@@ -4,6 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
+{% include navigation.html %}
+
 ## Projects
 
 <div class="projects-grid">
