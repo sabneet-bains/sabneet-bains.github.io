@@ -1,13 +1,34 @@
 ---
 layout: default
-title: "Projects"
+title: Projects
 permalink: /projects/
 ---
 
 ## Projects
 
-### Project Title 1
-A brief description of your first project. [Link to GitHub repo](https://github.com/yourusername/project1).
+<div class="projects-grid">
+  {% for project in site.data.repositories %}
+    {% include project-card.html project=project %}
+  {% endfor %}
+</div>
 
-### Project Title 2
-A brief description of your second project. [Link to GitHub repo](https://github.com/yourusername/project2).
+<!-- JavaScript for Dynamic GitHub Stats -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var repoCards = document.querySelectorAll('.project-card');
+    repoCards.forEach(function(card) {
+      var link = card.querySelector('a').href;
+      var repoPath = link.split('github.com/')[1];  // Extract "username/repo"
+      var apiUrl = 'https://api.github.com/repos/' + repoPath;
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          var statsDiv = card.querySelector('.repo-stats');
+          if (statsDiv && data.stargazers_count !== undefined) {
+            statsDiv.innerHTML = '⭐ ' + data.stargazers_count + ' | Forks: ' + data.forks_count;
+          }
+        })
+        .catch(error => console.error('Error fetching repo data:', error));
+    });
+  });
+</script>
