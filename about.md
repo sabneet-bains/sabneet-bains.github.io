@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "About Me"
+title: About Me
 permalink: /about/
 ---
 
 ## About Me
 
-I'm Sabneet Bains, a computational physicist with a passion for exploring the intersection of physics and computation. This portfolio highlights my projects, research work, and interests.
+I'm Sabneet Bains, a computational physicist passionate about leveraging technology to solve complex scientific problems. With projects spanning quantum computing, computer vision, nonlinear dynamics, and more, I blend theory with practical innovation.
