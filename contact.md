@@ -4,6 +4,8 @@ title: Contact
 permalink: /contact/
 ---
 
+{% include navigation.html %}
+
 ## Contact Me
 
 If you'd like to get in touch, please use the form below or reach out via social media.
