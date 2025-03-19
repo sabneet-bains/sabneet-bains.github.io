@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Initialize Carousel if Splide (or similar) is loaded
+  // Initialize Carousel if Splide is loaded
   if (typeof Splide !== 'undefined') {
     new Splide('#splide01', {
       type: 'loop',
