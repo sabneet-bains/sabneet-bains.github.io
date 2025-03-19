@@ -1,8 +1,27 @@
-<section id="hero">
-  <div class="hero-container">
-    <img src="/assets/images/your_selfie.jpg" alt="Your Name">
-    <h1>Hi, I’m {{ site.author }} 👋</h1>
-    <p>A brief description about what you do and your passions.</p>
-    <a href="mailto:your.email@example.com" class="btn">Let’s Connect</a>
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner row">
+      <div class="col col-6 col-d-12">
+        <div class="hero__left">
+          <div class="hero__image">
+            <img src="/assets/images/your_selfie.jpg" alt="Your Selfie">
+          </div>
+          <div class="hero__image__caption">Welcome to my creative space</div>
+        </div>
+      </div>
+      <div class="col col-6 col-d-12">
+        <div class="hero__right">
+          <div class="hero__avatar">
+            <img src="/assets/images/your_selfie.jpg" alt="Your Name">
+          </div>
+          <h1 class="hero__title">Hi! I’m {{ site.author }} 👋</h1>
+          <p class="hero__subtitle">[A brief description about what you do]</p>
+          <div class="hero__description">
+            <p>[Your engaging introduction text goes here.]</p>
+          </div>
+          <a href="mailto:your.email@example.com" class="hero__button button button--primary">Let’s Connect</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
