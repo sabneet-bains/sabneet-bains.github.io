@@ -1,11 +1,9 @@
-title: "Sabneet Bains Portfolio"
-description: "A portfolio site showcasing my projects and research."
-theme: jekyll-theme-architect
-markdown: kramdown
-author:
-  name: "Sabneet Bains"
-  email: "sabneet.bains@outlook.com"
+title: "Your Name Portfolio"
+description: "A digital portfolio showcasing my work, personality, and creative projects."
+url: "https://yourusername.github.io"  # your GitHub Pages URL
+baseurl: ""                           # set if you’re deploying to a subpath
+author: "Your Name"
 social:
-  linkedin: "https://www.linkedin.com/in/sabneet-bains/"
-  youtube: "https://www.youtube.com/@sabneetbains"
-custom_css: "/assets/css/custom.css"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  github: "https://github.com/yourusername"
+  youtube: "https://youtube.com/yourchannel"
