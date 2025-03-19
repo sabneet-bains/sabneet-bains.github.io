@@ -1,0 +1,90 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li a,
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-container img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #4643ec;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Section styles */
+section {
+  padding: 2rem;
+}
+
+/* Carousel (Nerd Stuff) */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+/* Videos Grid */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Gallery (Byte Frame) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+/* Footer additional styling */
+footer .social-links a {
+  margin-right: 1rem;
+}
