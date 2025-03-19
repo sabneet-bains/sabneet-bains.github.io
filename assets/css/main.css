@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* CSS Variables for theme colors */
+/*-------------------------------------
+  MAIN STYLESHEET
+-------------------------------------*/
 :root {
-  --background-color: #121212;
-  --text-color: #ffffff;
   --primary-color: #4643ec;
   --primary-hover: #3c3ab9;
   --secondary-color: #3eb99a;
   --accent-color: #de47e2;
   --link-color: #ff4500;
   --gray-color: #999999;
-  --header-bg: #1e1e1e;
+  --background-color: #121212;
+  --background-alt-color: #1e1e1e;
+  --text-color: #ffffff;
+  --heading-font: 'Roboto', sans-serif;
 }
 
 /* Global Styles */
@@ -21,7 +22,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--heading-font);
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -38,56 +39,67 @@ a:hover {
 }
 
 /* Header */
-header {
-  background-color: var(--header-bg);
+.header {
+  background-color: var(--background-alt-color);
   padding: 1rem 2rem;
 }
 
-header nav ul {
+.header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
 
-header nav ul li a {
+.header nav ul li a {
   font-weight: 700;
   font-size: 1.1rem;
 }
 
 /* Hero Section */
-#hero {
+.hero {
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
 }
 
-#hero .hero-container {
-  max-width: 800px;
-  margin: 0 auto;
+.hero .hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-#hero img {
+.hero__left, .hero__right {
+  flex: 1 1 300px;
+  margin: 1rem;
+}
+
+.hero__image img,
+.hero__avatar img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
   border: 4px solid var(--primary-color);
 }
 
-#hero h1 {
+.hero__title {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin: 1rem 0 0.5rem;
 }
 
-#hero p {
+.hero__subtitle {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--gray-color);
 }
 
-.btn {
+.hero__description p {
+  margin-bottom: 1rem;
+}
+
+.button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: var(--primary-color);
@@ -99,23 +111,21 @@ header nav ul li a {
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.button:hover {
   background-color: var(--primary-hover);
 }
 
-/* Nerd Stuff / Carousel Section */
-#nerdstuff {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-#nerdstuff h2 {
+/* Section Titles */
+section h2,
+.logos-title {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.carousel {
+/* Carousel / Nerd Stuff Section */
+.section-logos .logos {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
@@ -123,7 +133,7 @@ header nav ul li a {
   padding-bottom: 1rem;
 }
 
-.carousel-item {
+.logos__image {
   flex: 0 0 auto;
   width: 200px;
   border-radius: 10px;
@@ -131,13 +141,12 @@ header nav ul li a {
   transition: transform 0.3s ease;
 }
 
-.carousel-item img {
+.logos__image img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
-.carousel-item:hover {
+.logos__image:hover {
   transform: scale(1.05);
 }
 
@@ -147,12 +156,6 @@ header nav ul li a {
   text-align: center;
 }
 
-#latest-videos h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-}
-
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -160,7 +163,7 @@ header nav ul li a {
 }
 
 .video-card {
-  background-color: var(--header-bg);
+  background-color: var(--background-alt-color);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -172,7 +175,6 @@ header nav ul li a {
 
 .video-card img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -182,16 +184,10 @@ header nav ul li a {
   text-align: left;
 }
 
-/* Byte Frame (Gallery) Section */
+/* Gallery (Byte Frame) Section */
 #byte-frame {
   padding: 4rem 2rem;
   text-align: center;
-}
-
-#byte-frame h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
 }
 
 .gallery {
@@ -209,7 +205,6 @@ header nav ul li a {
 
 .gallery img {
   width: 100%;
-  height: auto;
   display: block;
   transition: opacity 0.3s ease;
 }
@@ -237,15 +232,11 @@ header nav ul li a {
 
 /* Footer */
 footer {
-  background-color: var(--header-bg);
+  background-color: var(--background-alt-color);
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
   margin-top: 2rem;
-}
-
-footer .social-links {
-  margin-bottom: 1rem;
 }
 
 footer .social-links a {
@@ -259,39 +250,14 @@ footer .social-links a:hover {
   transform: scale(1.2);
 }
 
-footer .footer-menu ul {
+.footer-menu ul {
   list-style: none;
   display: inline-flex;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-footer .footer-menu ul li a {
+.footer-menu ul li a {
   color: var(--text-color);
   font-weight: bold;
-}
-
-/* Utility Classes */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #hero h1 {
-    font-size: 2rem;
-  }
-
-  #nerdstuff h2,
-  #latest-videos h2,
-  #byte-frame h2 {
-    font-size: 1.75rem;
-  }
 }
