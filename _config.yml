@@ -1,9 +1,5 @@
-title: "Your Name Portfolio"
-description: "A digital portfolio showcasing my work, personality, and creative projects."
-url: "https://yourusername.github.io"  # your GitHub Pages URL
-baseurl: ""                           # set if you’re deploying to a subpath
-author: "Your Name"
-social:
-  linkedin: "https://linkedin.com/in/yourprofile"
-  github: "https://github.com/yourusername"
-  youtube: "https://youtube.com/yourchannel"
+title: "Coderon"
+description: "Coderon is a super modern and unique Jekyll blog theme"
+url: "https://yourusername.github.io"  # Update with your GitHub Pages URL
+baseurl: ""
+author: "Artem Sheludko"
