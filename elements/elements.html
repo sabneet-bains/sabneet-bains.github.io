@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Elements</title>
+  <meta name='description' content='Coderon is a super modern and unique Jekyll blog theme'>
+
+  <link rel="canonical" href="https://coderon-jekyll.netlify.app/elements/">
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elements – Coderon">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image:src" content="https://coderon-jekyll.netlify.app/images/17.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="Elements – Coderon">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://coderon-jekyll.netlify.app/images/17.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+  <script>
+    const defaultTheme = "dark";
+    const isToggleEnabled = true;
+    const userTheme = localStorage.getItem("theme");
+
+    function setTheme(mode) {
+      if (mode === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add("dark-mode");
+      } else if (mode === "light") {
+        document.documentElement.removeAttribute("dark");
+        document.documentElement.classList.remove("dark-mode");
+      }
+    }
+
+    if (isToggleEnabled) {
+      if (userTheme) {
+        setTheme(userTheme);
+      } else {
+        setTheme(defaultTheme);
+      }
+    } else {
+      setTheme(defaultTheme);
+    }
+
+    if (localStorage.getItem("classView") === "list") {
+      document.documentElement.setAttribute("list", "");
+      document.documentElement.classList.add('view-list');
+    }
+  </script>
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+  
+
+  <!-- begin global wrap -->
+  <div class="global-wrap">
+    <!-- begin header -->
+<header class="header">
+  <div class="container-big">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            Coderon
+          
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <div></div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main menu">
+          <div class="main-nav__box">
+            <ul class="nav__list list-reset">
+              
+              
+              <li class="nav__item">
+                <a href="/" class="nav__link">Home</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/videos/" class="nav__link">Videos</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="/archive/" class="nav__link">Archive</a>
+              </li>
+              
+              
+              
+              <li class="nav__item">
+                <a href="https://jekyllthemes.io/theme/coderon-blog-jekyll-theme" class="nav__link">Get Theme</a>
+              </li>
+              
+              
+              
+              <li class="nav__item dropdown">
+                <div class="dropdown-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="4" fill="none">
+                    <circle cx="2" cy="2" r="2" fill="var(--link-color)"/>
+                    <circle cx="10" cy="2" r="2" fill="var(--link-color)"/>
+                    <circle cx="18" cy="2" r="2" fill="var(--link-color)"/>
+                  </svg>
+                </div>
+                <div class="dropdown-menu">
+                  
+                  <a href="/about/" class="nav__link">About</a>
+                  
+                  <a href="/contact/" class="nav__link">Contact</a>
+                  
+                  <a href="/elements/" class="nav__link active-link">Elements</a>
+                  
+                </div>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </nav>
+
+        <div class="nav-button">
+          
+          <div class="color-scheme-button">
+            <div class="toggle-theme">
+              <div class="toggle-moon" title="Enable dark mode" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 1472 1536" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/>
+                </svg>
+              </div>
+              <div class="toggle-sun" title="Enable light mode" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4">
+                    <path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/>
+                    <path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/>
+                    <path stroke-linecap="round" d="M24 45v-3.15"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <div class="search-button">
+            <svg class="search-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+            <span class="search-button__text">Search posts...</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+<!-- begin search -->
+<div class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="search__box">
+          <div class="search__group">
+            <i class="search__close fa-solid fa-xmark"></i>
+            <label for="js-search-input" class="screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="search__text" autocomplete="off"
+              placeholder="Type to search...">
+          </div>
+          <div class="search-results-list view-list" id="js-results-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search__overlay"></div>
+</div>
+<!-- end search -->
+
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      <!-- begin page -->
+<div class="container">
+  <div class="row">
+
+    <div class="col col-8 col-d-12">
+      <div class="page-head">
+
+        
+        
+        <div class="page-image">
+          <img class="lazy" data-src="/images/17.jpg" alt="Elements">
+        </div>
+        
+        
+
+        <div class="page-info">
+          <h1 class="page-title">Elements</h1>
+        </div>
+
+      </div>
+
+      <article class="page">
+        <div class="page__content">
+          <p>A paragraph looks like this — Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures. Credibly reintermediate backend ideas for cross-platform models. Continually reintermediate integrated processes through technically sound intellectual capital. Holistically foster superior methodologies.</p>
+
+<hr />
+
+<h2 id="headings-by-default">Headings by default:</h2>
+
+<h1 id="h1-default-styles-for-headings">H1 Default styles for headings</h1>
+<h2 id="h2-default-styles-for-headings">H2 Default styles for headings</h2>
+<h3 id="h3-default-styles-for-headings">H3 Default styles for headings</h3>
+<h4 id="h4-default-styles-for-headings">H4 Default styles for headings</h4>
+<h5 id="h5-default-styles-for-headings">H5 Default styles for headings</h5>
+<h6 id="h6-default-styles-for-headings">H6 Default styles for headings</h6>
+
+<hr />
+
+<h2 id="lists">Lists</h2>
+
+<h3 id="ordered-list-example">Ordered list example:</h3>
+
+<ol>
+  <li>Poutine drinking vinegar bitters.</li>
+  <li>Coloring book distillery fanny pack.</li>
+  <li>Venmo biodiesel gentrify enamel pin meditation.</li>
+  <li>Jean shorts shaman listicle pickled portland.</li>
+  <li>Salvia mumblecore brunch iPhone migas.</li>
+</ol>
+
+<hr />
+
+<h3 id="unordered-list-example">Unordered list example:</h3>
+
+<ul>
+  <li>Bitters semiotics vice thundercats synth.</li>
+  <li>Literally cred narwhal bitters wayfarers.</li>
+  <li>Kale chips chartreuse paleo tbh street art marfa.</li>
+  <li>Mlkshk polaroid sriracha brooklyn.</li>
+  <li>Pug you probably haven’t heard of them air plant man bun.</li>
+</ul>
+
+<hr />
+
+<h2 id="table">Table</h2>
+
+<div class="table-container">
+  <table>
+    <tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+    <tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr>
+    <tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr>
+    <tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr>
+    <tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr>
+    <tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr>
+    <tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr>
+  </table>
+</div>
+
+<hr />
+
+<h2 id="quotes">Quotes</h2>
+
+<blockquote class="q-left">
+  <p>The longer I live, the more I realize that I am never wrong about anything, and that all the pains I have so humbly taken to verify my notions have only wasted my time!</p>
+</blockquote>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .q-left }
+&gt; The longer I live, the more I realize that I am never wrong about anything, and that all the pains I have so humbly taken to verify my notions have only wasted my time!
+</code></pre></div></div>
+
+<blockquote>
+  <p>Design is not just what it looks like and feels like. Design is how it works.</p>
+
+  <p><cite>– Steve Jobs</cite></p>
+</blockquote>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Design is not just what it looks like and feels like. Design is how it works.
+&gt;
+&gt; <span class="nt">&lt;cite&gt;</span>– Steve Jobs<span class="nt">&lt;/cite&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="callouts">Callouts</h2>
+
+<p class="note">Useful information that users should know, even when skimming content.</p>
+
+<p class="tip">Helpful advice for doing things better or more easily.</p>
+
+<p class="important">Key information users need to know to achieve their goal.</p>
+
+<p class="warning">Urgent info that needs immediate user attention to avoid problems.</p>
+
+<p class="caution">Advises about risks or negative outcomes of certain actions.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .note }
+Useful information that users should know, even when skimming content.
+</code></pre></div></div>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .tip }
+Helpful advice for doing things better or more easily.
+</code></pre></div></div>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .important }
+Key information users need to know to achieve their goal.
+</code></pre></div></div>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .warning }
+Urgent info that needs immediate user attention to avoid problems.
+</code></pre></div></div>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .caution }
+Advises about risks or negative outcomes of certain actions.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="syntax-highlighter">Syntax Highlighter</h2>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+    <span class="nl">justify-content</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+    <span class="nl">align-items</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">100vw</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#1c2021</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">200px</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">250px</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#000</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+    <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">top</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.top</span><span class="dl">'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">html, body</span><span class="dl">'</span><span class="p">).</span><span class="nx">stop</span><span class="p">().</span><span class="nx">animate</span><span class="p">({</span> <span class="na">scrollTop</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span> <span class="dl">'</span><span class="s1">slow</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">swing</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scroll</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">()</span> <span class="o">&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">height</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.top</span><span class="dl">'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="dl">"</span><span class="s2">top-active</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">.top</span><span class="dl">'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="dl">"</span><span class="s2">top-active</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">};</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="images">Images</h2>
+
+<p><img src="/images/20.jpg" alt="Coding" />
+<em>Photo by <a href="https://unsplash.com/photos/nlyWZtWTzCo">Luke McKeown</a> on <a href="https://unsplash.com/">Unsplash</a></em></p>
+
+<div class="gallery-box">
+  <div class="gallery gallery-columns-2">
+    <figure class="gallery__image">
+  <img src="/images/100.jpg" loading="lazy" alt="Lifestyle" />
+  
+  <figcaption class="gallery__image__caption">A stunning shot</figcaption>
+  
+</figure>
+    <figure class="gallery__image">
+  <img src="/images/101.jpg" loading="lazy" alt="Inspiration" />
+  
+  <figcaption class="gallery__image__caption">A stunning shot</figcaption>
+  
+</figure>
+    <figure class="gallery__image">
+  <img src="/images/102.jpg" loading="lazy" alt="Friends" />
+  
+  <figcaption class="gallery__image__caption">A stunning shot</figcaption>
+  
+</figure>
+    <figure class="gallery__image">
+  <img src="/images/103.jpg" loading="lazy" alt="Computers" />
+  
+  <figcaption class="gallery__image__caption">A stunning shot</figcaption>
+  
+</figure>
+    <figure class="gallery__image">
+  <img src="/images/21.jpg" loading="lazy" alt="Computers" />
+  
+  <figcaption class="gallery__image__caption">A stunning shot</figcaption>
+  
+</figure>
+    <figure class="gallery__image">
+  <img src="/images/23.jpg" loading="lazy" alt="Security" />
+  
+  <figcaption class="gallery__image__caption">A stunning shot</figcaption>
+  
+</figure>
+  </div>
+  <p>A gallery of stunning shots</p>
+</div>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="gallery-box"&gt;
+  &lt;div class="gallery gallery-columns-2"&gt;
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>img.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"/images/100.jpg"</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="s2">"Lifestyle"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"A stunning shot"</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>img.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"/images/101.jpg"</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="s2">"Inspiration"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"A stunning shot"</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>img.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"/images/102.jpg"</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="s2">"Friends"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"A stunning shot"</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>img.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"/images/103.jpg"</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="s2">"Computers"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"A stunning shot"</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>img.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"/images/21.jpg"</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="s2">"Computers"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"A stunning shot"</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>img.html<span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"/images/23.jpg"</span><span class="w"> </span><span class="na">alt</span><span class="o">=</span><span class="s2">"Security"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"A stunning shot"</span><span class="w"> </span><span class="p">%}</span>
+  &lt;/div&gt;
+  &lt;p&gt;A gallery of stunning shots&lt;/p&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="youtube-embed">Youtube Embed</h2>
+
+<p><iframe src="https://www.youtube.com/embed/eItOR9tLfuM?si=pcgT1w0hTfvm5mM9" loading="lazy" frameborder="0" allowfullscreen=""></iframe></p>
+
+<hr />
+
+<h2 id="vimeo-embed">Vimeo Embed</h2>
+
+<p><iframe src="https://player.vimeo.com/video/148003889?h=d36b8b4cbb" loading="lazy" width="640" height="360" frameborder="0" allowfullscreen=""></iframe></p>
+
+        </div>
+      </article>
+    </div>
+
+    <div class="col col-4 col-d-12">
+      <aside class="sidebar">
+        
+<div class="widget widget-subscribe">
+  <div class="widget-subscribe__content">
+    
+    <h2 class="widget-subscribe__title">Stay inspired weekly ✌️</h2>
+    
+    
+    <p class="widget-subscribe__description">Every Sunday, I deliver actionable tips for enhancing productivity, practical life advice, and top-notch insights gathered from various sources, right to your email inbox.</p>
+    
+  </div>
+  <form class="widget-subscribe__form validate"
+    action="//gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp" method="POST" id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
+    <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
+    <input class="widget-subscribe__email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="Your email address...">
+    <button class="button button--secondary button--big widget-subscribe__button" id="membedded-subscribe" type="submit" name="subscribe">Join Now</button>
+  </form>
+</div>
+
+        
+<div class="widget widget-social">
+  <ul class="widget-social__list list-reset">
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://twitter.com" target="_blank" rel="noopener"
+        aria-label="Twitter link"><i class="fa-brands fa-x-twitter"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://facebook.com" target="_blank" rel="noopener"
+        aria-label="Facebook link"><i class="fa-brands fa-facebook"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://mastodon.social" target="_blank" rel="noopener"
+        aria-label="Mastodon link"><i class="fa-brands fa-mastodon"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://reddit.com" target="_blank" rel="noopener"
+        aria-label="Reddit link"><i class="fa-brands fa-reddit-alien"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="https://github.com" target="_blank" rel="noopener"
+        aria-label="Github link"><i class="fa-brands fa-github"></i></a>
+    </li>
+    
+    <li class="widget-social__item">
+      <a class="widget-social__link" href="/feed.xml" target="_blank" rel="noopener"
+        aria-label="Rss link"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+        
+
+
+
+
+<div class="widget widget-featured-posts">
+  <div class="widget-sidebar-head">
+    <h2 class="widget-sidebar-title">Featured posts</h2>
+  </div>
+  
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/why-i-switched-to-arch-linux-and-never-looked-back" class="post-featured-image">
+        
+        <img class="lazy" data-src="/images/08.jpg" alt="Why I Switched to Arch Linux and Never Looked Back">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/why-i-switched-to-arch-linux-and-never-looked-back">Why I Switched to Arch Linux and Never Looked Back</a></h3>
+        <time class="post-featured-date" datetime="2024-12-15T12:01:35+00:00">15 Dec, 2024</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/automating-routine-tasks-with-bash-scripts" class="post-featured-image">
+        
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        
+        <img class="lazy" data-src="/images/32.jpg" alt="Automating Routine Tasks with Bash Scripts">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/automating-routine-tasks-with-bash-scripts">Automating Routine Tasks with Bash Scripts</a></h3>
+        <time class="post-featured-date" datetime="2024-11-15T12:01:35+00:00">15 Nov, 2024</time>
+      </div>
+    </div>
+    
+  
+
+    
+    
+    <div class="post-featured-content">
+      
+      <a href="/how-games-keep-players-engaged-and-motivated" class="post-featured-image">
+        
+        <img class="lazy" data-src="/images/33.jpg" alt="How Games Keep Players Engaged and Motivated">
+      </a>
+      
+      <div class="post-featured-meta">
+        <h3 class="post-featured-title"><a href="/how-games-keep-players-engaged-and-motivated">How Games Keep Players Engaged and Motivated</a></h3>
+        <time class="post-featured-date" datetime="2024-10-19T12:01:35+00:00">19 Oct, 2024</time>
+      </div>
+    </div>
+    
+  
+
+</div>
+
+
+        
+<div class="widget widget-tags">
+  <div class="widget-sidebar-head">
+    <h2 class="widget-sidebar-title">Topics</h2>
+  </div>
+
+  <div class="tag-cloud">
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=games"
+         class="tag-cloud__item"
+         style="background: #ff4500;">
+        Games
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=movies"
+         class="tag-cloud__item"
+         style="background: #f14979;">
+        Movies
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=security"
+         class="tag-cloud__item"
+         style="background: #de47e2;">
+        Security
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=productivity"
+         class="tag-cloud__item"
+         style="background: #3eb99a;">
+        Productivity
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=linux"
+         class="tag-cloud__item"
+         style="background: var(--dark-gray);">
+        Linux
+      </a>
+    
+      
+      
+      
+
+      
+
+      <a href="/tags/?tag=programming"
+         class="tag-cloud__item"
+         style="background: #4643ec;">
+        Programming
+      </a>
+    
+  </div>
+</div>
+
+      </aside>
+    </div>
+
+  </div>
+</div>
+<!-- end page -->
+    </main>
+    <!-- end content -->
+
+    <!-- begin footer -->
+<footer class="footer">
+
+  <div class="footer__inner">
+    <div class="container">
+      <div class="row">
+
+        <div class="col col-4 col-d-12">
+          <h3 class="footer__info__title">Coderon</h3>
+          
+          <p class="footer__info__description">Here, I share ideas, tools, and methods that help me balance productivity with creativity while keeping control over my digital world. Dive in, get inspired, and feel free to share your thoughts!</p>
+          
+          
+          <div class="footer__social">
+            <ul class="footer__social__list list-reset">
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://twitter.com" target="_blank" rel="noopener"
+                  aria-label="Twitter link"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://facebook.com" target="_blank" rel="noopener"
+                  aria-label="Facebook link"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://mastodon.social" target="_blank" rel="noopener"
+                  aria-label="Mastodon link"><i class="fa-brands fa-mastodon"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://reddit.com" target="_blank" rel="noopener"
+                  aria-label="Reddit link"><i class="fa-brands fa-reddit-alien"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="https://github.com" target="_blank" rel="noopener"
+                  aria-label="Github link"><i class="fa-brands fa-github"></i></a>
+              </li>
+              
+              <li class="footer__social__item">
+                <a class="footer__social__link" href="/feed.xml" target="_blank" rel="noopener"
+                  aria-label="Rss link"><i class="fa-solid fa-rss"></i></a>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="col col-4 col-d-12">
+          <h3 class="footer__title">Recent Posts</h3>
+          <div class="footer__recent-posts">
+            
+            <div class="footer__recent-content">
+              
+              <a href="/avoiding-common-javascript-mistakes-and-writing-clean-code" class="footer__recent-image">
+                
+                <img class="lazy" data-src="/images/02.jpg" alt="Avoiding Common JavaScript Mistakes and Writing Clean Code">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/avoiding-common-javascript-mistakes-and-writing-clean-code">Avoiding Common JavaScript Mistakes and Writing Clean Code</a></h3>
+                <time class="footer__recent-date" datetime="2025-01-05T12:01:35+00:00">05 Jan, 2025</time>
+              </div>
+            </div>
+            
+            <div class="footer__recent-content">
+              
+              <a href="/setting-up-the-perfect-programming-environment-on-ubuntu" class="footer__recent-image">
+                
+                <img class="lazy" data-src="/images/07.jpg" alt="Setting Up the Perfect Programming Environment on Ubuntu">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/setting-up-the-perfect-programming-environment-on-ubuntu">Setting Up the Perfect Programming Environment on Ubuntu</a></h3>
+                <time class="footer__recent-date" datetime="2025-01-04T12:01:35+00:00">04 Jan, 2025</time>
+              </div>
+            </div>
+            
+            <div class="footer__recent-content">
+              
+              <a href="/why-two-factor-authentication-is-a-must-have-tool" class="footer__recent-image">
+                
+                <div class="video-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <polygon points="40,30 70,50 40,70"></polygon>
+                  </svg>
+                </div>
+                
+                <img class="lazy" data-src="/images/04.jpg" alt="Why Two-Factor Authentication Is a Must-Have Tool">
+              </a>
+              
+              <div class="footer__recent-meta">
+                <h3 class="footer__recent-title"><a href="/why-two-factor-authentication-is-a-must-have-tool">Why Two-Factor Authentication Is a Must-Have Tool</a></h3>
+                <time class="footer__recent-date" datetime="2025-01-03T12:01:35+00:00">03 Jan, 2025</time>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        
+        <div class="col col-2 col-d-6 col-m-12">
+          <div class="footer-nav__left">
+            <h3 class="footer__title">Menu</h3>
+            <div class="footer-nav__list">
+            
+            
+              <a class="footer-nav__link" href="/">Home</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/videos/">Videos</a>
+            
+            
+            
+              <a class="footer-nav__link" href="/archive/">Archive</a>
+            
+            
+            
+              <a class="footer-nav__link" href="https://jekyllthemes.io/theme/coderon-blog-jekyll-theme">Get Theme</a>
+            
+            
+            
+            
+            
+            </div>
+          </div>
+        </div>
+        
+
+        
+        
+
+        
+        <div class="col col-2 col-d-6 col-m-12">
+          <div class="footer-nav__right">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <h3 class="footer__title">Pages</h3>
+            <div class="footer-nav__list">
+              
+                <a class="footer-nav__link" href="/about/">About</a>
+              
+                <a class="footer-nav__link" href="/contact/">Contact</a>
+              
+                <a class="footer-nav__link" href="/elements/">Elements</a>
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="copyright">2025 &copy; <a href="/">Coderon</a>. Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.</div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- end footer -->
+  </div>
+  <!-- end global wrap -->
+
+  <div class="top" title="Top"><i class="fa-solid fa-arrow-up"></i></div>
+
+  <div class="images-overlay"></div>
+
+  <script src="/js/scripts.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+
+</html>
