@@ -2,13 +2,9 @@
 layout: null
 ---
 [
-{% for page in site.pages %}
-  {% if page.title %}
+{% for post in site.posts %}
   {
-    "title": "{{ page.title | escape }}",
-    "url": "{{ page.url | relative_url }}",
-    "excerpt": "{{ page.content | strip_html | strip_newlines | truncate: 160, '...' | escape }}"
+    "article": "<div class='article'><div class='article__head'><a class='article__image' href='{{ post.url | relative_url }}'><img src='{{ post.image | relative_url }}' alt='{{ post.title | escape }}'></a></div><div class='article__content'><h2 class='article__title'><a href='{{ post.url | relative_url }}'>{{ post.title | escape }}</a></h2><p class='article__excerpt'>{{ post.excerpt | strip_html | strip_newlines | escape }}</p><div class='article__meta'><time datetime='{{ post.date | date_to_xmlschema }}'>{{ post.date | date: '%d %b, %Y' }}</time></div></div></div>"
   }{% unless forloop.last %},{% endunless %}
-  {% endif %}
 {% endfor %}
 ]
