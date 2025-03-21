@@ -29,6 +29,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
+  <!-- Inline CSS to fix grid layout issues -->
+  <style>
+    /* Recent Insights (Blog Section) Adjustments */
+    .section-blog .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .section-blog .article--flexible {
+      flex: 1 1 calc(50% - 20px); /* Two items per row with a gap */
+    }
+
+    /* Recent Snapshots (Gallery Section) Adjustments */
+    .section-gallery .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .section-gallery .gallery__image {
+      flex: 1 1 calc(20% - 10px); /* Five items per row on desktop */
+      margin: 10px;
+    }
+
+    /* Ensure images cover the container if aspect ratios vary */
+    .lazy {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+
   <script>
     const defaultTheme = "dark";
     const isToggleEnabled = true;
@@ -212,12 +243,11 @@
       </section>
       <!-- end hero -->
 
-      <!-- begin section-logos -->
+      <!-- begin section-logos (Research Highlights) -->
       <section class="section section-logos">
         <div class="container">
           <div class="row">
             <div class="col col-12">
-              <!-- Updated Section Title -->
               <h2 class="logos-title">Research Highlights</h2>
               <div class="logos splide">
                 <div class="splide__track">
@@ -246,13 +276,12 @@
       </section>
       <!-- end section-logos -->
 
-      <!-- begin section-blog -->
+      <!-- begin section-blog (Recent Insights) -->
       <section class="section section-blog">
         <div class="container">
           <div class="row">
             <div class="col col-12">
               <div class="section__head">
-                <!-- Updated Section Title -->
                 <h2 class="section__title">Recent Insights</h2>
                 <div class="blog__view">
                   <div class="blog__toggle">
@@ -332,7 +361,7 @@
                   <a class="widget-social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="Github link"><i class="fa-brands fa-github"></i></a>
                 </li>
                 <li class="widget-social__item">
-                  <a class="widget-social__link" href="/feed.xml" target="_blank" rel="noopener" aria-label="Rss link"><i class="fa-solid fa-rss"></i></a>
+                  <a class="widget-social__link" href="/feed.xml" target="_blank" rel="noopener" aria-label="RSS link"><i class="fa-solid fa-rss"></i></a>
                 </li>
               </ul>
             </div>
@@ -391,14 +420,14 @@
     </div>
     <!-- end section-blog -->
 
-    <!-- begin section-tags -->
+    <!-- begin section-tags (Recent Snapshots) -->
     <section class="section section-tags">
       <div class="section-tags__inner">
         <div class="container">
           <div class="row">
             <div class="col col-12">
               <div class="section__head">
-                <h2 class="section__title">Research Topics</h2>
+                <h2 class="section__title">Recent Snapshots</h2>
               </div>
               <div class="row">
                 <div class="col col-3 col-d-6 col-m-12">
@@ -453,7 +482,7 @@
     </section>
     <!-- end section-tags -->
 
-    <!-- begin section-videos -->
+    <!-- begin section-videos (Latest Presentations) -->
     <section class="section section-videos">
       <div class="section-videos__inner">
         <div class="container">
@@ -528,7 +557,7 @@
     </section>
     <!-- end section-videos -->
 
-    <!-- begin section-gallery -->
+    <!-- begin section-gallery (Research Snapshots) -->
     <section class="section section-gallery">
       <div class="container">
         <div class="row">
@@ -554,7 +583,7 @@
                 <figcaption class="gallery__image__caption">Extracting insights from big data.</figcaption>
               </figure>
               <figure class="gallery__image">
-                <img class="lazy" data-src="/images/104.jpg" alt="Interdisciplinary Collaboration">
+                <img class="lazy" data-src="/images/104.jpg" alt="Collaboration">
                 <figcaption class="gallery__image__caption">Collaborative research in action.</figcaption>
               </figure>
             </div>
