@@ -29,30 +29,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-  <!-- Inline CSS to fix grid layout issues -->
+  <!-- Inline CSS to address grid layout issues -->
   <style>
-    /* Recent Insights (Blog Section) Adjustments */
-    .section-blog .row {
+    /* For Recent Insights (Blog Section) */
+    .section-blog .row.grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
     .section-blog .article--flexible {
-      flex: 1 1 calc(50% - 20px); /* Two items per row with a gap */
+      flex: 1 1 calc(50% - 20px);
     }
 
-    /* Recent Snapshots (Gallery Section) Adjustments */
+    /* For Research Snapshots (Gallery Section) */
     .section-gallery .row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
     .section-gallery .gallery__image {
-      flex: 1 1 calc(20% - 10px); /* Five items per row on desktop */
+      flex: 1 1 calc(20% - 10px);
       margin: 10px;
     }
-
-    /* Ensure images cover the container if aspect ratios vary */
     .lazy {
       object-fit: cover;
       width: 100%;
@@ -295,8 +293,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <!-- Example Article: Update these with your research posts -->
+          <div class="row grid">
+            <!-- Example Article -->
             <div class="article article--flexible col col-6 col-t-12 grid__post animate">
               <div class="article__inner">
                 <div class="article__head">
@@ -311,7 +309,7 @@
                   <h2 class="article__title">
                     <a href="/quantum-research-breakthrough">Quantum Research Breakthrough</a>
                   </h2>
-                  <p class="article__excerpt">Exploring the innovative techniques behind advanced quantum circuit design and error mitigation.</p>
+                  <p class="article__excerpt">Exploring innovative techniques in quantum circuit design and error mitigation.</p>
                   <div class="article__meta">
                     <time class="article__date" datetime="2025-01-05T12:01:35+00:00">05 Jan, 2025</time>
                     <div class="article__minutes">3 min read</div>
@@ -319,7 +317,7 @@
                 </div>
               </div>
             </div>
-            <!-- Additional articles can be added here -->
+            <!-- Additional articles can be added similarly -->
           </div>
 
           <!-- begin pagination -->
@@ -420,14 +418,15 @@
     </div>
     <!-- end section-blog -->
 
-    <!-- begin section-tags (Recent Snapshots) -->
+    <!-- begin section-tags (Hacker’s Haven --> 
+    <!-- We’ve rebranded this section as "Research Topics" -->
     <section class="section section-tags">
       <div class="section-tags__inner">
         <div class="container">
           <div class="row">
             <div class="col col-12">
               <div class="section__head">
-                <h2 class="section__title">Recent Snapshots</h2>
+                <h2 class="section__title">Research Topics</h2>
               </div>
               <div class="row">
                 <div class="col col-3 col-d-6 col-m-12">
@@ -601,6 +600,7 @@
     <div class="footer__inner">
       <div class="container">
         <div class="row">
+
           <div class="col col-4 col-d-12">
             <h3 class="footer__info__title">Sabneet Bains</h3>
             <p class="footer__info__description">Advancing interdisciplinary research in quantum computing, AI, and complex systems. Explore insights, projects, and innovations that push technology beyond classical boundaries.</p>
@@ -708,6 +708,7 @@
   <!-- end global wrap -->
 
   <div class="top" title="Top"><i class="fa-solid fa-arrow-up"></i></div>
+
   <div class="images-overlay"></div>
 
   <script src="/js/scripts.js"></script>
