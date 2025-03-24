@@ -3,26 +3,40 @@ layout: default
 title: Home
 ---
 
-<!-- Main homepage content -->
-<main class="home">
-  <section class="hero">
-    <div class="container">
-      <h1>Welcome to My Jekyll Site</h1>
-      <p>This is the homepage where you'll find the latest updates, posts, and projects.</p>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Welcome to My Jekyll Site</h1>
+    <p>This is the homepage where you'll find the latest updates, posts, and projects.</p>
+  </div>
+</section>
 
-  <section class="content">
-    <div class="container">
-      <h2>Recent Posts</h2>
-      <ul class="post-list">
-        {% for post in site.posts %}
-          <li>
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt }}</p>
-          </li>
-        {% endfor %}
-      </ul>
+<div class="container">
+  <div class="row">
+    <!-- Sidebar Column -->
+    <div class="col col-5 col-d-12">
+      {% include sidebar.html %}
     </div>
-  </section>
-</main>
+
+    <!-- Main Content Column -->
+    <div class="col col-7 col-d-12">
+      <!-- Projects Section -->
+      {% include projects.html %}
+
+      <!-- Testimonials Section -->
+      {% include testimonials.html %}
+
+      <!-- Blog Section -->
+      {% include blog.html %}
+
+      <!-- FAQ Section -->
+      {% include faq.html %}
+
+      <!-- Gallery Section -->
+      {% include gallery.html %}
+
+      <!-- Subscribe Section -->
+      {% include subscribe.html %}
+    </div>
+  </div>
+</div>
