@@ -1,5 +1,48 @@
-title: "Sabneet Bains Portfolio"
-description: "A comprehensive digital portfolio showcasing interdisciplinary research in computational physics, quantum computing, AI, machine learning, nonlinear dynamics, simulations, automation, reverse engineering, digital logic, game development, and data science."
-url: "https://sabneet-bains.github.io"
-baseurl: ""
-author: "Sabneet Bains"
+# Site settings
+title: Baleon
+description: Baleon is a stylish and multifunctional theme for Jekyll.
+url: "https://yourusername.github.io"   # Your production URL (without a trailing slash)
+baseurl: ""                               # Leave empty if hosting at the site root or set to "/your-repo-name" if using a subpath
+
+# Theme & Plugins
+theme: jekyll-theme-primer              # Change this to your theme if different
+plugins:
+  - jekyll-feed                        # Generates an RSS feed
+  - jekyll-seo-tag                     # Adds SEO tags to your pages
+
+# Sass/SCSS settings
+sass:
+  sass_dir: _sass                      # Directory where your SCSS partials live
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
+# Pagination (if you have many posts)
+paginate: 5
+paginate_path: "/blog/page:num"
+
+# Defaults (adjust or add more defaults as needed)
+defaults:
+  -
+    scope:
+      path: ""        # applies to all files
+      type: "posts"   # only for blog posts
+    values:
+      layout: post
+      author: "Kevin Jones"
+
+# Exclusions (files and folders that should not be processed)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Build settings
+future: true
+lsi: false
+safe: true
