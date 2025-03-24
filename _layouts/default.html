@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: "Baleon" }}</title>
+    <meta name="description" content="{{ page.description | default: 'Baleon is a stylish and multifunctional theme for Jekyll' }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | relative_url }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Baleon">
+    <meta name="twitter:description" content="Baleon is a stylish and multifunctional theme for Jekyll">
+    <meta name="twitter:image:src" content="{{ '/images/100.jpg' | relative_url }}">
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:title" content="Baleon">
+    <meta property="og:description" content="Baleon is a stylish and multifunctional theme for Jekyll">
+    <meta property="og:image" content="{{ '/images/100.jpg' | relative_url }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&amp;display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&amp;family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+    <!-- External CSS (compiled from SCSS) -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    <!-- Inline script for theme toggling -->
+    <script>
+      if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.setAttribute("dark", "");
+          document.documentElement.classList.add('dark-mode');
+      }
+    </script>
+  </head>
+  <body class="{{ page.body_class | default: 'home-page' }}">
+    <!-- Global wrap -->
+    <div class="global-wrap">
+      <!-- Include header -->
+      {% include header.html %}
+
+      <!-- Main content -->
+      <main class="content" aria-label="Content">
+        {{ content }}
+      </main>
+
+      <!-- Include footer -->
+      {% include footer.html %}
+    </div>
+    <div class="overlay"></div>
+
+    <!-- External JS -->
+    <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
+  </body>
+</html>
