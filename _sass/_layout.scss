@@ -1,4 +1,5 @@
 /* _layout.scss */
+/* _layout.scss */
 /*--------------------------------------------------------------
 # Layout & Grid System
 --------------------------------------------------------------*/
@@ -65,7 +66,7 @@
 .col-11 { width: calc(11 / 12 * 100%); }
 .col-12 { width: calc(12 / 12 * 100%); }
 
-/* Push/Pull Utilities */
+/* Default Push/Pull Utilities */
 .push-0  { margin-left: calc(0 / 12 * 100%); }
 .push-1  { margin-left: calc(1 / 12 * 100%); }
 .push-2  { margin-left: calc(2 / 12 * 100%); }
@@ -95,6 +96,7 @@
 .pull-12 { margin-right: calc(12 / 12 * 100%); }
 
 /* Responsive grid utilities */
+
 /* Extra-large (w) */
 @media (max-width: 1400px) {
   .col-w-0  { width: calc(0 / 12 * 100%); }
@@ -110,7 +112,34 @@
   .col-w-10 { width: calc(10 / 12 * 100%); }
   .col-w-11 { width: calc(11 / 12 * 100%); }
   .col-w-12 { width: calc(12 / 12 * 100%); }
-  /* ...push-w and pull-w classes similarly */
+
+  .push-w-0  { margin-left: calc(0 / 12 * 100%); }
+  .push-w-1  { margin-left: calc(1 / 12 * 100%); }
+  .push-w-2  { margin-left: calc(2 / 12 * 100%); }
+  .push-w-3  { margin-left: calc(3 / 12 * 100%); }
+  .push-w-4  { margin-left: calc(4 / 12 * 100%); }
+  .push-w-5  { margin-left: calc(5 / 12 * 100%); }
+  .push-w-6  { margin-left: calc(6 / 12 * 100%); }
+  .push-w-7  { margin-left: calc(7 / 12 * 100%); }
+  .push-w-8  { margin-left: calc(8 / 12 * 100%); }
+  .push-w-9  { margin-left: calc(9 / 12 * 100%); }
+  .push-w-10 { margin-left: calc(10 / 12 * 100%); }
+  .push-w-11 { margin-left: calc(11 / 12 * 100%); }
+  .push-w-12 { margin-left: calc(12 / 12 * 100%); }
+
+  .pull-w-0  { margin-right: calc(0 / 12 * 100%); }
+  .pull-w-1  { margin-right: calc(1 / 12 * 100%); }
+  .pull-w-2  { margin-right: calc(2 / 12 * 100%); }
+  .pull-w-3  { margin-right: calc(3 / 12 * 100%); }
+  .pull-w-4  { margin-right: calc(4 / 12 * 100%); }
+  .pull-w-5  { margin-right: calc(5 / 12 * 100%); }
+  .pull-w-6  { margin-right: calc(6 / 12 * 100%); }
+  .pull-w-7  { margin-right: calc(7 / 12 * 100%); }
+  .pull-w-8  { margin-right: calc(8 / 12 * 100%); }
+  .pull-w-9  { margin-right: calc(9 / 12 * 100%); }
+  .pull-w-10 { margin-right: calc(10 / 12 * 100%); }
+  .pull-w-11 { margin-right: calc(11 / 12 * 100%); }
+  .pull-w-12 { margin-right: calc(12 / 12 * 100%); }
 }
 
 /* Desktop (d) */
@@ -128,7 +157,34 @@
   .col-d-10 { width: calc(10 / 12 * 100%); }
   .col-d-11 { width: calc(11 / 12 * 100%); }
   .col-d-12 { width: calc(12 / 12 * 100%); }
-  /* ...push-d and pull-d classes similarly */
+
+  .push-d-0  { margin-left: calc(0 / 12 * 100%); }
+  .push-d-1  { margin-left: calc(1 / 12 * 100%); }
+  .push-d-2  { margin-left: calc(2 / 12 * 100%); }
+  .push-d-3  { margin-left: calc(3 / 12 * 100%); }
+  .push-d-4  { margin-left: calc(4 / 12 * 100%); }
+  .push-d-5  { margin-left: calc(5 / 12 * 100%); }
+  .push-d-6  { margin-left: calc(6 / 12 * 100%); }
+  .push-d-7  { margin-left: calc(7 / 12 * 100%); }
+  .push-d-8  { margin-left: calc(8 / 12 * 100%); }
+  .push-d-9  { margin-left: calc(9 / 12 * 100%); }
+  .push-d-10 { margin-left: calc(10 / 12 * 100%); }
+  .push-d-11 { margin-left: calc(11 / 12 * 100%); }
+  .push-d-12 { margin-left: calc(12 / 12 * 100%); }
+
+  .pull-d-0  { margin-right: calc(0 / 12 * 100%); }
+  .pull-d-1  { margin-right: calc(1 / 12 * 100%); }
+  .pull-d-2  { margin-right: calc(2 / 12 * 100%); }
+  .pull-d-3  { margin-right: calc(3 / 12 * 100%); }
+  .pull-d-4  { margin-right: calc(4 / 12 * 100%); }
+  .pull-d-5  { margin-right: calc(5 / 12 * 100%); }
+  .pull-d-6  { margin-right: calc(6 / 12 * 100%); }
+  .pull-d-7  { margin-right: calc(7 / 12 * 100%); }
+  .pull-d-8  { margin-right: calc(8 / 12 * 100%); }
+  .pull-d-9  { margin-right: calc(9 / 12 * 100%); }
+  .pull-d-10 { margin-right: calc(10 / 12 * 100%); }
+  .pull-d-11 { margin-right: calc(11 / 12 * 100%); }
+  .pull-d-12 { margin-right: calc(12 / 12 * 100%); }
 }
 
 /* Tablet (t) */
@@ -146,7 +202,34 @@
   .col-t-10 { width: calc(10 / 12 * 100%); }
   .col-t-11 { width: calc(11 / 12 * 100%); }
   .col-t-12 { width: calc(12 / 12 * 100%); }
-  /* ...push-t and pull-t classes similarly */
+
+  .push-t-0  { margin-left: calc(0 / 12 * 100%); }
+  .push-t-1  { margin-left: calc(1 / 12 * 100%); }
+  .push-t-2  { margin-left: calc(2 / 12 * 100%); }
+  .push-t-3  { margin-left: calc(3 / 12 * 100%); }
+  .push-t-4  { margin-left: calc(4 / 12 * 100%); }
+  .push-t-5  { margin-left: calc(5 / 12 * 100%); }
+  .push-t-6  { margin-left: calc(6 / 12 * 100%); }
+  .push-t-7  { margin-left: calc(7 / 12 * 100%); }
+  .push-t-8  { margin-left: calc(8 / 12 * 100%); }
+  .push-t-9  { margin-left: calc(9 / 12 * 100%); }
+  .push-t-10 { margin-left: calc(10 / 12 * 100%); }
+  .push-t-11 { margin-left: calc(11 / 12 * 100%); }
+  .push-t-12 { margin-left: calc(12 / 12 * 100%); }
+
+  .pull-t-0  { margin-right: calc(0 / 12 * 100%); }
+  .pull-t-1  { margin-right: calc(1 / 12 * 100%); }
+  .pull-t-2  { margin-right: calc(2 / 12 * 100%); }
+  .pull-t-3  { margin-right: calc(3 / 12 * 100%); }
+  .pull-t-4  { margin-right: calc(4 / 12 * 100%); }
+  .pull-t-5  { margin-right: calc(5 / 12 * 100%); }
+  .pull-t-6  { margin-right: calc(6 / 12 * 100%); }
+  .pull-t-7  { margin-right: calc(7 / 12 * 100%); }
+  .pull-t-8  { margin-right: calc(8 / 12 * 100%); }
+  .pull-t-9  { margin-right: calc(9 / 12 * 100%); }
+  .pull-t-10 { margin-right: calc(10 / 12 * 100%); }
+  .pull-t-11 { margin-right: calc(11 / 12 * 100%); }
+  .pull-t-12 { margin-right: calc(12 / 12 * 100%); }
 }
 
 /* Mobile (m) */
@@ -164,8 +247,39 @@
   .col-m-10 { width: calc(10 / 12 * 100%); }
   .col-m-11 { width: calc(11 / 12 * 100%); }
   .col-m-12 { width: calc(12 / 12 * 100%); }
-  /* ...push-m and pull-m classes similarly */
+
+  .push-m-0  { margin-left: calc(0 / 12 * 100%); }
+  .push-m-1  { margin-left: calc(1 / 12 * 100%); }
+  .push-m-2  { margin-left: calc(2 / 12 * 100%); }
+  .push-m-3  { margin-left: calc(3 / 12 * 100%); }
+  .push-m-4  { margin-left: calc(4 / 12 * 100%); }
+  .push-m-5  { margin-left: calc(5 / 12 * 100%); }
+  .push-m-6  { margin-left: calc(6 / 12 * 100%); }
+  .push-m-7  { margin-left: calc(7 / 12 * 100%); }
+  .push-m-8  { margin-left: calc(8 / 12 * 100%); }
+  .push-m-9  { margin-left: calc(9 / 12 * 100%); }
+  .push-m-10 { margin-left: calc(10 / 12 * 100%); }
+  .push-m-11 { margin-left: calc(11 / 12 * 100%); }
+  .push-m-12 { margin-left: calc(12 / 12 * 100%); }
+
+  .pull-m-0  { margin-right: calc(0 / 12 * 100%); }
+  .pull-m-1  { margin-right: calc(1 / 12 * 100%); }
+  .pull-m-2  { margin-right: calc(2 / 12 * 100%); }
+  .pull-m-3  { margin-right: calc(3 / 12 * 100%); }
+  .pull-m-4  { margin-right: calc(4 / 12 * 100%); }
+  .pull-m-5  { margin-right: calc(5 / 12 * 100%); }
+  .pull-m-6  { margin-right: calc(6 / 12 * 100%); }
+  .pull-m-7  { margin-right: calc(7 / 12 * 100%); }
+  .pull-m-8  { margin-right: calc(8 / 12 * 100%); }
+  .pull-m-9  { margin-right: calc(9 / 12 * 100%); }
+  .pull-m-10 { margin-right: calc(10 / 12 * 100%); }
+  .pull-m-11 { margin-right: calc(11 / 12 * 100%); }
+  .pull-m-12 { margin-right: calc(12 / 12 * 100%); }
 }
+
+/*--------------------------------------------------------------
+# End of Layout & Grid System
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Header & Navigation Layout
