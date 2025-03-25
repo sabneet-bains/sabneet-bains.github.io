@@ -1,0 +1,57 @@
+// Tables and Other Content Containers
+// ------------------------------------
+
+// Horizontal Rule (Separator)
+hr {
+  position: relative;
+  height: 1px;
+  margin: 60px 0;
+  font-size: 16px;
+  border: 0;
+  background: var(--border-color);
+}
+
+// Table Container
+.table-container {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+// Base Table Styling
+table {
+  font-size: 12px;
+  width: 100%;
+  border-width: 1px;
+  border-color: var(--background-alt-color);
+  border-collapse: collapse;
+  color: var(--heading-font-color);
+}
+
+// Table Header Cells
+table th {
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid var(--th-color);
+  color: var(--heading-font-color);
+  font-weight: 700;
+}
+
+// Table Rows
+table tr {
+  background-color: var(--tr-color);
+  transition: all 0.3s ease;
+}
+
+// Alternate Row Background
+table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// Table Data Cells
+table td {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+}

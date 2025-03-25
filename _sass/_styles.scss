@@ -1,4 +1,6 @@
-/* _variables.scss */
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+-------------------------------------------------------------------*/
 :root {
   --brand-color: #780fff;
   --white: #fff;
@@ -57,3 +59,22 @@
   --tr-color: var(--background-alt-color);
   --syntax-highlighting-background: var(--background-alt-color);
 }
+
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after,
+.clearfix ::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;

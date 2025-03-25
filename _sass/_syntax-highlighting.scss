@@ -1,0 +1,216 @@
+/* _syntax-highlighting.scss */
+
+/* Base highlight container styles */
+.highlight {
+  margin-bottom: 32px;
+  border-radius: 8px;
+  background: var(--syntax-highlighting-background);
+
+  /* Token styles */
+  .c { 
+    color: #998;
+    font-style: italic;
+  }
+  
+  .err {
+    color: #a61717;
+    background-color: #e3d2d2;
+  }
+  
+  .k,
+  .o {
+    font-weight: bold;
+  }
+  
+  .cm {
+    color: #998;
+    font-style: italic;
+  }
+  
+  .cp {
+    color: #999;
+    font-weight: bold;
+  }
+  
+  .c1 {
+    color: #998;
+    font-style: italic;
+  }
+  
+  .cs {
+    color: #999;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .gd {
+    color: #000;
+    background-color: #fdd;
+    
+    .x {
+      color: #000;
+      background-color: #faa;
+    }
+  }
+  
+  .ge {
+    font-style: italic;
+  }
+  
+  .gr {
+    color: #a00;
+  }
+  
+  .gh {
+    color: #999;
+  }
+  
+  .gi {
+    color: #000;
+    background-color: #dfd;
+    
+    .x {
+      color: #000;
+      background-color: #afa;
+    }
+  }
+  
+  .go {
+    color: #888;
+  }
+  
+  .gp {
+    color: #555;
+  }
+  
+  .gs {
+    font-weight: bold;
+  }
+  
+  .gu {
+    color: #aaa;
+  }
+  
+  .gt {
+    color: #a00;
+  }
+  
+  .kc,
+  .kd,
+  .kp,
+  .kr {
+    font-weight: bold;
+  }
+  
+  .kt {
+    color: #5d76bf;
+    font-weight: bold;
+  }
+  
+  .m {
+    color: #099;
+  }
+  
+  .s {
+    color: #ec2355;
+  }
+  
+  .na {
+    color: teal;
+  }
+  
+  .nb {
+    color: #0086b3;
+  }
+  
+  .nc {
+    color: #5d76bf;
+    font-weight: bold;
+  }
+  
+  .no {
+    color: teal;
+  }
+  
+  .ni {
+    color: purple;
+  }
+  
+  .ne {
+    color: #900;
+    font-weight: bold;
+  }
+  
+  .nf {
+    color: #900;
+    font-weight: bold;
+  }
+  
+  .nn {
+    color: #555;
+  }
+  
+  .nt {
+    color: #4d65dc;
+  }
+  
+  .nv {
+    color: teal;
+  }
+  
+  .ow {
+    font-weight: bold;
+  }
+  
+  .w {
+    color: #bbb;
+  }
+  
+  .mf,
+  .mh,
+  .mi,
+  .mo {
+    color: #099;
+  }
+  
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .s1 {
+    color: #ec2355;
+  }
+  
+  .sr {
+    color: #009926;
+  }
+  
+  .ss {
+    color: #990073;
+  }
+  
+  .bp {
+    color: #999;
+  }
+  
+  .vc,
+  .vg,
+  .vi {
+    color: teal;
+  }
+  
+  .il {
+    color: #099;
+  }
+}
+
+/* Highlighter-rouge override */
+.highlighter-rouge {
+  .highlight {
+    background: var(--syntax-highlighting-background);
+  }
+}

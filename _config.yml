@@ -4,8 +4,7 @@ description: Baleon is a stylish and multifunctional theme for Jekyll.
 url: "https://yourusername.github.io"   # Your production URL (without a trailing slash)
 baseurl: ""                               # Leave empty if hosting at the site root or set to "/your-repo-name" if using a subpath
 
-# Theme & Plugins
-theme: jekyll-theme-primer              # Change this to your theme if different
+# Plugins
 plugins:
   - jekyll-feed                        # Generates an RSS feed
   - jekyll-seo-tag                     # Adds SEO tags to your pages

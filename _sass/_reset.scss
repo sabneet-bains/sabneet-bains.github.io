@@ -1,22 +1,55 @@
 /* _reset.scss */
-.list-reset {
-  list-style-type: none;
+
+/* Reset default margins and paddings for common elements */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+blockquote,
+pre,
+dl, dd,
+ol, ul,
+fieldset,
+legend,
+figure,
+hr {
   margin: 0;
   padding: 0;
 }
 
-.clearfix::after,
-.clearfix::before {
-  content: "";
-  display: table;
-  clear: both;
+/* Remove bottom margin for nested lists */
+li > ul,
+li > ol {
+  margin-bottom: 0;
 }
 
-.screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
+/* Table reset: remove spacing between cells */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set a default bottom margin for common elements */
+h1, h2, h3, h4, h5, h6,
+ul, ol,
+dl,
+blockquote,
+p,
+address,
+hr,
+table,
+fieldset,
+figure,
+pre {
+  margin-bottom: 32px;
+}
+
+/* Set left margin for list elements and definition descriptions */
+ul, ol, dd {
+  margin-left: 16px;
+}
+
+/* Provide a default bottom margin for list items */
+ul li,
+ol li {
+  margin-bottom: 4px;
 }

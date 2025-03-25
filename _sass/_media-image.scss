@@ -1,0 +1,40 @@
+// Media and Image Elements
+// -------------------------
+
+// Base styling for images and media wrappers
+img,
+.lightense-wrap {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+// Styling for elements immediately following images or galleries (e.g., captions)
+img + em,
+.gallery + em {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: var(--text-alt-color);
+}
+
+// Styling for links within the image caption blocks
+img + em a,
+.gallery + em a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0, 0, 0, 0);
+  font-weight: 500;
+  color: var(--link-color);
+  transition: all 0.25s;
+}
+
+// Hover state for links within the caption blocks
+img + em a:hover,
+.gallery + em a:hover {
+  text-decoration-color: var(--link-color);
+}

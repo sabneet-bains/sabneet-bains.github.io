@@ -1,15 +1,7 @@
-/* _typography.scss */
-body {
-  font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-}
+// Typography and Text Elements
+// ------------------------------
 
+// Headings (h1-h6)
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
   font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -19,19 +11,39 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading-font-color);
 }
 
+// Emphasis within Headings
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-family: "Old Standard TT", "Times New Roman", Georgia, serif;
   font-style: italic;
   font-weight: normal;
 }
 
-h1 { font-size: 36px; }
-h2 { font-size: 28px; }
-h3 { font-size: 24px; }
-h4 { font-size: 20px; }
-h5 { font-size: 18px; }
-h6 { font-size: 16px; }
+// Specific Heading Sizes
+h1 {
+  font-size: 36px;
+}
 
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+// Blockquotes
 blockquote {
   position: relative;
   margin: 96px 0 48px;
@@ -52,6 +64,7 @@ blockquote::before {
   transform: translateX(-50%);
   font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2em;
+  line-height: 0;
   color: var(--heading-font-color);
 }
 
@@ -72,7 +85,33 @@ blockquote cite {
   color: var(--heading-font-color);
 }
 
-/* Preformatted text */
+// Responsive Adjustments for Blockquotes
+@media (max-width: 768px) {
+  blockquote {
+    font-size: 32px;
+  }
+
+  blockquote cite {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  blockquote {
+    margin: 80px 0 40px;
+  }
+
+  blockquote::before {
+    top: -0.1em;
+  }
+
+  blockquote cite {
+    margin-top: 8px;
+  }
+}
+
+// Preformatted Text
 pre {
   overflow: auto;
   padding: 15px;
