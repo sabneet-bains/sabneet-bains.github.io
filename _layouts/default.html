@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="{{ page.body_class | default: 'home-page' }}">
+    <div class="global-wrap">
+      {% include header.html %}
+      <div class="container">
+        <div class="row">
+          <div class="col col-5 col-d-12">
+            {% include sidebar.html %}
+          </div>
+          <div class="col col-7 col-d-12">
+            {% include section-projects.html %}
+            {% include section-testimonials.html %}
+            {% include section-blog.html %}
+            {% include section-faq.html %}
+            {% include section-gallery.html %}
+            {% include section-subscribe.html %}
+          </div>
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
+    <div class="overlay"></div>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+  </body>
+</html>
