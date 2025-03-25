@@ -1,9 +1,4 @@
 /* _typography.scss */
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-
-/* Base body typography */
 body {
   font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -12,15 +7,22 @@ body {
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 12px;
   font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.3;
+  letter-spacing: normal;
   color: var(--heading-font-color);
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  font-family: "Old Standard TT", "Times New Roman", Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
 }
 
 h1 { font-size: 36px; }
@@ -30,7 +32,6 @@ h4 { font-size: 20px; }
 h5 { font-size: 18px; }
 h6 { font-size: 16px; }
 
-/* Blockquotes */
 blockquote {
   position: relative;
   margin: 96px 0 48px;
@@ -51,7 +52,6 @@ blockquote::before {
   transform: translateX(-50%);
   font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 2em;
-  line-height: 0;
   color: var(--heading-font-color);
 }
 
@@ -65,58 +65,21 @@ blockquote cite {
   font-family: "Inter Tight", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
+  font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1;
   color: var(--heading-font-color);
 }
 
-/* Responsive adjustments for blockquotes */
-@media (max-width: 768px) {
-  blockquote {
-    font-size: 32px;
-  }
-  blockquote cite {
-    margin-top: 12px;
-    font-size: 14px;
-  }
+/* Preformatted text */
+pre {
+  overflow: auto;
+  padding: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: var(--heading-font-color);
 }
-
-@media (max-width: 576px) {
-  blockquote {
-    margin: 80px 0 40px;
-  }
-  blockquote::before {
-    top: -0.1em;
-  }
-  blockquote cite {
-    margin-top: 8px;
-  }
-}
-
-/* Paragraphs */
-p {
-  margin-bottom: 32px;
-}
-
-/* Links */
-a {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: rgba(0, 0, 0, 0);
-  color: var(--link-color);
-  transition: all 0.25s ease;
-}
-a:hover {
-  text-decoration-color: var(--link-color);
-}
-
-/* Inline code elements */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Additional typography-related styles can be added here as needed */

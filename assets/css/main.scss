@@ -2,9 +2,11 @@
 layout: null
 ---
 
-@import "variables";
-@import "reset";
-@import "typography";
-@import "layout";
-@import "plugins";
-@import "components";
+@import 'variables';
+@import 'vendor';
+@import 'reset';
+@import 'typography';
+@import 'layout';
+@import 'components';
+@import 'responsive';
+
