@@ -1,39 +1,53 @@
+/*--------------------------------------------------------------
+   FAQ Item Base Styles
+--------------------------------------------------------------*/
 .faq .faq__item {
   padding: 0 24px;
   margin-bottom: 12px;
   border: 1px solid var(--border-color);
   border-radius: 24px;
   outline: none;
-  transition: all .25s;
-  cursor: pointer
+  transition: all 0.25s;
+  cursor: pointer;
 }
 
+/* Remove bottom margin for the last FAQ item */
 .faq .faq__item:last-child {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
+/*--------------------------------------------------------------
+   FAQ Item Hover & Open States
+--------------------------------------------------------------*/
 .faq .faq__item:hover {
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
 }
 
+/* When the FAQ item is open, keep the background consistent */
 .faq .faq__item[data-name=open] {
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
 }
 
+/* Rotate the SVG icon when the FAQ item is open */
 .faq .faq__item[data-name=open] .faq__title svg {
-  transform: rotate(45deg) translateZ(0px)
+  transform: rotate(45deg) translateZ(0px);
 }
 
+/* Change the SVG path fill in open state */
 .faq .faq__item[data-name=open] .faq__title svg path {
-  fill: var(--heading-font-color)
+  fill: var(--heading-font-color);
 }
 
+/* Reveal the FAQ description when open */
 .faq .faq__item[data-name=open] .faq__description {
   max-height: 400px;
   opacity: 1;
-  transition: all .25s
+  transition: all 0.25s;
 }
 
+/*--------------------------------------------------------------
+   FAQ Title Styles
+--------------------------------------------------------------*/
 .faq .faq__title {
   position: relative;
   display: flex;
@@ -41,47 +55,54 @@
   justify-content: space-between;
   padding: 20px 0;
   margin-bottom: 0;
-  font-family: "Inter Tight",Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: normal
+  letter-spacing: normal;
 }
 
+/* SVG within the FAQ title */
 .faq .faq__title svg {
   min-width: 15px;
   margin-left: 12px;
-  transition: all .25s
+  transition: all 0.25s;
 }
 
+/*--------------------------------------------------------------
+   FAQ Description Styles
+--------------------------------------------------------------*/
 .faq .faq__description {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all .25s;
-  will-change: opacity,max-height
+  transition: all 0.25s;
+  will-change: opacity, max-height;
 }
 
 .faq .faq__description p {
   font-size: 16px;
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
-@media(max-width: 1024px) {
+/*--------------------------------------------------------------
+   Responsive Adjustments
+--------------------------------------------------------------*/
+@media (max-width: 1024px) {
   .faq .faq__item {
-      border-radius:20px
+    border-radius: 20px;
   }
 }
 
-@media(max-width: 576px) {
+@media (max-width: 576px) {
   .faq .faq__item {
-      padding:0 20px
+    padding: 0 20px;
   }
-
+  
   .faq .faq__title {
-      font-size: 16px
+    font-size: 16px;
   }
-
+  
   .faq .faq__description p {
-      margin-bottom: 24px
+    margin-bottom: 24px;
   }
 }

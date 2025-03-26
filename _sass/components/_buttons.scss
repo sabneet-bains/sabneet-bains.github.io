@@ -1,3 +1,7 @@
+
+/*--------------------------------------------------------------
+   Base Button Styles
+--------------------------------------------------------------*/
 .button {
   position: relative;
   z-index: 1;
@@ -14,12 +18,15 @@
   border: none;
   outline: 0;
   cursor: pointer;
-  transition: all .25s;
+  transition: all 0.25s;
   color: var(--button-color);
   background: var(--button-background-color);
-  overflow: hidden
+  overflow: hidden;
 }
 
+/*--------------------------------------------------------------
+   Button Hover Overlay
+--------------------------------------------------------------*/
 .button::before {
   content: "";
   position: absolute;
@@ -31,37 +38,29 @@
   height: 100%;
   opacity: 0;
   will-change: transform;
-  transition: opacity .25s;
-  background: var(--button-background-hover)
+  transition: opacity 0.25s;
+  background: var(--button-background-hover);
 }
 
-.button:hover {
-  color: var(--button-color)
+/* Activate overlay on hover */
+.button:hover::before {
+  opacity: 1;
 }
 
-.button:hover:hover:before {
-  opacity: 1
-}
-
+/*--------------------------------------------------------------
+   Accent Button Variant
+--------------------------------------------------------------*/
 .button--accent {
-  background: var(--button-gradient-color)
+  background: var(--button-gradient-color);
 }
 
 .button--accent::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  will-change: transform;
-  transition: opacity .25s;
-  background: var(--button-gradient-hover)
+  background: var(--button-gradient-hover);
 }
 
+/*--------------------------------------------------------------
+   Big Button Variant
+--------------------------------------------------------------*/
 .button--big {
-  width: 100%
+  width: 100%;
 }

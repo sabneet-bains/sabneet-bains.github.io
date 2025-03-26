@@ -1,68 +1,80 @@
+/*--------------------------------------------------------------
+   Article Container
+--------------------------------------------------------------*/
 .article {
   position: relative;
-  margin-bottom: 32px
+  margin-bottom: 32px;
 }
 
+/*--------------------------------------------------------------
+   Article Content & Hover Effects
+--------------------------------------------------------------*/
 .article__content {
   border-radius: 24px;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .article__content:hover .article__image img {
-  transform: scale3d(1.04, 1.04, 1)
+  transform: scale3d(1.04, 1.04, 1);
 }
 
 .article__content:hover .video-icon {
   transform: translate(-50%, -50%) scale(1.1);
-  will-change: transform
+  will-change: transform;
 }
 
 .article__content:hover .article__info {
-  background: var(--background-alt-color-2)
+  background: var(--background-alt-color-2);
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .article__content {
-      border-radius:20px
+    border-radius: 20px;
   }
 }
 
+/*--------------------------------------------------------------
+   Article Head & Image
+--------------------------------------------------------------*/
 .article__head {
-  position: relative
+  position: relative;
 }
 
 .article__head .article__image {
   position: relative;
   transform: translate(0);
   display: block;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;
   border-radius: 24px 24px 0 0;
   overflow: hidden;
-  background: var(--background-alt-color-2)
+  background: var(--background-alt-color-2);
 }
 
 .article__head .article__image img {
   position: absolute;
   width: 100%;
   height: 100%;
-  will-change: transform;
   object-fit: cover;
   user-select: none;
-  transition: all .35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+  will-change: transform;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 }
 
-@supports not (aspect-ratio: 4/3) {
+@supports not (aspect-ratio: 4 / 3) {
   .article__head .article__image {
-      padding-bottom:75%
+    padding-bottom: 75%;
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .article__head .article__image {
-      border-radius:20px 20px 0 0
+    border-radius: 20px 20px 0 0;
   }
 }
 
+/*--------------------------------------------------------------
+   Video Icon
+--------------------------------------------------------------*/
 .video-icon {
   position: absolute;
   z-index: 1;
@@ -77,18 +89,19 @@
   border-radius: 50%;
   border: 1px solid var(--white);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
-  box-shadow: 0px 100px 80px rgba(0,0,0,.07),0px 41.7776px 33.4221px rgba(0,0,0,.0503198),0px 22.3363px 17.869px rgba(0,0,0,.0417275);
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+    0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275);
   overflow: hidden;
   pointer-events: none;
-  transition: all .25s;
-  will-change: transform
+  transition: all 0.25s;
+  will-change: transform;
 }
 
-@supports(-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .video-icon {
-      -webkit-backdrop-filter:saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-      background: rgba(0,0,0,0)
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(0, 0, 0, 0);
   }
 }
 
@@ -97,30 +110,36 @@
   fill: var(--white);
   stroke: var(--white);
   stroke-linejoin: round;
-  stroke-width: 8
+  stroke-width: 8;
 }
 
+/*--------------------------------------------------------------
+   Article Info Section
+--------------------------------------------------------------*/
 .article__info {
   padding: 20px 20px 24px;
   border-radius: 0 0 24px 24px;
   background: var(--background-alt-color);
-  transition: all .35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .article__info {
-      border-radius:0 0 20px 20px
+    border-radius: 0 0 20px 20px;
   }
 }
 
+/*--------------------------------------------------------------
+   Article Title & Meta
+--------------------------------------------------------------*/
 .article__title {
   margin-bottom: 4px;
   font-size: 18px;
-  font-weight: 500
+  font-weight: 500;
 }
 
 .article__title a {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .article__meta {
@@ -129,18 +148,21 @@
   flex-wrap: wrap;
   column-gap: 6px;
   font-size: 14px;
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
+/*--------------------------------------------------------------
+   Article Tags
+--------------------------------------------------------------*/
 .article__tag {
-  text-decoration: none
+  text-decoration: none;
 }
 
 .article__tag:after {
   content: ",";
-  display: inline-block
+  display: inline-block;
 }
 
 .article__tag:last-child:after {
-  content: ""
+  content: "";
 }

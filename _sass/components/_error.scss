@@ -1,19 +1,25 @@
+/*--------------------------------------------------------------
+   Error Container Styles
+--------------------------------------------------------------*/
 .error {
-  text-align: center
+  text-align: center;
 }
 
 .error .error__title {
   margin-bottom: 24px;
   font-size: 120px;
-  line-height: 1
+  line-height: 1;
 }
 
 .error .error__text {
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
-@media(max-width: 576px) {
+/*--------------------------------------------------------------
+   Responsive Adjustments for Error Title
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
   .error .error__title {
-      font-size:80px
+    font-size: 80px;
   }
 }

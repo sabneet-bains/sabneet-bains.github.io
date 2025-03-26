@@ -1,33 +1,45 @@
+/*--------------------------------------------------------------
+   Form Group Container
+--------------------------------------------------------------*/
 .form__group {
-  margin-bottom: 24px
+  margin-bottom: 24px;
 }
 
 .form__group:last-child {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
+/*--------------------------------------------------------------
+   Form Input Base Styles
+--------------------------------------------------------------*/
 .form__group .form__input {
   width: 100%;
   padding: 16px;
   font-size: 16px;
   border-radius: 12px;
-  border: 2px solid rgba(0,0,0,0);
+  border: 2px solid rgba(0, 0, 0, 0);
   outline: 0;
   color: var(--heading-font-color);
   background: var(--background-alt-color);
   resize: vertical;
-  transition: all .25s
+  transition: all 0.25s;
 }
 
+/*--------------------------------------------------------------
+   Form Input Placeholder
+--------------------------------------------------------------*/
 .form__group .form__input::placeholder {
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
+/*--------------------------------------------------------------
+   Form Input Hover & Focus States
+--------------------------------------------------------------*/
 .form__group .form__input:hover {
-  border-color: var(--border-color)
+  border-color: var(--border-color);
 }
 
 .form__group .form__input:focus {
   border-color: var(--brand-color);
-  background: var(--background-color)
+  background: var(--background-color);
 }

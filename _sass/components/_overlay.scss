@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+   Base Overlay Styles
+--------------------------------------------------------------*/
 .overlay {
   position: fixed;
   top: 0;
@@ -6,17 +9,23 @@
   background: var(--background-color);
   opacity: 0;
   visibility: hidden;
-  transition: opacity .25s
+  transition: opacity 0.25s;
 }
 
-@supports(-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+/*--------------------------------------------------------------
+   Backdrop Filter Support for Modern Browsers
+--------------------------------------------------------------*/
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .overlay {
-      -webkit-backdrop-filter:saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-      background: var(--background-rgba)
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background: var(--background-rgba);
   }
 }
 
+/*--------------------------------------------------------------
+   Active Overlay State
+--------------------------------------------------------------*/
 .overlay.active {
   z-index: 100;
   display: flex;
@@ -25,10 +34,13 @@
   opacity: 1;
   visibility: visible;
   cursor: zoom-out;
-  transition: opacity .25s
+  transition: opacity 0.25s;
 }
 
+/*--------------------------------------------------------------
+   Overlay Image Styles
+--------------------------------------------------------------*/
 .overlay img {
   max-width: 90%;
-  max-height: 90%
+  max-height: 90%;
 }

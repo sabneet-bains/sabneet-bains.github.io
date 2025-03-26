@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+   Sidebar Base Styles
+--------------------------------------------------------------*/
 .sidebar {
   position: fixed;
   z-index: 5;
@@ -5,59 +8,72 @@
   width: 39%;
   max-width: 450px;
   height: calc(100% - 190px);
-  overflow: auto
+  overflow: auto;
 }
 
-@media(max-width: 1024px) {
+/*--------------------------------------------------------------
+   Sidebar Styles for Desktop (max-width: 1024px)
+--------------------------------------------------------------*/
+@media (max-width: 1024px) {
   .sidebar {
-      position:relative;
-      top: 0;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      padding-bottom: 40px;
-      margin-bottom: 40px;
-      border-bottom: 1px solid var(--border-color);
-      overflow: visible
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    overflow: visible;
   }
-
+  
+  /* Ensure social block margin is reset */
   .sidebar .sidebar__social {
-      margin-bottom: 0
+    margin-bottom: 0;
   }
 }
 
-@media(max-width: 576px) {
+/*--------------------------------------------------------------
+   Sidebar Styles for Mobile (max-width: 576px)
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
   .sidebar {
-      padding-bottom:40px;
-      margin-bottom: 40px
+    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 
   .sidebar .sidebar__meta .sidebar__avatar {
-      min-width: 72px;
-      height: 72px
+    min-width: 72px;
+    height: 72px;
   }
 
   .sidebar .sidebar__content .sidebar__title {
-      font-size: 36px
+    font-size: 36px;
   }
 
   .sidebar .sidebar__social .sidebar__social__list .sidebar__social__link {
-      width: 40px;
-      height: 40px;
-      font-size: 16px
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
+/*--------------------------------------------------------------
+   Sidebar Inner Container
+--------------------------------------------------------------*/
 .sidebar__inner {
   display: flex;
   flex-direction: column;
-  height: 100%
+  height: 100%;
 }
 
+/*--------------------------------------------------------------
+   Sidebar Meta Section
+--------------------------------------------------------------*/
 .sidebar__meta {
   display: flex;
   align-items: center;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .sidebar__meta .sidebar__avatar {
@@ -67,7 +83,7 @@
   transform: translate(0);
   border-radius: 50%;
   overflow: hidden;
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
 }
 
 .sidebar__meta .sidebar__avatar img {
@@ -78,51 +94,58 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  user-select: none
+  user-select: none;
 }
 
 .sidebar__meta .sidebar__info .sidebar__intro {
   font-size: 16px;
-  color: var(--heading-font-color)
+  color: var(--heading-font-color);
 }
 
 .sidebar__meta .sidebar__info .sidebar__role {
   font-size: 16px;
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
+/*--------------------------------------------------------------
+   Sidebar Content Section
+--------------------------------------------------------------*/
 .sidebar__content {
-  margin-bottom: 24px
+  margin-bottom: 24px;
 }
 
 .sidebar__content .sidebar__title {
   margin-bottom: 20px;
   font-size: 44px;
-  line-height: 1.22
+  line-height: 1.22;
 }
 
 .sidebar__content .sidebar__description {
   margin-bottom: 0;
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
+/*--------------------------------------------------------------
+   Sidebar Social Section
+--------------------------------------------------------------*/
 .sidebar__social {
-  margin-bottom: 32px
+  margin-bottom: 32px;
 }
 
 .sidebar__social .sidebar__social__list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px
+  gap: 8px;
 }
 
-.sidebar__social .sidebar__social__list .sidebar__social__item:first-child>.sidebar__social__link {
-  padding-left: 0
+/* Remove left padding for first social link */
+.sidebar__social .sidebar__social__list .sidebar__social__item:first-child > .sidebar__social__link {
+  padding-left: 0;
 }
 
 .sidebar__social .sidebar__social__item {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .sidebar__social .sidebar__social__link {
@@ -135,22 +158,25 @@
   border-radius: 12px;
   text-decoration: none;
   color: var(--heading-font-color);
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
 }
 
 .sidebar__social .sidebar__social__link:hover {
   color: var(--white);
-  background: var(--brand-color)
+  background: var(--brand-color);
 }
 
+/*--------------------------------------------------------------
+   Sidebar Copyright
+--------------------------------------------------------------*/
 .sidebar__copyright {
   margin-top: auto;
   font-size: 16px;
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .sidebar__copyright {
-      display:none
+    display: none;
   }
 }

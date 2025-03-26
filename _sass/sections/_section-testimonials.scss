@@ -1,26 +1,41 @@
+/*--------------------------------------------------------------
+   Testimonials Slider Container
+--------------------------------------------------------------*/
 .testimonials__slider {
   overflow: hidden;
   -webkit-mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
-  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent)
+  mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
 }
 
+/*--------------------------------------------------------------
+   Testimonial Item Base Styles
+--------------------------------------------------------------*/
 .testimonial-item {
   padding: 20px;
   border-radius: 16px;
   overflow: hidden;
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
 }
 
+/*--------------------------------------------------------------
+   Testimonial Content Layout
+--------------------------------------------------------------*/
 .testimonial-item .testimonial-content {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
+/*--------------------------------------------------------------
+   Client Meta Section
+--------------------------------------------------------------*/
 .testimonial-item .client-meta {
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
+/*--------------------------------------------------------------
+   Client Image Container
+--------------------------------------------------------------*/
 .testimonial-item .image-container {
   position: relative;
   transform: translate(0);
@@ -28,42 +43,48 @@
   height: 40px;
   margin-right: 12px;
   border-radius: 50%;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .testimonial-item .image-container img {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  user-select: none
+  user-select: none;
 }
 
+/*--------------------------------------------------------------
+   Client Information
+--------------------------------------------------------------*/
 .testimonial-item .client-info {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .testimonial-item .client-name {
   margin-bottom: 0;
   font-size: 16px;
-  font-weight: 400
+  font-weight: 400;
 }
 
 .testimonial-item .client-designation {
   margin-bottom: 0;
   font-size: 14px;
-  color: var(--text-alt-color)
+  color: var(--text-alt-color);
 }
 
+/*--------------------------------------------------------------
+   Testimonial Icon & Text
+--------------------------------------------------------------*/
 .testimonial-item .testimonial-icon {
-  margin: 16px 0
+  margin: 16px 0;
 }
 
 .testimonial-item .client-text {
   margin-bottom: 0;
-  font-size: 16px
+  font-size: 16px;
 }

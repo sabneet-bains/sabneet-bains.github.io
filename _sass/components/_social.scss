@@ -1,18 +1,26 @@
+/*--------------------------------------------------------------
+   Social List Styles
+--------------------------------------------------------------*/
 .social .social__list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px
+  gap: 8px;
 }
 
-.social .social__list .social__item:first-child>.social__link {
-  padding-left: 0
+/* Remove left padding for the first social link in the list */
+.social .social__list .social__item:first-child > .social__link {
+  padding-left: 0;
 }
 
+/* Reset margin for social items */
 .social .social__item {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
+/*--------------------------------------------------------------
+   Social Link Base Styles
+--------------------------------------------------------------*/
 .social .social__link {
   display: flex;
   justify-content: center;
@@ -23,24 +31,28 @@
   border-radius: 12px;
   text-decoration: none;
   color: var(--heading-font-color);
-  background: var(--background-alt-color)
+  background: var(--background-alt-color);
 }
 
+/* Hover State for Social Links */
 .social .social__link:hover {
   color: var(--white);
-  background: var(--brand-color)
+  background: var(--brand-color);
 }
 
-@media(max-width: 1024px) {
+/*--------------------------------------------------------------
+   Responsive Adjustments
+--------------------------------------------------------------*/
+@media (max-width: 1024px) {
   .social {
-      order:-1
+    order: -1;
   }
 }
 
-@media(max-width: 576px) {
+@media (max-width: 576px) {
   .social .social__link {
-      width:40px;
-      height: 40px;
-      font-size: 16px
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }
