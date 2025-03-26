@@ -1,0 +1,33 @@
+.form__group {
+  margin-bottom: 24px
+}
+
+.form__group:last-child {
+  margin-bottom: 0
+}
+
+.form__group .form__input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid rgba(0,0,0,0);
+  outline: 0;
+  color: var(--heading-font-color);
+  background: var(--background-alt-color);
+  resize: vertical;
+  transition: all .25s
+}
+
+.form__group .form__input::placeholder {
+  color: var(--text-alt-color)
+}
+
+.form__group .form__input:hover {
+  border-color: var(--border-color)
+}
+
+.form__group .form__input:focus {
+  border-color: var(--brand-color);
+  background: var(--background-color)
+}
