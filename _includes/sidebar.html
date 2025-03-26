@@ -1,65 +1,74 @@
 <section class="sidebar">
-    <div class="sidebar__inner">
-      <div class="sidebar__meta">
-        <div class="sidebar__avatar">
-          <img class="lazy" data-src="/images/01.jpg" alt="Kevin Jones">
-        </div>
-        <div class="sidebar__info">
-          <div class="sidebar__intro">Hey, I’m Kevin Jones</div>
-          <span class="sidebar__role">Product Designer</span>
-        </div>
+  <div class="sidebar__inner">
+    <!-- Sidebar meta: Avatar and intro -->
+    <div class="sidebar__meta">
+      <div class="sidebar__avatar">
+        <!-- Using native lazy loading; ensure a fallback lazy-loading script is in place if needed -->
+        <img class="lazy" data-src="/images/01.jpg" loading="lazy" alt="Kevin Jones">
       </div>
-      <div class="sidebar__content">
-        <h1 class="sidebar__title">
-          One Stop Daily <em>News,</em>
-          <em>Article,</em>
-          <em>Inspiration</em>.
-        </h1>
-        <p class="sidebar__description">Welcome to a unique world of creativity and innovation! Here you'll find engaging articles, helpful tips, and captivating stories from the realms of design.</p>
-      </div>
-      <div class="sidebar__social">
-        <ul class="sidebar__social__list list-reset">
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-          </li>
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://mastodon.social" target="_blank" rel="noopener" aria-label="Mastodon">
-              <i class="fa-brands fa-mastodon"></i>
-            </a>
-          </li>
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://spotify.com" target="_blank" rel="noopener" aria-label="Spotify">
-              <i class="fa-brands fa-spotify"></i>
-            </a>
-          </li>
-          <li class="sidebar__social__item">
-            <a class="sidebar__social__link" href="https://vimeo.com" target="_blank" rel="noopener" aria-label="Vimeo">
-              <i class="fa-brands fa-vimeo-v"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="sidebar__copyright">
-        2024 &copy;<a href="/">Baleon</a>
-        . Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.
+      <div class="sidebar__info">
+        <div class="sidebar__intro">Hey, I’m Kevin Jones</div>
+        <span class="sidebar__role">Product Designer</span>
       </div>
     </div>
-  </section>
-  
+
+    <!-- Sidebar content: Title and description -->
+    <div class="sidebar__content">
+      <h1 class="sidebar__title">
+        One Stop Daily <em>News,</em>
+        <em>Article,</em>
+        <em>Inspiration</em>.
+      </h1>
+      <p class="sidebar__description">
+        Welcome to a unique world of creativity and innovation! Here you'll find engaging articles, helpful tips, and captivating stories from the realms of design.
+      </p>
+    </div>
+
+    <!-- Social links section with accessible icons -->
+    <div class="sidebar__social">
+      <ul class="sidebar__social__list list-reset">
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://mastodon.social" target="_blank" rel="noopener" aria-label="Mastodon">
+            <i class="fa-brands fa-mastodon"></i>
+          </a>
+        </li>
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://spotify.com" target="_blank" rel="noopener" aria-label="Spotify">
+            <i class="fa-brands fa-spotify"></i>
+          </a>
+        </li>
+        <li class="sidebar__social__item">
+          <a class="sidebar__social__link" href="https://vimeo.com" target="_blank" rel="noopener" aria-label="Vimeo">
+            <i class="fa-brands fa-vimeo-v"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sidebar copyright information -->
+    <div class="sidebar__copyright">
+      2024 &copy;<a href="/"> Baleon</a>
+      . Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.
+    </div>
+  </div>
+</section>

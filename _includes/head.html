@@ -1,36 +1,54 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Baleon</title>
   <meta name="description" content="Baleon is a stylish and multifunctional theme for Jekyll">
   <link rel="canonical" href="https://baleon.netlify.app/">
-  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
-  <!-- Twitter Card -->
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+
+  <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Baleon">
   <meta name="twitter:description" content="Baleon is a stylish and multifunctional theme for Jekyll">
   <meta name="twitter:image:src" content="https://baleon.netlify.app/images/100.jpg">
-  <!-- Facebook OpenGraph -->
+  
+  <!-- OpenGraph Metadata (used by LinkedIn, GitHub, Reddit, and others) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Baleon">
   <meta property="og:title" content="Baleon">
   <meta property="og:description" content="Baleon is a stylish and multifunctional theme for Jekyll">
   <meta property="og:image" content="https://baleon.netlify.app/images/100.jpg">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" as="style">
+  <meta property="og:url" content="https://baleon.netlify.app/">
+  
+  <!-- Preconnect and Preload for Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <!-- Normalize.css CDN (v8.0.1) -->
+
+  <!-- Normalize.css via CDN with Integrity -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Font Awesome CDN (v6.7.2) -->
+
+  <!-- Font Awesome CDN with Integrity -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- External CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Theme Script: Apply Dark Mode as Early as Possible -->
   <script>
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.setAttribute("dark", "");
-      document.documentElement.classList.add('dark-mode');
-    }
+    (function() {
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.setAttribute("dark", "");
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
   </script>
+  
+  <!-- Fallback for users with JavaScript disabled -->
+  <noscript>
+    <style>
+      /* Ensure the default theme is displayed properly */
+      .dark-mode { display: none; }
+    </style>
+  </noscript>
 </head>
-
-
