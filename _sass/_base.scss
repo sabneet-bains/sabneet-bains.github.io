@@ -1,0 +1,44 @@
+*,*::after,*::before {
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Inter Tight",Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+body.search-is-visible {
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto
+}
+
+body.disable-animation *,body.disable-animation *::after,body.disable-animation *::before {
+  transition: none !important
+}
+
+@media(max-width: 576px) {
+  body {
+      font-size:16px
+  }
+}
+
+.global-wrap.is-active {
+  overflow-x: hidden;
+  overflow-y: scroll
+}
+
+.content {
+  margin: 60px 0
+}
+
+@media(max-width: 576px) {
+  .content {
+      margin:40px 0
+  }
+}
