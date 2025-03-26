@@ -1,0 +1,19 @@
+.error {
+  text-align: center
+}
+
+.error .error__title {
+  margin-bottom: 24px;
+  font-size: 120px;
+  line-height: 1
+}
+
+.error .error__text {
+  color: var(--text-alt-color)
+}
+
+@media(max-width: 576px) {
+  .error .error__title {
+      font-size:80px
+  }
+}

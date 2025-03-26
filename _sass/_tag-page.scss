@@ -1,0 +1,44 @@
+.tag-page {
+  margin-bottom: -32px
+}
+
+.tag-page .tags.is-hidden {
+  display: none
+}
+
+.tag-page__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  margin-bottom: 32px;
+  font-size: 52px;
+  line-height: 1.2
+}
+
+.tag-page__head .tag-page__title {
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.2
+}
+
+.tag-page__head .tag-page__counter {
+  font-family: "Old Standard TT","Times New Roman",Georgia,serif;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  color: var(--heading-font-color)
+}
+
+@media(max-width: 1024px) {
+  .tag-page__head {
+      margin-bottom:24px;
+      font-size: 46px
+  }
+}
+
+@media(max-width: 576px) {
+  .tag-page__head {
+      font-size:36px
+  }
+}
