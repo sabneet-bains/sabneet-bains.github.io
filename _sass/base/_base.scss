@@ -1,0 +1,145 @@
+*,*::after,*::before {
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Inter Tight",Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+body.search-is-visible {
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto
+}
+
+body.disable-animation *,body.disable-animation *::after,body.disable-animation *::before {
+  transition: none !important
+}
+
+@media(max-width: 576px) {
+  body {
+      font-size:16px
+  }
+}
+
+.global-wrap.is-active {
+  overflow-x: hidden;
+  overflow-y: scroll
+}
+
+.content {
+  margin: 60px 0
+}
+
+@media(max-width: 576px) {
+  .content {
+      margin:40px 0
+  }
+}
+
+img,.lightense-wrap {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle
+}
+
+img+em,.gallery+em {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: var(--text-alt-color)
+}
+
+img+em a,.gallery+em a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0,0,0,0);
+  font-weight: 500;
+  color: var(--link-color);
+  transition: all .25s
+}
+
+img+em a:hover,.gallery+em a:hover {
+  text-decoration-color: var(--link-color)
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0,0,0,0);
+  color: var(--link-color);
+  transition: all .25s
+}
+
+a:hover {
+  text-decoration-color: var(--link-color)
+}
+
+hr {
+  position: relative;
+  height: 1px;
+  margin: 60px 0;
+  font-size: 16px;
+  border: 0;
+  background: var(--border-color)
+}
+
+.table-container {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto
+}
+
+table {
+  font-size: 12px;
+  color: var(--dark);
+  width: 100%;
+  border-width: 1px;
+  border-color: var(--background-alt-color);
+  border-collapse: collapse;
+  color: var(--heading-font-color)
+}
+
+table th {
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid var(--th-color);
+  color: var(--heading-font-color);
+  font-weight: 700
+}
+
+table tr {
+  background-color: var(--tr-color);
+  transition: all .3s ease
+}
+
+table tr:nth-child(even) {
+  background-color: rgba(0,0,0,0)
+}
+
+table td {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--border-color)
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity .3s ease-in-out
+}
+
+.lazy.loaded {
+  opacity: 1
+}

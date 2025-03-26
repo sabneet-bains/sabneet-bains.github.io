@@ -1,16 +1,48 @@
 ---
 ---
 
-@import "styles";
-@import "global-element-styling";
-@import "syntax-highlighting";
-@import "grid";
-@import "splide";
-@import "base";
-@import "typography";
-@import "rest";
+// ======================================================
+// Abstracts
+// ======================================================
+@import "abstracts/variables";
 
-@import "form";
-@import "post";
-@import "error";
-@import "tag-page";
+// ======================================================
+// Base Styles
+// ======================================================
+@import "base/reset";         // Global resets
+@import "base/base";          // Base element styles (e.g., global box-sizing, body, etc.)
+@import "base/typography";    // Headings, paragraphs, blockquotes, pre, etc.
+@import "base/syntax";        // Syntax highlighting styles
+@import "base/utilities";     // Utility classes (e.g., clearfix, list-reset, screen-reader-text)
+
+// ======================================================
+// Layout Components
+// ======================================================
+@import "layout/header";      // Header styles (including logo, navigation, etc.)
+@import "layout/footer";      // Footer styles (includes footer__info, copyright, etc.)
+@import "layout/grid";        // Grid system (container, row, columns, push/pull, etc.)
+@import "layout/sidebar";     // Sidebar styles (if used)
+
+// ======================================================
+// Reusable Components
+// ======================================================
+@import "components/buttons";   // Button styles (_buttons.scss)
+@import "components/error";     // Error page/component styles (_error.scss)
+@import "components/forms";     // Form controls (_forms.scss)
+@import "components/gallery";   // Gallery component styles (_gallery.scss)
+@import "components/overlay";   // Overlay/modal/lightbox styles (_overlay.scss)
+@import "components/social";    // Social links styles (_social.scss)
+@import "components/splide";    // Splide slider styles (_splide.scss)
+
+// ======================================================
+// Section/Template Specific Styles
+// ======================================================
+@import "sections/article";              // Article page/post styles
+@import "sections/section-blog";         // Blog section styles
+@import "sections/section-faq";          // FAQ section styles
+@import "sections/section-gallery";      // Gallery section styles
+@import "sections/section-headings";     // Section headings & general section layout
+@import "sections/section-projects";     // Projects section styles
+@import "sections/section-subscribe";    // Subscribe section styles
+@import "sections/section-testimonials"; // Testimonials section styles
+@import "sections/tag-page";             // Tag page styles
