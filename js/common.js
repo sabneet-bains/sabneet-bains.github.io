@@ -124,12 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
         },
       },
       breakpoints: {
-        1024: {
-          perPage: 2
-        },
-        768: {
-          perPage: 1
-        }
+        1024: { perPage: 2 },
+        768: { perPage: 1 }
       }
     }).mount(window.splide.Extensions);
   }
@@ -141,12 +137,15 @@ document.addEventListener("DOMContentLoaded", function() {
   const faqToggles = document.querySelectorAll(".faq .faq__toggle");
 
   function toggleAccordion() {
-    // Check current state
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    // Toggle the aria-expanded attribute
-    this.setAttribute('aria-expanded', !isExpanded);
-    // Find the FAQ description immediately following the button
-    const description = this.parentElement.nextElementSibling;
+    // Get the parent FAQ item container
+    const faqItem = this.closest('.faq__item');
+    // Determine current expanded state from the container
+    const isExpanded = faqItem.getAttribute('aria-expanded') === 'true';
+    // Toggle the aria-expanded attribute on the container
+    faqItem.setAttribute('aria-expanded', !isExpanded);
+
+    // Find the FAQ description element within the container
+    const description = faqItem.querySelector('.faq__description');
     if (description) {
       if (!isExpanded) {
         description.removeAttribute('hidden');
