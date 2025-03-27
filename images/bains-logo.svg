@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Name" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.08 41.4"><defs><style>.cls-1{font-family:OldStandardTT-Bold, 'Old Standard TT';font-size:36px;font-weight:700;}.cls-2{fill:#6c25fe;}.cls-3{fill:#1c1c1e;}</style></defs><text class="cls-1" transform="translate(0 30.82)"><tspan class="cls-2" x="0" y="0">.</tspan><tspan class="cls-3" x="10.08" y="0">Bains</tspan></text></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 27">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: OldStandardTT-Bold, 'Old Standard TT';
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #1d1d1f;
+      }
+
+      .cls-3 {
+        fill: #6653a3;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(-1.2 26.33)"><tspan class="cls-3" x="0" y="0">.</tspan><tspan class="cls-2" x="10.08" y="0">Bains</tspan></text>
+</svg>
