@@ -60,6 +60,13 @@
   letter-spacing: normal;
 }
 
+/* Ensure the FAQ toggle button fills the full width */
+.faq .faq__title button.faq__toggle {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
 /* SVG within the FAQ title (inside the button) */
 .faq .faq__title svg {
   min-width: 15px;
@@ -106,3 +113,4 @@
     margin-bottom: 24px;
   }
 }
+
