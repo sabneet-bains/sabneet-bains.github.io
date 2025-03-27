@@ -5,16 +5,17 @@
         <!-- Logo section with light and dark versions -->
         <div class="logo">
           <a class="logo__link" href="/">
-            <img class="logo__image" src="/images/logo.svg" alt="Baleon logo">
-            <img class="logo__image__dark" src="/images/logo-dark.svg" alt="Baleon logo in dark mode">
+            <!-- Use your custom SVG logos with defined dimensions for optimization -->
+            <img class="logo__image" src="/images/sabneet-logo.svg" alt="Sabneet Bains logo" width="150" height="auto">
+            <img class="logo__image__dark" src="/images/sabneet-logo-dark.svg" alt="Sabneet Bains logo in dark mode" width="150" height="auto">
           </a>
         </div>
         <!-- Hamburger menu button for mobile navigation -->
-        <button class="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" id="hamburger-toggle">
           <span class="hamburger__bar"></span>
         </button>
         <!-- Main navigation menu with ARIA label for accessibility -->
-        <nav class="main-nav" aria-label="Main menu">
+        <nav class="main-nav" aria-label="Main menu" id="main-nav">
           <div class="main-nav__box">
             <ul class="nav__list list-reset">
               <li class="nav__item">
@@ -24,18 +25,18 @@
                 <a href="/projects/" class="nav__link">Projects</a>
               </li>
               <li class="nav__item">
-                <a href="/blog/" class="nav__link">Blog</a>
+                <a href="/research/" class="nav__link">Research</a>
               </li>
               <li class="nav__item">
                 <a href="/about/" class="nav__link">About</a>
               </li>
               <li class="nav__item">
-                <a href="/elements/" class="nav__link">Elements</a>
+                <a href="/resume/" class="nav__link">Resume</a>
               </li>
             </ul>
           </div>
           <div class="nav-button">
-            <!-- Theme toggle button for dark/light mode -->
+            <!-- Theme toggle button for dark/light mode remains unchanged -->
             <button class="toggle-theme toggle-theme-js" aria-label="Toggle dark/light mode">
               <span class="toggle-icon toggle-moon" title="Dark mode" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -56,3 +57,17 @@
     </div>
   </div>
 </header>
+
+<!-- Inline script to toggle hamburger menu state -->
+<script>
+  const hamburger = document.getElementById('hamburger-toggle');
+  const nav = document.getElementById('main-nav');
+
+  hamburger.addEventListener('click', function() {
+    // Toggle a class to show/hide the navigation menu
+    nav.classList.toggle('is-visible');
+    // Toggle the aria-expanded attribute for accessibility
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+</script>
