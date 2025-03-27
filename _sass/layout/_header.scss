@@ -383,9 +383,9 @@
   fill: var(--link-color);
 }
 
-// .toggle-moon {
-//   transform: translateX(1px);
-// }
+.toggle-moon {
+  transform: translateX(-1px);
+}
 
 .toggle-theme::after {
   content: "";
