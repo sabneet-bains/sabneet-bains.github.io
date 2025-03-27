@@ -297,27 +297,24 @@
   }
 }
 
-.hamburger div,
-.hamburger div:after,
-.hamburger div:before {
+.hamburger span,
+.hamburger span:after,
+.hamburger span:before {
   width: 28px;
   height: 4px;
   border-radius: 10px;
   transition: all 0.15s linear;
   background-color: var(--heading-font-color);
 }
-
-.hamburger div:before,
-.hamburger div:after {
+.hamburger span:before,
+.hamburger span:after {
   content: "";
   position: absolute;
 }
-
-.hamburger div:before {
+.hamburger span:before {
   transform: translateY(-200%);
 }
-
-.hamburger div:after {
+.hamburger span:after {
   transform: translateY(200%);
 }
 
@@ -390,7 +387,8 @@
   transform: translateX(1px);
 }
 
-.toggle-thumb {
+.toggle-theme::after {
+  content: "";
   position: absolute;
   top: -1px;
   left: 0;
@@ -401,6 +399,15 @@
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.dark-mode .toggle-thumb {
+.dark-mode .toggle-theme::after {
   transform: translateX(21px);
+}
+
+/*--------------------------------------------------------------
+   Focus Styles for Toggle and Hamburger
+--------------------------------------------------------------*/
+.toggle-theme:focus-visible,
+.hamburger:focus-visible {
+  outline: 3px solid var(--brand-color);
+  outline-offset: 3px;
 }
