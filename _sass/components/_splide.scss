@@ -65,6 +65,7 @@
 .splide {
   position: relative;
   visibility: hidden;
+  min-height: 300px;
 }
 
 .splide.is-initialized,
