@@ -17,29 +17,27 @@
 }
 
 /*--------------------------------------------------------------
-   FAQ Item Hover & Open States
+   FAQ Item Hover State
 --------------------------------------------------------------*/
 .faq .faq__item:hover {
   background: var(--background-alt-color);
 }
 
-/* When the FAQ item is open, keep the background consistent */
-.faq .faq__item[aria-expanded="true"] {
-  background: var(--background-alt-color);
-}
-
-/* Rotate the SVG icon when the FAQ item is open */
-.faq .faq__item[aria-expanded="true"] .faq__title svg {
+/*--------------------------------------------------------------
+   FAQ Toggle Open State via Button's aria-expanded
+--------------------------------------------------------------*/
+/* Rotate the SVG icon when the button is expanded */
+.faq .faq__toggle[aria-expanded="true"] svg {
   transform: rotate(45deg) translateZ(0px);
 }
 
 /* Change the SVG path fill in open state */
-.faq .faq__item[aria-expanded="true"] .faq__title svg path {
+.faq .faq__toggle[aria-expanded="true"] svg path {
   fill: var(--heading-font-color);
 }
 
-/* Reveal the FAQ description when open */
-.faq .faq__item[aria-expanded="true"] .faq__description {
+/* Reveal the FAQ description when the toggle button is expanded */
+.faq .faq__toggle[aria-expanded="true"] + .faq__description {
   max-height: 400px;
   opacity: 1;
   transition: all 0.25s;
@@ -61,8 +59,8 @@
   letter-spacing: normal;
 }
 
-/* SVG within the FAQ title */
-.faq .faq__title svg {
+/* SVG within the FAQ title (inside the button) */
+.faq .faq__toggle svg {
   min-width: 15px;
   margin-left: 12px;
   transition: all 0.25s;
