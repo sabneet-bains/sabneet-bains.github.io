@@ -135,16 +135,17 @@ document.addEventListener("DOMContentLoaded", function() {
   ======================= */
   // Select all FAQ toggle buttons
   const faqToggles = document.querySelectorAll(".faq .faq__toggle");
+  // Also, select the parent FAQ items
+  const faqItems = document.querySelectorAll(".faq .faq__item");
 
-  function toggleAccordion() {
-    // Get the parent FAQ item container
+  // Toggle function: toggles the parent's aria-expanded and reveals/hides description
+  function toggleAccordion(e) {
+    // Stop event propagation so container-level click doesn't double-trigger
+    e.stopPropagation();
     const faqItem = this.closest('.faq__item');
-    // Determine current expanded state from the container
     const isExpanded = faqItem.getAttribute('aria-expanded') === 'true';
-    // Toggle the aria-expanded attribute on the container
     faqItem.setAttribute('aria-expanded', !isExpanded);
 
-    // Find the FAQ description element within the container
     const description = faqItem.querySelector('.faq__description');
     if (description) {
       if (!isExpanded) {
@@ -159,7 +160,20 @@ document.addEventListener("DOMContentLoaded", function() {
     toggle.addEventListener('click', toggleAccordion);
     toggle.addEventListener('keydown', function(event) {
       if (event.keyCode === 13) {
-        toggleAccordion.call(this);
+        toggleAccordion.call(this, event);
+      }
+    });
+  });
+
+  // Also add a click listener on the entire FAQ item container,
+  // so clicking anywhere within the box (except on the button) toggles the FAQ.
+  faqItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      if (!e.target.closest('.faq__toggle')) {
+        const toggle = item.querySelector('.faq__toggle');
+        if (toggle) {
+          toggle.click();
+        }
       }
     });
   });
@@ -194,3 +208,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
