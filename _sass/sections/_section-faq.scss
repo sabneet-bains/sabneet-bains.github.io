@@ -71,9 +71,14 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  /* Force inherited font styles to ensure correct font weight */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: inherit;
 }
 
-/* Ensure the SVG icon inside the button is aligned right */
+/* SVG within the FAQ title (inside the button) */
 .faq .faq__title button.faq__toggle svg {
   min-width: 15px;
   margin-left: 12px;
