@@ -387,6 +387,11 @@
   transform: translateX(-2.2px);
 }
 
+.toggle-sun {
+  transform: translateX(2.2px);
+}
+
+
 .toggle-theme::after {
   content: "";
   position: absolute;
