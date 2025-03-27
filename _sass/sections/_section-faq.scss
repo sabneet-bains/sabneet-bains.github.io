@@ -24,22 +24,22 @@
 }
 
 /* When the FAQ item is open, keep the background consistent */
-.faq .faq__item[data-name=open] {
+.faq .faq__item[aria-expanded="true"] {
   background: var(--background-alt-color);
 }
 
 /* Rotate the SVG icon when the FAQ item is open */
-.faq .faq__item[data-name=open] .faq__title svg {
+.faq .faq__item[aria-expanded="true"] .faq__title svg {
   transform: rotate(45deg) translateZ(0px);
 }
 
 /* Change the SVG path fill in open state */
-.faq .faq__item[data-name=open] .faq__title svg path {
+.faq .faq__item[aria-expanded="true"] .faq__title svg path {
   fill: var(--heading-font-color);
 }
 
 /* Reveal the FAQ description when open */
-.faq .faq__item[data-name=open] .faq__description {
+.faq .faq__item[aria-expanded="true"] .faq__description {
   max-height: 400px;
   opacity: 1;
   transition: all 0.25s;
