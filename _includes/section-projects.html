@@ -107,15 +107,16 @@
         <article class="project col col-6 col-t-12">
           <div class="project__content">
             <div class="project__head">
-              <!-- Video icon if you want to highlight a playable demo or trailer -->
-              <div class="video-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
-                  <polygon points="40,30 65,50 40,70"></polygon>
-                </svg>
-              </div>
-              <a href="/project/game-development" class="project__image">
-                <!-- Replace with a screenshot from your game -->
-                <img class="lazy" data-src="/images/game-dev.jpg" loading="lazy" alt="Game Development Project">
+              <a href="/project/game-development" class="project__image video-container">
+                <video 
+                  class="video-preview" 
+                  src="/assets/videos/game-demo.mp4"
+                  muted 
+                  playsinline 
+                  preload="metadata" 
+                  loop 
+                  poster="/images/game-dev.jpg">
+                </video>
               </a>
             </div>
             <div class="project__info">
