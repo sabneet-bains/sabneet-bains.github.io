@@ -40,16 +40,23 @@
               </div>
             </div>
           </div>
-        </article>
-        
+        </article>     
 
         <!-- Project: AI/Computer Vision -->
         <article class="project col col-6 col-t-12">
           <div class="project__content">
             <div class="project__head">
-              <a href="/project/ai-computer-vision" class="project__image">
-                <!-- Replace with a suitable AI/Computer Vision image or your custom video thumbnail -->
-                <img class="lazy" data-src="/images/ai-vision.jpg" loading="lazy" alt="AI and Computer Vision Project">
+              <a href="/project/ai-computer-vision" class="project__image video-container">
+                <!-- Video tag replacing the static image -->
+                <video 
+                  class="video-preview" 
+                  src="/assets/videos/ai-demo.mp4"
+                  muted 
+                  playsinline 
+                  preload="metadata" 
+                  loop 
+                  poster="/images/ai-vision.jpg">
+                </video>
               </a>
             </div>
             <div class="project__info">
@@ -64,6 +71,7 @@
             </div>
           </div>
         </article>
+
 
         <!-- Project: Nonlinear Dynamics -->
         <article class="project col col-6 col-t-12">
