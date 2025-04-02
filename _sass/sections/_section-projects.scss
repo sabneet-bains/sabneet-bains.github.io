@@ -18,7 +18,9 @@
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 }
 
-.project .project__content:hover .project__image img {
+/* Scale effect on hover for both images and videos */
+.project .project__content:hover .project__image img,
+.project .project__content:hover .project__image video {
   transform: scale3d(1.04, 1.04, 1);
 }
 
@@ -32,7 +34,7 @@
 }
 
 /*--------------------------------------------------------------
-   Project Head & Image
+   Project Head & Image/Video
 --------------------------------------------------------------*/
 .project .project__content .project__head {
   position: relative;
@@ -49,7 +51,9 @@
   background: var(--background-alt-color-2);
 }
 
-.project .project__content .project__head .project__image img {
+/* Apply styling to both <img> and <video> elements */
+.project .project__content .project__head .project__image img,
+.project .project__content .project__head .project__image video {
   position: absolute;
   top: 0;
   left: 0;
