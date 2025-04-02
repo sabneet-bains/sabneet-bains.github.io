@@ -2,20 +2,18 @@ document.addEventListener("DOMContentLoaded", function() {
   'use strict';
 
   const html = document.querySelector('html'),
-    globalWrap = document.querySelector('.global-wrap'),
-    body = document.querySelector('body'),
-    menuToggle = document.querySelector(".hamburger"),
-    menuList = document.querySelector(".main-nav"),
-    toggleTheme = document.querySelector(".toggle-theme"),
-    testimonialsSlider = document.querySelector(".testimonials__slider"),
-    overlay = document.querySelector('.overlay');
+        globalWrap = document.querySelector('.global-wrap'),
+        body = document.querySelector('body'),
+        menuToggle = document.querySelector(".hamburger"),
+        menuList = document.querySelector(".main-nav"),
+        toggleTheme = document.querySelector(".toggle-theme"),
+        testimonialsSlider = document.querySelector(".testimonials__slider"),
+        overlay = document.querySelector('.overlay');
 
   /* =======================================================
      Menu + Theme Switcher
   ======================================================= */
-  menuToggle.addEventListener("click", () => {
-    menu();
-  });
+  menuToggle.addEventListener("click", () => { menu(); });
 
   function menu() {
     menuToggle.classList.toggle("is-open");
@@ -46,9 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
      Stop Animations During Window Resizing and Theme Switching
   ================================================================ */
   let disableTransition;
-  window.addEventListener("resize", () => {
-    stopAnimation();
-  });
+  window.addEventListener("resize", () => { stopAnimation(); });
   function stopAnimation() {
     document.body.classList.add("disable-animation");
     clearTimeout(disableTransition);
@@ -65,9 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
   /* =======================
      LazyLoad Images
   ======================= */
-  const lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
-  });
+  const lazyLoadInstance = new LazyLoad({ elements_selector: ".lazy" });
 
   /* =======================
      Zoom Image
@@ -116,12 +110,8 @@ document.addEventListener("DOMContentLoaded", function() {
         pauseOnFocus: false
       },
       intersection: {
-        inView: {
-          autoScroll: true,
-        },
-        outView: {
-          autoScroll: false,
-        },
+        inView: { autoScroll: true },
+        outView: { autoScroll: false },
       },
       breakpoints: {
         1024: { perPage: 2 },
@@ -133,19 +123,14 @@ document.addEventListener("DOMContentLoaded", function() {
   /* =======================
      FAQ Accordion
   ======================= */
-  // Select all FAQ toggle buttons
   const faqToggles = document.querySelectorAll(".faq .faq__toggle");
-  // Also, select the parent FAQ items
   const faqItems = document.querySelectorAll(".faq .faq__item");
 
-  // Toggle function: toggles the parent's aria-expanded and reveals/hides description
   function toggleAccordion(e) {
-    // Stop event propagation so container-level click doesn't double-trigger
     e.stopPropagation();
     const faqItem = this.closest('.faq__item');
     const isExpanded = faqItem.getAttribute('aria-expanded') === 'true';
     faqItem.setAttribute('aria-expanded', !isExpanded);
-
     const description = faqItem.querySelector('.faq__description');
     if (description) {
       if (!isExpanded) {
@@ -165,8 +150,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // Also add a click listener on the entire FAQ item container,
-  // so clicking anywhere within the box (except on the button) toggles the FAQ.
   faqItems.forEach(item => {
     item.addEventListener('click', function(e) {
       if (!e.target.closest('.faq__toggle')) {
@@ -207,14 +190,42 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   }
-});
 
-document.querySelectorAll('.video-container').forEach(container => {
-  const video = container.querySelector('.video-preview');
-  container.addEventListener('mouseenter', () => {
-    video.play();
-  });
-  container.addEventListener('mouseleave', () => {
-    video.pause();
-  });
+  // ===============================
+  // VIDEO PLAYBACK HANDLING
+  // ===============================
+  
+  // Determine if the device is touch-enabled
+  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+  if (isTouchDevice && 'IntersectionObserver' in window) {
+    // For touch devices: use IntersectionObserver to play when visible (e.g., user scrolls over it)
+    const observerOptions = { threshold: 0.5 };
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('.video-preview');
+        if (!video) return;
+        if (entry.intersectionRatio >= 0.5) {
+          video.play().catch(err => console.error("Video play failed:", err));
+        } else {
+          video.pause();
+        }
+      });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    document.querySelectorAll('.video-container').forEach(container => {
+      observer.observe(container);
+    });
+  } else {
+    // For non-touch devices: use hover events
+    document.querySelectorAll('.video-container').forEach(container => {
+      const video = container.querySelector('.video-preview');
+      container.addEventListener('mouseenter', () => {
+        video.play().catch(err => console.error("Video play failed:", err));
+      });
+      container.addEventListener('mouseleave', () => {
+        video.pause();
+      });
+    });
+  }
 });
