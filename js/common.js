@@ -216,6 +216,5 @@ document.querySelectorAll('.video-container').forEach(container => {
   });
   container.addEventListener('mouseleave', () => {
     video.pause();
-    video.currentTime = 0; // Optional: reset to beginning
   });
 });
