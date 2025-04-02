@@ -1,9 +1,9 @@
-<section class="section section-projects">
+<section class="section section-projects" role="region" aria-labelledby="projects-heading">
   <div class="row">
     <div class="col col-12">
       <!-- Section header: Title and description -->
       <div class="section__info">
-        <h2 class="section__title">
+        <h2 class="section__title" id="projects-heading">
           Research &amp; <em>Projects</em>
         </h2>
         <p class="section__description">
@@ -16,8 +16,8 @@
         <article class="project col col-6 col-t-12">
           <div class="project__content">
             <div class="project__head">
-              <a href="/project/quantum-computing" class="project__image video-container">
-                <!-- Video tag replacing the static image -->
+              <a href="/project/quantum-computing" class="project__image video-container" aria-label="Preview of Quantum Fourier Transform and Hybrid QAI Project">
+                <!-- Video tag with fallback image -->
                 <video 
                   class="video-preview" 
                   src="/assets/videos/quantum-demo.mp4"
@@ -25,7 +25,9 @@
                   playsinline 
                   preload="metadata" 
                   loop 
-                  poster="/images/quantum-project.jpg">
+                  poster="/images/quantum-project.jpg"
+                  aria-hidden="true">
+                  <img src="/images/quantum-project.jpg" alt="Quantum Computing Project" aria-hidden="true">
                 </video>
               </a>
             </div>
@@ -46,8 +48,8 @@
         <article class="project col col-6 col-t-12">
           <div class="project__content">
             <div class="project__head">
-              <a href="/project/ai-computer-vision" class="project__image video-container">
-                <!-- Video tag replacing the static image -->
+              <a href="/project/ai-computer-vision" class="project__image video-container" aria-label="Preview of Real-Time Object Detection and Classification Project">
+                <!-- Video tag with fallback image -->
                 <video 
                   class="video-preview" 
                   src="/assets/videos/ai-demo.mp4"
@@ -55,7 +57,9 @@
                   playsinline 
                   preload="metadata" 
                   loop 
-                  poster="/images/ai-vision.jpg">
+                  poster="/images/ai-vision.jpg"
+                  aria-hidden="true">
+                  <img src="/images/ai-vision.jpg" alt="AI/Computer Vision Project" aria-hidden="true">
                 </video>
               </a>
             </div>
@@ -72,12 +76,12 @@
           </div>
         </article>
 
-
         <!-- Project: Nonlinear Dynamics -->
         <article class="project col col-6 col-t-12">
           <div class="project__content">
             <div class="project__head">
-              <a href="/project/nonlinear-dynamics" class="project__image video-container">
+              <a href="/project/nonlinear-dynamics" class="project__image video-container" aria-label="Preview of Chaotic Systems and Complex Simulations Project">
+                <!-- Video tag with fallback image -->
                 <video 
                   class="video-preview" 
                   src="/assets/videos/nonlinear-demo.mp4"
@@ -85,7 +89,9 @@
                   playsinline 
                   preload="metadata" 
                   loop 
-                  poster="/images/nonlinear-dynamics.jpg">
+                  poster="/images/nonlinear-dynamics.jpg"
+                  aria-hidden="true">
+                  <img src="/images/nonlinear-dynamics.jpg" alt="Nonlinear Dynamics Project" aria-hidden="true">
                 </video>
               </a>
             </div>
@@ -102,12 +108,12 @@
           </div>
         </article>
 
-
         <!-- Project: Game Development -->
         <article class="project col col-6 col-t-12">
           <div class="project__content">
             <div class="project__head">
-              <a href="/project/game-development" class="project__image video-container">
+              <a href="/project/game-development" class="project__image video-container" aria-label="Preview of 3D Unity Game Adaptation Project">
+                <!-- Video tag with fallback image -->
                 <video 
                   class="video-preview"
                   src="/assets/videos/game-demo.mp4"
@@ -115,7 +121,9 @@
                   playsinline
                   preload="metadata"
                   loop 
-                  poster="/images/game-dev.jpg">
+                  poster="/images/game-dev.jpg"
+                  aria-hidden="true">
+                  <img src="/images/game-dev.jpg" alt="Game Development Project" aria-hidden="true">
                 </video>
               </a>
             </div>
@@ -136,7 +144,7 @@
   </div>
   <!-- Section navigation: Link to all projects -->
   <div class="section__navigation">
-    <a href="/projects" class="button section__button">
+    <a href="/projects" class="button section__button" aria-label="View all projects">
       All Projects <i class="fa-solid fa-arrow-up"></i>
     </a>
   </div>

@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   'use strict';
 
+  // Element selectors
   const html = document.querySelector('html'),
         globalWrap = document.querySelector('.global-wrap'),
         body = document.querySelector('body'),
@@ -13,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
   /* =======================================================
      Menu + Theme Switcher
   ======================================================= */
-  menuToggle.addEventListener("click", () => { menu(); });
+  menuToggle?.addEventListener("click", () => menu());
 
-  function menu() {
+  const menu = () => {
     menuToggle.classList.toggle("is-open");
     menuList.classList.toggle("is-visible");
-  }
+  };
 
   // Theme Switcher
   if (toggleTheme) {
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  function darkMode() {
+  const darkMode = () => {
     if (html.classList.contains('dark-mode')) {
       html.classList.remove('dark-mode');
       localStorage.removeItem("theme");
@@ -38,20 +39,20 @@ document.addEventListener("DOMContentLoaded", function() {
       localStorage.setItem("theme", "dark");
       document.documentElement.setAttribute("dark", "");
     }
-  }
+  };
 
   /* ================================================================
      Stop Animations During Window Resizing and Theme Switching
   ================================================================ */
   let disableTransition;
-  window.addEventListener("resize", () => { stopAnimation(); });
-  function stopAnimation() {
+  window.addEventListener("resize", () => stopAnimation());
+  const stopAnimation = () => {
     document.body.classList.add("disable-animation");
     clearTimeout(disableTransition);
     disableTransition = setTimeout(() => {
       document.body.classList.remove("disable-animation");
     }, 100);
-  }
+  };
 
   /* =======================
      Responsive Videos
@@ -67,12 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
      Zoom Image
   ======================= */
   if (overlay) {
-    const images = document.querySelectorAll('.page__content img, .post__content img, .gallery img, .section-gallery img');
+    const images = document.querySelectorAll(
+      '.page__content img, .post__content img, .gallery img, .section-gallery img'
+    );
     images.forEach(image => {
+      // If image is wrapped in a link, mark it as such
       if (image.closest('a')) {
         image.classList.add('image-link');
       }
-      image.addEventListener('click', e => {
+      image.addEventListener('click', (e) => {
+        // Ignore images inside links
         if (image.classList.contains('image-link')) return;
         overlay.classList.add('active');
         const img = document.createElement('img');
@@ -126,32 +131,26 @@ document.addEventListener("DOMContentLoaded", function() {
   const faqToggles = document.querySelectorAll(".faq .faq__toggle");
   const faqItems = document.querySelectorAll(".faq .faq__item");
 
-  function toggleAccordion(e) {
+  const toggleAccordion = (e) => {
     e.stopPropagation();
-    const faqItem = this.closest('.faq__item');
+    const faqItem = e.currentTarget.closest('.faq__item');
     const isExpanded = faqItem.getAttribute('aria-expanded') === 'true';
     faqItem.setAttribute('aria-expanded', !isExpanded);
     const description = faqItem.querySelector('.faq__description');
     if (description) {
-      if (!isExpanded) {
-        description.removeAttribute('hidden');
-      } else {
-        description.setAttribute('hidden', '');
-      }
+      !isExpanded ? description.removeAttribute('hidden') : description.setAttribute('hidden', '');
     }
-  }
+  };
 
   faqToggles.forEach(toggle => {
     toggle.addEventListener('click', toggleAccordion);
-    toggle.addEventListener('keydown', function(event) {
-      if (event.keyCode === 13) {
-        toggleAccordion.call(this, event);
-      }
+    toggle.addEventListener('keydown', (event) => {
+      if (event.key === "Enter") toggleAccordion(event);
     });
   });
 
   faqItems.forEach(item => {
-    item.addEventListener('click', function(e) {
+    item.addEventListener('click', (e) => {
       if (!e.target.closest('.faq__toggle')) {
         const toggle = item.querySelector('.faq__toggle');
         if (toggle) {
@@ -164,42 +163,39 @@ document.addEventListener("DOMContentLoaded", function() {
   /* =======================
      Load More Posts
   ======================= */
-  var load_posts_button = document.querySelector('.load-more-posts');
-  if (load_posts_button) {
-    load_posts_button.addEventListener("click", function(e) {
+  const loadPostsButton = document.querySelector('.load-more-posts');
+  if (loadPostsButton) {
+    loadPostsButton.addEventListener("click", async (e) => {
       e.preventDefault();
-      var paginationContainer = document.querySelector(".pagination");
-      var url = pagination_next_url.split("/page")[0] + "/page/" + pagination_next_page_number + "/";
-      fetch(url)
-        .then(function(response) {
-          if (response.ok) return response.text();
-        })
-        .then(function(htmlText) {
-          var tempDiv = document.createElement("div");
-          tempDiv.innerHTML = htmlText;
-          var grid = document.querySelector(".grid");
-          var articles = tempDiv.querySelectorAll(".article--grid");
-          for (var i = 0; i < articles.length; i++) {
-            grid.appendChild(articles.item(i));
-          }
-          new LazyLoad({ elements_selector: ".lazy" });
-          pagination_next_page_number++;
-          if (pagination_next_page_number > pagination_available_pages_number) {
-            paginationContainer.style.display = "none";
-          }
-        });
+      const paginationContainer = document.querySelector(".pagination");
+      const url = `${pagination_next_url.split("/page")[0]}/page/${pagination_next_page_number}/`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const htmlText = await response.text();
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = htmlText;
+        const grid = document.querySelector(".grid");
+        const articles = tempDiv.querySelectorAll(".article--grid");
+        articles.forEach(article => grid.appendChild(article));
+        new LazyLoad({ elements_selector: ".lazy" });
+        pagination_next_page_number++;
+        if (pagination_next_page_number > pagination_available_pages_number) {
+          paginationContainer.style.display = "none";
+        }
+      } catch (error) {
+        console.error("Error loading posts:", error);
+      }
     });
   }
 
-  // ===============================
-  // VIDEO PLAYBACK HANDLING
-  // ===============================
-  
-  // Determine if the device is touch-enabled
+  /* =====================================
+     VIDEO PLAYBACK HANDLING
+  ===================================== */
   const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
   if (isTouchDevice && 'IntersectionObserver' in window) {
-    // For touch devices: use IntersectionObserver to play when visible (e.g., user scrolls over it)
+    // Touch devices: use IntersectionObserver to control video playback based on visibility.
     const observerOptions = { threshold: 0.5 };
     const observerCallback = (entries, observer) => {
       entries.forEach(entry => {
@@ -213,11 +209,9 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     };
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    document.querySelectorAll('.video-container').forEach(container => {
-      observer.observe(container);
-    });
+    document.querySelectorAll('.video-container').forEach(container => observer.observe(container));
   } else {
-    // For non-touch devices: use hover events
+    // Non-touch devices: control video playback via hover events.
     document.querySelectorAll('.video-container').forEach(container => {
       const video = container.querySelector('.video-preview');
       container.addEventListener('mouseenter', () => {
