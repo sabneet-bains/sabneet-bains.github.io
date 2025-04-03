@@ -73,6 +73,18 @@
 }
 
 /*--------------------------------------------------------------
+   Fade In Animation
+--------------------------------------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
    Sidebar Inner Container
 --------------------------------------------------------------*/
 .sidebar__inner {
@@ -116,11 +128,17 @@
 .sidebar__meta .sidebar__info .sidebar__intro {
   font-size: 16px;
   color: var(--heading-font-color);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1s; /* fades in after the avatar animation */
 }
 
 .sidebar__meta .sidebar__info .sidebar__role {
   font-size: 16px;
   color: var(--text-alt-color);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1.5s; /* starts a bit later for a staggered effect */
 }
 
 /*--------------------------------------------------------------
