@@ -251,3 +251,28 @@
 .sidebar__content .sidebar__title .typewriter-group:nth-child(3) {
   animation-delay: 6s;
 }
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px); /* Starts slightly below */
+    opacity: 0; /* Fully transparent */
+  }
+  to {
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.sidebar__content .sidebar__description {
+  margin-bottom: 0;
+  color: var(--text-alt-color);
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 6.5s; /* Start after your previous animations finish */
+}
+
+.sidebar__social {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 7.5s; /* Start after the description fades in */
+}
