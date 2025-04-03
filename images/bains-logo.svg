@@ -10,6 +10,7 @@
 
       .cls-2 {
         fill: #1d1d1f;
+        font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
 
       .cls-3 {
