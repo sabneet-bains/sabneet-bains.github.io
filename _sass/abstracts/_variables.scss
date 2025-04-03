@@ -22,7 +22,7 @@
   --background-alt-color-2: var(--dark-gray);
 
   /* Shadows */
-  --drop-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --drop-shadow: 3px 3px 30px rgba(0, 0, 0, 0.1);
 
   /* Text Colors */
   --text-color: var(--dark);
@@ -85,7 +85,7 @@
   --button-gradient-hover: linear-gradient(-90deg, #e72698 0%, #5b008c 100%);
 
   /* Shadows */
-  --drop-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.06);
+  --drop-shadow: 3px 3px 30px rgba(255, 255, 255, 0.1);
 
   /* Table Elements */
   --border-color: #252629;
