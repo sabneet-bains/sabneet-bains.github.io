@@ -82,8 +82,9 @@
   margin-right: 12px;
   transform: translate(0);
   border-radius: 50%;
+  overflow: hidden;
   background: var(--background-alt-color);
-  box-shadow: var(--drop-shadow);
+  box-shadow: inset var(--drop-shadow);
 }
 
 .sidebar__meta .sidebar__avatar img {
