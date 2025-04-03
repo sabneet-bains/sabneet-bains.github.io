@@ -10,7 +10,7 @@
         font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
         fill: #780fff;
       }
-      .bains-font {
+      .name-font {
         font-family: OldStandardTT-Bold, 'Old Standard TT';
         fill: #1d1d1f;
       }
@@ -18,7 +18,7 @@
   </defs>
   <text class="common-text" transform="translate(-1.2 35.33)">
     <tspan class="symbol-font" x="0" y="0">❯</tspan>
-    <tspan class="bains-font" x="24" y="0">Bains</tspan>
+    <tspan class="name-font" x="24" y="0">Bains</tspan>
     <tspan class="symbol-font" x="114" y="-6">&#xFF3F;</tspan>
   </text>
 </svg>
