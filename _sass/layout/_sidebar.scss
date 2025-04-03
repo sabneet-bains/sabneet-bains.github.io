@@ -59,6 +59,20 @@
 }
 
 /*--------------------------------------------------------------
+   Avatar Animation
+--------------------------------------------------------------*/
+@keyframes avatarSlideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
    Sidebar Inner Container
 --------------------------------------------------------------*/
 .sidebar__inner {
@@ -85,6 +99,7 @@
   overflow: hidden;
   background: var(--background-alt-color);
   box-shadow: var(--drop-shadow);
+  animation: avatarSlideIn 1s ease forwards;
 }
 
 .sidebar__meta .sidebar__avatar img {
