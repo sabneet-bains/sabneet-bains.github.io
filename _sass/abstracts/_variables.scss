@@ -16,7 +16,7 @@
   --rgb-color: 255, 255, 255;
 
   /* Adaptive Backdrop Blur Colors */
-  --blur-light-bg: rgba(var(--rgb-color), 0.3); /* Frosted glass effect for light theme */
+  --blur-light-bg: rgba(var(--rgb-color), 0.8); /* Frosted glass effect for light theme */
   --blur-dark-bg: rgba(10, 10, 10, 0.4); /* Subtle darker blur variant for light theme */
 
   /* Backgrounds */
@@ -65,7 +65,7 @@
   --rgb-color: 10, 10, 10;
 
   /* Adaptive Backdrop Blur Colors */
-  --blur-light-bg: rgba(20, 20, 20, 0.3);
+  --blur-light-bg: rgba(20, 20, 20, 0.8);
   --blur-dark-bg: rgba(0, 0, 0, 0.5);
 
   /* Backgrounds */
