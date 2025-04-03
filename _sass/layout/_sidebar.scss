@@ -84,7 +84,7 @@
   border-radius: 50%;
   overflow: hidden;
   background: var(--background-alt-color);
-  box-shadow: inset var(--drop-shadow);
+  box-shadow: var(--drop-shadow);
 }
 
 .sidebar__meta .sidebar__avatar img {
