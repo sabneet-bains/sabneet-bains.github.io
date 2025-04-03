@@ -3,14 +3,13 @@
   <defs>
     <style>
       .cls-1 {
-        font-family: OldStandardTT-Bold, 'Old Standard TT';
+        font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 40px;
         font-weight: 700;
       }
 
       .cls-2 {
         fill: #1d1d1f;
-        font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
 
       .cls-3 {
