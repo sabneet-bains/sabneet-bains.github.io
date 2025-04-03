@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Logo_Dark" data-name="Logo Dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 36">
+<svg id="Logo_Dark" data-name="Logo Dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145 36">
   <defs>
     <style>
-      .cls-1 {
-        font-family: OldStandardTT-Bold, 'Old Standard TT';
+      .common-text {
         font-size: 40px;
         font-weight: 700;
       }
-
-      .cls-2 {
-        fill: #f0f0f0;
-      }
-
-      .cls-3 {
+      .symbol-font {
+        font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
         fill: #e72698;
+      }
+      .name-font {
+        font-family: OldStandardTT-Bold, 'Old Standard TT';
+        fill: #f0f0f0;
       }
     </style>
   </defs>
-  <text class="cls-1" transform="translate(-1.2 35.33)"><tspan class="cls-3" x="0" y="0">.</tspan><tspan class="cls-2" x="12" y="0">Bains</tspan></text>
+  <text class="common-text" transform="translate(-1.2 35.33)">
+    <tspan class="symbol-font" x="0" y="-3">❯</tspan>
+    <tspan class="name-font" x="24" y="-3">Bains</tspan>
+    <tspan class="symbol-font" x="126" y="-7">&#x005F;</tspan>
+  </text>
 </svg>
