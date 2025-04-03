@@ -239,38 +239,32 @@ document.addEventListener("DOMContentLoaded", () => {
       img.src = posterUrl;
 
       img.onload = () => {
-        // Get dimensions using naturalWidth/naturalHeight
+        // Get and validate dimensions
         let width = Math.floor(img.naturalWidth);
         let height = Math.floor(img.naturalHeight);
-
-        // If dimensions are zero, try again after a short delay
-        if (width <= 0 || height <= 0) {
-          setTimeout(() => {
-            width = Math.floor(img.naturalWidth);
-            height = Math.floor(img.naturalHeight);
-            if (width > 0 && height > 0) {
-              processImage(width, height);
-            } else {
-              console.error("Poster image dimensions are invalid:", width, height);
-            }
-          }, 100);
-        } else {
-          processImage(width, height);
+      
+        if (!isFinite(width) || !isFinite(height) || width <= 0 || height <= 0) {
+          console.error('Invalid image dimensions:', width, height);
+          return; // Abort processing if dimensions are not valid
         }
-
-        function processImage(width, height) {
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
-          canvas.width = width;
-          canvas.height = height;
-          context.drawImage(img, 0, 0, width, height);
-          const colorThief = new ColorThief();
-          const dominantColor = colorThief.getColor(canvas); // Returns [R, G, B]
-          const bgColor = `rgb(${dominantColor.join(',')})`;
-          // Update a custom property and directly set the background of .project__info
-          projectInfo.style.setProperty('--project-info-dynamic-bg', bgColor);
-          projectInfo.style.backgroundColor = bgColor;
-        }
+      
+        // Create canvas with validated dimensions
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = width;
+        canvas.height = height;
+      
+        // Draw the image onto the canvas
+        context.drawImage(img, 0, 0, width, height);
+      
+        // Extract the dominant color using ColorThief
+        const colorThief = new ColorThief();
+        const dominantColor = colorThief.getColor(canvas); // Returns [R, G, B]
+        const bgColor = `rgb(${dominantColor.join(',')})`;
+      
+        // Update the background of .project__info
+        projectInfo.style.setProperty('--project-info-dynamic-bg', bgColor);
+        projectInfo.style.backgroundColor = bgColor;
       };
 
       img.onerror = () => {
