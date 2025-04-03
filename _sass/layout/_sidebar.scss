@@ -1,3 +1,7 @@
+/* ==========================================================================
+   STATIC STYLES
+   ========================================================================== */
+
 /*--------------------------------------------------------------
    Sidebar Base Styles
 --------------------------------------------------------------*/
@@ -59,32 +63,6 @@
 }
 
 /*--------------------------------------------------------------
-   Avatar Animation
---------------------------------------------------------------*/
-@keyframes avatarSlideIn {
-  from {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/*--------------------------------------------------------------
-   Fade In Animation
---------------------------------------------------------------*/
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/*--------------------------------------------------------------
    Sidebar Inner Container
 --------------------------------------------------------------*/
 .sidebar__inner {
@@ -94,7 +72,7 @@
 }
 
 /*--------------------------------------------------------------
-   Sidebar Meta Section
+   Sidebar Meta Section (Static Properties)
 --------------------------------------------------------------*/
 .sidebar__meta {
   display: flex;
@@ -111,7 +89,6 @@
   overflow: hidden;
   background: var(--background-alt-color);
   box-shadow: var(--drop-shadow);
-  animation: avatarSlideIn 1s ease forwards;
 }
 
 .sidebar__meta .sidebar__avatar img {
@@ -128,17 +105,11 @@
 .sidebar__meta .sidebar__info .sidebar__intro {
   font-size: 16px;
   color: var(--heading-font-color);
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 0.9s; /* fades in after the avatar animation */
 }
 
 .sidebar__meta .sidebar__info .sidebar__role {
   font-size: 16px;
   color: var(--text-alt-color);
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
-  animation-delay: 1.4s; /* starts a bit later for a staggered effect */
 }
 
 /*--------------------------------------------------------------
@@ -215,18 +186,77 @@
   }
 }
 
+/* ==========================================================================
+   ANIMATED STYLES & KEYFRAMES
+   ========================================================================== */
 
+/*--------------------------------------------------------------
+   Keyframes Definitions
+--------------------------------------------------------------*/
 
+/* Avatar Slide In Animation */
+@keyframes avatarSlideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-
-/* Typewriter animation keyframes */
+/* Typewriter Animation */
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
 }
 
-/* Base settings for our typewriter groups */
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
+   Animated Elements
+--------------------------------------------------------------*/
+
+/* Avatar Animation */
+.sidebar__meta .sidebar__avatar {
+  animation: avatarSlideIn 0.9s ease forwards;
+}
+
+/* Intro & Role Fade In Animations */
+.sidebar__meta .sidebar__info .sidebar__intro {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 0.4s ease forwards;
+  animation-delay: 0.7s; /* Fades in after the avatar animation */
+}
+
+.sidebar__meta .sidebar__info .sidebar__role {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1.1s; /* Staggered for effect */
+}
+
+/* Typewriter Animations for Sidebar Title */
 .sidebar__content .sidebar__title .typewriter-group {
   display: inline-block;
   white-space: nowrap;
@@ -234,45 +264,30 @@
   width: 0; /* Start hidden; animation will reveal the text */
 }
 
-/* "One Stop for" - 12 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(1) {
   animation: typewriter 0.8s steps(12, end) forwards;
-  animation-delay: 1.9s; /* Adjust this delay based on your overall timeline */
+  animation-delay: 1.6s;
 }
 
-/* "Quantum, AI" - 11 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(2) {
   animation: typewriter 0.8s steps(11, end) forwards;
-  animation-delay: 2.7s;
+  animation-delay: 2.4s;
 }
 
-/* "Innovation." - 11 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(3) {
   animation: typewriter 0.8s steps(11, end) forwards;
-  animation-delay: 3.5s;
+  animation-delay: 3.2s;
 }
 
-@keyframes fadeInUp {
-  from {
-    transform: translateY(20px); /* Starts slightly below */
-    opacity: 0; /* Fully transparent */
-  }
-  to {
-    transform: translateY(0); /* Final position */
-    opacity: 1; /* Fully visible */
-  }
-}
-
+/* Fade In Up for Description & Social */
 .sidebar__content .sidebar__description {
-  margin-bottom: 0;
-  color: var(--text-alt-color);
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 4.3s; /* Start after your previous animations finish */
+  animation-delay: 4s; /* After previous animations */
 }
 
 .sidebar__social {
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 5.3s; /* Start after the description fades in */
+  animation-delay: 5s; /* After the description fades in */
 }
