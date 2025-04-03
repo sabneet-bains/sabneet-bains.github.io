@@ -224,8 +224,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =====================================
-    Dominant Color Extraction from Poster Image
-    (Applied to .project__info)
+      Dominant Color Extraction from Poster Image
+      (Applied to .project__info)
   ===================================== */
   document.querySelectorAll('.project__content').forEach(projectContent => {
     const video = projectContent.querySelector('.project__head video');
@@ -234,20 +234,47 @@ document.addEventListener("DOMContentLoaded", () => {
       const posterUrl = video.getAttribute('poster');
       const img = new Image();
       img.crossOrigin = "Anonymous"; // Ensure proper CORS if needed
+      // Force eager loading
+      img.loading = "eager";
       img.src = posterUrl;
+
       img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        // Use naturalWidth and naturalHeight to ensure valid integer dimensions
-        canvas.width = img.naturalWidth;
-        canvas.height = img.naturalHeight;
-        context.drawImage(img, 0, 0, canvas.width, canvas.height);
-        const colorThief = new ColorThief();
-        const dominantColor = colorThief.getColor(canvas); // Returns [R, G, B]
-        const bgColor = `rgb(${dominantColor.join(',')})`;
-        // Update a custom property and directly set the background of .project__info
-        projectInfo.style.setProperty('--project-info-dynamic-bg', bgColor);
-        projectInfo.style.backgroundColor = bgColor;
+        // Get dimensions using naturalWidth/naturalHeight
+        let width = Math.floor(img.naturalWidth);
+        let height = Math.floor(img.naturalHeight);
+
+        // If dimensions are zero, try again after a short delay
+        if (width <= 0 || height <= 0) {
+          setTimeout(() => {
+            width = Math.floor(img.naturalWidth);
+            height = Math.floor(img.naturalHeight);
+            if (width > 0 && height > 0) {
+              processImage(width, height);
+            } else {
+              console.error("Poster image dimensions are invalid:", width, height);
+            }
+          }, 100);
+        } else {
+          processImage(width, height);
+        }
+
+        function processImage(width, height) {
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          canvas.width = width;
+          canvas.height = height;
+          context.drawImage(img, 0, 0, width, height);
+          const colorThief = new ColorThief();
+          const dominantColor = colorThief.getColor(canvas); // Returns [R, G, B]
+          const bgColor = `rgb(${dominantColor.join(',')})`;
+          // Update a custom property and directly set the background of .project__info
+          projectInfo.style.setProperty('--project-info-dynamic-bg', bgColor);
+          projectInfo.style.backgroundColor = bgColor;
+        }
+      };
+
+      img.onerror = () => {
+        console.error("Failed to load poster image:", posterUrl);
       };
     }
   });
