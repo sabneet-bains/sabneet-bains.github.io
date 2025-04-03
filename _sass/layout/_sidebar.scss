@@ -291,3 +291,9 @@
   animation: fadeInUp 1s ease forwards;
   animation-delay: 4.1s; /* After the description fades in */
 }
+
+.sidebar__copyright {
+  opacity: 0; /* Initially hidden */
+  animation: typewriter 0.8s steps(11, end) forwards;
+  animation-delay: 5.0s; /* After the social section fades in */
+}
