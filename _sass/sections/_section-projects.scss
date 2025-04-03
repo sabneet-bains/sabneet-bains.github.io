@@ -38,27 +38,11 @@
 --------------------------------------------------------------*/
 .project .project__content .project__head {
   position: relative;
-  /* Default fallback background; this can be overridden dynamically */
+  /* Default fallback background */
   background: var(--background-alt-color-2);
-  /* Ensure the pseudo-element is positioned correctly */
   z-index: 0;
 }
 
-/* Pseudo-element for dynamic blur effect */
-.project .project__content .project__head::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* Inherit background from the project__head so the dominant color is used */
-  background-color: inherit;
-  backdrop-filter: blur(10px);
-  z-index: -1; /* Place behind the main content */
-}
-
-/* Project image container styling */
 .project .project__content .project__head .project__image {
   position: relative;
   transform: translate(0);
@@ -67,7 +51,6 @@
   border-radius: 24px 24px 0 0;
   outline: none;
   overflow: hidden;
-  /* This background might be overridden by the dominant color extraction */
   background: var(--background-alt-color-2);
 }
 
@@ -93,13 +76,28 @@
 }
 
 /*--------------------------------------------------------------
-   Project Info Section
+   Project Info Section (Dynamic Background & Blur Effect)
 --------------------------------------------------------------*/
 .project .project__content .project__info {
+  position: relative; /* For pseudo-element positioning */
   padding: 20px 20px 24px;
   border-radius: 0 0 24px 24px;
-  background: var(--background-alt-color);
+  /* Use dynamic background color with fallback */
+  background: var(--project-info-dynamic-bg, var(--background-alt-color));
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+
+/* Pseudo-element for blur effect on project__info */
+.project .project__content .project__info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit; /* Uses the dynamic background color */
+  backdrop-filter: blur(10px);
+  z-index: -1; /* Place behind the content */
 }
 
 .project .project__content .project__info .project__title {
