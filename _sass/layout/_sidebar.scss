@@ -86,6 +86,17 @@
   background: var(--background-alt-color);
 }
 
+.sidebar__meta .sidebar__avatar {
+  min-width: 80px;
+  height: 80px;
+  margin-right: 12px;
+  transform: translate(0);
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--background-alt-color);
+  box-shadow: var(--drop-shadow);
+}
+
 .sidebar__meta .sidebar__avatar img {
   position: absolute;
   top: 0;
