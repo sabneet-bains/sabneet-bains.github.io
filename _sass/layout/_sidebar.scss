@@ -219,7 +219,8 @@
 
 
 
-/* Keyframe animation for the typewriter effect */
+
+/* Typewriter keyframe: reveals the text by increasing width */
 @keyframes typewriter {
   from {
     width: 0;
@@ -229,44 +230,24 @@
   }
 }
 
-/* Keyframe for blinking caret effect */
-@keyframes blinkCaret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: currentColor;
-  }
-}
-
-/* New styles for each text group */
+/* Apply to each group */
 .sidebar__content .sidebar__title .typewriter-group {
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden;   /* Hide the text until it “types” */
-  width: 0;           /* Start hidden; the animation will reveal it */
-  border-right: 2px solid currentColor;  /* Blinking caret effect */
-  
-  /* Apply both animations: the typewriter and the blinking caret */
-  animation: typewriter 1s steps(15, end) forwards, 
-             blinkCaret 0.75s step-end infinite;
+  overflow: hidden;
+  width: 0;  /* Start hidden; the animation will reveal it */
+  animation: typewriter 1s steps(15, end) forwards;
 }
 
-/* Stagger the animations for each group so they appear one after the other.
-   Adjust these delays as needed based on when you want this animation to begin 
-   following your previous animations. */
+/* Stagger the animations for each group */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(1) {
-  animation-delay: 3s;  /* First group (One Stop for) */
+  animation-delay: 3s;   /* Adjust delay based on your desired timeline */
 }
 
 .sidebar__content .sidebar__title .typewriter-group:nth-child(2) {
-  animation-delay: 4s;  /* Second group (Quantum) */
+  animation-delay: 4.5s;
 }
 
 .sidebar__content .sidebar__title .typewriter-group:nth-child(3) {
-  animation-delay: 5s;  /* Third group (AI) */
-}
-
-.sidebar__content .sidebar__title .typewriter-group:nth-child(4) {
-  animation-delay: 6s;  /* Fourth group (Innovation) */
+  animation-delay: 6s;
 }
