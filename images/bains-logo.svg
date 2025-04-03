@@ -19,6 +19,6 @@
   <text class="common-text" transform="translate(-1.2 35.33)">
     <tspan class="symbol-font" x="0" y="0">❯</tspan>
     <tspan class="bains-font" x="24" y="0">Bains</tspan>
-    <tspan class="symbol-font" x="20" y="-7">&#xFF3F;</tspan>
+    <tspan class="symbol-font" x="20" y="-6">&#xFF3F;</tspan>
   </text>
 </svg>
