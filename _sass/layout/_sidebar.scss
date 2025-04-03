@@ -220,36 +220,36 @@
 
 
 
-/* Typewriter keyframe: reveals the text by increasing width */
+/* Typewriter animation keyframes */
 @keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-/* Apply to each group */
+/* Base settings for our typewriter groups */
 .sidebar__content .sidebar__title .typewriter-group {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  width: 0;  /* Start hidden; the animation will reveal it */
-  animation: typewriter 1s steps(15, end) forwards;
+  width: 0; /* Start hidden; animation will reveal the text */
 }
 
-/* Stagger the animations for each group */
+/* "One Stop for" - 12 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(1) {
-  animation-delay: 3s;   /* Adjust delay based on your desired timeline */
+  animation: typewriter 0.8s steps(12, end) forwards;
+  animation-delay: 3s; /* Adjust this delay based on your overall timeline */
 }
 
+/* "Quantum, AI" - 11 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(2) {
-  animation-delay: 4.5s;
+  animation: typewriter 0.8s steps(11, end) forwards;
+  animation-delay: 3.8s;
 }
 
+/* "Innovation." - 11 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(3) {
-  animation-delay: 6s;
+  animation: typewriter 0.8s steps(11, end) forwards;
+  animation-delay: 4.6s;
 }
 
 @keyframes fadeInUp {
@@ -268,11 +268,11 @@
   color: var(--text-alt-color);
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 6.5s; /* Start after your previous animations finish */
+  animation-delay: 5s; /* Start after your previous animations finish */
 }
 
 .sidebar__social {
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 7.5s; /* Start after the description fades in */
+  animation-delay: 6s; /* Start after the description fades in */
 }
