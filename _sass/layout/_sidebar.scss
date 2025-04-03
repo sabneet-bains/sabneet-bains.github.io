@@ -130,7 +130,7 @@
   color: var(--heading-font-color);
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
-  animation-delay: 1s; /* fades in after the avatar animation */
+  animation-delay: 0.9s; /* fades in after the avatar animation */
 }
 
 .sidebar__meta .sidebar__info .sidebar__role {
@@ -138,7 +138,7 @@
   color: var(--text-alt-color);
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
-  animation-delay: 1.5s; /* starts a bit later for a staggered effect */
+  animation-delay: 1.4s; /* starts a bit later for a staggered effect */
 }
 
 /*--------------------------------------------------------------
@@ -237,19 +237,19 @@
 /* "One Stop for" - 12 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(1) {
   animation: typewriter 0.8s steps(12, end) forwards;
-  animation-delay: 3s; /* Adjust this delay based on your overall timeline */
+  animation-delay: 1.9s; /* Adjust this delay based on your overall timeline */
 }
 
 /* "Quantum, AI" - 11 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(2) {
   animation: typewriter 0.8s steps(11, end) forwards;
-  animation-delay: 3.8s;
+  animation-delay: 2.7s;
 }
 
 /* "Innovation." - 11 characters */
 .sidebar__content .sidebar__title .typewriter-group:nth-child(3) {
   animation: typewriter 0.8s steps(11, end) forwards;
-  animation-delay: 4.6s;
+  animation-delay: 3.5s;
 }
 
 @keyframes fadeInUp {
@@ -268,11 +268,11 @@
   color: var(--text-alt-color);
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 5s; /* Start after your previous animations finish */
+  animation-delay: 4.3s; /* Start after your previous animations finish */
 }
 
 .sidebar__social {
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 6s; /* Start after the description fades in */
+  animation-delay: 5.3s; /* Start after the description fades in */
 }
