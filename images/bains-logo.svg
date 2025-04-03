@@ -2,20 +2,25 @@
 <svg id="Logo" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36">
   <defs>
     <style>
-      .cls-1 {
-        font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      /* Common properties for both text spans */
+      .common-text {
         font-size: 40px;
         font-weight: 700;
       }
-
-      .cls-2 {
-        fill: #1d1d1f;
-      }
-
-      .cls-3 {
+      /* Specific style for the symbol */
+      .symbol-font {
+        font-family: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
         fill: #780fff;
+      }
+      /* Specific style for "Bains" */
+      .bains-font {
+        font-family: OldStandardTT-Bold, 'Old Standard TT';
+        fill: #1d1d1f;
       }
     </style>
   </defs>
-  <text class="cls-1" transform="translate(-1.2 35.33)"><tspan class="cls-3" x="0" y="0"><![CDATA[❯_]]></tspan><tspan class="cls-2" x="30" y="0">Bains</tspan></text>
+  <text class="common-text" transform="translate(-1.2 35.33)">
+    <tspan class="symbol-font" x="0" y="0"><![CDATA[❯_]]></tspan>
+    <tspan class="bains-font" x="30" y="0">Bains</tspan>
+  </text>
 </svg>
