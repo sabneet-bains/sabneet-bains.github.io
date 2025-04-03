@@ -238,9 +238,10 @@ document.addEventListener("DOMContentLoaded", () => {
       img.onload = () => {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        context.drawImage(img, 0, 0, img.width, img.height);
+        // Use naturalWidth and naturalHeight to ensure valid integer dimensions
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
         const colorThief = new ColorThief();
         const dominantColor = colorThief.getColor(canvas); // Returns [R, G, B]
         const bgColor = `rgb(${dominantColor.join(',')})`;
