@@ -38,8 +38,27 @@
 --------------------------------------------------------------*/
 .project .project__content .project__head {
   position: relative;
+  /* Default fallback background; this can be overridden dynamically */
+  background: var(--background-alt-color-2);
+  /* Ensure the pseudo-element is positioned correctly */
+  z-index: 0;
 }
 
+/* Pseudo-element for dynamic blur effect */
+.project .project__content .project__head::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Inherit background from the project__head so the dominant color is used */
+  background-color: inherit;
+  backdrop-filter: blur(10px);
+  z-index: -1; /* Place behind the main content */
+}
+
+/* Project image container styling */
 .project .project__content .project__head .project__image {
   position: relative;
   transform: translate(0);
@@ -48,6 +67,7 @@
   border-radius: 24px 24px 0 0;
   outline: none;
   overflow: hidden;
+  /* This background might be overridden by the dominant color extraction */
   background: var(--background-alt-color-2);
 }
 

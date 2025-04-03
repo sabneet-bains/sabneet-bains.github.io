@@ -222,4 +222,35 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  /* =====================================
+     Dominant Color Extraction from Poster Image
+  ===================================== */
+  // Ensure that the ColorThief library is loaded on your page.
+  document.querySelectorAll('.project__head').forEach(projectHead => {
+    const video = projectHead.querySelector('video');
+    if (video && video.getAttribute('poster')) {
+      const posterUrl = video.getAttribute('poster');
+      const img = new Image();
+      img.crossOrigin = "Anonymous"; // necessary if the image is loaded from another domain
+      img.src = posterUrl;
+      img.onload = () => {
+        // Create a canvas to draw the poster image
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        context.drawImage(img, 0, 0, img.width, img.height);
+        // Use ColorThief to get the dominant color (an [R, G, B] array)
+        const colorThief = new ColorThief();
+        const dominantColor = colorThief.getColor(canvas);
+        const bgColor = `rgb(${dominantColor.join(',')})`;
+        // Update a custom property to set the dynamic background color.
+        // In your SCSS, you could reference this property in .project__head.
+        projectHead.style.setProperty('--project-head-dynamic-bg', bgColor);
+        // Optionally, directly update the background as a fallback.
+        projectHead.style.backgroundColor = bgColor;
+      };
+    }
+  });
 });
