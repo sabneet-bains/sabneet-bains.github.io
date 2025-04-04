@@ -155,7 +155,7 @@ table td {
   opacity: 1;
 }
 
-@keyframes zoomIn {
+@keyframes zoomInFade {
   from {
     transform: scale(0.8);
     opacity: 0;
@@ -168,7 +168,9 @@ table td {
 
 .col.col-7.col-d-12 {
   opacity: 0; /* Initially hidden */
-  animation: zoomIn 1s ease forwards;
-  animation-delay: 5.3s; /* Adjust as needed for your sequence */
+  transform: scale(0.8);
+  transform-origin: center center; /* Ensure uniform scaling */
+  animation: zoomInFade 1s ease forwards;
+  animation-delay: 5.3s; /* Adjust delay as needed */
 }
 
