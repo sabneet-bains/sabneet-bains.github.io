@@ -235,6 +235,17 @@
   }
 }
 
+@keyframes pivotFall {
+  from {
+    transform: translateY(-20px) rotate(15deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+
 /*--------------------------------------------------------------
    Animated Elements
 --------------------------------------------------------------*/
@@ -244,10 +255,11 @@
   animation: avatarSlideIn 0.8s ease forwards;
 }
 
-/* Intro & Role Fade In Animations */
+/* Intro & Role Animations */
 .sidebar__meta .sidebar__info .sidebar__intro {
   opacity: 0; /* Initially hidden */
-  animation: fadeIn 0.4s ease forwards;
+  transform-origin: left center; /* Pivots around the first letter (H) */
+  animation: pivotFall 0.4s ease forwards;
   animation-delay: 0.4s;
 }
 
