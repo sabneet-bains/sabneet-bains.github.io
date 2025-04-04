@@ -155,22 +155,10 @@ table td {
   opacity: 1;
 }
 
-@keyframes zoomInFade {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
+/* Hide the entire col until animations finish */
 .col.col-7.col-d-12 {
   opacity: 0; /* Initially hidden */
-  transform: scale(0.8);
-  transform-origin: center center; /* Ensure uniform scaling */
-  animation: zoomInFade 1s ease forwards;
-  animation-delay: 5.3s; /* Adjust delay as needed */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInUp 1s ease forwards; /* Animate in */
+  animation-delay: 5s; /* Delay to allow previous animations to complete */
 }
-
