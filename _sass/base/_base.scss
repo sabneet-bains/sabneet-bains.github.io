@@ -154,3 +154,11 @@ table td {
 .lazy.loaded {
   opacity: 1;
 }
+
+/* Hide the entire col until animations finish */
+.col.col-7.col-d-12 {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInUp 1s ease forwards; /* Animate in */
+  animation-delay: 7s; /* Delay to allow previous animations to complete */
+}
