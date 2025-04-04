@@ -186,6 +186,7 @@
   }
 }
 
+
 /* ==========================================================================
    ANIMATED STYLES & KEYFRAMES
    ========================================================================== */
@@ -247,13 +248,13 @@
 .sidebar__meta .sidebar__info .sidebar__intro {
   opacity: 0; /* Initially hidden */
   animation: fadeIn 0.4s ease forwards;
-  animation-delay: 0.4s; /* Fades in after the avatar animation */
+  animation-delay: 0.4s;
 }
 
 .sidebar__meta .sidebar__info .sidebar__role {
   opacity: 0;
   animation: fadeIn 0.4s ease forwards;
-  animation-delay: 0.7s; /* Staggered for effect */
+  animation-delay: 0.7s;
 }
 
 /* Typewriter Animations for Sidebar Title */
@@ -281,19 +282,24 @@
 
 /* Fade In Up for Description & Social */
 .sidebar__content .sidebar__description {
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 3.2s; /* After previous animations */
+  animation-delay: 3.2s;
 }
 
 .sidebar__social {
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 4.1s; /* After the description fades in */
+  animation-delay: 4.1s;
 }
 
+/*--------------------------------------------------------------
+   Typewriter Animation for Sidebar Copyright
+--------------------------------------------------------------*/
 .sidebar__copyright {
-  opacity: 0; /* Initially hidden */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0; /* Hide text initially */
   animation: typewriter 0.8s steps(11, end) forwards;
-  animation-delay: 5.0s; /* After the social section fades in */
+  animation-delay: 5s;
 }
