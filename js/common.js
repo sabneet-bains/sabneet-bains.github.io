@@ -12,6 +12,26 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay = document.querySelector('.overlay');
 
   /* =======================================================
+     Initial Theme Detection: 
+     - Check localStorage for a stored theme preference.
+     - Fallback to OS preference using matchMedia.
+     - Apply the appropriate theme by adding/removing the dark-mode class
+       and setting or removing the "dark" attribute on the html element.
+  ======================================================= */
+  const storedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  // Use stored theme if available; otherwise use OS preference.
+  const theme = storedTheme || (prefersDark ? "dark" : "light");
+
+  if (theme === "dark") {
+    html.classList.add("dark-mode");
+    document.documentElement.setAttribute("dark", "");
+  } else {
+    html.classList.remove("dark-mode");
+    document.documentElement.removeAttribute("dark");
+  }
+
+  /* =======================================================
      Menu + Theme Switcher
   ======================================================= */
   menuToggle?.addEventListener("click", () => menu());
@@ -21,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuList.classList.toggle("is-visible");
   };
 
-  // Theme Switcher
+  // Theme Switcher: on toggle, switch theme and persist user choice.
   if (toggleTheme) {
     toggleTheme.addEventListener("click", () => {
       darkMode();
@@ -31,10 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const darkMode = () => {
     if (html.classList.contains('dark-mode')) {
+      // User is switching away from dark mode.
       html.classList.remove('dark-mode');
-      localStorage.removeItem("theme");
+      localStorage.setItem("theme", "light"); // Optionally, you can remove the item here if you want to fall back on OS preference next time.
       document.documentElement.removeAttribute("dark");
     } else {
+      // User selects dark mode.
       html.classList.add('dark-mode');
       localStorage.setItem("theme", "dark");
       document.documentElement.setAttribute("dark", "");
