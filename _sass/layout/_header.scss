@@ -297,9 +297,10 @@
   }
 }
 
-.hamburger .hamburger__bar,
-.hamburger .hamburger__bar:after,
-.hamburger .hamburger__bar:before {
+/* Ensure the inner hamburger bar is positioned and displayed correctly */
+.hamburger .hamburger__bar {
+  display: block;
+  position: relative;
   width: 28px;
   height: 4px;
   border-radius: 10px;
@@ -311,6 +312,11 @@
 .hamburger .hamburger__bar:after {
   content: "";
   position: absolute;
+  width: 28px;
+  height: 4px;
+  border-radius: 10px;
+  transition: all 0.15s linear;
+  background-color: var(--heading-font-color);
 }
 
 .hamburger .hamburger__bar:before {
