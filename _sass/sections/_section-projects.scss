@@ -29,10 +29,6 @@
   will-change: transform;
 }
 
-.project .project__content:hover .project__info {
-  background: var(--background-alt-color-2);
-}
-
 /*--------------------------------------------------------------
    Project Head & Image/Video
 --------------------------------------------------------------*/
@@ -76,28 +72,15 @@
 }
 
 /*--------------------------------------------------------------
-   Project Info Section (Dynamic Background & Blur Effect)
+   Project Info Section (Dynamic Background)
 --------------------------------------------------------------*/
 .project .project__content .project__info {
-  position: relative; /* For pseudo-element positioning */
+  position: relative; /* For potential future positioning */
   padding: 20px 20px 24px;
   border-radius: 0 0 24px 24px;
   /* Use dynamic background color with fallback */
   background: var(--project-info-dynamic-bg, var(--background-alt-color));
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-}
-
-/* Pseudo-element for blur effect on project__info */
-.project .project__content .project__info::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: inherit; /* Uses the dynamic background color */
-  backdrop-filter: blur(10px);
-  z-index: -1; /* Place behind the content */
 }
 
 .project .project__content .project__info .project__title {
@@ -135,3 +118,4 @@
     border-radius: 0 0 20px 20px;
   }
 }
+
