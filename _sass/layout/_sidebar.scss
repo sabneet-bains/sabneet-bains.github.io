@@ -102,7 +102,7 @@
   user-select: none;
 }
 
-.sidebar__avatar .sidebar__avatar img:hover {
+.sidebar__avatar:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
