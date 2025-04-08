@@ -7,7 +7,7 @@
   z-index: 10;
   width: 100%;
   height: auto;
-  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   background: var(--background-color);
   will-change: transform;
 }
@@ -15,8 +15,8 @@
 /* Backdrop Filter for Modern Browsers */
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .header {
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(200%) blur(15px);
+    backdrop-filter: saturate(200%) blur(15px);
     background: var(--background-rgba);
   }
 }
