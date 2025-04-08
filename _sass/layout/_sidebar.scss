@@ -102,6 +102,11 @@
   user-select: none;
 }
 
+.sidebar__avatar .sidebar__avatar img:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 .sidebar__meta .sidebar__info .sidebar__intro {
   font-size: 16px;
   color: var(--heading-font-color);
@@ -170,6 +175,7 @@
   transform: scale(1.05);
   color: var(--white);
   background: var(--brand-color);
+  transition: all 0.3s ease;
 }
 
 /*--------------------------------------------------------------
