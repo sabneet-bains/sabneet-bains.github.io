@@ -295,14 +295,14 @@
 /* Fade In Up for Description & Social */
 .sidebar__content .sidebar__description {
   opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
+  animation: fadeInUp 0.9s ease forwards;
   animation-delay: 2.5s;
 }
 
 .sidebar__social {
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 2.9s;
+  animation-delay: 3.0s;
 }
 
 /*--------------------------------------------------------------
@@ -312,6 +312,6 @@
   overflow: hidden;
   white-space: nowrap;
   width: 0; /* Hide text initially */
-  animation: typewriter 0.6s steps(18, end) forwards;
-  animation-delay: 3.4s;
+  animation: typewriter 0.5s steps(30, end) forwards;
+  animation-delay: 3.3s;
 }

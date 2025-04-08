@@ -159,6 +159,6 @@ table td {
 .col.col-7.col-d-12 {
   opacity: 0; /* Initially hidden */
   transform: translateY(20px); /* Start slightly below */
-  animation: fadeInUp 1s ease forwards; /* Animate in */
+  animation: fadeInUp 0.9s ease forwards; /* Animate in */
   animation-delay: 2.3s; /* Delay to allow previous animations to complete */
 }
