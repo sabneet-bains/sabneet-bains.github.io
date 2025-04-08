@@ -167,6 +167,7 @@
 }
 
 .sidebar__social .sidebar__social__link:hover {
+  transform: scale(1.05);
   color: var(--white);
   background: var(--brand-color);
 }
