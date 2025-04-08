@@ -16,8 +16,8 @@
 /* Backdrop Filter for Modern Browsers */
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .header {
-    -webkit-backdrop-filter: saturate(200%) blur(15px);
-    backdrop-filter: saturate(200%) blur(15px);
+    -webkit-backdrop-filter: saturate(500%) blur(500px);
+    backdrop-filter: saturate(500%) blur(500px);
     background: var(--background-rgba);
   }
 }
