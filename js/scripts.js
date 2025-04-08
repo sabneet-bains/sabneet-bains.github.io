@@ -3145,3 +3145,128 @@ t = function() {
    window.splide.Extensions = window.splide.Extensions || {},
    window.splide.Extensions.Intersection = F)
 });
+
+/* shuffle-letters
+  ====================================================
+  Version : v1.0.2
+  Website : hhttps://github.com/georapbox/shuffle-letters#readme
+  Repo    : https://github.com/georapbox/shuffle-letters.git
+  Author  : George Raptis
+  License : MIT
+  ==================================================== */
+
+  !function(e, t) {
+    "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (e = "undefined" != typeof globalThis ? globalThis : e || self).shuffleLetters = t()
+}(this, (function() {
+    "use strict";
+    function e(e, t) {
+        var r = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+            var n = Object.getOwnPropertySymbols(e);
+            t && (n = n.filter((function(t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable
+            }
+            ))),
+            r.push.apply(r, n)
+        }
+        return r
+    }
+    function t(t) {
+        for (var n = 1; n < arguments.length; n++) {
+            var o = null != arguments[n] ? arguments[n] : {};
+            n % 2 ? e(Object(o), !0).forEach((function(e) {
+                r(t, e, o[e])
+            }
+            )) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o)) : e(Object(o)).forEach((function(e) {
+                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e))
+            }
+            ))
+        }
+        return t
+    }
+    function r(e, t, r) {
+        return t in e ? Object.defineProperty(e, t, {
+            value: r,
+            enumerable: !0,
+            configurable: !0,
+            writable: !0
+        }) : e[t] = r,
+        e
+    }
+    function n(e) {
+        return function(e) {
+            if (Array.isArray(e))
+                return o(e)
+        }(e) || function(e) {
+            if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"])
+                return Array.from(e)
+        }(e) || function(e, t) {
+            if (!e)
+                return;
+            if ("string" == typeof e)
+                return o(e, t);
+            var r = Object.prototype.toString.call(e).slice(8, -1);
+            "Object" === r && e.constructor && (r = e.constructor.name);
+            if ("Map" === r || "Set" === r)
+                return Array.from(e);
+            if ("Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r))
+                return o(e, t)
+        }(e) || function() {
+            throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+        }()
+    }
+    function o(e, t) {
+        (null == t || t > e.length) && (t = e.length);
+        for (var r = 0, n = new Array(t); r < t; r++)
+            n[r] = e[r];
+        return n
+    }
+    function i(e) {
+        var t = "";
+        "lowerCase" === e ? t = "abcdefghijklmnopqrstuvwxyz0123456789" : "upperCase" === e ? t = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" : "symbol" === e && (t = ",.?/\\(^)![]{}*&^%$#'\"");
+        var r = t.split("");
+        return r[Math.floor(Math.random() * r.length)]
+    }
+    function a(e) {
+        return !!e && 1 === e.nodeType && e instanceof Element == !0
+    }
+    return function(e) {
+        var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+          , o = {
+            text: "",
+            iterations: 8,
+            fps: 30,
+            onComplete: function() {}
+        }
+          , f = t(t({}, o), r);
+        if (!a(e))
+            throw new TypeError("Expected element to be a valid HTML element.");
+        for (var u = f.text && "string" == typeof f.text ? f.text.split("") : e.textContent.split(""), l = [], c = [], s = 0; s < u.length; s += 1) {
+            var p = u[s];
+            /\s/.test(p) ? l[s] = "space" : (/[a-z]/.test(p) ? l[s] = "lowerCase" : /[A-Z]/.test(p) ? l[s] = "upperCase" : l[s] = "symbol",
+            c.push(s))
+        }
+        e.textContent = "";
+        var y = null;
+        return function t(r) {
+            var o = n(u)
+              , a = c.length;
+            if (r > a)
+                "function" == typeof f.onComplete && f.onComplete(e);
+            else {
+                for (var s = Math.max(r, 0); s < a; s += 1)
+                    s < r + f.iterations ? o[c[s]] = i(l[c[s]]) : o[c[s]] = "";
+                e.textContent = o.join(""),
+                y = setTimeout((function() {
+                    t(r + 1)
+                }
+                ), 1e3 / f.fps)
+            }
+        }(-f.iterations),
+        function() {
+            clearTimeout(y),
+            y = null
+        }
+    }
+}
+));
