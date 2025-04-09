@@ -103,9 +103,9 @@
 }
 
 .sidebar__avatar:hover img {
-  transform: scale(1.08) rotate(6deg);
+  transform: scale(1.05) rotate(2deg);
   content: url('/images/sabneet-avatar-hover.svg');
-  transition: all 0.3s ease;
+  transition: 0.2s ease-in-out;
 }
 
 .sidebar__meta .sidebar__info .sidebar__intro {
