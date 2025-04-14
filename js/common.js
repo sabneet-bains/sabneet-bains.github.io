@@ -464,4 +464,4 @@ document.addEventListener("DOMContentLoaded", () => {
 //     avatar.addEventListener('mouseleave', () => updateSvgAnimationsDirection(false));
 //   }
 
-// }); // End DOMContentLoaded
+}); // End DOMContentLoaded
