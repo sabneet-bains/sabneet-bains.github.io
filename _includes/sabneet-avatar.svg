@@ -1,0 +1,749 @@
+<svg
+  id="avatar"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1543 1539"
+  shape-rendering="geometricPrecision"
+  text-rendering="geometricPrecision"
+  project-id="b66a45ba6c97450b80c1035044c562b4"
+  export-id="023a5f4e68374dd7a6be56aa4c3db0e9"
+  cached="false"
+>
+  <style type="text/css"><![CDATA[
+  #avatar {
+      pointer-events: all
+  }
+
+  #avatar * {
+      animation-play-state: paused !important
+  }
+
+  #avatar:hover * {
+      animation-play-state: running !important
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-shoulder-plate_tr {
+      animation: avatar-u-shoulder-plate_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-shoulder-plate_tr__tr {
+      0% {
+          transform: translate(2059.5px,1562px) rotate(0deg)
+      }
+
+      33.333333% {
+          transform: translate(2059.5px,1562px) rotate(1deg)
+      }
+
+      66.666667% {
+          transform: translate(2059.5px,1562px) rotate(-1deg)
+      }
+
+      100% {
+          transform: translate(2059.5px,1562px) rotate(0deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-led {
+      animation: avatar-u-led_f_p 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-led_f_p {
+      0% {
+          fill: #ffc000
+      }
+
+      33.333333% {
+          fill: #ff7000
+      }
+
+      66.666667% {
+          fill: #ffc000
+      }
+
+      100% {
+          fill: #ff7000
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-head_tr {
+      animation: avatar-u-head_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-head_tr__tr {
+      0% {
+          transform: translate(2029.717041px,1148.722198px) rotate(0deg)
+      }
+
+      33.333333% {
+          transform: translate(2029.717041px,1148.722198px) rotate(1.5deg)
+      }
+
+      100% {
+          transform: translate(2029.717041px,1148.722198px) rotate(0deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-right-ear_ts {
+      animation: avatar-u-right-ear_ts__ts 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-right-ear_ts__ts {
+      0% {
+          transform: translate(2323.72px,1176.22px) scale(1,1)
+      }
+
+      10% {
+          transform: translate(2323.72px,1176.22px) scale(1,1)
+      }
+
+      23.333333% {
+          transform: translate(2323.72px,1176.22px) scale(1.1,1.1)
+      }
+
+      100% {
+          transform: translate(2323.72px,1176.22px) scale(1.1,1.1)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-skin_ts {
+      animation: avatar-u-skin_ts__ts 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-skin_ts__ts {
+      0% {
+          transform: translate(2030.525373px,755.670959px) scale(1,1)
+      }
+
+      36.666667% {
+          transform: translate(2030.525373px,755.670959px) scale(1,0.97)
+      }
+
+      100% {
+          transform: translate(2030.525373px,755.670959px) scale(1,1)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-mouth {
+      animation: avatar-u-mouth__m 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-mouth__m {
+      0% {
+          d: path('M616.905306,1144.88885C622.942311,1168.374918,662.101854,1174.042747,685.132028,1172.703311C707.374265,1171.409701,729.922604,1162.261279,753.586209,1144.20797')
+      }
+
+      6.666667% {
+          d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,720.832673,1167.732881,743.585599,1149.20797')
+      }
+
+      13.333333% {
+          d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,721.237276,1169.351295,737.586209,1152.20797')
+      }
+
+      20% {
+          d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.046483,1170.565105,733.586209,1154.20797')
+      }
+
+      26.666667% {
+          d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797')
+      }
+
+      100% {
+          d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797')
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-mouth_to {
+      animation: avatar-u-mouth_to__to 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-mouth_to__to {
+      0% {
+          transform: translate(2040.772475px,1399.390043px)
+      }
+
+      26.666667% {
+          transform: translate(2041.722064px,1398.774439px)
+      }
+
+      100% {
+          transform: translate(2041.722064px,1398.774439px)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-mouth_tr {
+      animation: avatar-u-mouth_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-mouth_tr__tr {
+      0% {
+          transform: rotate(0deg)
+      }
+
+      26.666667% {
+          transform: rotate(10deg)
+      }
+
+      100% {
+          transform: rotate(10deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-right-eye2 {
+      animation: avatar-u-right-eye2__m 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-right-eye2__m {
+      0% {
+          d: path('M-0.630236,-17.168464L2.680903,31.412714')
+      }
+
+      43.333333% {
+          d: path('M-0.630236,-17.168464L2.680903,31.412714')
+      }
+
+      50% {
+          d: path('M-0.630236,-17.168464L1.680903,24.412714')
+      }
+
+      56.666667% {
+          d: path('M-0.630236,-17.168464L1.680903,17.412714')
+      }
+
+      63.333333% {
+          d: path('M-0.630236,-17.168464L0.680903,10.412714')
+      }
+
+      70% {
+          d: path('M-0.630236,-17.168464L-0.458578,-20.01717')
+      }
+
+      80% {
+          d: path('M-0.630236,-17.168464L0.680903,10.412714')
+      }
+
+      86.666667% {
+          d: path('M-0.630236,-17.168464L1.680903,17.412714')
+      }
+
+      93.333333% {
+          d: path('M-0.630236,-17.168464L1.680903,24.412714')
+      }
+
+      100% {
+          d: path('M-0.630236,-17.168464L1.680903,24.412714')
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-right-brow_tr {
+      animation: avatar-u-right-brow_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-right-brow_tr__tr {
+      0% {
+          transform: translate(2208.464723px,1111.039897px) rotate(-10deg)
+      }
+
+      43.333333% {
+          transform: translate(2208.464723px,1111.039897px) rotate(-10deg)
+      }
+
+      100% {
+          transform: translate(2208.464723px,1111.039897px) rotate(4deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-left-eye2_to {
+      animation: avatar-u-left-eye2_to__to 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-left-eye2_to__to {
+      0% {
+          transform: translate(2202px,1140px)
+      }
+
+      26.666667% {
+          transform: translate(2222px,1124px)
+      }
+
+      100% {
+          transform: translate(2222px,1124px)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-left-brow_to {
+      animation: avatar-u-left-brow_to__to 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-left-brow_to__to {
+      0% {
+          transform: translate(2202px,1116px)
+      }
+
+      26.666667% {
+          transform: translate(2222px,1100px)
+      }
+
+      100% {
+          transform: translate(2222px,1100px)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-left-brow_tr {
+      animation: avatar-u-left-brow_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-left-brow_tr__tr {
+      0% {
+          transform: rotate(0deg)
+      }
+
+      26.666667% {
+          transform: rotate(20deg)
+      }
+
+      66.666667% {
+          transform: rotate(15deg)
+      }
+
+      100% {
+          transform: rotate(15deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-pomp-back_tr {
+      animation: avatar-u-pomp-back_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-pomp-back_tr__tr {
+      0% {
+          transform: translate(1959.380834px,525.26172px) rotate(0deg)
+      }
+
+      60% {
+          transform: translate(1959.380834px,525.26172px) rotate(-0.5deg)
+      }
+
+      100% {
+          transform: translate(1959.380834px,525.26172px) rotate(0.5deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-pomp-back_ts {
+      animation: avatar-u-pomp-back_ts__ts 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-pomp-back_ts__ts {
+      0% {
+          transform: scale(1,1)
+      }
+
+      36.666667% {
+          transform: scale(1,0.97)
+      }
+
+      100% {
+          transform: scale(1,1)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-pomp-front_tr {
+      animation: avatar-u-pomp-front_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-pomp-front_tr__tr {
+      0% {
+          transform: translate(2204.412204px,655.460852px) rotate(0deg)
+      }
+
+      33.333333% {
+          transform: translate(2204.412204px,655.460852px) rotate(-4deg)
+      }
+
+      66.666667% {
+          transform: translate(2204.412204px,655.460852px) rotate(4deg)
+      }
+
+      100% {
+          transform: translate(2204.412204px,655.460852px) rotate(0deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-visor_to {
+      animation: avatar-u-visor_to__to 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-visor_to__to {
+      0% {
+          offset-distance: 0%;
+          animation-timing-function: cubic-bezier(0,0,0.38,1)
+      }
+
+      26.666667% {
+          offset-distance: 100%
+      }
+
+      100% {
+          offset-distance: 100%
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-visor_tr {
+      animation: avatar-u-visor_tr__tr 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-visor_tr__tr {
+      0% {
+          transform: rotate(0deg);
+          animation-timing-function: cubic-bezier(0,0,0.5,1)
+      }
+
+      26.666667% {
+          transform: rotate(180deg)
+      }
+
+      83.333333% {
+          transform: rotate(170deg)
+      }
+
+      100% {
+          transform: rotate(180deg)
+      }
+  }
+
+  svg[viewBox="0 0 1543 1539"] #avatar-u-screen {
+      animation: avatar-u-screen_f_o 3000ms linear infinite alternate forwards
+  }
+
+  @keyframes avatar-u-screen_f_o {
+      0% {
+          fill-opacity: 0.6
+      }
+
+      10% {
+          fill-opacity: 0.4;
+          animation-timing-function: cubic-bezier(0,0,0.58,1)
+      }
+
+      30% {
+          fill-opacity: 0.6
+      }
+
+      53.333333% {
+          fill-opacity: 0.55
+      }
+
+      100% {
+          fill-opacity: 0.55
+      }
+  }
+  ]]></style>
+  <defs>
+    <filter id="avatar-u-background-filter" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur
+        id="avatar-u-background-filter-blur-0"
+        stdDeviation="30,30"
+        result="result"
+      />
+    </filter>
+    <filter id="avatar-u-screen-filter" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur
+        id="avatar-u-screen-filter-blur-0"
+        stdDeviation="0,0"
+        result="result"
+      />
+    </filter>
+  </defs>
+  <ellipse
+    id="avatar-u-background"
+    rx="398.326358"
+    ry="397.293756"
+    transform="matrix(1.936854 0 0 1.936854 771.500001 769.5)"
+    filter="url(#avatar-u-background-filter)"
+    fill="#deeaf6"
+    stroke-width="0"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <g id="avatar-u-avatar" transform="translate(-1291.680903-201.412715)">
+    <g id="avatar-u-armor">
+      <g id="avatar-u-shoulder-plate_tr" transform="translate(2059.5,1562) rotate(0)">
+        <path
+          id="avatar-u-shoulder-plate"
+          d="M2058.96,1393c163.51,0,301.87,107.88,348.01,256.46l.03.13-44.35,21.23c-92.21,38.75-193.59,60.18-300.01,60.18s-207.8-21.43-300.01-60.18L1712,1646.58l11.2-30.66c55.32-131,184.82-222.92,335.76-222.92Z"
+          transform="translate(-2059.5,-1562)"
+          fill="#c7c5cb"
+          fill-rule="evenodd"
+          stroke="#000"
+          stroke-width="18.3048"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="8"
+        />
+      </g>
+      <path
+        id="avatar-u-chest-plate"
+        d="M1720.61,1583h676.78c14.69,0,26.61,11.94,26.61,26.65v32.03l-60.8,29.1c-46.18,19.41-94.66,34.48-144.92,44.69l-29.85,4.53h-251.49l-29.84-4.53c-75.39-15.32-146.77-41.56-212.41-76.98l-.69-.42v-28.42c0-14.71,11.92-26.65,26.61-26.65Z"
+        fill="#b2b0bc"
+        fill-rule="evenodd"
+        stroke="#000"
+        stroke-width="18.3048"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="8"
+      />
+      <path
+        id="avatar-u-middle-plate"
+        d="M1943.67,1365h230.66c31.85,0,57.67,25.89,57.67,57.83v288.98l-14.18,3.63c-50.12,10.2-102,15.56-155.15,15.56-53.14,0-105.03-5.36-155.14-15.56l-21.53-5.5v-287.11c0-31.94,25.82-57.83,57.67-57.83Z"
+        fill="#77718c"
+        fill-rule="evenodd"
+        stroke="#000"
+        stroke-width="18.3048"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-miterlimit="8"
+      />
+      <g id="avatar-u-beacon">
+        <path
+          id="avatar-u-holder"
+          d="M2000.19,1625h118.62c32.14,0,58.19,26.09,58.19,58.27v38.39l-35.5,5.38c-25.97,2.62-52.31,3.96-78.98,3.96-26.66,0-53.01-1.34-78.97-3.96l-41.55-6.3v-37.47c0-32.18,26.05-58.27,58.19-58.27Z"
+          fill="#5c586f"
+          fill-rule="evenodd"
+          stroke="#000"
+          stroke-width="18.3048"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="8"
+        />
+        <path
+          id="avatar-u-casing"
+          d="M2061.5,1677c21.27,0,38.5,17.05,38.5,38.08l-2.9,14.22-34.24,1.7-36.98-1.83-2.88-14.09c0-21.03,17.23-38.08,38.5-38.08Z"
+          fill-rule="evenodd"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          id="avatar-u-led"
+          d="M2045.72,1713.23c0-6.62,5.15-12,11.5-12c6.36,0,11.5,5.38,11.5,12c0,6.63-5.14,12-11.5,12-6.35,0-11.5-5.37-11.5-12Z"
+          fill="#ffc000"
+          fill-rule="evenodd"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </g>
+    <g id="avatar-u-head_tr" transform="translate(2029.717041,1148.722198) rotate(0)">
+      <g id="avatar-u-head" transform="translate(-2029.717041,-1148.722198)">
+        <g id="avatar-u-ears">
+          <g id="avatar-u-right-ear_ts" transform="translate(2323.72,1176.22) scale(1,1)">
+            <path
+              id="avatar-u-right-ear"
+              d="M2249.72,1176.22c0-51.36,33.13-93,74-93c40.86,0,74,41.64,74,93s-33.14,93-74,93c-40.87,0-74-41.64-74-93Z"
+              transform="translate(-2323.72,-1176.22)"
+              fill="#c38369"
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width="18.3048"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-miterlimit="8"
+            />
+          </g>
+          <path
+            id="avatar-u-left-ear"
+            d="M1612.72,1174.22c0-51.36,33.13-93,74-93c40.86,0,74,41.64,74,93s-33.14,93-74,93c-40.87,0-74-41.64-74-93Z"
+            fill="#c38369"
+            fill-rule="evenodd"
+            stroke="#000"
+            stroke-width="18.3048"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="8"
+          />
+        </g>
+        <g id="avatar-u-face">
+          <g id="avatar-u-skin_ts" transform="translate(2030.525373,755.670959) scale(1,1)">
+            <g id="avatar-u-skin" transform="translate(-2030.525373,-755.670959)">
+              <path
+                id="avatar-u-flesh"
+                d="M1697.02,1146.85c2.93-77.26-13.74-190.466,97.92-311.88c44.52-50.431,166.08-78.563,243.6-78.746s167.95,27.215,221.55,77.645c51.78,52.632,106.29,150.407,102.43,313.531-1.11,84.65-5.49,195.56-80.66,298.36-21,23.96-42.89,30.72-72.56,55.73-34.78,28.06-84.07,41.88-142.77,39.46-58.1,2.54-133.04-36.95-171.35-53.55-38.3-16.6-81.51-28.04-116.57-79.06-29.02-33.95-32.34-65.23-52.09-103.22-13.09-39.64-32.44-81.01-29.5-158.27Z"
+                fill="#da9d81"
+                fill-rule="evenodd"
+                stroke="#000"
+                stroke-width="18.3048"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="8"
+              />
+              <path
+                id="avatar-u-shadow"
+                d="M1756.31,1080.12c-3.47,89.96,19.4,138.13,34.88,184.28c23.34,44.22,27.27,80.64,61.57,120.18c41.46,59.4,92.53,72.71,137.81,92.04c28.31,12.08,73.52,34.57,120.23,49.02l3.41045.9184c-15.19744,2.04252-31.3329,2.73959-48.27584,2.0406-56.37229,2.46659-129.09041-35.93059-166.26822-52.07022-37.16812-16.13963-79.09367-27.25869-113.12246-76.87204-28.15708-33.00759-31.38361-63.42235-50.54903-100.36287-12.70266-38.54284-31.4805-78.77539-28.62216-153.88974c2.61397-68.93521-10.79556-167.29977,70.69868-274.25417-26.42896,80.69125-19.6023,152.94889-21.76144,208.97005l.00002-.00001Z"
+                transform="matrix(.997622 0 0 1.006585 3.543544-6.902037)"
+                fill="#c38369"
+                fill-rule="evenodd"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </g>
+          <g id="avatar-u-mouth_to" transform="translate(2040.772475,1399.390043)">
+            <g id="avatar-u-mouth_tr" transform="rotate(0)">
+              <path
+                id="avatar-u-mouth"
+                d="M616.905306,1144.88885c6.037005,23.486068,45.196548,29.153897,68.226722,27.814461c22.242237-1.29361,44.790576-10.442032,68.454181-28.495341"
+                transform="translate(-685.245757,-1158.465618)"
+                fill="none"
+                stroke="#1f1313"
+                stroke-width="30"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </g>
+          <g id="avatar-u-right-eye" transform="translate(0 0.000001)">
+            <path
+              id="avatar-u-right-eye2"
+              d="M-0.630236,-17.168464L2.680903,31.412714"
+              transform="translate(2203 1145)"
+              fill="none"
+              stroke="#1f1313"
+              stroke-width="36"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <g id="avatar-u-right-brow_tr" transform="translate(2208.464723,1111.039897) rotate(-10)">
+              <line
+                id="avatar-u-right-brow"
+                x1="-45.365344"
+                y1="16.444938"
+                x2="33.025775"
+                y2="-11.602036"
+                transform="translate(0,0)"
+                fill="none"
+                stroke="#1f1313"
+                stroke-width="36"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </g>
+          <g id="avatar-u-left-eye" transform="translate(-349.823791 31.412439)">
+            <g id="avatar-u-left-eye2_to" transform="translate(2202,1140)">
+              <line
+                id="avatar-u-left-eye2"
+                x1="-1.594794"
+                y1="-23.891159"
+                x2="3.149509"
+                y2="37.00674"
+                transform="translate(0.000001,0)"
+                fill="none"
+                stroke="#1f1313"
+                stroke-width="36"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <g id="avatar-u-left-brow_to" transform="translate(2202,1116)">
+              <g id="avatar-u-left-brow_tr" transform="rotate(0)">
+                <line
+                  id="avatar-u-left-brow"
+                  x1="-39.444606"
+                  y1="11.125401"
+                  x2="39.040043"
+                  y2="-17.193802"
+                  transform="translate(0,0)"
+                  fill="none"
+                  stroke="#1f1313"
+                  stroke-width="36"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="avatar-u-hair">
+      <g id="avatar-u-pomp-back_tr" transform="translate(1959.380834,525.26172) rotate(0)">
+        <g id="avatar-u-pomp-back_ts" transform="scale(1,1)">
+          <g id="avatar-u-pomp-back" transform="translate(-1959.380834,-525.26172)">
+            <path
+              id="avatar-u-volume"
+              d="M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961l8.14,15.857c20.33,42.384,19.56,44.654,25.48,74.629c13.33,78.853,4.21,185.093-14.78,273.783-12.19,4.53-9.09-156.481-32.22-208.114-33.34-52.667-84.74-122.224-155.97-104.914-71.24,17.31-65.28,14.98-111.82,20.467
+              s-125.77-6.127-179.3,9.487c-61.32,24.731-140.05,68.327-141.89,84.2-3.8,17.416,26.79,41.274,1.73,53.854-8.93,6.89-34.26,12.81-39.28,75.46-4.62,51.01,7.24,182.67-6.86,130.58-3.6,15.33-8-1.9-14.81-38.61-6.8-36.72-5.33-130.84-42.36-167.2
+              c28.66-12.867-73.26-119.768-89.38-201.906-15.99-88.402-14.32-156.602,194.76-244.083c71.89-28.829,188.75-45.817,228.29-33.902c15.74,3.592,19.3,5.511,35.29,16.75
+              c112.52-34.348,192.840408,53.247228,225.672386,81.028132Z"
+              fill="#1f1313"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              id="avatar-u-shadow2"
+              d="M1827.72,539.224c-61.51,40.497-168.85,127.073-135.12,190.17c31.34,59.748,65.2,126.073,96.54,185.82-30,31.1-66.6,21.575-36.81,77.732c12.45,31.234-75.58,35.244-97.22,30.744-21.64-4.51-15.81-26.307-32.63-57.759-18.7-33.809-35.69-60.662-54.39-95.632-66.58-139.534-11.95-212.437,83.53-263.591c52.71-30.78,140.52-64.676,176.1-67.484Z"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </g>
+      </g>
+      <g id="avatar-u-pomp-front_tr" transform="translate(2204.412204,655.460852) rotate(0)">
+        <g id="avatar-u-pomp-front" transform="translate(-1451.696167,-1030.229035)">
+          <path
+            id="avatar-u-volume2"
+            d="M1183.657201,251.7943q37.403377,58.557896,38.626051,116.023558c1.222674,57.465662-47.684273,128.380735-84.7368,165.407324s-120.302166,89.733583-235.673914,105.510916-221.868747,27.610333-261.31208-44.37375-36.485083-204.119248,62.123249-244.548664s174.536748-24.652083,296.81108-27.610333q122.274332-2.95825,184.162414-70.409051Z"
+            transform="translate(532.300289 578.987245)"
+            fill="#1f1313"
+            stroke-width="3.086"
+          />
+          <path
+            id="avatar-u-shadow3"
+            d="M748.022428,501.612415c8.224333,130.166521,182.212446,132.29705,181.885315,132.369746-.404561.089903-20.278205,3.76319-28.211077,4.846315-115.371748,15.777333-221.692875,27.517955-261.136208-44.466128s-37.073229-205.584582,62.123249-244.548664c35.133114-13.800183,75.076483-23.537055,105.763061-25.622551-45.994898,28.032592-67.072165,69.633267-60.42434,177.421282Z"
+            transform="translate(532.060051 578.952031)"
+            stroke-width="3.086"
+          />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+    id="avatar-u-visor_to"
+    style="offset-path: path('M974.65,931.93 Q319.64,392.214322,506.53,931.93'); offset-rotate: 0deg"
+  >
+    <g id="avatar-u-visor_tr" transform="rotate(0)">
+      <g id="avatar-u-visor" transform="translate(-974.65,-931.93)">
+        <path
+          id="avatar-u-screen"
+          d="M995.07,766.625l-208.06,36.905c-33.44,5.93-55.73,37.84-49.8,71.27l30.61,172.64c5.94,33.43,37.85,55.73,71.28,49.8l208.06-36.9c33.44-5.93,55.74-37.85,49.8-71.28l-30.62-172.63c-5.92-33.438-37.84-55.735-71.27-49.805Z"
+          filter="url(#avatar-u-screen-filter)"
+          fill="#a9d18e"
+          fill-opacity="0.6"
+          fill-rule="evenodd"
+          stroke="#000"
+          stroke-width="18.3048"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="8"
+        />
+        <path
+          id="avatar-u-dial"
+          d="M1065.48,792.15l62.68-10.938c34.62-6.043,71.32,38.508,81.97,99.508c10.65,61.01-8.78,115.36-43.4,121.4l-62.69,10.94-38.56-220.91Z"
+          fill="#e8e8e8"
+          fill-rule="evenodd"
+          stroke="#000"
+          stroke-width="18.2875"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-miterlimit="8"
+        />
+      </g>
+    </g>
+  </g>
+</svg>
+
+
+
+

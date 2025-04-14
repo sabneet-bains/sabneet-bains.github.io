@@ -88,48 +88,10 @@
   overflow: hidden;
   background: var(--background-alt-color);
   box-shadow: var(--drop-shadow);
-  position: relative; /* Ensure absolute positioning for children */
+  position: relative; /* Ensure absolute positioning for children if needed */
 }
 
-/* Common styles for both images */
-.sidebar__meta .sidebar__avatar img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  user-select: none;
-  will-change: transform, opacity;
-}
-
-/* Default image styles: fully visible and transition only transform */
-.sidebar__avatar .sidebar__avatar-img {
-  opacity: 1;
-  transition: transform 0.4s ease;
-}
-
-/* Hover image styles: hidden by default, transition transform and nearly instant opacity */
-.sidebar__avatar .sidebar__avatar__hover-img {
-  opacity: 0;
-  transition: opacity 0s ease, transform 0.4s ease;
-}
-
-/* On hover: apply transform and perform a near-instant opacity swap */
-.sidebar__avatar:hover .sidebar__avatar-img,
-.sidebar__avatar:hover .sidebar__avatar__hover-img {
-  transform: scale(1.06) rotate(4deg);
-}
-
-.sidebar__avatar:hover .sidebar__avatar-img {
-  opacity: 0;
-}
-
-.sidebar__avatar:hover .sidebar__avatar__hover-img {
-  opacity: 1;
-}
-
+/* Sidebar Info Section remains unchanged */
 .sidebar__meta .sidebar__info .sidebar__intro {
   font-size: 16px;
   color: var(--heading-font-color);
