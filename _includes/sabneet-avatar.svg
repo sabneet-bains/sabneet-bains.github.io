@@ -439,28 +439,11 @@
       }
   }
   ]]></style>
-  <defs>
-    <filter id="avatar-u-background-filter" x="-150%" y="-150%" width="400%" height="400%">
-      <feGaussianBlur
-        id="avatar-u-background-filter-blur-0"
-        stdDeviation="30,30"
-        result="result"
-      />
-    </filter>
-    <filter id="avatar-u-screen-filter" x="-150%" y="-150%" width="400%" height="400%">
-      <feGaussianBlur
-        id="avatar-u-screen-filter-blur-0"
-        stdDeviation="0,0"
-        result="result"
-      />
-    </filter>
-  </defs>
   <ellipse
     id="avatar-u-background"
     rx="398.326358"
     ry="397.293756"
     transform="matrix(1.936854 0 0 1.936854 771.500001 769.5)"
-    filter="url(#avatar-u-background-filter)"
     fill="#deeaf6"
     stroke-width="0"
     stroke-linecap="round"
@@ -718,7 +701,6 @@
         <path
           id="avatar-u-screen"
           d="M995.07,766.625l-208.06,36.905c-33.44,5.93-55.73,37.84-49.8,71.27l30.61,172.64c5.94,33.43,37.85,55.73,71.28,49.8l208.06-36.9c33.44-5.93,55.74-37.85,49.8-71.28l-30.62-172.63c-5.92-33.438-37.84-55.735-71.27-49.805Z"
-          filter="url(#avatar-u-screen-filter)"
           fill="#a9d18e"
           fill-opacity="0.6"
           fill-rule="evenodd"
