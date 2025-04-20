@@ -1,0 +1,1124 @@
+<svg id="sabneet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1542 1542" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" > #sabneet { pointer-events: all } <style type="text/css">
+  <![CDATA[
+  :root {
+    --anim-dur: 3000ms;
+    --anim-timing: linear;
+    --anim-iter: infinite;
+    --anim-dir: alternate;
+    --anim-fill: forwards;
+  }
+
+  /* Pause by default, run on hover */
+  #sabneet [id^="sabneet-u-"] {
+    animation-duration: var(--anim-dur);
+    animation-timing-function: var(--anim-timing);
+    animation-iteration-count: var(--anim-iter);
+    animation-direction: var(--anim-dir);
+    animation-fill-mode: var(--anim-fill);
+    will-change: transform, d, filter, opacity;
+    animation-play-state: paused !important;
+  }
+
+  #sabneet:hover [id^="sabneet-u-"] {
+    animation-play-state: running !important;
+  }
+
+  /* Map IDs to concise animation names */
+  #sabneet #sabneet-u-avatar_to {
+    animation-name: avatar_to;
+  }
+
+  #sabneet #sabneet-u-avatar_ts {
+    animation-name: avatar_ts;
+  }
+
+  #sabneet #sabneet-u-right-arm_tr {
+    animation-name: right_arm_tr;
+  }
+
+  #sabneet #sabneet-u-left-arm_tr {
+    animation-name: left_arm_tr;
+  }
+
+  #sabneet #sabneet-u-core_ts {
+    animation-name: core_ts;
+  }
+
+  #sabneet #sabneet-u-left-pec {
+    animation-name: left_pec_m;
+  }
+
+  #sabneet #sabneet-u-left-pec_tr {
+    animation-name: left_pec_tr;
+  }
+
+  #sabneet #sabneet-u-right-pec {
+    animation-name: right_pec_m;
+  }
+
+  #sabneet #sabneet-u-right-pec_tr {
+    animation-name: right_pec_tr;
+  }
+
+  #sabneet #sabneet-u-shoulders_ts {
+    animation-name: shoulders_ts;
+  }
+
+  #sabneet #sabneet-u-beacon_tr {
+    animation-name: beacon_tr;
+  }
+
+  #sabneet #sabneet-u-casing {
+    animation-name: casing_fp;
+  }
+
+  #sabneet #sabneet-u-led {
+    animation-name: led_fp;
+  }
+
+  #sabneet #sabneet-u-head_tr {
+    animation-name: head_tr;
+  }
+
+  #sabneet #sabneet-u-right-ear_ts {
+    animation-name: right_ear_ts;
+  }
+
+  #sabneet #sabneet-u-skin_ts {
+    animation-name: skin_ts;
+  }
+
+  #sabneet #sabneet-u-mouth {
+    animation-name: mouth_m;
+  }
+
+  #sabneet #sabneet-u-mouth_to {
+    animation-name: mouth_to;
+  }
+
+  #sabneet #sabneet-u-mouth_tr {
+    animation-name: mouth_tr;
+  }
+
+  #sabneet #sabneet-u-right-eye2 {
+    animation-name: right_eye2_m, right_eye2_sp;
+  }
+
+  #sabneet #sabneet-u-right-brow_tr {
+    animation-name: right_brow_tr;
+  }
+
+  #sabneet #sabneet-u-right-brow {
+    animation-name: right_brow_sp;
+  }
+
+  #sabneet #sabneet-u-left-eye2_to {
+    animation-name: left_eye2_to;
+  }
+
+  #sabneet #sabneet-u-left-eye2 {
+    animation-name: left_eye2_sp;
+  }
+
+  #sabneet #sabneet-u-left-brow_to {
+    animation-name: left_brow_to;
+  }
+
+  #sabneet #sabneet-u-left-brow_tr {
+    animation-name: left_brow_tr;
+  }
+
+  #sabneet #sabneet-u-left-brow {
+    animation-name: left_brow_sp;
+  }
+
+  #sabneet #sabneet-u-hair {
+    animation-name: hair_fl;
+  }
+
+  #sabneet #sabneet-u-pomp-back_tr {
+    animation-name: pomp_back_tr;
+  }
+
+  #sabneet #sabneet-u-pomp-back_ts {
+    animation-name: pomp_back_ts;
+  }
+
+  #sabneet #sabneet-u-hair-volume {
+    animation-name: hair_vol_m, hair_vol_fp;
+  }
+
+  #sabneet #sabneet-u-shadow2 {
+    animation-name: shadow2_fp;
+  }
+
+  #sabneet #sabneet-u-pomp-front_tr {
+    animation-name: pomp_front_tr;
+  }
+
+  #sabneet #sabneet-u-hair-volume2 {
+    animation-name: hair_vol2_m, hair_vol2_fp;
+  }
+
+  #sabneet #sabneet-u-shadow3 {
+    animation-name: shadow3_fp;
+  }
+
+  #sabneet #sabneet-u-visor_to {
+    animation-name: visor_to;
+  }
+
+  #sabneet #sabneet-u-visor_tr {
+    animation-name: visor_tr;
+  }
+
+  #sabneet #sabneet-u-visor_ts {
+    animation-name: visor_ts;
+  }
+
+  #sabneet #sabneet-u-visor {
+    animation-name: visor_co;
+  }
+
+  #sabneet #sabneet-u-screen {
+    animation-name: screen_fp, screen_fo;
+  }
+
+  /* Full keyframe definitions */
+  @keyframes avatar_to {
+    0% {
+      transform: translate(-1291.680903px, -204.208004px);
+    }
+
+    46.666667% {
+      transform: translate(-1291.680903px, -201.412715px);
+    }
+
+    53.333333% {
+      transform: translate(-668.082987px, 69.716813px);
+    }
+
+    100% {
+      transform: translate(-668.082987px, 69.716813px);
+    }
+  }
+
+  @keyframes avatar_ts {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    46.666667% {
+      transform: scale(1, 1);
+    }
+
+    53.333333% {
+      transform: scale(0.7, 0.7);
+    }
+
+    100% {
+      transform: scale(0.7, 0.7);
+    }
+  }
+
+  @keyframes right_arm_tr {
+    0% {
+      transform: translate(2039.617261px, 452.690919px) rotate(0deg);
+    }
+
+    43.333333% {
+      transform: translate(2039.617261px, 452.690919px) rotate(0deg);
+    }
+
+    63.333333% {
+      transform: translate(2039.617261px, 452.690919px) rotate(5deg);
+    }
+
+    100% {
+      transform: translate(2039.617261px, 452.690919px) rotate(-6deg);
+    }
+  }
+
+  @keyframes left_arm_tr {
+    0% {
+      transform: translate(371.51219px, 455.479133px) rotate(0deg);
+    }
+
+    43.333333% {
+      transform: translate(371.51219px, 455.479133px) rotate(0deg);
+    }
+
+    63.333333% {
+      transform: translate(371.51219px, 455.479133px) rotate(6deg);
+    }
+
+    100% {
+      transform: translate(371.51219px, 455.479133px) rotate(3deg);
+    }
+  }
+
+  @keyframes core_ts {
+
+    0%,
+    60% {
+      transform: translate(1208.000001px, 1237.428894px) scale(1.1, 1.1);
+    }
+
+    70% {
+      transform: translate(1208.000001px, 1237.428894px) scale(1.07, 1.07);
+    }
+
+    86.666667%,
+    100% {
+      transform: translate(1208.000001px, 1237.428894px) scale(1.13, 1.13);
+    }
+  }
+
+  @keyframes left_pec_m {
+    0% {
+      d: path('M561.5,358.704493C561.5,140.928354,620.722702,-35.459784,693.728695,-35.459784L755.374832,-35.459784C828.431311,-35.459784,887.603526,141.078856,887.603526,358.704493L887.603526,617.718132C887.603526,835.494272,828.380824,1011.88241,755.374832,1011.88241L693.728695,1011.88241C620.672215,1011.88241,561.5,835.34377,561.5,617.718132L561.5,358.704493Z');
+    }
+
+    40% {
+      d: path('M561.5,576.4C561.5,431.7,671.394466,314.5,806.865393,314.5L921.256818,314.5C1164.965841,312.538219,1166.622211,431.8,1166.622211,576.4L1166.622211,748.5C1166.622211,893.2,1056.727745,1010.4,921.256818,1010.4L806.865393,1010.4C671.300779,1010.4,561.5,893.1,561.5,748.5L561.5,576.4Z');
+    }
+
+    100% {
+      d: path('M561.5,576.4C561.5,431.7,671.394466,314.5,806.865393,314.5L921.256818,314.5C1164.965841,312.538219,1166.622211,431.8,1166.622211,576.4L1166.622211,748.5C1166.622211,893.2,1056.727745,1010.4,921.256818,1010.4L806.865393,1010.4C671.300779,1010.4,561.5,893.1,561.5,748.5L561.5,576.4Z');
+    }
+  }
+
+  @keyframes left_pec_tr {
+
+    0%,
+    40%,
+    100% {
+      transform: translate(532.167315px, 657.825596px) rotate(0deg);
+    }
+
+    16.666667% {
+      transform: translate(532.167315px, 657.825596px) rotate(10deg);
+    }
+  }
+
+  @keyframes right_pec_m {
+    0% {
+      d: path('M1487.650997,357.451805C1487.650997,140.920278,1547.419865,-34.459784,1621.099134,-34.459784L1683.313788,-34.459784C1757.044011,-34.459784,1816.761926,141.069919,1816.761926,357.451805L1816.761926,620.970822C1816.761926,837.502349,1756.993057,1012.88241,1683.313788,1012.88241L1621.099134,1012.88241C1547.368911,1012.88241,1487.650997,837.352707,1487.650997,620.970822C1487.650997,620.970822,1487.650997,357.451805,1487.650997,357.451805Z');
+    }
+
+    40% {
+      d: path('M1209.5,577.4C1209.5,432.7,1197.403744,313.538217,1471.390028,315.5L1593.485379,315.5C1738.179869,315.5,1855.375407,432.8,1855.375407,577.4L1855.375407,753.5C1855.375407,898.2,1738.079873,1015.4,1593.485379,1015.4L1471.390028,1015.4C1326.695538,1015.4,1209.5,898.1,1209.5,753.5C1209.5,753.5,1209.5,577.4,1209.5,577.4Z');
+    }
+
+    100% {
+      d: path('M1209.5,577.4C1209.5,432.7,1197.403744,313.538217,1471.390028,315.5L1593.485379,315.5C1738.179869,315.5,1855.375407,432.8,1855.375407,577.4L1855.375407,753.5C1855.375407,898.2,1738.079873,1015.4,1593.485379,1015.4L1471.390028,1015.4C1326.695538,1015.4,1209.5,898.1,1209.5,753.5C1209.5,753.5,1209.5,577.4,1209.5,577.4Z');
+    }
+  }
+
+  @keyframes right_pec_tr {
+
+    0%,
+    40%,
+    100% {
+      transform: translate(1919.771863px, 661.274659px) rotate(0deg);
+    }
+
+    16.666667% {
+      transform: translate(1919.771863px, 661.274659px) rotate(-10deg);
+    }
+  }
+
+  @keyframes shoulders_ts {
+
+    0%,
+    43.333333% {
+      transform: translate(1208.100953px, 528.181427px) scale(1, 1);
+    }
+
+    66.666667% {
+      transform: translate(1208.100953px, 528.181427px) scale(1.05, 1.05);
+    }
+
+    100% {
+      transform: translate(1208.100953px, 528.181427px) scale(1, 1);
+    }
+  }
+
+  @keyframes beacon_tr {
+
+    0%,
+    40% {
+      transform: translate(1207.818486px, 772.648577px) rotate(-180deg);
+    }
+
+    56.666667%,
+    100% {
+      transform: translate(1207.818486px, 772.648577px) rotate(0deg);
+    }
+  }
+
+  @keyframes casing_fp {
+    0% {
+      fill: #5c586f;
+    }
+
+    63.333333% {
+      fill: #b2b0bc;
+    }
+
+    100% {
+      fill: #b2b0bc;
+    }
+  }
+
+  @keyframes led_fp {
+    0% {
+      fill: #ffc000;
+    }
+
+    50% {
+      fill: #e57e59;
+    }
+
+    63.333333% {
+      fill: #f8484c;
+    }
+
+    100% {
+      fill: #f8484c;
+    }
+  }
+
+  @keyframes head_tr {
+    0% {
+      transform: translate(2029.717041px, 1148.722198px) rotate(0deg);
+    }
+
+    33.333333% {
+      transform: translate(2029.717041px, 1148.722198px) rotate(1.5deg);
+    }
+
+    100% {
+      transform: translate(2029.717041px, 1148.722198px) rotate(0deg);
+    }
+  }
+
+  @keyframes right_ear_ts {
+
+    0%,
+    10% {
+      transform: translate(2337.11851px, 1149.422979px) scale(1, 1);
+    }
+
+    23.333333%,
+    100% {
+      transform: translate(2337.11851px, 1149.422979px) scale(1.1, 1.1);
+    }
+  }
+
+  @keyframes skin_ts {
+    0% {
+      transform: translate(2030.525373px, 755.670959px) scale(1, 1);
+    }
+
+    36.666667% {
+      transform: translate(2030.525373px, 755.670959px) scale(1, 0.97);
+    }
+
+    100% {
+      transform: translate(2030.525373px, 755.670959px) scale(1, 1);
+    }
+  }
+
+  @keyframes mouth_m {
+    0% {
+      d: path('M616.905306,1144.88885C622.942311,1168.374918,662.101854,1174.042747,685.132028,1172.703311C707.374265,1171.409701,729.922604,1162.261279,753.586209,1144.20797');
+    }
+
+    16.666667% {
+      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,720.832673,1167.732881,743.585599,1149.20797');
+    }
+
+    33.333333% {
+      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,721.237276,1169.351295,737.586209,1152.20797');
+    }
+
+    50% {
+      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.046483,1170.565105,733.586209,1154.20797');
+    }
+
+    66.666667% {
+      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797');
+    }
+
+    100% {
+      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797');
+    }
+  }
+
+  @keyframes mouth_to {
+    0% {
+      transform: translate(2040.772475px, 1399.390043px);
+    }
+
+    66.666667% {
+      transform: translate(2041.722064px, 1398.774439px);
+    }
+
+    73.333333% {
+      transform: translate(2042.791164px, 1385.691565px);
+    }
+
+    100% {
+      transform: translate(2042.791164px, 1385.691565px);
+    }
+  }
+
+  @keyframes mouth_tr {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    58% {
+      transform: rotate(10deg);
+    }
+
+    60%,
+    100% {
+      transform: rotate(-15deg);
+    }
+  }
+
+  @keyframes right_eye2_m {
+
+    0%,
+    43.333333% {
+      d: path('M-0.630236,-17.168464L2.680903,31.412714');
+    }
+
+    50% {
+      d: path('M-0.630236,-17.168464L1.680903,24.412714');
+    }
+
+    56.666667% {
+      d: path('M-0.630236,-17.168464L1.680903,17.412714');
+    }
+
+    63.333333% {
+      d: path('M-0.630236,-17.168464L0.680903,10.412714');
+    }
+
+    70% {
+      d: path('M-0.630236,-17.168464L-0.458578,-20.01717');
+    }
+
+    80% {
+      d: path('M-0.630236,-17.168464L0.680903,10.412714');
+    }
+
+    86.666667% {
+      d: path('M-0.630236,-17.168464L1.680903,17.412714');
+    }
+
+    93.333333% {
+      d: path('M-0.630236,-17.168464L1.680903,24.412714');
+    }
+
+    100% {
+      d: path('M-0.630236,-17.168464L1.680903,24.412714');
+    }
+  }
+
+  @keyframes right_eye2_sp {
+
+    0%,
+    50% {
+      stroke: #1f1313;
+    }
+
+    53.333333% {
+      stroke: #135a5c;
+    }
+
+    100% {
+      stroke: #135a5c;
+    }
+  }
+
+  @keyframes right_brow_tr {
+
+    0%,
+    43.333333% {
+      transform: translate(2208.464723px, 1111.039897px) rotate(-10deg);
+    }
+
+    100% {
+      transform: translate(2208.464723px, 1111.039897px) rotate(4deg);
+    }
+  }
+
+  @keyframes right_brow_sp {
+
+    0%,
+    50% {
+      stroke: #1f1313;
+    }
+
+    53.333333%,
+    100% {
+      stroke: #0f7b7e;
+    }
+  }
+
+  @keyframes left_eye2_to {
+    0% {
+      transform: translate(2202px, 1140px);
+    }
+
+    26.666667% {
+      transform: translate(2222px, 1124px);
+    }
+
+    100% {
+      transform: translate(2222px, 1124px);
+    }
+  }
+
+  @keyframes left_eye2_sp {
+
+    0%,
+    50% {
+      stroke: #1f1313;
+    }
+
+    53.333333%,
+    100% {
+      stroke: #135a5c;
+    }
+  }
+
+  @keyframes left_brow_to {
+    0% {
+      transform: translate(2202px, 1116px);
+    }
+
+    26.666667% {
+      transform: translate(2222px, 1100px);
+    }
+
+    100% {
+      transform: translate(2222px, 1100px);
+    }
+  }
+
+  @keyframes left_brow_tr {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    26.666667% {
+      transform: rotate(20deg);
+    }
+
+    66.666667% {
+      transform: rotate(15deg);
+    }
+
+    100% {
+      transform: rotate(15deg);
+    }
+  }
+
+  @keyframes left_brow_sp {
+
+    0%,
+    50% {
+      stroke: #1f1313;
+    }
+
+    53.333333%,
+    100% {
+      stroke: #0f7b7e;
+    }
+  }
+
+  @keyframes hair_fl {
+
+    0%,
+    53.333333% {
+      filter: drop-shadow(0px 0px 282.842712px rgba(202, 171, 71, 0));
+    }
+
+    60% {
+      filter: drop-shadow(0px 0px 282.842712px #caab47);
+    }
+
+    66.666667% {
+      filter: drop-shadow(0px 0px 282.842712px #e07c56);
+    }
+
+    76.666667% {
+      filter: drop-shadow(0px 0px 282.842712px #caab47);
+    }
+
+    86.666667% {
+      filter: drop-shadow(0px 0px 282.842712px #e07c56);
+    }
+
+    93.333333% {
+      filter: drop-shadow(0px 0px 282.842712px #caab47);
+    }
+
+    100% {
+      filter: drop-shadow(0px 0px 282.842712px #e07c56);
+    }
+  }
+
+  @keyframes pomp_back_tr {
+    0% {
+      transform: translate(1959.380834px, 525.26172px) rotate(0deg);
+    }
+
+    60% {
+      transform: translate(1959.380834px, 525.26172px) rotate(-0.5deg);
+    }
+
+    100% {
+      transform: translate(1959.380834px, 525.26172px) rotate(-4deg);
+    }
+  }
+
+  @keyframes pomp_back_ts {
+    0% {
+      transform: scale(1, 1);
+    }
+
+    36.666667% {
+      transform: scale(1, 0.97);
+    }
+
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  @keyframes hair_vol_m {
+
+    0%,
+    40% {
+      d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2370.72,850.472,2376.64,880.447C2381.373803,908.449593,2383.276367,939.906044,2382.911099,972.803816C2382.68451,993.211466,2381.585223,1014.173759,2379.747731,1035.210273C2376.206302,1075.754288,2369.922774,1116.573997,2361.86,1154.23C2364.741822,1153.159069,2368.478182,1142.836207,2373.617646,1119.629032C2365.16045,1157.817381,2360.502581,1161.117536,2357.199748,1145.714672C2357.829126,1148.649797,2358.507708,1150.905777,2359.252408,1152.37062C2349.995025,1134.161109,2350.954737,993.696796,2329.64,946.116C2296.3,893.449,2244.9,823.892,2173.67,841.202C2102.43,858.512,2108.39,856.182,2061.85,861.669C2015.31,867.156,1936.08,855.542,1882.55,871.156C1821.23,895.887,1742.5,939.483,1740.66,955.356C1736.86,972.772,1767.45,996.63,1742.39,1009.21C1733.46,1016.1,1708.13,1022.02,1703.11,1084.67C1698.49,1135.68,1710.35,1267.34,1696.25,1215.25C1692.65,1230.58,1688.25,1213.35,1681.44,1176.64C1679.509749,1166.216649,1678.245868,1151.168196,1676.578609,1134.128642C1672.372347,1091.140242,1665.598652,1035.478838,1639.08,1009.44C1651.209239,1003.994539,1639.95057,981.706847,1621.705705,951.581797C1612.018036,935.58598,1600.360677,917.380496,1589.189043,898.313417C1581.208151,884.692105,1573.475149,870.631077,1566.885256,856.621825C1559.022796,839.907261,1552.787564,823.266401,1549.7,807.534C1543.898769,775.461428,1540.422062,746.047975,1548.331313,717.408147C1558.124854,681.945201,1585.375746,647.668403,1647.287222,610.998121C1673.190666,595.655463,1705.161593,579.893816,1744.46,563.451C1781.989292,548.401175,1831.773961,536.578298,1876.416115,530.409739C1917.289149,524.76199,1953.851372,523.854079,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132');
+    }
+
+    53.333333% {
+      d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2497.103385,793.420064,2553.637684,771.908081C2623.455379,757.963981,2767.905499,664.139475,2760.526268,697.57491C2717.166188,894.040249,2528.423477,1066.46865,2533.62178,1067.745481C2601.247698,1090.923536,2676.723531,1151.987978,2658.669531,1161.624833C2658.276709,1161.770812,2602.895481,1166.389809,2597.873384,1166.677735C2407.421539,1177.596684,2253.713587,1282.137165,2253.713587,1282.137165C2253.713587,1282.137165,2318.929488,1149.121517,2308.631389,1151.098313C2291.29056,1154.427013,2278.212214,1158.769618,2248.942657,1169.294717C2259.95715,1026.499296,2215.991514,1171.242192,2121.805487,1208.648429C2139.385643,1139.198623,2187.535927,932.355556,2085.457277,943.372974C1983.378627,954.390392,1943.184282,1138.04164,1899.912123,1207.834824C1866.999606,1159.11353,1887.4374,1037.10682,1870.974363,1038.106017C1824.084305,1057.273361,1814.380732,1179.640641,1800.569418,1193.183493C1791.639418,1200.073493,1750.474699,1136.444973,1740.082367,1074.032166C1720.079792,1146.752893,1732.947635,1164.296931,1718.06711,1200.73914C1690.996289,1209.860602,1639.282586,1126.264005,1604.243296,1193.590444C1599.899465,1197.821448,1594.723769,1144.268733,1592.843861,1141.605114C1590.690587,1138.554165,1556.70712,1134.009454,1450.203306,1109.198618C1448.0479,1098.672845,1477.282557,1060.501697,1590.29186,1030.645883C1596.944361,1028.888366,1596.390218,1020.522856,1596.728683,996.544443C1597.043725,974.225407,1543.655019,949.856067,1496.348963,908.379002C1453.539705,870.844645,1420.709848,812.088207,1398.030327,763.61003C1360.957759,669.107664,1317.637539,511.744326,1331.683359,526.936515C1367.731371,565.926635,1625.790616,674.435242,1658.817893,635.892207C1686.183357,603.956542,1455.612388,384.573082,1340.620419,328.980246C1394.935465,307.199074,1684.464843,117.165759,1892.334316,338.113016C1931.746269,380.00451,1963.083653,526.636139,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132');
+    }
+
+    100% {
+      d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2497.103385,793.420064,2553.637684,771.908081C2623.455379,757.963981,2767.905499,664.139475,2760.526268,697.57491C2717.166188,894.040249,2528.423477,1066.46865,2533.62178,1067.745481C2601.247698,1090.923536,2676.723531,1151.987978,2658.669531,1161.624833C2658.276709,1161.770812,2602.895481,1166.389809,2597.873384,1166.677735C2407.421539,1177.596684,2253.713587,1282.137165,2253.713587,1282.137165C2253.713587,1282.137165,2318.929488,1149.121517,2308.631389,1151.098313C2291.29056,1154.427013,2278.212214,1158.769618,2248.942657,1169.294717C2259.95715,1026.499296,2215.991514,1171.242192,2121.805487,1208.648429C2139.385643,1139.198623,2187.535927,932.355556,2085.457277,943.372974C1983.378627,954.390392,1943.184282,1138.04164,1899.912123,1207.834824C1866.999606,1159.11353,1887.4374,1037.10682,1870.974363,1038.106017C1824.084305,1057.273361,1814.380732,1179.640641,1800.569418,1193.183493C1791.639418,1200.073493,1750.474699,1136.444973,1740.082367,1074.032166C1720.079792,1146.752893,1732.947635,1164.296931,1718.06711,1200.73914C1690.996289,1209.860602,1639.282586,1126.264005,1604.243296,1193.590444C1599.899465,1197.821448,1594.723769,1144.268733,1592.843861,1141.605114C1590.690587,1138.554165,1556.70712,1134.009454,1450.203306,1109.198618C1448.0479,1098.672845,1477.282557,1060.501697,1590.29186,1030.645883C1596.944361,1028.888366,1596.390218,1020.522856,1596.728683,996.544443, etc...);\
+}
+@keyframes hair_vol_fp {
+          0%, 50% {
+            fill:#1f1313
+          }
+
+          53.333333% {
+            fill:#f0c64e
+          }
+
+          100% {
+            fill:#f0c64e
+          }
+        }
+
+        @keyframes shadow2_fp {
+          0%, 50% {
+            fill:#000
+          }
+
+          53.333333% {
+            fill:#caab47
+          }
+
+          100% {
+            fill:#caab47
+          }
+        }
+
+        @keyframes pomp_front_tr {
+          0% {
+            transform:translate(2204.412204px, 655.460852px) rotate(0deg)
+          }
+
+          33.333333% {
+            transform:translate(2204.412204px, 655.460852px) rotate(-4deg)
+          }
+
+          73.333333% {
+            transform:translate(2204.412204px, 655.460852px) rotate(11deg)
+          }
+
+          100% {
+            transform:translate(2204.412204px, 655.460852px) rotate(0deg)
+          }
+        }
+
+        @keyframes hair_vol2_m {
+          0%, 40% {
+            d: path('M920.627637,322.166547C944.979437,322.564107,970.976575,322.893308,999.494787,322.203351C1027.516118,321.525415,1053.158931,318.307222,1076.423228,312.548772C1114.801205,303.049337,1146.706407,286.636975,1172.138833,263.311685C1176.138368,259.643521,1179.977824,255.804393,1183.657201,251.7943C1186.944821,256.941324,1190.022797,262.08202,1192.891131,267.216386C1211.778231,301.024614,1221.575604,334.558437,1222.283252,367.817858C1222.919008,397.698417,1210.001154,431.21531,1192.243754,461.713511C1175.850495,489.868809,1155.332688,515.451398,1137.546452,533.225182C1146.622019,524.155972,1152.926021,516.02751,1156.251697,509.612882C1152.165256,517.494888,1143.582021,527.96451,1130.885583,539.587496C1120.379494,549.20532,1107.056984,559.612875,1091.135476,569.997485C1078.455054,578.268136,1064.126072,586.524233,1048.258368,594.355225C1058.764185,589.170418,1068.595487,583.799263,1077.720395,578.360914C1090.278247,570.876567,1101.498208,563.264956,1111.297187,555.836663C1112.568885,554.872629,1113.816649,553.911684,1115.040299,552.954504Q913.618786,322.124002,920.627637,322.166547Z');
+          }
+
+          53.333333%, 100% {
+            d: path('M914.782155,284.381522C981.163803,220.891755,987.910996,-24.774229,1003.774212,-30.542841C1030.116091,-40.121988,1059.533692,15.869454,1080.301377,57.686447C1097.887034,93.096234,1112.059935,136.900996,1123.240712,231.787038C1123.823356,236.731666,1199.707275,207.922251,1249.312908,184.807591C1280.364381,173.096166,1335.333284,155.505476,1358.496187,154.735334C1428.065761,152.422219,1469.43438,168.733692,1465.335391,173.384261C1411.911486,233.997137,1274.032363,454.617174,1270.156866,532.465306C1269.260562,550.469602,1280.801522,534.825079,1309.34333,531.778212C1312.334181,531.458936,1427.093965,480.157713,1433.424144,522.745641C1437.659455,551.239799,1337.580506,664.965665,1329.6821,704.03044C1321.159571,746.182063,1166.387697,862.451968,1378.166572,901.250959C1409.618129,907.013048,1236.276979,891.056081,1224.774882,912.717228C1191.993278,974.452674,1104.06092,955.44385,1080.71541,984.542721C1041.950866,1032.860556,1090.748638,822.245304,1067.367326,848.966043C1004.386528,920.942047,949.65078,843.304723,912.675136,950.507999Q907.725177,305.486984,914.782155,284.381522Z');
+          }
+        }
+
+        @keyframes hair_vol2_fp {
+          0%, 50% {
+            fill:#1f1313
+          }
+
+          53.333333% {
+            fill:#edc141
+          }
+
+          100% {
+            fill:#edc141
+          }
+        }
+
+        @keyframes shadow3_fp {
+          0%, 50% {
+            fill:#000
+          }
+
+          53.333333% {
+            fill:#caab47
+          }
+
+          100% {
+            fill:#caab47
+          }
+        }
+
+        @keyframes visor_to {
+          0% {
+            offset-distance: 0%;
+          }
+
+          28.666667% {
+            offset-distance: 54.429256%;
+          }
+
+          33.333333% {
+            offset-distance: 55.705953%;
+          }
+
+          34.666667% {
+            offset-distance: 57.023086%;
+          }
+
+          35.666667% {
+            offset-distance: 58.059651%;
+          }
+
+          36.666667% {
+            offset-distance: 58.887714%;
+          }
+
+          40.333333% {
+            offset-distance: 59.452227%;
+          }
+
+          41.666667% {
+            offset-distance: 60.582144%;
+          }
+
+          43.333333% {
+            offset-distance: 61.725801%;
+          }
+
+          44.333333% {
+            offset-distance: 62.283680%;
+          }
+
+          45.333333% {
+            offset-distance: 63.024436%;
+          }
+
+          46.333333% {
+            offset-distance: 63.663960%;
+          }
+
+          48.666667% {
+            offset-distance: 64.524181%;
+          }
+
+          49% {
+            offset-distance: 65.884846%;
+          }
+
+          49.333333% {
+            offset-distance: 66.799026%;
+          }
+
+          49.666667% {
+            offset-distance: 67.879540%;
+          }
+
+          50% {
+            offset-distance: 68.751056%;
+          }
+
+          50.666667% {
+            offset-distance: 69.875969%;
+          }
+
+          51.333333% {
+            offset-distance: 70.701504%;
+          }
+
+          52% {
+            offset-distance: 71.992019%;
+          }
+
+          52.666667% {
+            offset-distance: 74.742309%;
+          }
+
+          53.333333% {
+            offset-distance: 76.304366%;
+          }
+
+          54% {
+            offset-distance: 78.132338%;
+          }
+
+          54.666667% {
+            offset-distance: 79.480596%;
+          }
+
+          55.333333% {
+            offset-distance: 80.652879%;
+          }
+
+          55.666667% {
+            offset-distance: 81.967513%;
+          }
+
+          61% {
+            offset-distance: 100%;
+          }
+
+          100% {
+            offset-distance: 100%;
+          }
+        }
+
+        @keyframes visor_tr {
+          0% {
+            transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005);
+          }
+
+          26.666667% {
+            transform: rotate(180deg); animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005);
+          }
+
+          83.333333% {
+            transform: rotate(170deg); animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005);
+          }
+
+          100% {
+            transform: rotate(180deg);
+          }
+        }
+
+        @keyframes visor_ts {
+          0%, 11%, 55.666667% {
+            transform:scale(1, 1)
+          }
+
+          61%, 100% {
+            transform:scale(1.4, 1.4)
+          }
+        }
+
+        @keyframes visor_co {
+          0%, 57% {
+            opacity:1
+          }
+
+          60%, 100% {
+            opacity:0
+          }
+        }
+
+        @keyframes screen_fp {
+          0%, 40% {
+            fill:#a9d18e
+          }
+
+          53.333333%, 100% {
+            fill:#93fef1
+          }
+        }
+
+        @keyframes screen_fo {
+          0% {
+            fill-opacity:0.6
+          }
+
+          10% {
+            fill-opacity:0.4; animation-timing-function:cubic-bezier(0, 0, 0.58, 1)
+          }
+
+          30% {
+            fill-opacity:0.55
+          }
+
+          53.333333%, 100% {
+            fill-opacity:0.5
+          }
+        }
+  ]]>
+</style>
+  <defs>
+    <filter id="sabneet-u-background-filter" x="-150%" y="-150%" width="400%" height="400%">
+      <feComponentTransfer id="sabneet-u-background-filter-contrast-0" result="result">
+        <feFuncR id="sabneet-u-background-filter-contrast-0-R" type="linear" slope="1" intercept="0" />
+        <feFuncG id="sabneet-u-background-filter-contrast-0-G" type="linear" slope="1" intercept="0" />
+        <feFuncB id="sabneet-u-background-filter-contrast-0-B" type="linear" slope="1" intercept="0" />
+      </feComponentTransfer>
+    </filter>
+    <filter id="sabneet-u-avatar-filter" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur id="sabneet-u-avatar-filter-drop-shadow-0-blur" in="SourceAlpha" stdDeviation="50,50" />
+      <feOffset id="sabneet-u-avatar-filter-drop-shadow-0-offset" dx="10" dy="10" result="tmp" />
+      <feFlood id="sabneet-u-avatar-filter-drop-shadow-0-flood" flood-color="rgba(0,0,0,0.4)" />
+      <feComposite id="sabneet-u-avatar-filter-drop-shadow-0-composite" operator="in" in2="tmp" />
+      <feMerge id="sabneet-u-avatar-filter-drop-shadow-0-merge" result="result">
+        <feMergeNode id="sabneet-u-avatar-filter-drop-shadow-0-merge-node-1" />
+        <feMergeNode id="sabneet-u-avatar-filter-drop-shadow-0-merge-node-2" in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="sabneet-s-rect1-fill" x1="0.5" y1="0" x2="0.5" y2="1" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
+      <stop id="sabneet-s-rect1-fill-0" offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop id="sabneet-s-rect1-fill-1" offset="100%" stop-color="#010022" />
+    </linearGradient>
+  </defs>
+  <ellipse id="sabneet-u-background" rx="399.103391" ry="398.068208" transform="matrix(1.936854 0 0 1.936854 773.005 771)" filter="url(#sabneet-u-background-filter)" fill="#deeaf6" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+  <g id="sabneet-u-avatar_to" transform="translate(-1291.680903,-204.208004)">
+    <g id="sabneet-u-avatar_ts" transform="scale(1,1)">
+      <g id="sabneet-u-avatar" transform="translate(0,0)" filter="url(#sabneet-u-avatar-filter)">
+        <g id="sabneet-u-armor" transform="matrix(.429659 0 0 0.429659 1531.315885 1455.213266)">
+          <g id="sabneet-u-right-arm_tr" transform="translate(2039.617261,452.690919) rotate(0)">
+            <g id="sabneet-u-right-arm" transform="translate(-2039.617261,-452.690919)">
+              <path id="sabneet-u-right-forearm" d="M2263.4,964.4c-6.2-106.2-97.3-187.3-203.5-181.2v0c-106.2,6.2-187.3,97.3-181.2,203.5l28.5,490.1c6.2,106.2,97.3,187.3,203.5,181.2v0c106.2-6.2,187.3-97.3,181.2-203.5l-28.5-490.1Z" fill="#5c586f" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+              <path id="sabneet-u-right-bicep" d="M2310.2,577.1c-17.3-30.1-296-143.4-337.5-119.6-100.1,57.4-80.9,234-181,291.4-41.5,23.8-61.1,67.5-43.8,97.7c39.8,102.1,71.6,212.8,119.4,306.4c23.1,53.3,117.1,69.4,189.8,60.3c38.3-4.2,109.3-18.2,166.5-55.9c59.4-34.9,94.6-132.7,104.7-192.8c23.6-160.6,12.9-339-18.1-387.5Z" fill="#b2b0bc" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+              <path id="sabneet-u-right-shield" d="M2305,1274.8c-22.7-9.8-43.4,81.4-116,97.2s-280-60.6-319.4-2.2c-39.4,58.3,33.8,264.7,82.8,352.3c48.9,87.6,148.7,221.9,210.9,173.4s138-363.7,162.1-464.6c24.1-100.8,2.3-146.3-20.4-156.1Z" fill="#b2b0bc" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+            </g>
+          </g>
+          <g id="sabneet-u-left-arm_tr" transform="translate(371.51219,455.479133) rotate(0)">
+            <g id="sabneet-u-left-arm" transform="translate(-371.51219,-455.479133)">
+              <path id="sabneet-u-left-forearm" d="M152.8,966.1c6.2-106.2,97.3-187.3,203.5-181.2v0c106.2,6.2,187.3,97.3,181.2,203.5L509,1478.5c-6.2,106.2-97.3,187.3-203.5,181.2v0c-106.2-6.2-187.3-97.3-181.2-203.5l28.5-490.1Z" fill="#5c586f" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+              <path id="sabneet-u-left-bicep" d="M2310.2,577.1c-17.3-30.1-296-143.4-337.5-119.6-100.1,57.4-80.9,234-181,291.4-41.5,23.8-61.1,67.5-43.8,97.7c39.8,102.1,71.6,212.8,119.4,306.4c23.1,53.3,117.1,69.4,189.8,60.3c38.3-4.2,109.3-18.2,166.5-55.9c59.4-34.9,94.6-132.7,104.7-192.8c23.6-160.6,12.9-339-18.1-387.5Z" transform="matrix(-1 0 0 1 2416.203342 1.701097)" fill="#b2b0bc" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+              <path id="sabneet-u-left-shield" d="M111.3,1276.5c22.7-9.8,43.4,81.4,116,97.2s280-60.6,319.4-2.2c39.4,58.3-33.9,264.7-82.8,352.3s-148.7,221.9-210.9,173.4-138-363.7-162.1-464.6c-24.1-100.8-2.3-146.3,20.4-156.1Z" fill="#b2b0bc" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+            </g>
+          </g>
+          <path id="sabneet-u-traps" d="M278.872157,255.419451c-19.222211-111.48898,530.696037,62.948772,899.112989-861.972185c439.819924,893.260479,944.699884,780.84841,963.199884,865.421119s-347.981305,1179.606832-934.168231,965.111957C708.762228,1431.098064,283.272157,377.52978,278.872157,255.419451Z" fill="#5c586f" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+          <g id="sabneet-u-core_ts" transform="translate(1208.000001,1237.428894) scale(1.1,1.1)">
+            <g id="sabneet-u-core" transform="translate(-1208.000001,-1237.428894)">
+              <path id="sabneet-u-ab-4" d="M737.4,1402.5h920c12.5,0,23.5,22.1,30,55.7l3,19.4-28.5,39.4c-34.4,34-102.2,157-181.2,169-99.7,13.9-191.5,5.6-283.9,6.2s-186.6,5.8-270.6-2.5c-100.6-19.4-155.9-137-192.9-172.7l-28.8-39.8l3-19c6.5-33.6,17.5-55.7,30-55.7h-.1Z" fill="#c7c5cb" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" />
+              <path id="sabneet-u-ab-3" d="M742.4,1268.5h920c12.5,0,23.5,22.1,30,55.7l3,19.4-28.5,39.4c-34.4,34-102.2,157-181.2,169-99.7,13.9-191.5,5.6-283.9,6.2s-186.6,5.8-270.6-2.5c-100.6-19.4-155.9-137-192.9-172.7l-28.8-39.8l3-19c6.5-33.6,17.5-55.7,30-55.7h-.1Z" fill="#b2b0bc" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" />
+              <path id="sabneet-u-ab-2" d="M741.4,1126.5h920c12.5,0,23.5,22.1,30,55.7l3,19.4-28.5,39.4c-34.4,34-102.2,157-181.2,169-99.7,13.9-191.5,5.6-283.9,6.2s-186.6,5.8-270.6-2.5c-100.6-19.4-155.9-137-192.9-172.7l-28.8-39.8l3-19c6.5-33.6,17.5-55.7,30-55.7h-.1Z" fill="#c7c5cb" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" />
+              <path id="sabneet-u-ab-1" d="M649.5,780.5h1116.9c15.2,0,28.5,34.9,36.4,87.8l3.7,30.6-34.6,62.1c-41.8,53.6-124.1,247.3-220,266.3-121.1,21.9-232.5,8.8-344.7,9.8s-226.6,9.2-328.5-4C756.6,1202.5,689.4,1017.3,644.5,961l-35-62.7l3.6-30c7.9-53,21.3-87.8,36.4-87.8Z" fill="#b2b0bc" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+          </g>
+          <g id="sabneet-u-pecs">
+            <g id="sabneet-u-left-pec_tr" transform="translate(532.167315,657.825596) rotate(0)">
+              <path id="sabneet-u-left-pec" d="M561.5,358.704493c0-217.776139,59.222702-394.164277,132.228695-394.164277h61.646137c73.056479,0,132.228694,176.53864,132.228694,394.164277v259.013639c0,217.77614-59.222702,394.164278-132.228694,394.164278h-61.646137C620.672215,1011.88241,561.5,835.34377,561.5,617.718132v-259.013639Z" transform="scale(1.153863,1) translate(-558.753573,-659.321201)" fill="#c7c5cb" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+            </g>
+            <g id="sabneet-u-right-pec_tr" transform="translate(1919.771863,661.274659) rotate(0)">
+              <path id="sabneet-u-right-pec" d="M1487.650997,357.451805c0-216.531527,59.768868-391.911589,133.448137-391.911589h62.214654c73.730223,0,133.448138,175.529703,133.448138,391.911589v263.519017c0,216.531527-59.768869,391.911588-133.448138,391.911588h-62.214654c-73.730223,0-133.448137-175.529703-133.448137-391.911588c0,0,0-263.519017,0-263.519017Z" transform="scale(1.081057,1) translate(-1857.168348,-663.770262)" fill="#c7c5cb" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+            </g>
+          </g>
+          <g id="sabneet-u-shoulders_ts" transform="translate(1208.100953,528.181427) scale(1,1)">
+            <g id="sabneet-u-shoulders" transform="translate(-1208.100953,-528.181427)">
+              <path id="sabneet-u-left-shoulder" d="M396.3,915.4C571.2,967,800.9,380.3,805.5,334.9C767.5,41.4,451.7,148.7,320.7,211C189.8,273.4,-17,508.5,19.5,708.9c60.4,51.4,181.9,153,376.8,206.5Z" fill="#c7c5cb" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+              <path id="sabneet-u-righter-shoulder" d="M2019.9,913.7c-174.9,51.6-404.6-535.1-409.2-580.5c38-293.5,353.8-186.2,484.8-123.9s337.7,297.5,301.2,497.9c-60.4,51.4-181.9,153-376.8,206.4v.1Z" fill="#c7c5cb" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+            </g>
+          </g>
+          <g id="sabneet-u-beacon_tr" transform="translate(1207.818486,772.648577) rotate(-180)">
+            <g id="sabneet-u-beacon" transform="translate(-1186.450013,-840.000001)">
+              <path id="sabneet-u-casing" d="M1277.6,553.5c119.2,0,215.9,96.7,215.9,215.9v193.5c0,90.3-73.2,163.6-163.6,163.6h-286.9c-90.3,0-163.6-73.2-163.6-163.6v-193.5c0-119.2,96.7-215.9,215.9-215.9h182.3Z" transform="matrix(1.124496 0 0 1.124496-147.708279-104.57664)" fill="#5c586f" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+              <path id="sabneet-u-led" d="M1036.5,851c0-82,66.5-148.5,148.5-148.5s148.5,66.5,148.5,148.5-66.5,148.5-148.5,148.5-148.5-66.5-148.5-148.5Z" fill="#ffc000" fill-rule="evenodd" stroke="#000" stroke-width="40" stroke-miterlimit="8" />
+            </g>
+          </g>
+        </g>
+        <g id="sabneet-u-head_tr" transform="translate(2029.717041,1148.722198) rotate(0)">
+          <g id="sabneet-u-head" transform="translate(-2029.717041,-1148.722198)">
+            <g id="sabneet-u-ears">
+              <g id="sabneet-u-right-ear_ts" transform="translate(2337.11851,1149.422979) scale(1,1)">
+                <path id="sabneet-u-right-ear" d="M2249.72,1176.22c0-51.36,33.13-93,74-93c40.86,0,74,41.64,74,93s-33.14,93-74,93c-40.87,0-74-41.64-74-93Z" transform="translate(-2323.72,-1176.22)" fill="#c38369" fill-rule="evenodd" stroke="#000" stroke-width="18.3048" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="8" />
+              </g>
+              <path id="sabneet-u-left-ear" d="M1612.72,1174.22c0-51.36,33.13-93,74-93c40.86,0,74,41.64,74,93s-33.14,93-74,93c-40.87,0-74-41.64-74-93Z" fill="#c38369" fill-rule="evenodd" stroke="#000" stroke-width="18.3048" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="8" />
+            </g>
+            <g id="sabneet-u-face">
+              <g id="sabneet-u-skin_ts" transform="translate(2030.525373,755.670959) scale(1,1)">
+                <g id="sabneet-u-skin" transform="translate(-2030.525373,-755.670959)">
+                  <path id="sabneet-u-flesh" d="M1697.02,1146.85c2.93-77.26-13.74-190.466,97.92-311.88c44.52-50.431,166.08-78.563,243.6-78.746s167.95,27.215,221.55,77.645c51.78,52.632,106.29,150.407,102.43,313.531-1.11,84.65-5.49,195.56-80.66,298.36-21,23.96-42.89,30.72-72.56,55.73-34.78,28.06-84.07,41.88-142.77,39.46-58.1,2.54-133.04-36.95-171.35-53.55-38.3-16.6-81.51-28.04-116.57-79.06-29.02-33.95-32.34-65.23-52.09-103.22-13.09-39.64-32.44-81.01-29.5-158.27Z" fill="#da9d81" fill-rule="evenodd" stroke="#000" stroke-width="18.3048" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="8" />
+                  <path id="sabneet-u-shadow" d="M1756.31,1080.12c-3.47,89.96,19.4,138.13,34.88,184.28c23.34,44.22,27.27,80.64,61.57,120.18c41.46,59.4,92.53,72.71,137.81,92.04c28.31,12.08,73.52,34.57,120.23,49.02l3.41045.9184c-15.19744,2.04252-31.3329,2.73959-48.27584,2.0406-56.37229,2.46659-129.09041-35.93059-166.26822-52.07022-37.16812-16.13963-79.09367-27.25869-113.12246-76.87204-28.15708-33.00759-31.38361-63.42235-50.54903-100.36287-12.70266-38.54284-31.4805-78.77539-28.62216-153.88974c2.61397-68.93521-10.79556-167.29977,70.69868-274.25417-26.42896,80.69125-19.6023,152.94889-21.76144,208.97005l.00002-.00001Z" transform="matrix(.997622 0 0 1.006585 3.543544-6.902037)" fill="#c38369" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </g>
+              <g id="sabneet-u-mouth_to" transform="translate(2040.772475,1399.390043)">
+                <g id="sabneet-u-mouth_tr" transform="rotate(0)">
+                  <path id="sabneet-u-mouth" d="M616.905306,1144.88885c6.037005,23.486068,45.196548,29.153897,68.226722,27.814461c22.242237-1.29361,44.790576-10.442032,68.454181-28.495341" transform="translate(-685.245757,-1158.465618)" fill="none" stroke="#1f1313" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </g>
+              <g id="sabneet-u-right-eye" transform="translate(0 0.000001)">
+                <path id="sabneet-u-right-eye2" d="M-0.630236,-17.168464L2.680903,31.412714" transform="translate(2203 1145)" fill="none" stroke="#1f1313" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+                <g id="sabneet-u-right-brow_tr" transform="translate(2208.464723,1111.039897) rotate(-10)">
+                  <line id="sabneet-u-right-brow" x1="-45.365344" y1="16.444938" x2="33.025775" y2="-11.602036" transform="translate(0,0)" fill="none" stroke="#1f1313" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+              </g>
+              <g id="sabneet-u-left-eye" transform="translate(-349.823791 31.412439)">
+                <g id="sabneet-u-left-eye2_to" transform="translate(2202,1140)">
+                  <line id="sabneet-u-left-eye2" x1="-1.594794" y1="-23.891159" x2="3.149509" y2="37.00674" transform="translate(0.000001,0)" fill="none" stroke="#1f1313" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <g id="sabneet-u-left-brow_to" transform="translate(2202,1116)">
+                  <g id="sabneet-u-left-brow_tr" transform="rotate(0)">
+                    <line id="sabneet-u-left-brow" x1="-39.444606" y1="11.125401" x2="39.040043" y2="-17.193802" transform="translate(0,0)" fill="none" stroke="#1f1313" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </g>
+              </g>
+            </g>
+            <g id="sabneet-u-hair" style="filter:drop-shadow(0px 0px 282.842712px rgba(202,171,71,0))">
+              <g id="sabneet-u-pomp-back_tr" transform="translate(1959.380834,525.26172) rotate(0)">
+                <g id="sabneet-u-pomp-back_ts" transform="scale(1,1)">
+                  <g id="sabneet-u-pomp-back" transform="translate(-1959.380834,-525.26172)">
+                    <path id="sabneet-u-hair-volume" d="M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961l8.14,15.857c20.33,42.384,19.56,44.654,25.48,74.629c4.733803,28.002593,6.636367,59.459044,6.271099,92.356816-.226589,20.40765-1.325876,41.369943-3.163368,62.406457-3.541429,40.544015-9.824957,81.363724-17.887731,119.019727c2.881822-1.070931,6.618182-11.393793,11.757646-34.600968-8.457196,38.188349-13.115065,41.488504-16.417898,26.08564.629378,2.935125,1.30796,5.191105,2.05266,6.655948-9.257383-18.209511-8.297671-158.673824-29.612408-206.25462-33.34-52.667-84.74-122.224-155.97-104.914-71.24,17.31-65.28,14.98-111.82,20.467s-125.77-6.127-179.3,9.487c-61.32,24.731-140.05,68.327-141.89,84.2-3.8,17.416,26.79,41.274,1.73,53.854-8.93,6.89-34.26,12.81-39.28,75.46-4.62,51.01,7.24,182.67-6.86,130.58-3.6,15.33-8-1.9-14.81-38.61-1.930251-10.423351-3.194132-25.471804-4.861391-42.511358-4.206262-42.9884-10.979957-98.649804-37.498609-124.688642c12.129239-5.445461.87057-27.733153-17.374295-57.858203-9.687669-15.995817-21.345028-34.201301-32.516662-53.26838-7.980892-13.621312-15.713894-27.68234-22.303787-41.691592-7.86246-16.714564-14.097692-33.355424-17.185256-49.087825-5.801231-32.072572-9.277938-61.486025-1.368687-90.125853c9.793541-35.462946,37.044433-69.739744,98.955909-106.410026c25.903444-15.342658,57.874371-31.104305,97.172778-47.547121c37.529292-15.049825,87.313961-26.872702,131.956115-33.041261c40.873034-5.647749,77.435257-6.55566,96.333885-.860739c15.74,3.592,19.3,5.511,35.29,16.75c112.52-34.348,192.840408,53.247228,225.672386,81.028132Z" fill="#1f1313" fill-rule="evenodd" stroke-width="25" stroke-opacity="0" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="sabneet-u-shadow2" d="M1827.72,539.224c-61.51,40.497-168.85,127.073-135.12,190.17c31.34,59.748,65.2,126.073,96.54,185.82-30,31.1-66.6,21.575-36.81,77.732c12.45,31.234-75.58,35.244-97.22,30.744-21.64-4.51-15.81-26.307-32.63-57.759-18.7-33.809-35.69-60.662-54.39-95.632-66.58-139.534-11.95-212.437,83.53-263.591c52.71-30.78,140.52-64.676,176.1-67.484Z" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </g>
+              </g>
+              <g id="sabneet-u-pomp-front_tr" transform="translate(2204.412204,655.460852) rotate(0)">
+                <g id="sabneet-u-pomp-front" transform="translate(-1451.696167,-1030.229035)">
+                  <path id="sabneet-u-hair-volume2" d="M920.627637,322.166547c24.3518.39756,50.348938.726761,78.86715.036804c28.021331-.677936,53.664144-3.896129,76.928441-9.654579c38.377977-9.499435,70.283179-25.911797,95.715605-49.237087c3.999535-3.668164,7.838991-7.507292,11.518368-11.517385c3.28762,5.147024,6.365596,10.28772,9.23393,15.422086c18.8871,33.808228,28.684473,67.342051,29.392121,100.601472.635756,29.880559-12.282098,63.397452-30.039498,93.895653-16.393259,28.155298-36.911066,53.737887-54.697302,71.511671c9.075567-9.06921,15.379569-17.197672,18.705245-23.6123-4.086441,7.882006-12.669676,18.351628-25.366114,29.974614-10.506089,9.617824-23.828599,20.025379-39.750107,30.409989-12.680422,8.270651-27.009404,16.526748-42.877108,24.35774c10.505817-5.184807,20.337119-10.555962,29.462027-15.994311c12.557852-7.484347,23.777813-15.095958,33.576792-22.524251c1.271698-.964034,2.519462-1.924979,3.743112-2.882159-43.409935,33.95668-117.168749,72.653524-213.167761,85.781594-115.371748,15.777333-221.868747,27.610333-261.31208-44.37375s-36.485083-204.119248,62.123249-244.548664c19.233224-7.885622,37.603631-13.632959,55.623408-17.7981c6.928252-1.601415,13.804671-2.968941,20.658369-4.134184c23.727574-4.034085,47.182817-5.643705,71.57364-6.140305q63.079662.382907,70.088513.425452Z" transform="translate(532.300289 578.987245)" fill="#1f1313" stroke-width="25" stroke-opacity="0" stroke-linecap="round" stroke-linejoin="round" />
+                  <path id="sabneet-u-shadow3" d="M748.022428,501.612415c8.224333,130.166521,182.212446,132.29705,181.885315,132.369746-.404561.089903-20.278205,3.76319-28.211077,4.846315-115.371748,15.777333-221.692875,27.517955-261.136208-44.466128s-37.073229-205.584582,62.123249-244.548664c35.133114-13.800183,75.076483-23.537055,105.763061-25.622551-45.994898,28.032592-67.072165,69.633267-60.42434,177.421282Z" transform="translate(532.060051 578.952031)" stroke-width="3.086" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="sabneet-u-visor_to" style="offset-path:path('M2270.096745,1126.248753C1849.915213,348.950225,1429.123264,693.264916,1795.828817,1126.299936Q1815.298483,1120.358344,1813.46284,1141.049445Q1831.061212,1153.361556,1841.738575,1145.412464Q1846.82394,1126.269367,1838.136097,1123.797593Q1826.300281,1117.222156,1826.143021,1131.372168Q1820.357707,1130.163472,1821.724519,1141.471601Q1817.69752,1147.454687,1811.726702,1120.299755Q1816.596427,1101.446851,1830.340468,1114.295314Q1828.942004,1121.129382,1839.347129,1119.699311Q1847.503908,1120.726786,1847.512148,1132.967467Q1852.422608,1130.419518,1847.001834,1145.214996Q1855.355564,1145.976601,1841.492004,1160.367027Q1821.668478,1164.260898,1814.457059,1149.553052Q1812.914821,1165.960237,1801.625699,1153.219154Q1814.194916,1177.481042,1815.611987,1167.205443Q1809.040476,1182.961484,1802.13144,1171.698959Q1796.071081,1161.346921,1794.368254,1146.856761Q1780.534797,1141.394478,1794.368254,1134.769772Q1796.320398,1107.84209,1808.465491,1114.905485Q1797.392643,1153.587374,1832.481698,1166.273497Q1816.176758,1147.326001,1851.265813,1160.012124Q1824.446672,1173.388572,1837.507443,1193.548161Q1833.905555,1162.209889,1846.966326,1182.369478Q1826.166466,1163.929685,1839.227237,1184.089274Q1813.267986,1172.528671,1826.328757,1192.68826Q1743.399227,906.543726,1642.087581,820.466789');offset-rotate:0deg">
+          <g id="sabneet-u-visor_tr" transform="rotate(0)">
+            <g id="sabneet-u-visor_ts" transform="scale(1,1)">
+              <g id="sabneet-u-visor" transform="translate(-2267.730835,-1143.612488)">
+                <path id="sabneet-u-screen" d="M2288.15,978.305l-208.06,36.905c-33.44,5.93-55.73,37.84-49.8,71.27l30.61,172.64c5.94,33.43,37.85,55.73,71.28,49.8l208.06-36.9c33.44-5.93,55.74-37.85,49.8-71.28l-30.62-172.63c-5.92-33.438-37.84-55.735-71.27-49.805Z" transform="matrix(.931297 0 0 0.931297 170.381237 71.125992)" fill="#a9d18e" fill-opacity="0.6" fill-rule="evenodd" stroke="#000" stroke-width="18.3048" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="8" />
+                <path id="sabneet-u-dial" d="M2358.56,1003.83l62.68-10.938c34.62-6.043,71.32,38.508,81.97,99.508c10.65,61.01-8.78,115.36-43.4,121.4l-62.69,10.94-38.56-220.91Z" transform="matrix(.925629 0 0 0.925629 181.522838 76.472808)" fill="#e8e8e8" fill-rule="evenodd" stroke="#000" stroke-width="18.2875" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="8" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
