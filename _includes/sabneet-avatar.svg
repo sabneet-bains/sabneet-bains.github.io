@@ -1,986 +1,1130 @@
 <svg id="sabneet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1542 1542" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" > #sabneet { pointer-events: all } <style type="text/css">
-  <![CDATA[
-  :root {
-    --anim-dur: 3000ms;
-    --anim-timing: linear;
-    --anim-iter: infinite;
-    --anim-dir: alternate;
-    --anim-fill: forwards;
-  }
-
-  /* Pause by default, run on hover */
-  #sabneet [id^="sabneet-u-"] {
-    animation-duration: var(--anim-dur);
-    animation-timing-function: var(--anim-timing);
-    animation-iteration-count: var(--anim-iter);
-    animation-direction: var(--anim-dir);
-    animation-fill-mode: var(--anim-fill);
-    will-change: transform, d, filter, opacity;
-    animation-play-state: paused !important;
-  }
-
-  #sabneet:hover [id^="sabneet-u-"] {
-    animation-play-state: running !important;
-  }
-
-  /* Map IDs to concise animation names */
-  #sabneet #sabneet-u-avatar_to {
-    animation-name: avatar_to;
-  }
-
-  #sabneet #sabneet-u-avatar_ts {
-    animation-name: avatar_ts;
-  }
-
-  #sabneet #sabneet-u-right-arm_tr {
-    animation-name: right_arm_tr;
-  }
-
-  #sabneet #sabneet-u-left-arm_tr {
-    animation-name: left_arm_tr;
-  }
-
-  #sabneet #sabneet-u-core_ts {
-    animation-name: core_ts;
-  }
-
-  #sabneet #sabneet-u-left-pec {
-    animation-name: left_pec_m;
-  }
-
-  #sabneet #sabneet-u-left-pec_tr {
-    animation-name: left_pec_tr;
-  }
-
-  #sabneet #sabneet-u-right-pec {
-    animation-name: right_pec_m;
-  }
-
-  #sabneet #sabneet-u-right-pec_tr {
-    animation-name: right_pec_tr;
-  }
-
-  #sabneet #sabneet-u-shoulders_ts {
-    animation-name: shoulders_ts;
-  }
-
-  #sabneet #sabneet-u-beacon_tr {
-    animation-name: beacon_tr;
-  }
-
-  #sabneet #sabneet-u-casing {
-    animation-name: casing_fp;
-  }
-
-  #sabneet #sabneet-u-led {
-    animation-name: led_fp;
-  }
-
-  #sabneet #sabneet-u-head_tr {
-    animation-name: head_tr;
-  }
-
-  #sabneet #sabneet-u-right-ear_ts {
-    animation-name: right_ear_ts;
-  }
-
-  #sabneet #sabneet-u-skin_ts {
-    animation-name: skin_ts;
-  }
-
-  #sabneet #sabneet-u-mouth {
-    animation-name: mouth_m;
-  }
-
-  #sabneet #sabneet-u-mouth_to {
-    animation-name: mouth_to;
-  }
-
-  #sabneet #sabneet-u-mouth_tr {
-    animation-name: mouth_tr;
-  }
-
-  #sabneet #sabneet-u-right-eye2 {
-    animation-name: right_eye2_m, right_eye2_sp;
-  }
+    <![CDATA[
+    #sabneet * {
+      animation-play-state: paused !important
+    }
 
-  #sabneet #sabneet-u-right-brow_tr {
-    animation-name: right_brow_tr;
-  }
+    #sabneet:hover * {
+      animation-play-state: running !important
+    }
 
-  #sabneet #sabneet-u-right-brow {
-    animation-name: right_brow_sp;
-  }
+    /*
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-background {
+      animation: sabneet-u-background_f_p 3000ms linear infinite alternate forwards
+    }
 
-  #sabneet #sabneet-u-left-eye2_to {
-    animation-name: left_eye2_to;
-  }
+    @keyframes sabneet-u-background_f_p {
+      0% {
+        fill: #deeaf6
+      }
 
-  #sabneet #sabneet-u-left-eye2 {
-    animation-name: left_eye2_sp;
-  }
+      56.666667% {
+        fill: #deeaf6
+      }
 
-  #sabneet #sabneet-u-left-brow_to {
-    animation-name: left_brow_to;
-  }
+      60% {
+        fill: #e07b57
+      }
 
-  #sabneet #sabneet-u-left-brow_tr {
-    animation-name: left_brow_tr;
-  }
+      100% {
+        fill: #e07b57
+      }
+    }
+    */
 
-  #sabneet #sabneet-u-left-brow {
-    animation-name: left_brow_sp;
-  }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-avatar_to {
+      animation: sabneet-u-avatar_to__to 3000ms linear infinite alternate forwards
+    }
 
-  #sabneet #sabneet-u-hair {
-    animation-name: hair_fl;
-  }
+    @keyframes sabneet-u-avatar_to__to {
+      0% {
+        transform: translate(-1291.680903px, -204.208004px)
+      }
 
-  #sabneet #sabneet-u-pomp-back_tr {
-    animation-name: pomp_back_tr;
-  }
+      46.666667% {
+        transform: translate(-1291.680903px, -201.412715px)
+      }
 
-  #sabneet #sabneet-u-pomp-back_ts {
-    animation-name: pomp_back_ts;
-  }
+      53.333333% {
+        transform: translate(-668.082987px, 69.716813px)
+      }
 
-  #sabneet #sabneet-u-hair-volume {
-    animation-name: hair_vol_m, hair_vol_fp;
-  }
+      100% {
+        transform: translate(-668.082987px, 69.716813px)
+      }
+    }
 
-  #sabneet #sabneet-u-shadow2 {
-    animation-name: shadow2_fp;
-  }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-avatar_ts {
+      animation: sabneet-u-avatar_ts__ts 3000ms linear infinite alternate forwards
+    }
 
-  #sabneet #sabneet-u-pomp-front_tr {
-    animation-name: pomp_front_tr;
-  }
+    @keyframes sabneet-u-avatar_ts__ts {
+      0% {
+        transform: scale(1, 1)
+      }
 
-  #sabneet #sabneet-u-hair-volume2 {
-    animation-name: hair_vol2_m, hair_vol2_fp;
-  }
+      46.666667% {
+        transform: scale(1, 1)
+      }
 
-  #sabneet #sabneet-u-shadow3 {
-    animation-name: shadow3_fp;
-  }
+      53.333333% {
+        transform: scale(0.7, 0.7)
+      }
 
-  #sabneet #sabneet-u-visor_to {
-    animation-name: visor_to;
-  }
+      100% {
+        transform: scale(0.7, 0.7)
+      }
+    }
 
-  #sabneet #sabneet-u-visor_tr {
-    animation-name: visor_tr;
-  }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-arm_tr {
+      animation: sabneet-u-right-arm_tr__tr 3000ms linear infinite alternate forwards
+    }
 
-  #sabneet #sabneet-u-visor_ts {
-    animation-name: visor_ts;
-  }
+    @keyframes sabneet-u-right-arm_tr__tr {
+      0% {
+        transform: translate(2039.617261px, 452.690919px) rotate(0deg)
+      }
 
-  #sabneet #sabneet-u-visor {
-    animation-name: visor_co;
-  }
+      43.333333% {
+        transform: translate(2039.617261px, 452.690919px) rotate(0deg)
+      }
 
-  #sabneet #sabneet-u-screen {
-    animation-name: screen_fp, screen_fo;
-  }
+      63.333333% {
+        transform: translate(2039.617261px, 452.690919px) rotate(5deg)
+      }
 
-  /* Full keyframe definitions */
-  @keyframes avatar_to {
-    0% {
-      transform: translate(-1291.680903px, -204.208004px);
+      100% {
+        transform: translate(2039.617261px, 452.690919px) rotate(-6deg)
+      }
     }
 
-    46.666667% {
-      transform: translate(-1291.680903px, -201.412715px);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-arm_tr {
+      animation: sabneet-u-left-arm_tr__tr 3000ms linear infinite alternate forwards
     }
 
-    53.333333% {
-      transform: translate(-668.082987px, 69.716813px);
-    }
+    @keyframes sabneet-u-left-arm_tr__tr {
+      0% {
+        transform: translate(371.51219px, 455.479133px) rotate(0deg)
+      }
 
-    100% {
-      transform: translate(-668.082987px, 69.716813px);
-    }
-  }
+      43.333333% {
+        transform: translate(371.51219px, 455.479133px) rotate(0deg)
+      }
 
-  @keyframes avatar_ts {
-    0% {
-      transform: scale(1, 1);
-    }
+      63.333333% {
+        transform: translate(371.51219px, 455.479133px) rotate(6deg)
+      }
 
-    46.666667% {
-      transform: scale(1, 1);
+      100% {
+        transform: translate(371.51219px, 455.479133px) rotate(3deg)
+      }
     }
 
-    53.333333% {
-      transform: scale(0.7, 0.7);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-core_ts {
+      animation: sabneet-u-core_ts__ts 3000ms linear infinite alternate forwards
     }
 
-    100% {
-      transform: scale(0.7, 0.7);
-    }
-  }
+    @keyframes sabneet-u-core_ts__ts {
+      0% {
+        transform: translate(1208.000001px, 1237.428894px) scale(1.1, 1.1)
+      }
 
-  @keyframes right_arm_tr {
-    0% {
-      transform: translate(2039.617261px, 452.690919px) rotate(0deg);
-    }
+      60% {
+        transform: translate(1208.000001px, 1237.428894px) scale(1.1, 1.1)
+      }
 
-    43.333333% {
-      transform: translate(2039.617261px, 452.690919px) rotate(0deg);
-    }
+      70% {
+        transform: translate(1208.000001px, 1237.428894px) scale(1.07, 1.07)
+      }
 
-    63.333333% {
-      transform: translate(2039.617261px, 452.690919px) rotate(5deg);
-    }
+      86.666667% {
+        transform: translate(1208.000001px, 1237.428894px) scale(1.13, 1.13)
+      }
 
-    100% {
-      transform: translate(2039.617261px, 452.690919px) rotate(-6deg);
+      100% {
+        transform: translate(1208.000001px, 1237.428894px) scale(1.13, 1.13)
+      }
     }
-  }
 
-  @keyframes left_arm_tr {
-    0% {
-      transform: translate(371.51219px, 455.479133px) rotate(0deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-pec {
+      animation: sabneet-u-left-pec__m 3000ms linear infinite alternate forwards
     }
 
-    43.333333% {
-      transform: translate(371.51219px, 455.479133px) rotate(0deg);
-    }
+    @keyframes sabneet-u-left-pec__m {
+      0% {
+        d: path('M561.5,358.704493C561.5,140.928354,620.722702,-35.459784,693.728695,-35.459784L755.374832,-35.459784C828.431311,-35.459784,887.603526,141.078856,887.603526,358.704493L887.603526,617.718132C887.603526,835.494272,828.380824,1011.88241,755.374832,1011.88241L693.728695,1011.88241C620.672215,1011.88241,561.5,835.34377,561.5,617.718132L561.5,358.704493Z')
+      }
 
-    63.333333% {
-      transform: translate(371.51219px, 455.479133px) rotate(6deg);
+      40% {
+        d: path('M561.5,576.4C561.5,431.7,671.394466,314.5,806.865393,314.5L921.256818,314.5C1164.965841,312.538219,1166.622211,431.8,1166.622211,576.4L1166.622211,748.5C1166.622211,893.2,1056.727745,1010.4,921.256818,1010.4L806.865393,1010.4C671.300779,1010.4,561.5,893.1,561.5,748.5L561.5,576.4Z')
+      }
+
+      100% {
+        d: path('M561.5,576.4C561.5,431.7,671.394466,314.5,806.865393,314.5L921.256818,314.5C1164.965841,312.538219,1166.622211,431.8,1166.622211,576.4L1166.622211,748.5C1166.622211,893.2,1056.727745,1010.4,921.256818,1010.4L806.865393,1010.4C671.300779,1010.4,561.5,893.1,561.5,748.5L561.5,576.4Z')
+      }
     }
 
-    100% {
-      transform: translate(371.51219px, 455.479133px) rotate(3deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-pec_tr {
+      animation: sabneet-u-left-pec_tr__tr 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes core_ts {
+    @keyframes sabneet-u-left-pec_tr__tr {
+      0% {
+        transform: translate(532.167315px, 657.825596px) rotate(0deg)
+      }
 
-    0%,
-    60% {
-      transform: translate(1208.000001px, 1237.428894px) scale(1.1, 1.1);
-    }
+      16.666667% {
+        transform: translate(532.167315px, 657.825596px) rotate(10deg)
+      }
 
-    70% {
-      transform: translate(1208.000001px, 1237.428894px) scale(1.07, 1.07);
-    }
+      40% {
+        transform: translate(532.167315px, 657.825596px) rotate(0deg)
+      }
 
-    86.666667%,
-    100% {
-      transform: translate(1208.000001px, 1237.428894px) scale(1.13, 1.13);
+      100% {
+        transform: translate(532.167315px, 657.825596px) rotate(0deg)
+      }
     }
-  }
 
-  @keyframes left_pec_m {
-    0% {
-      d: path('M561.5,358.704493C561.5,140.928354,620.722702,-35.459784,693.728695,-35.459784L755.374832,-35.459784C828.431311,-35.459784,887.603526,141.078856,887.603526,358.704493L887.603526,617.718132C887.603526,835.494272,828.380824,1011.88241,755.374832,1011.88241L693.728695,1011.88241C620.672215,1011.88241,561.5,835.34377,561.5,617.718132L561.5,358.704493Z');
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-pec {
+      animation: sabneet-u-right-pec__m 3000ms linear infinite alternate forwards
     }
+
+    @keyframes sabneet-u-right-pec__m {
+      0% {
+        d: path('M1487.650997,357.451805C1487.650997,140.920278,1547.419865,-34.459784,1621.099134,-34.459784L1683.313788,-34.459784C1757.044011,-34.459784,1816.761926,141.069919,1816.761926,357.451805L1816.761926,620.970822C1816.761926,837.502349,1756.993057,1012.88241,1683.313788,1012.88241L1621.099134,1012.88241C1547.368911,1012.88241,1487.650997,837.352707,1487.650997,620.970822C1487.650997,620.970822,1487.650997,357.451805,1487.650997,357.451805Z')
+      }
 
-    40% {
-      d: path('M561.5,576.4C561.5,431.7,671.394466,314.5,806.865393,314.5L921.256818,314.5C1164.965841,312.538219,1166.622211,431.8,1166.622211,576.4L1166.622211,748.5C1166.622211,893.2,1056.727745,1010.4,921.256818,1010.4L806.865393,1010.4C671.300779,1010.4,561.5,893.1,561.5,748.5L561.5,576.4Z');
+      40% {
+        d: path('M1209.5,577.4C1209.5,432.7,1197.403744,313.538217,1471.390028,315.5L1593.485379,315.5C1738.179869,315.5,1855.375407,432.8,1855.375407,577.4L1855.375407,753.5C1855.375407,898.2,1738.079873,1015.4,1593.485379,1015.4L1471.390028,1015.4C1326.695538,1015.4,1209.5,898.1,1209.5,753.5C1209.5,753.5,1209.5,577.4,1209.5,577.4Z')
+      }
+
+      100% {
+        d: path('M1209.5,577.4C1209.5,432.7,1197.403744,313.538217,1471.390028,315.5L1593.485379,315.5C1738.179869,315.5,1855.375407,432.8,1855.375407,577.4L1855.375407,753.5C1855.375407,898.2,1738.079873,1015.4,1593.485379,1015.4L1471.390028,1015.4C1326.695538,1015.4,1209.5,898.1,1209.5,753.5C1209.5,753.5,1209.5,577.4,1209.5,577.4Z')
+      }
     }
 
-    100% {
-      d: path('M561.5,576.4C561.5,431.7,671.394466,314.5,806.865393,314.5L921.256818,314.5C1164.965841,312.538219,1166.622211,431.8,1166.622211,576.4L1166.622211,748.5C1166.622211,893.2,1056.727745,1010.4,921.256818,1010.4L806.865393,1010.4C671.300779,1010.4,561.5,893.1,561.5,748.5L561.5,576.4Z');
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-pec_tr {
+      animation: sabneet-u-right-pec_tr__tr 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes left_pec_tr {
+    @keyframes sabneet-u-right-pec_tr__tr {
+      0% {
+        transform: translate(1919.771863px, 661.274659px) rotate(0deg)
+      }
 
-    0%,
-    40%,
-    100% {
-      transform: translate(532.167315px, 657.825596px) rotate(0deg);
-    }
+      16.666667% {
+        transform: translate(1919.771863px, 661.274659px) rotate(-10deg)
+      }
 
-    16.666667% {
-      transform: translate(532.167315px, 657.825596px) rotate(10deg);
-    }
-  }
+      40% {
+        transform: translate(1919.771863px, 661.274659px) rotate(0deg)
+      }
 
-  @keyframes right_pec_m {
-    0% {
-      d: path('M1487.650997,357.451805C1487.650997,140.920278,1547.419865,-34.459784,1621.099134,-34.459784L1683.313788,-34.459784C1757.044011,-34.459784,1816.761926,141.069919,1816.761926,357.451805L1816.761926,620.970822C1816.761926,837.502349,1756.993057,1012.88241,1683.313788,1012.88241L1621.099134,1012.88241C1547.368911,1012.88241,1487.650997,837.352707,1487.650997,620.970822C1487.650997,620.970822,1487.650997,357.451805,1487.650997,357.451805Z');
+      100% {
+        transform: translate(1919.771863px, 661.274659px) rotate(0deg)
+      }
     }
 
-    40% {
-      d: path('M1209.5,577.4C1209.5,432.7,1197.403744,313.538217,1471.390028,315.5L1593.485379,315.5C1738.179869,315.5,1855.375407,432.8,1855.375407,577.4L1855.375407,753.5C1855.375407,898.2,1738.079873,1015.4,1593.485379,1015.4L1471.390028,1015.4C1326.695538,1015.4,1209.5,898.1,1209.5,753.5C1209.5,753.5,1209.5,577.4,1209.5,577.4Z');
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-shoulders_ts {
+      animation: sabneet-u-shoulders_ts__ts 3000ms linear infinite alternate forwards
     }
 
-    100% {
-      d: path('M1209.5,577.4C1209.5,432.7,1197.403744,313.538217,1471.390028,315.5L1593.485379,315.5C1738.179869,315.5,1855.375407,432.8,1855.375407,577.4L1855.375407,753.5C1855.375407,898.2,1738.079873,1015.4,1593.485379,1015.4L1471.390028,1015.4C1326.695538,1015.4,1209.5,898.1,1209.5,753.5C1209.5,753.5,1209.5,577.4,1209.5,577.4Z');
-    }
-  }
+    @keyframes sabneet-u-shoulders_ts__ts {
+      0% {
+        transform: translate(1208.100953px, 528.181427px) scale(1, 1)
+      }
+
+      43.333333% {
+        transform: translate(1208.100953px, 528.181427px) scale(1, 1)
+      }
 
-  @keyframes right_pec_tr {
+      66.666667% {
+        transform: translate(1208.100953px, 528.181427px) scale(1.05, 1.05)
+      }
 
-    0%,
-    40%,
-    100% {
-      transform: translate(1919.771863px, 661.274659px) rotate(0deg);
+      100% {
+        transform: translate(1208.100953px, 528.181427px) scale(1, 1)
+      }
     }
 
-    16.666667% {
-      transform: translate(1919.771863px, 661.274659px) rotate(-10deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-beacon_tr {
+      animation: sabneet-u-beacon_tr__tr 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes shoulders_ts {
+    @keyframes sabneet-u-beacon_tr__tr {
+      0% {
+        transform: translate(1207.818486px, 772.648577px) rotate(-180deg)
+      }
 
-    0%,
-    43.333333% {
-      transform: translate(1208.100953px, 528.181427px) scale(1, 1);
-    }
+      40% {
+        transform: translate(1207.818486px, 772.648577px) rotate(-180deg)
+      }
+
+      56.666667% {
+        transform: translate(1207.818486px, 772.648577px) rotate(0deg)
+      }
 
-    66.666667% {
-      transform: translate(1208.100953px, 528.181427px) scale(1.05, 1.05);
+      100% {
+        transform: translate(1207.818486px, 772.648577px) rotate(0deg)
+      }
     }
 
-    100% {
-      transform: translate(1208.100953px, 528.181427px) scale(1, 1);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-casing {
+      animation: sabneet-u-casing_f_p 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes beacon_tr {
+    @keyframes sabneet-u-casing_f_p {
+      0% {
+        fill: #5c586f
+      }
 
-    0%,
-    40% {
-      transform: translate(1207.818486px, 772.648577px) rotate(-180deg);
-    }
+      63.333333% {
+        fill: #b2b0bc
+      }
 
-    56.666667%,
-    100% {
-      transform: translate(1207.818486px, 772.648577px) rotate(0deg);
+      100% {
+        fill: #b2b0bc
+      }
     }
-  }
 
-  @keyframes casing_fp {
-    0% {
-      fill: #5c586f;
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-led {
+      animation: sabneet-u-led_f_p 3000ms linear infinite alternate forwards
     }
 
-    63.333333% {
-      fill: #b2b0bc;
-    }
+    @keyframes sabneet-u-led_f_p {
+      0% {
+        fill: #ffc000
+      }
 
-    100% {
-      fill: #b2b0bc;
-    }
-  }
+      50% {
+        fill: #e57e59
+      }
 
-  @keyframes led_fp {
-    0% {
-      fill: #ffc000;
-    }
+      63.333333% {
+        fill: #f8484c
+      }
 
-    50% {
-      fill: #e57e59;
+      100% {
+        fill: #f8484c
+      }
     }
 
-    63.333333% {
-      fill: #f8484c;
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-head_tr {
+      animation: sabneet-u-head_tr__tr 3000ms linear infinite alternate forwards
     }
 
-    100% {
-      fill: #f8484c;
-    }
-  }
+    @keyframes sabneet-u-head_tr__tr {
+      0% {
+        transform: translate(2029.717041px, 1148.722198px) rotate(0deg)
+      }
 
-  @keyframes head_tr {
-    0% {
-      transform: translate(2029.717041px, 1148.722198px) rotate(0deg);
-    }
+      33.333333% {
+        transform: translate(2029.717041px, 1148.722198px) rotate(1.5deg)
+      }
 
-    33.333333% {
-      transform: translate(2029.717041px, 1148.722198px) rotate(1.5deg);
+      100% {
+        transform: translate(2029.717041px, 1148.722198px) rotate(0deg)
+      }
     }
 
-    100% {
-      transform: translate(2029.717041px, 1148.722198px) rotate(0deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-ear_ts {
+      animation: sabneet-u-right-ear_ts__ts 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes right_ear_ts {
+    @keyframes sabneet-u-right-ear_ts__ts {
+      0% {
+        transform: translate(2337.11851px, 1149.422979px) scale(1, 1)
+      }
 
-    0%,
-    10% {
-      transform: translate(2337.11851px, 1149.422979px) scale(1, 1);
-    }
+      10% {
+        transform: translate(2337.11851px, 1149.422979px) scale(1, 1)
+      }
 
-    23.333333%,
-    100% {
-      transform: translate(2337.11851px, 1149.422979px) scale(1.1, 1.1);
-    }
-  }
+      23.333333% {
+        transform: translate(2337.11851px, 1149.422979px) scale(1.1, 1.1)
+      }
 
-  @keyframes skin_ts {
-    0% {
-      transform: translate(2030.525373px, 755.670959px) scale(1, 1);
+      100% {
+        transform: translate(2337.11851px, 1149.422979px) scale(1.1, 1.1)
+      }
     }
 
-    36.666667% {
-      transform: translate(2030.525373px, 755.670959px) scale(1, 0.97);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-skin_ts {
+      animation: sabneet-u-skin_ts__ts 3000ms linear infinite alternate forwards
     }
 
-    100% {
-      transform: translate(2030.525373px, 755.670959px) scale(1, 1);
-    }
-  }
+    @keyframes sabneet-u-skin_ts__ts {
+      0% {
+        transform: translate(2030.525373px, 755.670959px) scale(1, 1)
+      }
 
-  @keyframes mouth_m {
-    0% {
-      d: path('M616.905306,1144.88885C622.942311,1168.374918,662.101854,1174.042747,685.132028,1172.703311C707.374265,1171.409701,729.922604,1162.261279,753.586209,1144.20797');
-    }
+      36.666667% {
+        transform: translate(2030.525373px, 755.670959px) scale(1, 0.97)
+      }
 
-    16.666667% {
-      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,720.832673,1167.732881,743.585599,1149.20797');
+      100% {
+        transform: translate(2030.525373px, 755.670959px) scale(1, 1)
+      }
     }
 
-    33.333333% {
-      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,721.237276,1169.351295,737.586209,1152.20797');
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-mouth {
+      animation: sabneet-u-mouth__m 3000ms linear infinite alternate forwards
     }
 
-    50% {
-      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.046483,1170.565105,733.586209,1154.20797');
-    }
+    @keyframes sabneet-u-mouth__m {
+      0% {
+        d: path('M616.905306,1144.88885C622.942311,1168.374918,662.101854,1174.042747,685.132028,1172.703311C707.374265,1171.409701,729.922604,1162.261279,753.586209,1144.20797')
+      }
 
-    66.666667% {
-      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797');
-    }
+      16.666667% {
+        d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,720.832673,1167.732881,743.585599,1149.20797')
+      }
 
-    100% {
-      d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797');
-    }
-  }
+      33.333333% {
+        d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,721.237276,1169.351295,737.586209,1152.20797')
+      }
 
-  @keyframes mouth_to {
-    0% {
-      transform: translate(2040.772475px, 1399.390043px);
-    }
+      50% {
+        d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.046483,1170.565105,733.586209,1154.20797')
+      }
 
-    66.666667% {
-      transform: translate(2041.722064px, 1398.774439px);
-    }
+      66.666667% {
+        d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797')
+      }
 
-    73.333333% {
-      transform: translate(2042.791164px, 1385.691565px);
+      100% {
+        d: path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797')
+      }
     }
 
-    100% {
-      transform: translate(2042.791164px, 1385.691565px);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-mouth_to {
+      animation: sabneet-u-mouth_to__to 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes mouth_tr {
-    0% {
-      transform: rotate(0deg);
-    }
+    @keyframes sabneet-u-mouth_to__to {
+      0% {
+        transform: translate(2040.772475px, 1399.390043px)
+      }
+
+      66.666667% {
+        transform: translate(2041.722064px, 1398.774439px)
+      }
 
-    58% {
-      transform: rotate(10deg);
+      73.333333% {
+        transform: translate(2042.791164px, 1385.691565px)
+      }
+
+      100% {
+        transform: translate(2042.791164px, 1385.691565px)
+      }
     }
 
-    60%,
-    100% {
-      transform: rotate(-15deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-mouth_tr {
+      animation: sabneet-u-mouth_tr__tr 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes right_eye2_m {
+    @keyframes sabneet-u-mouth_tr__tr {
+      0% {
+        transform: rotate(0deg)
+      }
 
-    0%,
-    43.333333% {
-      d: path('M-0.630236,-17.168464L2.680903,31.412714');
-    }
+      58% {
+        transform: rotate(10deg)
+      }
 
-    50% {
-      d: path('M-0.630236,-17.168464L1.680903,24.412714');
-    }
+      60% {
+        transform: rotate(-15deg)
+      }
 
-    56.666667% {
-      d: path('M-0.630236,-17.168464L1.680903,17.412714');
+      100% {
+        transform: rotate(-15deg)
+      }
     }
 
-    63.333333% {
-      d: path('M-0.630236,-17.168464L0.680903,10.412714');
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-eye2 {
+      animation-name: sabneet-u-right-eye2__m, sabneet-u-right-eye2_s_p;
+      animation-duration: 3000ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
     }
 
-    70% {
-      d: path('M-0.630236,-17.168464L-0.458578,-20.01717');
-    }
+    @keyframes sabneet-u-right-eye2__m {
+      0% {
+        d: path('M-0.630236,-17.168464L2.680903,31.412714')
+      }
 
-    80% {
-      d: path('M-0.630236,-17.168464L0.680903,10.412714');
-    }
+      43.333333% {
+        d: path('M-0.630236,-17.168464L2.680903,31.412714')
+      }
 
-    86.666667% {
-      d: path('M-0.630236,-17.168464L1.680903,17.412714');
-    }
+      50% {
+        d: path('M-0.630236,-17.168464L1.680903,24.412714')
+      }
 
-    93.333333% {
-      d: path('M-0.630236,-17.168464L1.680903,24.412714');
-    }
+      56.666667% {
+        d: path('M-0.630236,-17.168464L1.680903,17.412714')
+      }
 
-    100% {
-      d: path('M-0.630236,-17.168464L1.680903,24.412714');
-    }
-  }
+      63.333333% {
+        d: path('M-0.630236,-17.168464L0.680903,10.412714')
+      }
 
-  @keyframes right_eye2_sp {
+      70% {
+        d: path('M-0.630236,-17.168464L-0.458578,-20.01717')
+      }
 
-    0%,
-    50% {
-      stroke: #1f1313;
-    }
+      80% {
+        d: path('M-0.630236,-17.168464L0.680903,10.412714')
+      }
 
-    53.333333% {
-      stroke: #135a5c;
-    }
+      86.666667% {
+        d: path('M-0.630236,-17.168464L1.680903,17.412714')
+      }
+
+      93.333333% {
+        d: path('M-0.630236,-17.168464L1.680903,24.412714')
+      }
 
-    100% {
-      stroke: #135a5c;
+      100% {
+        d: path('M-0.630236,-17.168464L1.680903,24.412714')
+      }
     }
-  }
 
-  @keyframes right_brow_tr {
+    @keyframes sabneet-u-right-eye2_s_p {
+      0% {
+        stroke: #1f1313
+      }
 
-    0%,
-    43.333333% {
-      transform: translate(2208.464723px, 1111.039897px) rotate(-10deg);
+      50% {
+        stroke: #1f1313
+      }
+
+      53.333333% {
+        stroke: #135a5c
+      }
+
+      100% {
+        stroke: #135a5c
+      }
     }
 
-    100% {
-      transform: translate(2208.464723px, 1111.039897px) rotate(4deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-brow_tr {
+      animation: sabneet-u-right-brow_tr__tr 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes right_brow_sp {
+    @keyframes sabneet-u-right-brow_tr__tr {
+      0% {
+        transform: translate(2208.464723px, 1111.039897px) rotate(-10deg)
+      }
 
-    0%,
-    50% {
-      stroke: #1f1313;
-    }
+      43.333333% {
+        transform: translate(2208.464723px, 1111.039897px) rotate(-10deg)
+      }
 
-    53.333333%,
-    100% {
-      stroke: #0f7b7e;
+      100% {
+        transform: translate(2208.464723px, 1111.039897px) rotate(4deg)
+      }
     }
-  }
 
-  @keyframes left_eye2_to {
-    0% {
-      transform: translate(2202px, 1140px);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-right-brow {
+      animation: sabneet-u-right-brow_s_p 3000ms linear infinite alternate forwards
     }
 
-    26.666667% {
-      transform: translate(2222px, 1124px);
+    @keyframes sabneet-u-right-brow_s_p {
+      0% {
+        stroke: #1f1313
+      }
+
+      50% {
+        stroke: #1f1313
+      }
+
+      53.333333% {
+        stroke: #0f7b7e
+      }
+
+      100% {
+        stroke: #0f7b7e
+      }
     }
 
-    100% {
-      transform: translate(2222px, 1124px);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-eye2_to {
+      animation: sabneet-u-left-eye2_to__to 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes left_eye2_sp {
+    @keyframes sabneet-u-left-eye2_to__to {
+      0% {
+        transform: translate(2202px, 1140px)
+      }
 
-    0%,
-    50% {
-      stroke: #1f1313;
-    }
+      26.666667% {
+        transform: translate(2222px, 1124px)
+      }
 
-    53.333333%,
-    100% {
-      stroke: #135a5c;
+      100% {
+        transform: translate(2222px, 1124px)
+      }
     }
-  }
 
-  @keyframes left_brow_to {
-    0% {
-      transform: translate(2202px, 1116px);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-eye2 {
+      animation: sabneet-u-left-eye2_s_p 3000ms linear infinite alternate forwards
     }
 
-    26.666667% {
-      transform: translate(2222px, 1100px);
+    @keyframes sabneet-u-left-eye2_s_p {
+      0% {
+        stroke: #1f1313
+      }
+
+      50% {
+        stroke: #1f1313
+      }
+
+      53.333333% {
+        stroke: #135a5c
+      }
+
+      100% {
+        stroke: #135a5c
+      }
     }
 
-    100% {
-      transform: translate(2222px, 1100px);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-brow_to {
+      animation: sabneet-u-left-brow_to__to 3000ms linear infinite alternate forwards
     }
-  }
 
-  @keyframes left_brow_tr {
-    0% {
-      transform: rotate(0deg);
+    @keyframes sabneet-u-left-brow_to__to {
+      0% {
+        transform: translate(2202px, 1116px)
+      }
+
+      26.666667% {
+        transform: translate(2222px, 1100px)
+      }
+
+      100% {
+        transform: translate(2222px, 1100px)
+      }
     }
 
-    26.666667% {
-      transform: rotate(20deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-brow_tr {
+      animation: sabneet-u-left-brow_tr__tr 3000ms linear infinite alternate forwards
     }
+
+    @keyframes sabneet-u-left-brow_tr__tr {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      26.666667% {
+        transform: rotate(20deg)
+      }
 
-    66.666667% {
-      transform: rotate(15deg);
+      66.666667% {
+        transform: rotate(15deg)
+      }
+
+      100% {
+        transform: rotate(15deg)
+      }
     }
 
-    100% {
-      transform: rotate(15deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-left-brow {
+      animation: sabneet-u-left-brow_s_p 3000ms linear infinite alternate forwards
     }
-  }
+
+    @keyframes sabneet-u-left-brow_s_p {
+      0% {
+        stroke: #1f1313
+      }
+
+      50% {
+        stroke: #1f1313
+      }
 
-  @keyframes left_brow_sp {
+      53.333333% {
+        stroke: #0f7b7e
+      }
 
-    0%,
-    50% {
-      stroke: #1f1313;
+      100% {
+        stroke: #0f7b7e
+      }
     }
 
-    53.333333%,
-    100% {
-      stroke: #0f7b7e;
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-hair {
+      animation: sabneet-u-hair__fl 3000ms linear infinite alternate forwards
     }
-  }
+
+    @keyframes sabneet-u-hair__fl {
+      0% {
+        filter: drop-shadow(0px 0px 282.842712px rgba(202, 171, 71, 0))
+      }
+
+      53.333333% {
+        filter: drop-shadow(0px 0px 282.842712px rgba(202, 171, 71, 0))
+      }
+
+      60% {
+        filter: drop-shadow(0px 0px 282.842712px #caab47)
+      }
+
+      66.666667% {
+        filter: drop-shadow(0px 0px 282.842712px #e07c56)
+      }
 
-  @keyframes hair_fl {
+      76.666667% {
+        filter: drop-shadow(0px 0px 282.842712px #caab47)
+      }
 
-    0%,
-    53.333333% {
-      filter: drop-shadow(0px 0px 282.842712px rgba(202, 171, 71, 0));
+      86.666667% {
+        filter: drop-shadow(0px 0px 282.842712px #e07c56)
+      }
+
+      93.333333% {
+        filter: drop-shadow(0px 0px 282.842712px #caab47)
+      }
+
+      100% {
+        filter: drop-shadow(0px 0px 282.842712px #e07c56)
+      }
     }
 
-    60% {
-      filter: drop-shadow(0px 0px 282.842712px #caab47);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-pomp-back_tr {
+      animation: sabneet-u-pomp-back_tr__tr 3000ms linear infinite alternate forwards
     }
+
+    @keyframes sabneet-u-pomp-back_tr__tr {
+      0% {
+        transform: translate(1959.380834px, 525.26172px) rotate(0deg)
+      }
 
-    66.666667% {
-      filter: drop-shadow(0px 0px 282.842712px #e07c56);
+      60% {
+        transform: translate(1959.380834px, 525.26172px) rotate(-0.5deg)
+      }
+
+      100% {
+        transform: translate(1959.380834px, 525.26172px) rotate(-4deg)
+      }
     }
 
-    76.666667% {
-      filter: drop-shadow(0px 0px 282.842712px #caab47);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-pomp-back_ts {
+      animation: sabneet-u-pomp-back_ts__ts 3000ms linear infinite alternate forwards
     }
+
+    @keyframes sabneet-u-pomp-back_ts__ts {
+      0% {
+        transform: scale(1, 1)
+      }
 
-    86.666667% {
-      filter: drop-shadow(0px 0px 282.842712px #e07c56);
+      36.666667% {
+        transform: scale(1, 0.97)
+      }
+
+      100% {
+        transform: scale(1, 1)
+      }
     }
 
-    93.333333% {
-      filter: drop-shadow(0px 0px 282.842712px #caab47);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-hair-volume {
+      animation-name: sabneet-u-hair-volume__m, sabneet-u-hair-volume_f_p;
+      animation-duration: 3000ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
     }
+
+    @keyframes sabneet-u-hair-volume__m {
+      0% {
+        d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2370.72,850.472,2376.64,880.447C2381.373803,908.449593,2383.276367,939.906044,2382.911099,972.803816C2382.68451,993.211466,2381.585223,1014.173759,2379.747731,1035.210273C2376.206302,1075.754288,2369.922774,1116.573997,2361.86,1154.23C2364.741822,1153.159069,2368.478182,1142.836207,2373.617646,1119.629032C2365.16045,1157.817381,2360.502581,1161.117536,2357.199748,1145.714672C2357.829126,1148.649797,2358.507708,1150.905777,2359.252408,1152.37062C2349.995025,1134.161109,2350.954737,993.696796,2329.64,946.116C2296.3,893.449,2244.9,823.892,2173.67,841.202C2102.43,858.512,2108.39,856.182,2061.85,861.669C2015.31,867.156,1936.08,855.542,1882.55,871.156C1821.23,895.887,1742.5,939.483,1740.66,955.356C1736.86,972.772,1767.45,996.63,1742.39,1009.21C1733.46,1016.1,1708.13,1022.02,1703.11,1084.67C1698.49,1135.68,1710.35,1267.34,1696.25,1215.25C1692.65,1230.58,1688.25,1213.35,1681.44,1176.64C1679.509749,1166.216649,1678.245868,1151.168196,1676.578609,1134.128642C1672.372347,1091.140242,1665.598652,1035.478838,1639.08,1009.44C1651.209239,1003.994539,1639.95057,981.706847,1621.705705,951.581797C1612.018036,935.58598,1600.360677,917.380496,1589.189043,898.313417C1581.208151,884.692105,1573.475149,870.631077,1566.885256,856.621825C1559.022796,839.907261,1552.787564,823.266401,1549.7,807.534C1543.898769,775.461428,1540.422062,746.047975,1548.331313,717.408147C1558.124854,681.945201,1585.375746,647.668403,1647.287222,610.998121C1673.190666,595.655463,1705.161593,579.893816,1744.46,563.451C1781.989292,548.401175,1831.773961,536.578298,1876.416115,530.409739C1917.289149,524.76199,1953.851372,523.854079,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132Z')
+      }
 
-    100% {
-      filter: drop-shadow(0px 0px 282.842712px #e07c56);
+      40% {
+        d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2370.72,850.472,2376.64,880.447C2381.373803,908.449593,2383.276367,939.906044,2382.911099,972.803816C2382.68451,993.211466,2381.585223,1014.173759,2379.747731,1035.210273C2376.206302,1075.754288,2369.922774,1116.573997,2361.86,1154.23C2364.741822,1153.159069,2368.478182,1142.836207,2373.617646,1119.629032C2365.16045,1157.817381,2360.502581,1161.117536,2357.199748,1145.714672C2357.829126,1148.649797,2358.507708,1150.905777,2359.252408,1152.37062C2349.995025,1134.161109,2350.954737,993.696796,2329.64,946.116C2296.3,893.449,2244.9,823.892,2173.67,841.202C2102.43,858.512,2108.39,856.182,2061.85,861.669C2015.31,867.156,1936.08,855.542,1882.55,871.156C1821.23,895.887,1742.5,939.483,1740.66,955.356C1736.86,972.772,1767.45,996.63,1742.39,1009.21C1733.46,1016.1,1708.13,1022.02,1703.11,1084.67C1698.49,1135.68,1710.35,1267.34,1696.25,1215.25C1692.65,1230.58,1688.25,1213.35,1681.44,1176.64C1679.509749,1166.216649,1678.245868,1151.168196,1676.578609,1134.128642C1672.372347,1091.140242,1665.598652,1035.478838,1639.08,1009.44C1651.209239,1003.994539,1639.95057,981.706847,1621.705705,951.581797C1612.018036,935.58598,1600.360677,917.380496,1589.189043,898.313417C1581.208151,884.692105,1573.475149,870.631077,1566.885256,856.621825C1559.022796,839.907261,1552.787564,823.266401,1549.7,807.534C1543.898769,775.461428,1540.422062,746.047975,1548.331313,717.408147C1558.124854,681.945201,1585.375746,647.668403,1647.287222,610.998121C1673.190666,595.655463,1705.161593,579.893816,1744.46,563.451C1781.989292,548.401175,1831.773961,536.578298,1876.416115,530.409739C1917.289149,524.76199,1953.851372,523.854079,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132Z')
+      }
+
+      53.333333% {
+        d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2497.103385,793.420064,2553.637684,771.908081C2623.455379,757.963981,2767.905499,664.139475,2760.526268,697.57491C2717.166188,894.040249,2528.423477,1066.46865,2533.62178,1067.745481C2601.247698,1090.923536,2676.723531,1151.987978,2658.669531,1161.624833C2658.276709,1161.770812,2602.895481,1166.389809,2597.873384,1166.677735C2407.421539,1177.596684,2253.713587,1282.137165,2253.713587,1282.137165C2253.713587,1282.137165,2318.929488,1149.121517,2308.631389,1151.098313C2291.29056,1154.427013,2278.212214,1158.769618,2248.942657,1169.294717C2259.95715,1026.499296,2215.991514,1171.242192,2121.805487,1208.648429C2139.385643,1139.198623,2187.535927,932.355556,2085.457277,943.372974C1983.378627,954.390392,1943.184282,1138.04164,1899.912123,1207.834824C1866.999606,1159.11353,1887.4374,1037.10682,1870.974363,1038.106017C1824.084305,1057.273361,1814.380732,1179.640641,1800.569418,1193.183493C1791.639418,1200.073493,1750.474699,1136.444973,1740.082367,1074.032166C1720.079792,1146.752893,1732.947635,1164.296931,1718.06711,1200.73914C1690.996289,1209.860602,1639.282586,1126.264005,1604.243296,1193.590444C1599.899465,1197.821448,1594.723769,1144.268733,1592.843861,1141.605114C1590.690587,1138.554165,1556.70712,1134.009454,1450.203306,1109.198618C1448.0479,1098.672845,1477.282557,1060.501697,1590.29186,1030.645883C1596.944361,1028.888366,1596.390218,1020.522856,1596.728683,996.544443C1597.043725,974.225407,1543.655019,949.856067,1496.348963,908.379002C1453.539705,870.844645,1420.709848,812.088207,1398.030327,763.61003C1360.957759,669.107664,1317.637539,511.744326,1331.683359,526.936515C1367.731371,565.926635,1625.790616,674.435242,1658.817893,635.892207C1686.183357,603.956542,1455.612388,384.573082,1340.620419,328.980246C1394.935465,307.199074,1684.464843,117.165759,1892.334316,338.113016C1931.746269,380.00451,1963.083653,526.636139,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132Z')
+      }
+
+      100% {
+        d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2497.103385,793.420064,2553.637684,771.908081C2623.455379,757.963981,2767.905499,664.139475,2760.526268,697.57491C2717.166188,894.040249,2528.423477,1066.46865,2533.62178,1067.745481C2601.247698,1090.923536,2676.723531,1151.987978,2658.669531,1161.624833C2658.276709,1161.770812,2602.895481,1166.389809,2597.873384,1166.677735C2407.421539,1177.596684,2253.713587,1282.137165,2253.713587,1282.137165C2253.713587,1282.137165,2318.929488,1149.121517,2308.631389,1151.098313C2291.29056,1154.427013,2278.212214,1158.769618,2248.942657,1169.294717C2259.95715,1026.499296,2215.991514,1171.242192,2121.805487,1208.648429C2139.385643,1139.198623,2187.535927,932.355556,2085.457277,943.372974C1983.378627,954.390392,1943.184282,1138.04164,1899.912123,1207.834824C1866.999606,1159.11353,1887.4374,1037.10682,1870.974363,1038.106017C1824.084305,1057.273361,1814.380732,1179.640641,1800.569418,1193.183493C1791.639418,1200.073493,1750.474699,1136.444973,1740.082367,1074.032166C1720.079792,1146.752893,1732.947635,1164.296931,1718.06711,1200.73914C1690.996289,1209.860602,1639.282586,1126.264005,1604.243296,1193.590444C1599.899465,1197.821448,1594.723769,1144.268733,1592.843861,1141.605114C1590.690587,1138.554165,1556.70712,1134.009454,1450.203306,1109.198618C1448.0479,1098.672845,1477.282557,1060.501697,1590.29186,1030.645883C1596.944361,1028.888366,1596.390218,1020.522856,1596.728683,996.544443C1597.043725,974.225407,1543.655019,949.856067,1496.348963,908.379002C1453.539705,870.844645,1420.709848,812.088207,1398.030327,763.61003C1360.957759,669.107664,1317.637539,511.744326,1331.683359,526.936515C1367.731371,565.926635,1625.790616,674.435242,1658.817893,635.892207C1686.183357,603.956542,1455.612388,384.573082,1340.620419,328.980246C1394.935465,307.199074,1684.464843,117.165759,1892.334316,338.113016C1931.746269,380.00451,1963.083653,526.636139,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132Z')
+      }
     }
-  }
+
+    @keyframes sabneet-u-hair-volume_f_p {
+      0% {
+        fill: #1f1313
+      }
 
-  @keyframes pomp_back_tr {
-    0% {
-      transform: translate(1959.380834px, 525.26172px) rotate(0deg);
+      50% {
+        fill: #1f1313
+      }
+
+      53.333333% {
+        fill: #f0c64e
+      }
+
+      100% {
+        fill: #f0c64e
+      }
     }
 
-    60% {
-      transform: translate(1959.380834px, 525.26172px) rotate(-0.5deg);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-shadow2 {
+      animation: sabneet-u-shadow2_f_p 3000ms linear infinite alternate forwards
     }
+
+    @keyframes sabneet-u-shadow2_f_p {
+      0% {
+        fill: #000
+      }
+
+      50% {
+        fill: #000
+      }
 
-    100% {
-      transform: translate(1959.380834px, 525.26172px) rotate(-4deg);
+      53.333333% {
+        fill: #caab47
+      }
+
+      100% {
+        fill: #caab47
+      }
     }
-  }
 
-  @keyframes pomp_back_ts {
-    0% {
-      transform: scale(1, 1);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-pomp-front_tr {
+      animation: sabneet-u-pomp-front_tr__tr 3000ms linear infinite alternate forwards
     }
+
+    @keyframes sabneet-u-pomp-front_tr__tr {
+      0% {
+        transform: translate(2204.412204px, 655.460852px) rotate(0deg)
+      }
+
+      33.333333% {
+        transform: translate(2204.412204px, 655.460852px) rotate(-4deg)
+      }
 
-    36.666667% {
-      transform: scale(1, 0.97);
+      73.333333% {
+        transform: translate(2204.412204px, 655.460852px) rotate(11deg)
+      }
+
+      100% {
+        transform: translate(2204.412204px, 655.460852px) rotate(0deg)
+      }
     }
 
-    100% {
-      transform: scale(1, 1);
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-hair-volume2 {
+      animation-name: sabneet-u-hair-volume2__m, sabneet-u-hair-volume2_f_p;
+      animation-duration: 3000ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
     }
-  }
+
+    @keyframes sabneet-u-hair-volume2__m {
+      0% {
+        d: path('M920.627637,322.166547C944.979437,322.564107,970.976575,322.893308,999.494787,322.203351C1027.516118,321.525415,1053.158931,318.307222,1076.423228,312.548772C1114.801205,303.049337,1146.706407,286.636975,1172.138833,263.311685C1176.138368,259.643521,1179.977824,255.804393,1183.657201,251.7943C1186.944821,256.941324,1190.022797,262.08202,1192.891131,267.216386C1211.778231,301.024614,1221.575604,334.558437,1222.283252,367.817858C1222.919008,397.698417,1210.001154,431.21531,1192.243754,461.713511C1175.850495,489.868809,1155.332688,515.451398,1137.546452,533.225182C1146.622019,524.155972,1152.926021,516.02751,1156.251697,509.612882C1152.165256,517.494888,1143.582021,527.96451,1130.885583,539.587496C1120.379494,549.20532,1107.056984,559.612875,1091.135476,569.997485C1078.455054,578.268136,1064.126072,586.524233,1048.258368,594.355225C1058.764185,589.170418,1068.595487,583.799263,1077.720395,578.360914C1090.278247,570.876567,1101.498208,563.264956,1111.297187,555.836663C1112.568885,554.872629,1113.816649,553.911684,1115.040299,552.954504C1071.630364,586.911184,997.87155,625.608028,901.872538,638.736098C786.50079,654.513431,680.003791,666.346431,640.560458,594.362348C601.117125,522.378265,604.075375,390.2431,702.683707,349.813684C721.916931,341.928062,740.287338,336.180725,758.307115,332.015584C765.235367,330.414169,772.111786,329.046643,778.965484,327.8814C802.693058,323.847315,826.148301,322.237695,850.539124,321.741095Q913.618786,322.124002,920.627637,322.166547Z')
+      }
 
-  @keyframes hair_vol_m {
+      40% {
+        d: path('M920.627637,322.166547C944.979437,322.564107,970.976575,322.893308,999.494787,322.203351C1027.516118,321.525415,1053.158931,318.307222,1076.423228,312.548772C1114.801205,303.049337,1146.706407,286.636975,1172.138833,263.311685C1176.138368,259.643521,1179.977824,255.804393,1183.657201,251.7943C1186.944821,256.941324,1190.022797,262.08202,1192.891131,267.216386C1211.778231,301.024614,1221.575604,334.558437,1222.283252,367.817858C1222.919008,397.698417,1210.001154,431.21531,1192.243754,461.713511C1175.850495,489.868809,1155.332688,515.451398,1137.546452,533.225182C1146.622019,524.155972,1152.926021,516.02751,1156.251697,509.612882C1152.165256,517.494888,1143.582021,527.96451,1130.885583,539.587496C1120.379494,549.20532,1107.056984,559.612875,1091.135476,569.997485C1078.455054,578.268136,1064.126072,586.524233,1048.258368,594.355225C1058.764185,589.170418,1068.595487,583.799263,1077.720395,578.360914C1090.278247,570.876567,1101.498208,563.264956,1111.297187,555.836663C1112.568885,554.872629,1113.816649,553.911684,1115.040299,552.954504C1071.630364,586.911184,997.87155,625.608028,901.872538,638.736098C786.50079,654.513431,680.003791,666.346431,640.560458,594.362348C601.117125,522.378265,604.075375,390.2431,702.683707,349.813684C721.916931,341.928062,740.287338,336.180725,758.307115,332.015584C765.235367,330.414169,772.111786,329.046643,778.965484,327.8814C802.693058,323.847315,826.148301,322.237695,850.539124,321.741095Q913.618786,322.124002,920.627637,322.166547Z')
+      }
 
-    0%,
-    40% {
-      d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2370.72,850.472,2376.64,880.447C2381.373803,908.449593,2383.276367,939.906044,2382.911099,972.803816C2382.68451,993.211466,2381.585223,1014.173759,2379.747731,1035.210273C2376.206302,1075.754288,2369.922774,1116.573997,2361.86,1154.23C2364.741822,1153.159069,2368.478182,1142.836207,2373.617646,1119.629032C2365.16045,1157.817381,2360.502581,1161.117536,2357.199748,1145.714672C2357.829126,1148.649797,2358.507708,1150.905777,2359.252408,1152.37062C2349.995025,1134.161109,2350.954737,993.696796,2329.64,946.116C2296.3,893.449,2244.9,823.892,2173.67,841.202C2102.43,858.512,2108.39,856.182,2061.85,861.669C2015.31,867.156,1936.08,855.542,1882.55,871.156C1821.23,895.887,1742.5,939.483,1740.66,955.356C1736.86,972.772,1767.45,996.63,1742.39,1009.21C1733.46,1016.1,1708.13,1022.02,1703.11,1084.67C1698.49,1135.68,1710.35,1267.34,1696.25,1215.25C1692.65,1230.58,1688.25,1213.35,1681.44,1176.64C1679.509749,1166.216649,1678.245868,1151.168196,1676.578609,1134.128642C1672.372347,1091.140242,1665.598652,1035.478838,1639.08,1009.44C1651.209239,1003.994539,1639.95057,981.706847,1621.705705,951.581797C1612.018036,935.58598,1600.360677,917.380496,1589.189043,898.313417C1581.208151,884.692105,1573.475149,870.631077,1566.885256,856.621825C1559.022796,839.907261,1552.787564,823.266401,1549.7,807.534C1543.898769,775.461428,1540.422062,746.047975,1548.331313,717.408147C1558.124854,681.945201,1585.375746,647.668403,1647.287222,610.998121C1673.190666,595.655463,1705.161593,579.893816,1744.46,563.451C1781.989292,548.401175,1831.773961,536.578298,1876.416115,530.409739C1917.289149,524.76199,1953.851372,523.854079,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132');
+      53.333333% {
+        d: path('M914.782155,284.381522C981.163803,220.891755,987.910996,-24.774229,1003.774212,-30.542841C1030.116091,-40.121988,1059.533692,15.869454,1080.301377,57.686447C1097.887034,93.096234,1112.059935,136.900996,1123.240712,231.787038C1123.823356,236.731666,1199.707275,207.922251,1249.312908,184.807591C1280.364381,173.096166,1335.333284,155.505476,1358.496187,154.735334C1428.065761,152.422219,1469.43438,168.733692,1465.335391,173.384261C1411.911486,233.997137,1274.032363,454.617174,1270.156866,532.465306C1269.260562,550.469602,1280.801522,534.825079,1309.34333,531.778212C1312.334181,531.458936,1427.093965,480.157713,1433.424144,522.745641C1437.659455,551.239799,1337.580506,664.965665,1329.6821,704.03044C1321.159571,746.182063,1166.387697,862.451968,1378.166572,901.250959C1409.618129,907.013048,1236.276979,891.056081,1224.774882,912.717228C1191.993278,974.452674,1104.06092,955.44385,1080.71541,984.542721C1041.950866,1032.860556,1090.748638,822.245304,1067.367326,848.966043C1004.386528,920.942047,949.65078,843.304723,912.675136,950.507999C898.482325,991.657135,944.07881,725.788064,843.344534,732.351147C637.402476,745.768772,680.003791,666.346431,640.560458,594.362348C601.117125,522.378265,584.465791,263.100836,589.610702,156.650519C605.480704,-171.706321,814.171243,-249.922259,832.19102,-254.0874C839.119272,-255.688815,828.399452,-170.078874,828.824844,-128.317738C829.770117,-35.519402,841.127012,0.185917,859.999169,92.174303Q907.725177,305.486984,914.782155,284.381522Z')
+      }
+
+      100% {
+        d: path('M914.782155,284.381522C981.163803,220.891755,987.910996,-24.774229,1003.774212,-30.542841C1030.116091,-40.121988,1059.533692,15.869454,1080.301377,57.686447C1097.887034,93.096234,1112.059935,136.900996,1123.240712,231.787038C1123.823356,236.731666,1199.707275,207.922251,1249.312908,184.807591C1280.364381,173.096166,1335.333284,155.505476,1358.496187,154.735334C1428.065761,152.422219,1469.43438,168.733692,1465.335391,173.384261C1411.911486,233.997137,1274.032363,454.617174,1270.156866,532.465306C1269.260562,550.469602,1280.801522,534.825079,1309.34333,531.778212C1312.334181,531.458936,1427.093965,480.157713,1433.424144,522.745641C1437.659455,551.239799,1337.580506,664.965665,1329.6821,704.03044C1321.159571,746.182063,1166.387697,862.451968,1378.166572,901.250959C1409.618129,907.013048,1236.276979,891.056081,1224.774882,912.717228C1191.993278,974.452674,1104.06092,955.44385,1080.71541,984.542721C1041.950866,1032.860556,1090.748638,822.245304,1067.367326,848.966043C1004.386528,920.942047,949.65078,843.304723,912.675136,950.507999C898.482325,991.657135,944.07881,725.788064,843.344534,732.351147C637.402476,745.768772,680.003791,666.346431,640.560458,594.362348C601.117125,522.378265,584.465791,263.100836,589.610702,156.650519C605.480704,-171.706321,814.171243,-249.922259,832.19102,-254.0874C839.119272,-255.688815,828.399452,-170.078874,828.824844,-128.317738C829.770117,-35.519402,841.127012,0.185917,859.999169,92.174303Q907.725177,305.486984,914.782155,284.381522Z')
+      }
     }
+
+    @keyframes sabneet-u-hair-volume2_f_p {
+      0% {
+        fill: #1f1313
+      }
 
-    53.333333% {
-      d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2497.103385,793.420064,2553.637684,771.908081C2623.455379,757.963981,2767.905499,664.139475,2760.526268,697.57491C2717.166188,894.040249,2528.423477,1066.46865,2533.62178,1067.745481C2601.247698,1090.923536,2676.723531,1151.987978,2658.669531,1161.624833C2658.276709,1161.770812,2602.895481,1166.389809,2597.873384,1166.677735C2407.421539,1177.596684,2253.713587,1282.137165,2253.713587,1282.137165C2253.713587,1282.137165,2318.929488,1149.121517,2308.631389,1151.098313C2291.29056,1154.427013,2278.212214,1158.769618,2248.942657,1169.294717C2259.95715,1026.499296,2215.991514,1171.242192,2121.805487,1208.648429C2139.385643,1139.198623,2187.535927,932.355556,2085.457277,943.372974C1983.378627,954.390392,1943.184282,1138.04164,1899.912123,1207.834824C1866.999606,1159.11353,1887.4374,1037.10682,1870.974363,1038.106017C1824.084305,1057.273361,1814.380732,1179.640641,1800.569418,1193.183493C1791.639418,1200.073493,1750.474699,1136.444973,1740.082367,1074.032166C1720.079792,1146.752893,1732.947635,1164.296931,1718.06711,1200.73914C1690.996289,1209.860602,1639.282586,1126.264005,1604.243296,1193.590444C1599.899465,1197.821448,1594.723769,1144.268733,1592.843861,1141.605114C1590.690587,1138.554165,1556.70712,1134.009454,1450.203306,1109.198618C1448.0479,1098.672845,1477.282557,1060.501697,1590.29186,1030.645883C1596.944361,1028.888366,1596.390218,1020.522856,1596.728683,996.544443C1597.043725,974.225407,1543.655019,949.856067,1496.348963,908.379002C1453.539705,870.844645,1420.709848,812.088207,1398.030327,763.61003C1360.957759,669.107664,1317.637539,511.744326,1331.683359,526.936515C1367.731371,565.926635,1625.790616,674.435242,1658.817893,635.892207C1686.183357,603.956542,1455.612388,384.573082,1340.620419,328.980246C1394.935465,307.199074,1684.464843,117.165759,1892.334316,338.113016C1931.746269,380.00451,1963.083653,526.636139,1972.75,529.549C1988.49,533.141,1992.05,535.06,2008.04,546.299C2120.56,511.951,2200.880408,599.546228,2233.712386,627.327132');
+      50% {
+        fill: #1f1313
+      }
+
+      53.333333% {
+        fill: #edc141
+      }
+
+      100% {
+        fill: #edc141
+      }
     }
 
-    100% {
-      d: path('M2233.712386,627.327132Q2261.49329,660.15911,2343.02,789.961L2351.16,805.818C2371.49,848.202,2497.103385,793.420064,2553.637684,771.908081C2623.455379,757.963981,2767.905499,664.139475,2760.526268,697.57491C2717.166188,894.040249,2528.423477,1066.46865,2533.62178,1067.745481C2601.247698,1090.923536,2676.723531,1151.987978,2658.669531,1161.624833C2658.276709,1161.770812,2602.895481,1166.389809,2597.873384,1166.677735C2407.421539,1177.596684,2253.713587,1282.137165,2253.713587,1282.137165C2253.713587,1282.137165,2318.929488,1149.121517,2308.631389,1151.098313C2291.29056,1154.427013,2278.212214,1158.769618,2248.942657,1169.294717C2259.95715,1026.499296,2215.991514,1171.242192,2121.805487,1208.648429C2139.385643,1139.198623,2187.535927,932.355556,2085.457277,943.372974C1983.378627,954.390392,1943.184282,1138.04164,1899.912123,1207.834824C1866.999606,1159.11353,1887.4374,1037.10682,1870.974363,1038.106017C1824.084305,1057.273361,1814.380732,1179.640641,1800.569418,1193.183493C1791.639418,1200.073493,1750.474699,1136.444973,1740.082367,1074.032166C1720.079792,1146.752893,1732.947635,1164.296931,1718.06711,1200.73914C1690.996289,1209.860602,1639.282586,1126.264005,1604.243296,1193.590444C1599.899465,1197.821448,1594.723769,1144.268733,1592.843861,1141.605114C1590.690587,1138.554165,1556.70712,1134.009454,1450.203306,1109.198618C1448.0479,1098.672845,1477.282557,1060.501697,1590.29186,1030.645883C1596.944361,1028.888366,1596.390218,1020.522856,1596.728683,996.544443, etc...);\
-}
-@keyframes hair_vol_fp {
-          0%, 50% {
-            fill:#1f1313
-          }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-shadow3 {
+      animation: sabneet-u-shadow3_f_p 3000ms linear infinite alternate forwards
+    }
 
-          53.333333% {
-            fill:#f0c64e
-          }
+    @keyframes sabneet-u-shadow3_f_p {
+      0% {
+        fill: #000
+      }
 
-          100% {
-            fill:#f0c64e
-          }
-        }
+      50% {
+        fill: #000
+      }
 
-        @keyframes shadow2_fp {
-          0%, 50% {
-            fill:#000
-          }
+      53.333333% {
+        fill: #caab47
+      }
 
-          53.333333% {
-            fill:#caab47
-          }
+      100% {
+        fill: #caab47
+      }
+    }
 
-          100% {
-            fill:#caab47
-          }
-        }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-visor_to {
+      animation: sabneet-u-visor_to__to 3000ms linear infinite alternate forwards
+    }
 
-        @keyframes pomp_front_tr {
-          0% {
-            transform:translate(2204.412204px, 655.460852px) rotate(0deg)
-          }
+    @keyframes sabneet-u-visor_to__to {
+      0% {
+        offset-distance: 0%
+      }
 
-          33.333333% {
-            transform:translate(2204.412204px, 655.460852px) rotate(-4deg)
-          }
+      28.666667% {
+        offset-distance: 54.429256%
+      }
 
-          73.333333% {
-            transform:translate(2204.412204px, 655.460852px) rotate(11deg)
-          }
+      33.333333% {
+        offset-distance: 55.705953%
+      }
 
-          100% {
-            transform:translate(2204.412204px, 655.460852px) rotate(0deg)
-          }
-        }
+      34.666667% {
+        offset-distance: 57.023086%
+      }
 
-        @keyframes hair_vol2_m {
-          0%, 40% {
-            d: path('M920.627637,322.166547C944.979437,322.564107,970.976575,322.893308,999.494787,322.203351C1027.516118,321.525415,1053.158931,318.307222,1076.423228,312.548772C1114.801205,303.049337,1146.706407,286.636975,1172.138833,263.311685C1176.138368,259.643521,1179.977824,255.804393,1183.657201,251.7943C1186.944821,256.941324,1190.022797,262.08202,1192.891131,267.216386C1211.778231,301.024614,1221.575604,334.558437,1222.283252,367.817858C1222.919008,397.698417,1210.001154,431.21531,1192.243754,461.713511C1175.850495,489.868809,1155.332688,515.451398,1137.546452,533.225182C1146.622019,524.155972,1152.926021,516.02751,1156.251697,509.612882C1152.165256,517.494888,1143.582021,527.96451,1130.885583,539.587496C1120.379494,549.20532,1107.056984,559.612875,1091.135476,569.997485C1078.455054,578.268136,1064.126072,586.524233,1048.258368,594.355225C1058.764185,589.170418,1068.595487,583.799263,1077.720395,578.360914C1090.278247,570.876567,1101.498208,563.264956,1111.297187,555.836663C1112.568885,554.872629,1113.816649,553.911684,1115.040299,552.954504Q913.618786,322.124002,920.627637,322.166547Z');
-          }
+      35.666667% {
+        offset-distance: 58.059651%
+      }
 
-          53.333333%, 100% {
-            d: path('M914.782155,284.381522C981.163803,220.891755,987.910996,-24.774229,1003.774212,-30.542841C1030.116091,-40.121988,1059.533692,15.869454,1080.301377,57.686447C1097.887034,93.096234,1112.059935,136.900996,1123.240712,231.787038C1123.823356,236.731666,1199.707275,207.922251,1249.312908,184.807591C1280.364381,173.096166,1335.333284,155.505476,1358.496187,154.735334C1428.065761,152.422219,1469.43438,168.733692,1465.335391,173.384261C1411.911486,233.997137,1274.032363,454.617174,1270.156866,532.465306C1269.260562,550.469602,1280.801522,534.825079,1309.34333,531.778212C1312.334181,531.458936,1427.093965,480.157713,1433.424144,522.745641C1437.659455,551.239799,1337.580506,664.965665,1329.6821,704.03044C1321.159571,746.182063,1166.387697,862.451968,1378.166572,901.250959C1409.618129,907.013048,1236.276979,891.056081,1224.774882,912.717228C1191.993278,974.452674,1104.06092,955.44385,1080.71541,984.542721C1041.950866,1032.860556,1090.748638,822.245304,1067.367326,848.966043C1004.386528,920.942047,949.65078,843.304723,912.675136,950.507999Q907.725177,305.486984,914.782155,284.381522Z');
-          }
-        }
+      36.666667% {
+        offset-distance: 58.887714%
+      }
 
-        @keyframes hair_vol2_fp {
-          0%, 50% {
-            fill:#1f1313
-          }
+      40.333333% {
+        offset-distance: 59.452227%
+      }
 
-          53.333333% {
-            fill:#edc141
-          }
+      41.666667% {
+        offset-distance: 60.582144%
+      }
 
-          100% {
-            fill:#edc141
-          }
-        }
+      43.333333% {
+        offset-distance: 61.725801%
+      }
 
-        @keyframes shadow3_fp {
-          0%, 50% {
-            fill:#000
-          }
+      44.333333% {
+        offset-distance: 62.28368%
+      }
 
-          53.333333% {
-            fill:#caab47
-          }
+      45.333333% {
+        offset-distance: 63.024436%
+      }
 
-          100% {
-            fill:#caab47
-          }
-        }
+      46.333333% {
+        offset-distance: 63.66396%
+      }
 
-        @keyframes visor_to {
-          0% {
-            offset-distance: 0%;
-          }
+      48.666667% {
+        offset-distance: 64.524181%
+      }
 
-          28.666667% {
-            offset-distance: 54.429256%;
-          }
+      49% {
+        offset-distance: 65.884846%
+      }
 
-          33.333333% {
-            offset-distance: 55.705953%;
-          }
+      49.333333% {
+        offset-distance: 66.799026%
+      }
 
-          34.666667% {
-            offset-distance: 57.023086%;
-          }
+      49.666667% {
+        offset-distance: 67.87954%
+      }
 
-          35.666667% {
-            offset-distance: 58.059651%;
-          }
+      50% {
+        offset-distance: 68.751056%
+      }
 
-          36.666667% {
-            offset-distance: 58.887714%;
-          }
+      50.666667% {
+        offset-distance: 69.875969%
+      }
 
-          40.333333% {
-            offset-distance: 59.452227%;
-          }
+      51.333333% {
+        offset-distance: 70.701504%
+      }
 
-          41.666667% {
-            offset-distance: 60.582144%;
-          }
+      52% {
+        offset-distance: 71.992019%
+      }
 
-          43.333333% {
-            offset-distance: 61.725801%;
-          }
+      52.666667% {
+        offset-distance: 74.742309%
+      }
 
-          44.333333% {
-            offset-distance: 62.283680%;
-          }
+      53.333333% {
+        offset-distance: 76.304366%
+      }
 
-          45.333333% {
-            offset-distance: 63.024436%;
-          }
+      54% {
+        offset-distance: 78.132338%
+      }
 
-          46.333333% {
-            offset-distance: 63.663960%;
-          }
+      54.666667% {
+        offset-distance: 79.480596%
+      }
 
-          48.666667% {
-            offset-distance: 64.524181%;
-          }
+      55.333333% {
+        offset-distance: 80.652879%
+      }
 
-          49% {
-            offset-distance: 65.884846%;
-          }
+      55.666667% {
+        offset-distance: 81.967513%
+      }
 
-          49.333333% {
-            offset-distance: 66.799026%;
-          }
+      61% {
+        offset-distance: 100%
+      }
 
-          49.666667% {
-            offset-distance: 67.879540%;
-          }
+      100% {
+        offset-distance: 100%
+      }
+    }
 
-          50% {
-            offset-distance: 68.751056%;
-          }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-visor_tr {
+      animation: sabneet-u-visor_tr__tr 3000ms linear infinite alternate forwards
+    }
 
-          50.666667% {
-            offset-distance: 69.875969%;
-          }
+    @keyframes sabneet-u-visor_tr__tr {
+      0% {
+        transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005)
+      }
 
-          51.333333% {
-            offset-distance: 70.701504%;
-          }
+      26.666667% {
+        transform: rotate(180deg);
+        animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005)
+      }
 
-          52% {
-            offset-distance: 71.992019%;
-          }
+      83.333333% {
+        transform: rotate(170deg);
+        animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005)
+      }
 
-          52.666667% {
-            offset-distance: 74.742309%;
-          }
+      100% {
+        transform: rotate(180deg)
+      }
+    }
 
-          53.333333% {
-            offset-distance: 76.304366%;
-          }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-visor_ts {
+      animation: sabneet-u-visor_ts__ts 3000ms linear infinite alternate forwards
+    }
 
-          54% {
-            offset-distance: 78.132338%;
-          }
+    @keyframes sabneet-u-visor_ts__ts {
+      0% {
+        transform: scale(1, 1)
+      }
 
-          54.666667% {
-            offset-distance: 79.480596%;
-          }
+      11% {
+        transform: scale(1, 1)
+      }
 
-          55.333333% {
-            offset-distance: 80.652879%;
-          }
+      55.666667% {
+        transform: scale(1, 1)
+      }
 
-          55.666667% {
-            offset-distance: 81.967513%;
-          }
+      61% {
+        transform: scale(1.4, 1.4)
+      }
 
-          61% {
-            offset-distance: 100%;
-          }
+      100% {
+        transform: scale(1.4, 1.4)
+      }
+    }
 
-          100% {
-            offset-distance: 100%;
-          }
-        }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-visor {
+      animation: sabneet-u-visor_c_o 3000ms linear infinite alternate forwards
+    }
 
-        @keyframes visor_tr {
-          0% {
-            transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005);
-          }
+    @keyframes sabneet-u-visor_c_o {
+      0% {
+        opacity: 1
+      }
 
-          26.666667% {
-            transform: rotate(180deg); animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005);
-          }
+      57% {
+        opacity: 1
+      }
 
-          83.333333% {
-            transform: rotate(170deg); animation-timing-function: cubic-bezier(0.2, -0.005, 0.8, 1.005);
-          }
+      60% {
+        opacity: 0
+      }
 
-          100% {
-            transform: rotate(180deg);
-          }
-        }
+      100% {
+        opacity: 0
+      }
+    }
 
-        @keyframes visor_ts {
-          0%, 11%, 55.666667% {
-            transform:scale(1, 1)
-          }
+    svg[viewBox="0 0 1542 1542"] #sabneet-u-screen {
+      animation-name: sabneet-u-screen_f_p, sabneet-u-screen_f_o;
+      animation-duration: 3000ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
 
-          61%, 100% {
-            transform:scale(1.4, 1.4)
-          }
-        }
+    @keyframes sabneet-u-screen_f_p {
+      0% {
+        fill: #a9d18e
+      }
 
-        @keyframes visor_co {
-          0%, 57% {
-            opacity:1
-          }
+      40% {
+        fill: #a9d18e
+      }
 
-          60%, 100% {
-            opacity:0
-          }
-        }
+      53.333333% {
+        fill: #93fef1
+      }
 
-        @keyframes screen_fp {
-          0%, 40% {
-            fill:#a9d18e
-          }
+      100% {
+        fill: #93fef1
+      }
+    }
 
-          53.333333%, 100% {
-            fill:#93fef1
-          }
-        }
+    @keyframes sabneet-u-screen_f_o {
+      0% {
+        fill-opacity: 0.6
+      }
 
-        @keyframes screen_fo {
-          0% {
-            fill-opacity:0.6
-          }
+      10% {
+        fill-opacity: 0.4;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1)
+      }
 
-          10% {
-            fill-opacity:0.4; animation-timing-function:cubic-bezier(0, 0, 0.58, 1)
-          }
+      30% {
+        fill-opacity: 0.55
+      }
 
-          30% {
-            fill-opacity:0.55
-          }
+      53.333333% {
+        fill-opacity: 0.5
+      }
 
-          53.333333%, 100% {
-            fill-opacity:0.5
-          }
-        }
-  ]]>
-</style>
+      100% {
+        fill-opacity: 0.5
+      }
+    }
+    ]]>
+  </style>
   <defs>
     <filter id="sabneet-u-background-filter" x="-150%" y="-150%" width="400%" height="400%">
       <feComponentTransfer id="sabneet-u-background-filter-contrast-0" result="result">
