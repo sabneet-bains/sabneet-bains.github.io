@@ -1,4 +1,4 @@
-<svg id="sabneet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1542 1542" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="21f8bacc7efc4cfcbcabe828b511f902" export-id="72dc0abff1394f8e8fbdc5bd3c503bf7" cached="false"> #sabneet { pointer-events: all } <style type="text/css">
+<svg id="sabneet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1542 1542" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" > #sabneet { pointer-events: all } <style type="text/css">
     <![CDATA[
     #sabneet * {
       animation-play-state: paused !important
@@ -8,6 +8,7 @@
       animation-play-state: running !important
     }
 
+    /*
     svg[viewBox="0 0 1542 1542"] #sabneet-u-background {
       animation: sabneet-u-background_f_p 3000ms linear infinite alternate forwards
     }
@@ -29,6 +30,7 @@
         fill: #e07b57
       }
     }
+    */
 
     svg[viewBox="0 0 1542 1542"] #sabneet-u-avatar_to {
       animation: sabneet-u-avatar_to__to 3000ms linear infinite alternate forwards
