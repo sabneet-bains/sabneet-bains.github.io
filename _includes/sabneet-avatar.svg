@@ -8,30 +8,6 @@
       animation-play-state: running !important
     }
 
-    /*
-    svg[viewBox="0 0 1542 1542"] #sabneet-u-background {
-      animation: sabneet-u-background_f_p 3000ms linear infinite alternate forwards
-    }
-
-    @keyframes sabneet-u-background_f_p {
-      0% {
-        fill: #deeaf6
-      }
-
-      56.666667% {
-        fill: #deeaf6
-      }
-
-      60% {
-        fill: #e07b57
-      }
-
-      100% {
-        fill: #e07b57
-      }
-    }
-    */
-
     svg[viewBox="0 0 1542 1542"] #sabneet-u-avatar_to {
       animation: sabneet-u-avatar_to__to 3000ms linear infinite alternate forwards
     }
@@ -667,27 +643,27 @@
       }
 
       60% {
-        filter: drop-shadow(0px 0px 282.842712px #caab47)
+        filter: drop-shadow(0px 0px 282.842712px #0f7b7e)
       }
 
       66.666667% {
-        filter: drop-shadow(0px 0px 282.842712px #e07c56)
+        filter: drop-shadow(0px 0px 282.842712px #deeaf6)
       }
 
       76.666667% {
-        filter: drop-shadow(0px 0px 282.842712px #caab47)
+        filter: drop-shadow(0px 0px 282.842712px #0f7b7e)
       }
 
       86.666667% {
-        filter: drop-shadow(0px 0px 282.842712px #e07c56)
+        filter: drop-shadow(0px 0px 282.842712px #deeaf6)
       }
 
       93.333333% {
-        filter: drop-shadow(0px 0px 282.842712px #caab47)
+        filter: drop-shadow(0px 0px 282.842712px #0f7b7e)
       }
 
       100% {
-        filter: drop-shadow(0px 0px 282.842712px #e07c56)
+        filter: drop-shadow(0px 0px 282.842712px #deeaf6)
       }
     }
 
@@ -764,11 +740,11 @@
       }
 
       53.333333% {
-        fill: #f0c64e
+        fill: #deeaf6
       }
 
       100% {
-        fill: #f0c64e
+        fill: #deeaf6
       }
     }
 
@@ -786,11 +762,11 @@
       }
 
       53.333333% {
-        fill: #caab47
+        fill: rgb(54, 80, 106)
       }
 
       100% {
-        fill: #caab47
+        fill: rgb(54, 80, 106)
       }
     }
 
@@ -853,11 +829,11 @@
       }
 
       53.333333% {
-        fill: #edc141
+        fill: #deeaf6
       }
 
       100% {
-        fill: #edc141
+        fill: #deeaf6
       }
     }
 
@@ -875,11 +851,11 @@
       }
 
       53.333333% {
-        fill: #caab47
+        fill:rgb(54, 80, 106)
       }
 
       100% {
-        fill: #caab47
+        fill: rgb(54, 80, 106)
       }
     }
 
