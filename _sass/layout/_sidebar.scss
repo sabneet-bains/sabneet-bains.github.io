@@ -84,7 +84,12 @@
   min-width: 80px;
   height: 80px;
   margin-right: 12px;
-  filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-image: radial-gradient(circle at center, #000 70%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   position: relative; /* Ensure absolute positioning for children if needed */
 }
 
