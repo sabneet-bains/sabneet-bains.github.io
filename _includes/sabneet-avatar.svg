@@ -15,214 +15,6 @@
       animation-play-state: running !important
     }
 
-    @supports (animation-timeline: scroll()) {
-      @scroll-timeline svgScroll {
-        source: auto;
-        orientation: vertical;
-        scroll-offsets: 0px, 100vh;
-      }
-
-      #sb-avatar_motion {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-avatar_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-arm_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-arm_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-rectus_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-pec {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-pec_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-pec {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-pec_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-delts_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-beacon_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-beacon-casing {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-beacon-led {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-head_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-ear_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-skin_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-mouth {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-mouth_motion {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-mouth_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-pupil {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-brow_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-right-brow {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-pupil_motion {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-pupil {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-brow_motion {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-brow_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-left-brow {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-hair {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-back_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-back_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-back-volume {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-back-highlight {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-front_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-front-volume {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-pomp-front-highlight {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-visor_motion {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-visor_rig {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-visor_scale {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-visor {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-
-      #sb-visor-screen {
-        animation-timeline: svgScroll;
-        animation-range: 0% 100%;
-      }
-    }
-
     #sb-avatar_motion {
       animation: zoomCorrection 3000ms linear infinite alternate forwards
     }
@@ -1445,4 +1237,41 @@
       </g>
     </g>
   </g>
+  <script>
+    // 1. select your fixed sidebar SVG
+    const svg   = document.querySelector('#sb');
+    // 2. collect every Animation created by your CSS keyframes
+    const anims = svg.getAnimations();
+    // 3. pause them so they never auto-play
+    anims.forEach(a => a.pause());
+
+    // 4. on scroll, compute how far the page (or content region) has scrolled
+    //    here we map from top-of-page (0) to bottom-of-page (1)
+    function onScroll() {
+      const scrollTop = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const fraction  = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+      // 5. scrub each animation to that fraction of its duration
+      anims.forEach(a => {
+        const dur = a.effect.getTiming().duration;
+        a.currentTime = fraction * dur;
+      });
+    }
+
+    // throttle via requestAnimationFrame
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          onScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // initialize at load
+    onScroll();
+  </script>
 </svg>
+
