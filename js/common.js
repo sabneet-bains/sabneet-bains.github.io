@@ -239,35 +239,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //
-  // ─── SVG SCROLL-SCRUBBING ─────────────────────────────────────────────────────
-  //
-  // Select your fixed-sidebar SVG and grab all of its CSS-driven animations:
-  const svg   = document.querySelector('#sb');
-  if (svg && svg.getAnimations) {
-    const anims = svg.getAnimations();
-    // Pause them so they never auto-play
-    anims.forEach(a => a.pause());
+  // ── SVG SCROLL-SCRUB VIA animation-delay ────────────────────────────────
+  const svg = document.querySelector('#sb');
+  if (svg) {
+    // 1) collect all SVG descendants with CSS animations
+    const animatedEls = Array.from(svg.querySelectorAll('*')).filter(el => {
+      const name = getComputedStyle(el).animationName;
+      return name && name !== 'none';
+    });
 
-    // On scroll, compute fraction of page scrolled and update each animation’s currentTime
+    // 2) for each element, parse out its durations (could be comma-list)
+    const elems = animatedEls.map(el => {
+      const style    = getComputedStyle(el);
+      const names    = style.animationName.split(',');
+      const durations= style.animationDuration.split(',').map(s => parseFloat(s) * 1000);
+      return { el, names, durations };
+    });
+
+    // 3) on scroll, compute fraction of total page scroll
     let ticking = false;
     function scrub() {
       const scrollTop = window.scrollY;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const fraction  = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
-      anims.forEach(a => {
-        const dur = a.effect.getTiming().duration;
-        a.currentTime = fraction * dur;
+      const f = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+
+      // 4) for each element & each animation, set negative delay
+      elems.forEach(({el, durations}) => {
+        // build a comma-separated list of delays
+        const delays = durations
+          .map(dur => `-${(f * dur).toFixed(0)}ms`)
+          .join(', ');
+        el.style.animationDelay = delays;
       });
+
       ticking = false;
     }
+
     window.addEventListener('scroll', () => {
       if (!ticking) {
         window.requestAnimationFrame(scrub);
         ticking = true;
       }
     });
-    // Initialize scrub position immediately
+
+    // init once
     scrub();
   }
 });
