@@ -239,229 +239,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-//   /* =====================================================
-//      SVG Animations via the Web Animations API
-//      -----------------------------------------------------
-//      This section replaces or overrides the CSS animations.
-//      Each animated element is defined with its selector and
-//      keyframes (matching your original CSS) and then added
-//      to an array of animations that are controlled by hover.
-//   ===================================================== */
-//   const svgElementsConfig = [
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-shoulder-plate_tr',
-//       keyframes: [
-//         { transform: 'translate(2059.5px,1562px) rotate(0deg)', offset: 0 },
-//         { transform: 'translate(2059.5px,1562px) rotate(1deg)', offset: 0.333333 },
-//         { transform: 'translate(2059.5px,1562px) rotate(-1deg)', offset: 0.666667 },
-//         { transform: 'translate(2059.5px,1562px) rotate(0deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-led',
-//       keyframes: [
-//         { fill: '#ffc000', offset: 0 },
-//         { fill: '#ff7000', offset: 0.333333 },
-//         { fill: '#ffc000', offset: 0.666667 },
-//         { fill: '#ff7000', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-head_tr',
-//       keyframes: [
-//         { transform: 'translate(2029.717041px,1148.722198px) rotate(0deg)', offset: 0 },
-//         { transform: 'translate(2029.717041px,1148.722198px) rotate(1.5deg)', offset: 0.333333 },
-//         { transform: 'translate(2029.717041px,1148.722198px) rotate(0deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-right-ear_ts',
-//       keyframes: [
-//         { transform: 'translate(2323.72px,1176.22px) scale(1,1)', offset: 0 },
-//         { transform: 'translate(2323.72px,1176.22px) scale(1,1)', offset: 0.1 },
-//         { transform: 'translate(2323.72px,1176.22px) scale(1.1,1.1)', offset: 0.233333 },
-//         { transform: 'translate(2323.72px,1176.22px) scale(1.1,1.1)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-skin_ts',
-//       keyframes: [
-//         { transform: 'translate(2030.525373px,755.670959px) scale(1,1)', offset: 0 },
-//         { transform: 'translate(2030.525373px,755.670959px) scale(1,0.97)', offset: 0.366667 },
-//         { transform: 'translate(2030.525373px,755.670959px) scale(1,1)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-mouth',
-//       keyframes: [
-//         { d: "path('M616.905306,1144.88885C622.942311,1168.374918,662.101854,1174.042747,685.132028,1172.703311C707.374265,1171.409701,729.922604,1162.261279,753.586209,1144.20797')", offset: 0 },
-//         { d: "path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,720.832673,1167.732881,743.585599,1149.20797')", offset: 0.066667 },
-//         { d: "path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,721.237276,1169.351295,737.586209,1152.20797')", offset: 0.133333 },
-//         { d: "path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.046483,1170.565105,733.586209,1154.20797')", offset: 0.20 },
-//         { d: "path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797')", offset: 0.266667 },
-//         { d: "path('M616.905306,1144.88885C638.873347,1163.948792,661.615588,1173.220279,685.132028,1172.703311C707.406469,1172.213646,722.85569,1168.137485,731.586209,1155.20797')", offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-mouth_to',
-//       keyframes: [
-//         { transform: 'translate(2040.772475px,1399.390043px)', offset: 0 },
-//         { transform: 'translate(2041.722064px,1398.774439px)', offset: 0.266667 },
-//         { transform: 'translate(2041.722064px,1398.774439px)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-mouth_tr',
-//       keyframes: [
-//         { transform: 'rotate(0deg)', offset: 0 },
-//         { transform: 'rotate(10deg)', offset: 0.266667 },
-//         { transform: 'rotate(10deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-right-eye2',
-//       keyframes: [
-//         { d: "path('M-0.630236,-17.168464L2.680903,31.412714')", offset: 0 },
-//         { d: "path('M-0.630236,-17.168464L2.680903,31.412714')", offset: 0.433333 },
-//         { d: "path('M-0.630236,-17.168464L1.680903,24.412714')", offset: 0.5 },
-//         { d: "path('M-0.630236,-17.168464L1.680903,17.412714')", offset: 0.566667 },
-//         { d: "path('M-0.630236,-17.168464L0.680903,10.412714')", offset: 0.633333 },
-//         { d: "path('M-0.630236,-17.168464L-0.458578,-20.01717')", offset: 0.70 },
-//         { d: "path('M-0.630236,-17.168464L0.680903,10.412714')", offset: 0.80 },
-//         { d: "path('M-0.630236,-17.168464L1.680903,17.412714')", offset: 0.866667 },
-//         { d: "path('M-0.630236,-17.168464L1.680903,24.412714')", offset: 0.933333 },
-//         { d: "path('M-0.630236,-17.168464L1.680903,24.412714')", offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-right-brow_tr',
-//       keyframes: [
-//         { transform: 'translate(2208.464723px,1111.039897px) rotate(-10deg)', offset: 0 },
-//         { transform: 'translate(2208.464723px,1111.039897px) rotate(-10deg)', offset: 0.433333 },
-//         { transform: 'translate(2208.464723px,1111.039897px) rotate(4deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-left-eye2_to',
-//       keyframes: [
-//         { transform: 'translate(2202px,1140px)', offset: 0 },
-//         { transform: 'translate(2222px,1124px)', offset: 0.266667 },
-//         { transform: 'translate(2222px,1124px)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-left-brow_to',
-//       keyframes: [
-//         { transform: 'translate(2202px,1116px)', offset: 0 },
-//         { transform: 'translate(2222px,1100px)', offset: 0.266667 },
-//         { transform: 'translate(2222px,1100px)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-left-brow_tr',
-//       keyframes: [
-//         { transform: 'rotate(0deg)', offset: 0 },
-//         { transform: 'rotate(20deg)', offset: 0.266667 },
-//         { transform: 'rotate(15deg)', offset: 0.666667 },
-//         { transform: 'rotate(15deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-pomp-back_tr',
-//       keyframes: [
-//         { transform: 'translate(1959.380834px,525.26172px) rotate(0deg)', offset: 0 },
-//         { transform: 'translate(1959.380834px,525.26172px) rotate(-0.5deg)', offset: 0.6 },
-//         { transform: 'translate(1959.380834px,525.26172px) rotate(0.5deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-pomp-back_ts',
-//       keyframes: [
-//         { transform: 'scale(1,1)', offset: 0 },
-//         { transform: 'scale(1,0.97)', offset: 0.366667 },
-//         { transform: 'scale(1,1)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-pomp-front_tr',
-//       keyframes: [
-//         { transform: 'translate(2204.412204px,655.460852px) rotate(0deg)', offset: 0 },
-//         { transform: 'translate(2204.412204px,655.460852px) rotate(-4deg)', offset: 0.333333 },
-//         { transform: 'translate(2204.412204px,655.460852px) rotate(4deg)', offset: 0.666667 },
-//         { transform: 'translate(2204.412204px,655.460852px) rotate(0deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-visor_to',
-//       keyframes: [
-//         { offsetDistance: '0%', animationTimingFunction: 'cubic-bezier(0,0,0.38,1)', offset: 0 },
-//         { offsetDistance: '100%', offset: 0.266667 },
-//         { offsetDistance: '100%', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-visor_tr',
-//       keyframes: [
-//         { transform: 'rotate(0deg)', animationTimingFunction: 'cubic-bezier(0,0,0.5,1)', offset: 0 },
-//         { transform: 'rotate(180deg)', offset: 0.266667 },
-//         { transform: 'rotate(170deg)', offset: 0.833333 },
-//         { transform: 'rotate(180deg)', offset: 1 }
-//       ]
-//     },
-//     {
-//       selector: 'svg[viewBox="0 0 1543 1539"] #avatar-u-screen',
-//       keyframes: [
-//         { fillOpacity: 0.6, offset: 0 },
-//         { fillOpacity: 0.4, animationTimingFunction: 'cubic-bezier(0,0,0.58,1)', offset: 0.1 },
-//         { fillOpacity: 0.6, offset: 0.3 },
-//         { fillOpacity: 0.55, offset: 0.533333 },
-//         { fillOpacity: 0.55, offset: 1 }
-//       ]
-//     }
-//   ];
+  //
+  // ─── SVG SCROLL-SCRUBBING ─────────────────────────────────────────────────────
+  //
+  // Select your fixed-sidebar SVG and grab all of its CSS-driven animations:
+  const svg   = document.querySelector('#sb');
+  if (svg && svg.getAnimations) {
+    const anims = svg.getAnimations();
+    // Pause them so they never auto-play
+    anims.forEach(a => a.pause());
 
-//   // Shared animation options for all SVG elements.
-//   const svgAnimationOptions = {
-//     duration: 3000,
-//     easing: 'linear',
-//     iterations: Infinity,
-//     direction: 'alternate',
-//     fill: 'forwards'
-//   };
-
-//   // Array to store Animation objects.
-//   const svgAnimations = [];
-
-//   // Create an animation for each configured SVG element.
-//   svgElementsConfig.forEach(item => {
-//     const element = document.querySelector(item.selector);
-//     if (element) {
-//       const anim = element.animate(item.keyframes, svgAnimationOptions);
-//       // Start paused; JS controls the playback rate.
-//       anim.pause();
-//       svgAnimations.push(anim);
-//     }
-//   });
-
-//   // Function to update all SVG animations' playback direction.
-//   function updateSvgAnimationsDirection(isHovered) {
-//     svgAnimations.forEach(anim => {
-//       // Set playback: 1 for forward on hover, -1 for reverse on mouse leave.
-//       anim.playbackRate = isHovered ? 1 : -1;
-//       // If the animation has finished, reset currentTime to either beginning or end.
-//       const totalDuration = anim.effect.getComputedTiming().duration;
-//       if (anim.playState === 'finished') {
-//         anim.currentTime = isHovered ? 0 : totalDuration;
-//       }
-//       anim.play();
-//     });
-//   }
-
-//   // Attach hover event listeners to the #avatar container.
-//   const avatar = document.getElementById('avatar');
-//   if (avatar) {
-//     avatar.addEventListener('mouseenter', () => updateSvgAnimationsDirection(true));
-//     avatar.addEventListener('mouseleave', () => updateSvgAnimationsDirection(false));
-//   }
-
-}); // End DOMContentLoaded
+    // On scroll, compute fraction of page scrolled and update each animation’s currentTime
+    let ticking = false;
+    function scrub() {
+      const scrollTop = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const fraction  = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
+      anims.forEach(a => {
+        const dur = a.effect.getTiming().duration;
+        a.currentTime = fraction * dur;
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(scrub);
+        ticking = true;
+      }
+    });
+    // Initialize scrub position immediately
+    scrub();
+  }
+});

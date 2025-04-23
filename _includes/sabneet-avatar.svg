@@ -1237,41 +1237,4 @@
       </g>
     </g>
   </g>
-  <script>
-    // 1. select your fixed sidebar SVG
-    const svg   = document.querySelector('#sb');
-    // 2. collect every Animation created by your CSS keyframes
-    const anims = svg.getAnimations();
-    // 3. pause them so they never auto-play
-    anims.forEach(a => a.pause());
-
-    // 4. on scroll, compute how far the page (or content region) has scrolled
-    //    here we map from top-of-page (0) to bottom-of-page (1)
-    function onScroll() {
-      const scrollTop = window.scrollY;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const fraction  = Math.min(Math.max(scrollTop / maxScroll, 0), 1);
-      // 5. scrub each animation to that fraction of its duration
-      anims.forEach(a => {
-        const dur = a.effect.getTiming().duration;
-        a.currentTime = fraction * dur;
-      });
-    }
-
-    // throttle via requestAnimationFrame
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          onScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-
-    // initialize at load
-    onScroll();
-  </script>
 </svg>
-
