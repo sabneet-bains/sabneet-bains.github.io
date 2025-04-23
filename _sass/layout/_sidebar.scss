@@ -84,6 +84,7 @@
   min-width: 80px;
   height: 80px;
   margin-right: 12px;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
   position: relative; /* Ensure absolute positioning for children if needed */
 }
 
