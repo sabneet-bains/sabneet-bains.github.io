@@ -1120,6 +1120,7 @@
       </feMerge>
     </filter>
   </defs>
+  <ellipse id="sabneet-u-background" rx="399.103391" ry="398.068208" transform="matrix(1.936854 0 0 1.936854 773.005 771)" fill="#deeaf6" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
   <g id="sb-avatar_motion" transform="translate(-1291.680903,-204.208004)">
     <g id="sb-avatar_scale" transform="scale(1,1)">
       <g id="sb-avatar" transform="translate(0,0)" filter="url(#sb-avatar-filter)">
