@@ -29,11 +29,11 @@
       }
 
       53.333333% {
-        transform: translate(-877.86px, 69.716813px)
+        transform: translate(-877.86px, 95.4px)
       }
 
       100% {
-        transform: translate(-877.86px, 69.716813px)
+        transform: translate(-877.86px, 95.4px)
       }
     }
 
