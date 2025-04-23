@@ -1,4 +1,4 @@
-<svg id="sb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1542 1542" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+<svg id="sb" xmlns="http://www.w3.org/2000/svg" viewBox="-129 -129 1800 1800" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
   <style type="text/css">
     <![CDATA[
     #sb {
@@ -29,11 +29,11 @@
       }
 
       53.333333% {
-        transform: translate(-668.082987px, 69.716813px)
+        transform: translate(-877.86px, 69.716813px)
       }
 
       100% {
-        transform: translate(-668.082987px, 69.716813px)
+        transform: translate(-877.86px, 69.716813px)
       }
     }
 
@@ -51,11 +51,11 @@
       }
 
       53.333333% {
-        transform: scale(0.7, 0.7)
+        transform: scale(0.8, 0.8)
       }
 
       100% {
-        transform: scale(0.7, 0.7)
+        transform: scale(0.8, 0.8)
       }
     }
 
@@ -650,27 +650,27 @@
       }
 
       60% {
-        filter: drop-shadow(0px 0px 282.842712px #0f7b7e)
+        filter: drop-shadow(0px 0px 282.842712px #caab47)
       }
 
       66.666667% {
-        filter: drop-shadow(0px 0px 282.842712px #deeaf6)
+        filter: drop-shadow(0px 0px 282.842712px #e07c56)
       }
 
       76.666667% {
-        filter: drop-shadow(0px 0px 282.842712px #0f7b7e)
+        filter: drop-shadow(0px 0px 282.842712px #caab47)
       }
 
       86.666667% {
-        filter: drop-shadow(0px 0px 282.842712px #deeaf6)
+        filter: drop-shadow(0px 0px 282.842712px #e07c56)
       }
 
       93.333333% {
-        filter: drop-shadow(0px 0px 282.842712px #0f7b7e)
+        filter: drop-shadow(0px 0px 282.842712px #caab47)
       }
 
       100% {
-        filter: drop-shadow(0px 0px 282.842712px #deeaf6)
+        filter: drop-shadow(0px 0px 282.842712px #e07c56)
       }
     }
 
@@ -747,11 +747,11 @@
       }
 
       53.333333% {
-        fill: #deeaf6
+        fill: #f0c64e
       }
 
       100% {
-        fill: #deeaf6
+        fill: #f0c64e
       }
     }
 
@@ -761,19 +761,19 @@
 
     @keyframes backPompHighlight {
       0% {
-        fill: #000
+        fill: #000000
       }
 
       50% {
-        fill: #000
+        fill: #000000
       }
 
       53.333333% {
-        fill: rgb(54, 80, 106)
+        fill: #caab47
       }
 
       100% {
-        fill: rgb(54, 80, 106)
+        fill: #caab47
       }
     }
 
@@ -836,11 +836,11 @@
       }
 
       53.333333% {
-        fill: #deeaf6
+        fill: #edc141
       }
 
       100% {
-        fill: #deeaf6
+        fill: #edc141
       }
     }
 
@@ -850,19 +850,19 @@
 
     @keyframes frontPompHighlight {
       0% {
-        fill: #000
+        fill: #000000
       }
 
       50% {
-        fill: #000
+        fill: #000000
       }
 
       53.333333% {
-        fill: rgb(54, 80, 106)
+        fill: #caab47
       }
 
       100% {
-        fill: rgb(54, 80, 106)
+        fill: #caab47
       }
     }
 
@@ -1120,7 +1120,6 @@
       </feMerge>
     </filter>
   </defs>
-  <ellipse id="sb-background" rx="399.103391" ry="398.068208" transform="matrix(1.936854 0 0 1.936854 773.005 771)" fill="#deeaf6" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
   <g id="sb-avatar_motion" transform="translate(-1291.680903,-204.208004)">
     <g id="sb-avatar_scale" transform="scale(1,1)">
       <g id="sb-avatar" transform="translate(0,0)" filter="url(#sb-avatar-filter)">
