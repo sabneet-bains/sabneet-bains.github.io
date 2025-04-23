@@ -15,6 +15,28 @@
       animation-play-state: running !important
     }
 
+    #sb-background {
+    animation: colorFlash 3000ms linear infinite alternate forwards
+    }
+
+    @keyframes colorFlash {
+        0% {
+            fill: #deeaf6
+        }
+
+        56.666667% {
+            fill: #deeaf6
+        }
+
+        60% {
+            fill: #e07b57
+        }
+
+        100% {
+            fill: #e07b57
+        }
+    }
+
     #sb-avatar_motion {
       animation: zoomCorrection 3000ms linear infinite alternate forwards
     }
