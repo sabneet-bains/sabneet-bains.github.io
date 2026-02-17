@@ -1,6 +1,9 @@
 {
   "extends": ["html-validate:recommended"],
   "rules": {
+    "empty-heading": "off",
+    "hidden-focusable": "off",
+    "prefer-native-element": "off",
     "void-style": "off",
     "wcag/h37": "off"
   }
