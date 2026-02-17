@@ -1,0 +1,31 @@
+/* _layout-shell.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .layout-container {
+    max-width: var(--maxw);
+    margin: clamp(56px, 9.4vh, 104px) auto;
+    padding: 0 var(--pad);
+    container-type: inline-size;
+  }
+
+  .hero-section {
+    margin-bottom: var(--space-12);
+  }
+
+  .hero-section .display-title {
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-section .display-lede {
+    max-width: 810px;
+  }
+
+  .research-proof {
+    margin-bottom: var(--space-16);
+  }
+
+  /* ======================
+     RESEARCH SNAPSHOT
+  ====================== */
+

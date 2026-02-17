@@ -1,0 +1,107 @@
+/* _footer-social.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .footer-social {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(108px, 132px));
+    gap: var(--space-2);
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .footer-social__link {
+    --social-icon-box: 20px;
+    --social-icon-box-w: var(--social-icon-box);
+    --social-icon-box-h: var(--social-icon-box);
+
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    min-height: 32px;
+    padding: 0;
+    justify-content: flex-start;
+
+    text-decoration: none;
+    color: var(--text-secondary);
+    opacity: 0.86;
+
+    transition:
+      transform var(--dur-card) var(--ease-standard),
+      color var(--dur-card) var(--ease-standard),
+      opacity var(--dur-card) var(--ease-standard);
+  }
+
+  .footer-social__icon {
+    width: var(--social-icon-box-w);
+    height: var(--social-icon-box-h);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .footer-social__icon svg {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    fill: currentColor;
+    opacity: 0.95;
+  }
+
+  .footer-social__link--youtube {
+    /* Match the source design ratio you validated: 1.8in x 2.57in against 2in x 2in peers */
+    --social-icon-box-w: calc(var(--social-icon-box) * 1.285);
+    --social-icon-box-h: calc(var(--social-icon-box) * 0.9);
+  }
+
+  .footer-social__link--email {
+    --social-icon-box-w: calc(var(--social-icon-box) * 1.285);
+    --social-icon-box-h: calc(var(--social-icon-box) * 0.9);
+  }
+
+  .footer-social__label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.008em;
+    line-height: 1;
+    color: currentColor;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .footer-social__link:hover {
+      transform: scale(1.02);
+      opacity: 0.98;
+      color: var(--text-primary);
+    }
+  }
+
+  @media (max-width: 620px) {
+    .footer-social {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: center;
+      justify-items: start;
+      width: fit-content;
+      margin-inline: auto;
+      gap: var(--space-12) var(--space-12);
+    }
+
+    .footer-social__link {
+      gap: var(--space-4);
+      min-height: 36px;
+    }
+
+    .footer-social__label {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* ======================
+     DIALOG MODAL SHELL
+  ====================== */
+

@@ -1,0 +1,23 @@
+/* _reduced-motion.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .card::before,
+    .card__media-video,
+    .card__action,
+    .footer-social__link,
+    .dialog-modal,
+    .dialog-modal__backdrop,
+    .dialog-modal__sheet,
+    .dialog-modal__body,
+    .dialog-modal__close,
+    .nav-primary__link,
+    .skip-link {
+      animation: none;
+      transition: none;
+      transform: none;
+    }
+  }
+

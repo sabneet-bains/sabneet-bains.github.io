@@ -1,0 +1,110 @@
+/* _responsive.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  @container (max-width: 860px) {
+    .resume-modal__top {
+      justify-content: flex-start;
+      margin-bottom: var(--space-7);
+    }
+
+    .resume-modal__download-link {
+      margin-top: 2px;
+    }
+
+    .resume-modal__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-7);
+    }
+
+    .resume-panel {
+      padding-top: var(--space-5);
+      margin-top: var(--space-6);
+    }
+  }
+
+  .dialog-modal__header {
+    padding: var(--space-6) var(--space-10) 0 var(--space-10);
+    max-width: var(--modal-content-maxw);
+    margin: auto;
+  }
+
+  @container (max-width: 700px) {
+    .dialog-modal__title {
+      font-size: clamp(1.82rem, 8.4vw, 2.68rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+
+    .dialog-modal__header {
+      padding: var(--space-5) var(--space-5) 0 var(--space-5);
+    }
+
+    .dialog-modal__body {
+      padding: var(--space-6) var(--space-5);
+      margin-top: var(--space-6);
+      margin-bottom: var(--space-5);
+    }
+
+    .dialog-modal--resume .dialog-modal__title {
+      font-size: clamp(1.88rem, 9.3vw, 2.48rem);
+      line-height: 1.01;
+      letter-spacing: -0.022em;
+      max-width: 10.6ch;
+    }
+
+    .resume-modal__top {
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+
+    .resume-list li {
+      font-size: 0.97rem;
+      line-height: 1.5;
+    }
+
+    .resume-kpi {
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: 6px;
+    }
+
+    .resume-kpi__value {
+      font-size: 1.18rem;
+    }
+
+    .resume-kpi__label {
+      font-size: 0.93rem;
+      line-height: 1.46;
+    }
+
+    .resume-modal__download-label {
+      font-size: 0.94rem;
+    }
+
+    .resume-modal__download-meta {
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .dialog-modal__title {
+      font-size: clamp(1.82rem, 8.4vw, 2.68rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+
+    .dialog-modal__header {
+      padding: var(--space-5) var(--space-5) 0 var(--space-5);
+    }
+
+    .dialog-modal__body {
+      padding: var(--space-6) var(--space-5);
+      margin-top: var(--space-6);
+      margin-bottom: var(--space-5);
+    }
+  }
+
+  /* ======================
+     ENHANCED VISUAL SUPPORT
+  ====================== */
+

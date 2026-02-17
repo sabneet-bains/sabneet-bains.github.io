@@ -1,0 +1,185 @@
+/* _resume-modal.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .dialog-modal__body--resume {
+    max-width: 980px;
+  }
+
+  .dialog-modal--resume .dialog-modal__eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
+    color: color-mix(in srgb, var(--modal-eyebrow) 92%, transparent);
+  }
+
+  .dialog-modal--resume .dialog-modal__title {
+    font-size: clamp(1.9rem, 4.05vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: -0.022em;
+    max-width: 11.2ch;
+  }
+
+  .dialog-modal__body--resume .resume-modal {
+    display: block;
+  }
+
+  .resume-modal__top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: var(--space-10);
+  }
+
+  .resume-modal__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-10);
+    align-items: start;
+  }
+
+  .resume-modal__column {
+    display: block;
+  }
+
+  .resume-panel {
+    border-top: 1px solid color-mix(in srgb, var(--surface-border-subtle) 11%, transparent);
+    padding-top: var(--space-6);
+    margin-top: var(--space-7);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .resume-panel {
+      border-top-color: color-mix(in srgb, var(--surface-border-subtle) 8%, transparent);
+    }
+  }
+
+  .resume-modal__column > .resume-panel:first-child {
+    margin-top: 0;
+  }
+
+  .resume-panel__title {
+    margin: 0 0 var(--space-3) 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-weight: var(--weight-eyebrow);
+    color: color-mix(in srgb, var(--modal-eyebrow) 86%, transparent);
+  }
+
+  .resume-panel__text {
+    margin: 0;
+    color: color-mix(in srgb, var(--modal-title) 82%, var(--modal-body) 18%);
+    font-size: 1.01rem;
+    line-height: 1.5;
+    letter-spacing: -0.003em;
+    max-width: 58ch;
+  }
+
+  .resume-panel__text + .resume-panel__text {
+    margin-top: var(--space-2);
+  }
+
+  .resume-kpi-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .resume-kpi {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: var(--space-3);
+    row-gap: 2px;
+  }
+
+  .resume-kpi__value {
+    font-size: 1.24rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 620;
+    color: var(--modal-title);
+    white-space: nowrap;
+  }
+
+  .resume-kpi__label {
+    color: color-mix(in srgb, var(--modal-title) 78%, var(--modal-body) 22%);
+    font-size: 0.96rem;
+    line-height: 1.48;
+    letter-spacing: -0.003em;
+    text-wrap: pretty;
+  }
+
+  .resume-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  .resume-list li {
+    margin: 0;
+    color: color-mix(in srgb, var(--modal-title) 74%, var(--modal-body) 26%);
+    font-size: 0.96rem;
+    line-height: 1.56;
+    letter-spacing: -0.003em;
+    text-wrap: pretty;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .resume-list li::before {
+    content: "+";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: color-mix(in srgb, var(--modal-eyebrow) 74%, transparent);
+    font-weight: 620;
+  }
+
+  .resume-modal__download-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    text-decoration: none;
+    color: var(--modal-title);
+    width: fit-content;
+    border-bottom: 1px solid color-mix(in srgb, var(--surface-border-subtle) 16%, transparent);
+    padding-bottom: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    justify-self: end;
+    align-self: start;
+    grid-column: 2 / 3;
+    opacity: 0.76;
+    transition: var(--motion-opacity-fast), var(--motion-border-medium);
+  }
+
+  .resume-modal__download-label {
+    font-size: 0.92rem;
+    font-weight: 525;
+    letter-spacing: -0.008em;
+  }
+
+  .resume-modal__download-meta {
+    font-size: 0.74rem;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--modal-eyebrow);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .resume-modal__download-link:hover {
+      opacity: 0.66;
+      border-bottom-color: color-mix(in srgb, var(--surface-border-subtle) 34%, transparent);
+    }
+  }
+
+  /* ======================
+     RESPONSIVE ADAPTATIONS
+  ====================== */
+

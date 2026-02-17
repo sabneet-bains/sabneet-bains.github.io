@@ -1,0 +1,47 @@
+/* _accessibility-preferences.css */
+/* Auto-extracted from styles.css split markers. */
+
+@layer tokens {
+  @media (prefers-contrast: more) {
+    :root {
+      --surface-panel: rgba(255,255,255,0.96);
+      --surface-panel-strong: rgba(255,255,255,1);
+      --surface-border-subtle: rgba(0,0,0,0.24);
+      --text-secondary: #22242a;
+      --text-tertiary: #3c4150;
+      --focus-color: #005fcc;
+      --backdrop-overlay: rgba(0,0,0,0.64);
+      --blur-control: blur(0px);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+    :root {
+      --surface-panel: rgba(18,20,25,0.96);
+      --surface-panel-strong: rgba(18,20,25,0.99);
+      --surface-border-subtle: rgba(255,255,255,0.32);
+      --text-secondary: #e5e9f2;
+      --text-tertiary: #c4cad5;
+      --backdrop-overlay: rgba(0,0,0,0.74);
+    }
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    :root {
+      --surface-panel: #ffffff;
+      --surface-panel-strong: #ffffff;
+      --modal-surface: #ffffff;
+      --backdrop-overlay: rgba(0,0,0,0.56);
+      --blur-control: blur(0px);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) and (prefers-reduced-transparency: reduce) {
+    :root {
+      --surface-panel: #1c1f26;
+      --surface-panel-strong: #1c1f26;
+      --modal-surface: #1c1f26;
+      --backdrop-overlay: rgba(0,0,0,0.72);
+    }
+  }
+}

@@ -1,4 +1,463 @@
----
-layout: default
-body_class: home-page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f8" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1015" />
+  <title>Sabneet Bains</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-primary" aria-label="Primary navigation">
+      <a class="nav-primary__brand" href="#home" aria-label="Go to home">Sabneet</a>
+      <div class="nav-primary__links">
+        <a class="nav-primary__link" href="#selected">Selected</a>
+        <a class="nav-primary__link" href="archive.html">Archive</a>
+        <a class="nav-primary__link" href="assets/resume.pdf" data-open="resume-modal">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="layout-container" tabindex="-1">
+
+    <section class="hero-section" id="home" aria-label="Homepage introduction">
+      <h1 class="display-title">Sabneet Bains</h1>
+      <p class="display-lede">
+        AI/ML and quantum-focused researcher building rigorously evaluated learning and
+        simulation systems under real-world constraints, with experience across defense
+        R&D, clinical neuroscience pipelines, and academic research.
+      </p>
+    </section>
+
+    <section class="research-proof" aria-labelledby="research-proof-title">
+      <h2 class="section-label" id="research-proof-title">Research Snapshot</h2>
+      <div class="research-proof__grid">
+        <article class="research-proof__item">
+          <h3 class="research-proof__metric">15x runtime reduction</h3>
+          <p class="research-proof__text">
+            Re-engineered CFD simulation workflows from FORTRAN prototype to validated C++ at Lockheed Martin.
+          </p>
+        </article>
+        <article class="research-proof__item">
+          <h3 class="research-proof__metric">&gt;70% faster analysis cycles</h3>
+          <p class="research-proof__text">
+            Automated MRI/PET research pipelines with integrated quality checks in clinical neuroscience settings.
+          </p>
+        </article>
+        <article class="research-proof__item">
+          <h3 class="research-proof__metric">~10% CV accuracy gain</h3>
+          <p class="research-proof__text">
+            Built and evaluated a custom CNN for real-time object detection under variable lighting conditions.
+          </p>
+        </article>
+        <article class="research-proof__item">
+          <h3 class="research-proof__metric">Quantum + complex systems</h3>
+          <p class="research-proof__text">
+            Implemented QFT/Deutsch simulations, stochastic SIQR modeling, and nonlinear system analysis at JHU.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="selected-section" id="selected" aria-labelledby="selected-title">
+      <h2 class="selected-heading" id="selected-title">Selected Research</h2>
+
+      <div class="card-grid">
+
+        <!-- Card 1 -->
+        <article class="card card--dark" tabindex="0" role="button"
+                aria-haspopup="dialog"
+                aria-controls="project-modal"
+                aria-expanded="false"
+                aria-label="Open details for Quantum Fourier Transform Simulation"
+                data-project="qft"
+                data-title="Quantum Fourier Transform Simulation"
+                data-eyebrow="Quantum & Hybrid Methods">
+
+          <div class="card__media" aria-hidden="true">
+            <video class="card__media-video" muted loop playsinline preload="metadata">
+              <source data-src="assets/quantum-demo.webm" type="video/webm" />
+              <source data-src="assets/quantum-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <span class="card__action" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+            </svg>
+          </span>
+
+          <div class="card__content">
+            <div class="card__eyebrow">Quantum & Hybrid Methods</div>
+            <h3 class="card__title">Quantum Fourier Transform Simulation</h3>
+            <div class="card__outcome">
+              Quantified decoherence and numerical stability across repeated quantum algorithm executions.
+            </div>
+            <div class="card__meta">Jan 2025 · JHU · QFT + Deutsch simulation</div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card card--light" tabindex="0" role="button"
+                aria-haspopup="dialog"
+                aria-controls="project-modal"
+                aria-expanded="false"
+                aria-label="Open details for Real-Time Object Detection"
+                data-project="vision"
+                data-title="Real-Time Object Detection"
+                data-eyebrow="Learning Systems & Perception">
+
+          <div class="card__media" aria-hidden="true">
+            <video class="card__media-video" muted loop playsinline preload="metadata">
+              <source data-src="assets/ai-demo.webm" type="video/webm" />
+              <source data-src="assets/ai-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <span class="card__action" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+            </svg>
+          </span>
+
+          <div class="card__content">
+            <div class="card__eyebrow">Learning Systems & Perception</div>
+            <h3 class="card__title">Real-Time Object Detection</h3>
+            <div class="card__outcome">
+              Achieved ~10% accuracy improvement under variable lighting via custom CNN and controlled evaluation.
+            </div>
+            <div class="card__meta">Dec 2024 · JHU · Controlled CV experiments</div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card card--light" tabindex="0" role="button"
+                aria-haspopup="dialog"
+                aria-controls="project-modal"
+                aria-expanded="false"
+                aria-label="Open details for Chaotic Systems and Complex Simulations"
+                data-project="chaotic"
+                data-title="Chaotic Systems & Complex Simulations"
+                data-eyebrow="Modeling & Analysis">
+
+          <div class="card__media" aria-hidden="true">
+            <video class="card__media-video" muted loop playsinline preload="metadata">
+              <source data-src="assets/nonlinear-demo.webm" type="video/webm" />
+              <source data-src="assets/nonlinear-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <span class="card__action" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+            </svg>
+          </span>
+
+          <div class="card__content">
+            <div class="card__eyebrow">Modeling & Analysis</div>
+            <h3 class="card__title">Chaotic Systems & Complex Simulations</h3>
+            <div class="card__outcome">
+              Modeled nonlinear dynamics and sensitivity to initial conditions across long-horizon simulations.
+            </div>
+            <div class="card__meta">05 Nov 2024 · SIQR + stochastic modeling</div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card card--dark" tabindex="0" role="button"
+                aria-haspopup="dialog"
+                aria-controls="project-modal"
+                aria-expanded="false"
+                aria-label="Open details for 3D Unity Game Adaptation"
+                data-project="unity3d"
+                data-title="3D Unity Game Adaptation"
+                data-eyebrow="Design & Development">
+
+          <div class="card__media" aria-hidden="true">
+            <video class="card__media-video" muted loop playsinline preload="metadata">
+              <source data-src="assets/game-demo.webm" type="video/webm" />
+              <source data-src="assets/game-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <span class="card__action" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+            </svg>
+          </span>
+
+          <div class="card__content">
+            <div class="card__eyebrow">Design & Development</div>
+            <h3 class="card__title">3D Unity Game Adaptation</h3>
+            <div class="card__outcome">
+              Delivered a 3D interactive system with optimized assets, gameplay logic, CI, and versioned iteration.
+            </div>
+            <div class="card__meta">20 Oct 2024 · Unity · CI + software quality</div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <footer class="footer-links" aria-label="Footer links">
+      <div class="footer-social">
+
+        <a class="footer-social__link footer-social__link--email" href="mailto:sabneet.bains@outlook.com" aria-label="Send email to sabneet.bains@outlook.com">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="2880 1764 792 594" aria-hidden="true">
+              <path d="M2880 1863C2880 1808.32 2924.32 1764 2979 1764L3573 1764C3627.68 1764 3672 1808.32 3672 1863L3672 1873.89 3276 2104.56 2880.5 1873.89 2880.5 1863ZM2880 1931.31 2880 2259.5C2880.27 2313.98 2924.52 2358 2979 2358L3573 2358C3627.48 2358 3671.73 2313.98 3672 2259.5L3672 1931.31 3303.23 2147.13C3286.71 2158.01 3265.29 2158.01 3248.77 2147.13L2880 1931.31Z" fill-rule="evenodd"/>
+            </svg>
+          </span>
+          <span class="footer-social__label">Email</span>
+        </a>
+
+        <a class="footer-social__link" href="https://linkedin.com/in/sabneet-bains" aria-label="LinkedIn profile" rel="noopener noreferrer">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="1444 1004 660 660" aria-hidden="true">
+              <path d="M2051.19 1004.06 1500.51 1004.06C1493.41 1003.73 1486.32 1004.8 1479.64 1007.21 1472.95 1009.62 1466.81 1013.33 1461.56 1018.12 1456.31 1022.91 1452.06 1028.68 1449.05 1035.12 1446.03 1041.55 1444.32 1048.52 1444 1055.62L1444 1607.49C1444.42 1622.35 1450.5 1636.48 1461.01 1646.99 1471.52 1657.5 1485.66 1663.58 1500.51 1664L2051.19 1664C2065.63 1663.36 2079.24 1657.08 2089.12 1646.52 2098.99 1635.95 2104.32 1621.95 2103.99 1607.49L2103.99 1055.62C2104.11 1048.71 2102.81 1041.85 2100.18 1035.46 2097.56 1029.07 2093.65 1023.28 2088.7 1018.45 2083.76 1013.63 2077.88 1009.86 2071.43 1007.38 2064.98 1004.91 2058.09 1003.78 2051.19 1004.06ZM1650.25 1554.29 1554.14 1554.29 1554.14 1260.2 1650.25 1260.2 1650.25 1554.29ZM1604.46 1215.65C1597.75 1215.89 1591.07 1214.73 1584.83 1212.26 1578.59 1209.79 1572.93 1206.05 1568.21 1201.29 1563.48 1196.52 1559.79 1190.83 1557.37 1184.57 1554.95 1178.32 1553.85 1171.62 1554.14 1164.92 1553.84 1158.14 1554.96 1151.38 1557.43 1145.06 1559.9 1138.75 1563.67 1133.01 1568.48 1128.24 1573.3 1123.46 1579.06 1119.74 1585.4 1117.32 1591.74 1114.9 1598.51 1113.84 1605.28 1114.19 1611.99 1113.95 1618.67 1115.11 1624.91 1117.58 1631.15 1120.05 1636.81 1123.79 1641.54 1128.55 1646.26 1133.32 1649.95 1139.01 1652.37 1145.27 1654.8 1151.52 1655.9 1158.22 1655.61 1164.92 1655.9 1171.7 1654.78 1178.46 1652.31 1184.78 1649.84 1191.09 1646.07 1196.82 1641.26 1201.6 1636.44 1206.38 1630.68 1210.1 1624.34 1212.52 1618.01 1214.94 1611.23 1216 1604.46 1215.65ZM1994.26 1554.29 1897.74 1554.29 1897.74 1393.43C1897.74 1355.07 1884.13 1328.67 1849.89 1328.67 1839.26 1328.76 1828.91 1332.14 1820.27 1338.34 1811.63 1344.54 1805.12 1353.27 1801.63 1363.32 1798.95 1370.85 1797.83 1378.84 1798.33 1386.83L1798.33 1554.29 1703.46 1554.29 1703.46 1260.2 1798.33 1260.2 1798.33 1301.45C1806.77 1285.95 1819.32 1273.09 1834.6 1264.28 1849.89 1255.47 1867.31 1251.06 1884.95 1251.54 1947.24 1251.54 1994.26 1292.78 1994.26 1380.64L1994.26 1554.29Z" fill-rule="evenodd"/>
+            </svg>
+          </span>
+          <span class="footer-social__label">LinkedIn</span>
+        </a>
+
+        <a class="footer-social__link" href="https://github.com/sabneet-bains" aria-label="GitHub profile" rel="noopener noreferrer">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="460 1001 661 661" aria-hidden="true">
+              <path d="M790.97 1001.33C973.229 1001.33 1120.97 1152.79 1120.97 1339.68 1120.97 1489.14 1026.52 1615.92 895.481 1660.7 878.75 1664.04 872.81 1653.48 872.81 1644.46 872.81 1633.31 873.205 1596.88 873.205 1551.6 873.205 1520.06 862.645 1499.47 850.799 1488.96 924.29 1480.59 1001.51 1451.97 1001.51 1322.02 1001.51 1285.07 988.705 1254.9 967.52 1231.2 970.952 1222.66 982.27 1188.24 964.286 1141.64 964.286 1141.64 936.632 1132.57 873.635 1176.34 847.268 1168.84 819.02 1165.07 790.97 1164.94 762.92 1165.07 734.705 1168.84 708.371 1176.34 645.308 1132.57 617.588 1141.64 617.588 1141.64 599.669 1188.24 610.988 1222.66 614.387 1231.2 593.3 1254.9 580.397 1285.07 580.397 1322.02 580.397 1451.65 657.452 1480.68 730.745 1489.24 721.307 1497.68 712.76 1512.6 709.79 1534.47 690.98 1543.12 643.196 1558.07 613.76 1506.37 613.76 1506.37 596.302 1473.85 563.171 1471.48 563.171 1471.48 530.996 1471.05 560.927 1492.04 560.927 1492.04 582.542 1502.44 597.557 1541.54 597.557 1541.54 616.927 1601.93 708.734 1581.47 708.899 1609.75 709.196 1636.42 709.196 1644.46 709.196 1653.4 703.124 1663.87 686.657 1660.73 555.514 1616.02 460.97 1489.17 460.97 1339.68 460.97 1152.79 608.744 1001.33 790.97 1001.33" fill-rule="evenodd"/>
+            </svg>
+          </span>
+          <span class="footer-social__label">GitHub</span>
+        </a>
+
+        <a class="footer-social__link footer-social__link--youtube" href="https://www.youtube.com/@sabneetbains" aria-label="YouTube channel" rel="noopener noreferrer">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="2405 1029 887 606" aria-hidden="true">
+              <path d="M2765.6 1440.34 2765.6 1202.23C2850.07 1242.01 2915.49 1280.44 2992.86 1321.86 2929.04 1357.28 2850.07 1397 2765.6 1440.34M3236.35 1083.81C3221.77 1064.59 3196.94 1049.65 3170.5 1044.7 3092.79 1029.95 2607.98 1029.91 2530.31 1044.7 2509.1 1048.68 2490.23 1058.29 2474.01 1073.23 2405.67 1136.7 2427.08 1477.07 2443.56 1532.2 2450.48 1556.06 2459.44 1573.28 2470.71 1584.57 2485.24 1599.51 2505.13 1609.8 2527.98 1614.4 2591.97 1627.66 2921.61 1635.06 3169.15 1616.39 3191.96 1612.42 3212.15 1601.81 3228.07 1586.23 3291.25 1523.02 3286.94 1163.51 3236.35 1083.81" fill-rule="evenodd"/>
+            </svg>
+          </span>
+          <span class="footer-social__label">YouTube</span>
+        </a>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Dialog Modal -->
+  <div class="dialog-modal" id="project-modal" aria-hidden="true">
+
+    <div class="dialog-modal__backdrop"></div>
+
+    <div class="dialog-modal__shell">
+
+      <div class="dialog-modal__sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          aria-describedby="modal-body"
+          tabindex="-1">
+
+        <button class="dialog-modal__close" type="button" aria-label="Close">×</button>
+
+        <div class="dialog-modal__header">
+          <div class="dialog-modal__eyebrow" id="modal-eyebrow"></div>
+          <h2 class="dialog-modal__title" id="modal-title"></h2>
+        </div>
+
+        <div class="dialog-modal__body" id="modal-body"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <template id="project-qft">
+    <section class="modal-section">
+      <h2 class="section-label">Problem</h2>
+      <p class="body-text">
+        Evaluated Quantum Fourier Transform execution under noise and precision
+        constraints, with emphasis on numerical stability and gate fidelity.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Approach</h2>
+      <p class="body-text">
+        Ran parameter sweeps across qubit counts and noise models, using controlled
+        seeds to preserve reproducibility across runs.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Evaluation</h2>
+      <p class="body-text">
+        Measured amplitude drift, phase distortion, and stability degradation across
+        circuit depth, showing fidelity loss as noise and precision stress increased.
+      </p>
+      <a class="modal-link" href="https://github.com/sabneet-bains/Quantum-Computing" target="_blank" rel="noopener noreferrer" aria-label="Open Quantum Fourier Transform Simulation repository on GitHub">
+        View Repository <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </template>
+
+  <template id="project-vision">
+    <section class="modal-section">
+      <h2 class="section-label">Problem</h2>
+      <p class="body-text">
+        Evaluated real-time object detection under variable lighting with strict latency
+        constraints.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Model & Training</h2>
+      <p class="body-text">
+        Trained a CNN baseline with augmentation ablations to isolate illumination
+        sensitivity.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Evaluation</h2>
+      <p class="body-text">
+        Observed ~10% accuracy improvement under controlled lighting variation while
+        maintaining consistent inference time, indicating stronger robustness under
+        real-time constraints.
+      </p>
+      <a class="modal-link" href="https://github.com/sabneet-bains/Computer-Vision" target="_blank" rel="noopener noreferrer" aria-label="Open Real-Time Object Detection repository on GitHub">
+        View Repository <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </template>
+
+  <template id="project-chaotic">
+    <section class="modal-section">
+      <h2 class="section-label">Problem</h2>
+      <p class="body-text">
+        Simulated nonlinear chaotic systems where small perturbations in initial
+        conditions produced long-horizon divergence.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Approach</h2>
+      <p class="body-text">
+        Built nonlinear simulation loops and phase-space visualizations to analyze
+        attractor behavior and transition regimes.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Evaluation</h2>
+      <p class="body-text">
+        Compared stability windows, sensitivity trends, and trajectory divergence across
+        parameter sweeps, revealing boundaries between stable and chaotic regimes.
+      </p>
+      <a class="modal-link" href="https://github.com/sabneet-bains/Nonlinear-Dynamics" target="_blank" rel="noopener noreferrer" aria-label="Open Chaotic Systems and Complex Simulations repository on GitHub">
+        View Repository <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </template>
+
+  <template id="project-unity3d">
+    <section class="modal-section">
+      <h2 class="section-label">Problem</h2>
+      <p class="body-text">
+        Adapted a gameplay concept into a fully interactive 3D Unity environment under
+        runtime constraints, while preserving responsiveness and scene clarity.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Design & Build</h2>
+      <p class="body-text">
+        Implemented camera control, movement systems, asset integration, and interaction
+        logic through iterative playtesting and performance optimization.
+      </p>
+    </section>
+
+    <section class="modal-section">
+      <h2 class="section-label">Outcome</h2>
+      <p class="body-text">
+        Delivered a stable prototype with improved pacing and readable composition,
+        while maintaining optimized runtime behavior under interactive workloads.
+      </p>
+      <a class="modal-link" href="https://github.com/sabneet-bains/Game-Development" target="_blank" rel="noopener noreferrer" aria-label="Open 3D Unity Game Adaptation repository on GitHub">
+        View Repository <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </template>
+
+  <template id="project-resume">
+    <section class="resume-modal">
+      <div class="resume-modal__top">
+        <a class="resume-modal__download-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="View full resume PDF">
+          <span class="resume-modal__download-label">View Full Resume</span>
+          <span class="resume-modal__download-meta">PDF</span>
+        </a>
+      </div>
+
+      <div class="resume-modal__grid">
+        <div class="resume-modal__column">
+          <section class="resume-panel">
+            <h3 class="resume-panel__title">Applied Research Scientist</h3>
+            <p class="resume-panel__text">
+              Develops and validates robust machine learning and simulation systems under real-world and physically constrained environments, with emphasis on reliability, controlled experimentation, and deployment-aware performance.
+            </p>
+          </section>
+
+          <section class="resume-panel">
+            <h3 class="resume-panel__title">Proof of Impact</h3>
+            <ul class="resume-kpi-list">
+              <li class="resume-kpi">
+                <span class="resume-kpi__value">15&times;</span>
+                <span class="resume-kpi__label">Acceleration of computational simulation through systems-level C++ optimization.</span>
+              </li>
+              <li class="resume-kpi">
+                <span class="resume-kpi__value">70%</span>
+                <span class="resume-kpi__label">Faster neuroimaging analysis via automated, quality-controlled pipelines.</span>
+              </li>
+              <li class="resume-kpi">
+                <span class="resume-kpi__value">~10%</span>
+                <span class="resume-kpi__label">Improvement in vision accuracy under variable lighting through controlled evaluation design.</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="resume-modal__column">
+          <section class="resume-panel">
+            <h3 class="resume-panel__title">Trajectory</h3>
+            <p class="resume-panel__text">Johns Hopkins AI Research</p>
+            <p class="resume-panel__text">Lockheed Martin R&amp;D &middot; Eli Lilly Neuroimaging</p>
+          </section>
+
+          <section class="resume-panel">
+            <h3 class="resume-panel__title">Core Depth</h3>
+            <ul class="resume-list">
+              <li>Probabilistic Modeling &middot; Reliability Engineering &middot; Experimental Evaluation</li>
+              <li>Stochastic Simulation &middot; Numerical Methods</li>
+              <li>Computer Vision Robustness &middot; Cross-Validation &amp; Bias-Variance Analysis</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <script src="./js/constants.js" defer></script>
+  <script src="./js/motion.js" defer></script>
+  <script src="./js/dom.js" defer></script>
+  <script src="./js/modal-controller.js" defer></script>
+  <script src="./js/preview-controller.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* _modal-typography.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .dialog-modal__eyebrow {
+    color: var(--modal-eyebrow);
+    font-size: 0.8rem;
+    font-weight: var(--weight-eyebrow);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    margin-bottom: var(--modal-stack-1);
+  }
+
+  .dialog-modal__title {
+    margin: 0;
+    font-size: clamp(2.28rem, 5.45vw, 4.12rem);
+    letter-spacing: var(--tracking-display);
+    line-height: 0.98;
+    font-weight: var(--weight-display);
+    color: var(--modal-title);
+    text-wrap: balance;
+    max-width: 11.5ch;
+  }
+
+  .dialog-modal__body {
+    padding: var(--space-8);
+    max-width: var(--modal-content-maxw);
+    margin: auto;
+    margin-top: var(--modal-stack-3);
+    margin-bottom: var(--space-8);
+
+    color: var(--modal-body);
+    background: transparent;
+    border: 0;
+
+    opacity: 1;
+    transform: none;
+  }
+
+  .modal-section {
+    margin: 0;
+  }
+
+  .modal-section + .modal-section {
+    margin-top: var(--space-10);
+  }
+
+  .dialog-modal__body .modal-section .section-label {
+    margin: 0 0 var(--modal-stack-2) 0;
+    font-size: 0.76rem;
+    letter-spacing: var(--tracking-eyebrow);
+    color: var(--modal-eyebrow);
+  }
+
+  .dialog-modal__body .modal-section .body-text {
+    margin: 0;
+    max-width: 58ch;
+    color: var(--modal-body);
+    font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+    line-height: 1.44;
+    letter-spacing: -0.006em;
+    text-wrap: pretty;
+  }
+
+  .dialog-modal__body .modal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.22em;
+    margin-top: var(--space-4);
+    text-decoration: none;
+    color: #005fb8;
+    font-size: clamp(0.96rem, 1.1vw, 1.03rem);
+    font-weight: 500;
+    letter-spacing: -0.006em;
+    line-height: 1.35;
+    opacity: 0.92;
+    transition: var(--motion-opacity-fast);
+  }
+
+  .dialog-modal__body .modal-link:hover {
+    opacity: 0.72;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .dialog-modal__body .modal-link {
+      color: #6bafff;
+    }
+  }
+
+  /* ======================
+     RESUME MODAL
+  ====================== */
+

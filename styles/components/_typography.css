@@ -1,0 +1,64 @@
+/* _typography.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .display-title {
+    font-size: var(--display-title-size-lg);
+    font-weight: var(--weight-display);
+    line-height: 1.03;
+    margin: 0 0 var(--space-5) 0;
+    letter-spacing: var(--tracking-display);
+    text-wrap: balance;
+  }
+
+  .display-lede {
+    font-size: var(--display-lede-size-lg);
+    color: var(--text-secondary);
+    max-width: 760px;
+    margin: 0;
+    line-height: 1.42;
+    letter-spacing: -0.004em;
+  }
+
+  @container (max-width: var(--cq-md)) {
+    .display-title { font-size: var(--display-title-size-sm); }
+    .display-lede { font-size: var(--display-lede-size-sm); }
+  }
+
+  @media (max-width: 860px) {
+    .display-title {
+      font-size: var(--display-title-size-sm);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+    }
+
+    .display-lede {
+      font-size: var(--display-lede-size-sm);
+      line-height: 1.46;
+    }
+  }
+
+  .section-label {
+    font-size: 0.82rem;
+    font-weight: var(--weight-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-eyebrow);
+    color: var(--text-tertiary);
+    margin: 0 0 var(--space-8) 0;
+  }
+
+  .body-text {
+    margin: 0 0 var(--space-3) 0;
+    color: var(--text-secondary);
+  }
+
+  .footer-links {
+    margin-top: var(--space-12);
+    padding: var(--space-8) 0 var(--space-2);
+    border-top: 1px solid color-mix(in srgb, var(--surface-border-subtle) 18%, transparent);
+  }
+
+  /* ======================
+     SELECTED GRID
+  ====================== */
+

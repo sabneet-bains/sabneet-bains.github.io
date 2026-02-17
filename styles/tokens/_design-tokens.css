@@ -1,0 +1,166 @@
+/* _design-tokens.css */
+/* Auto-extracted from styles.css split markers. */
+
+@layer tokens {
+
+  :root {
+
+  /* =======================================================
+     SURFACE SYSTEM
+  ======================================================= */
+
+  --surface-bg: #f7f7fa;
+  --surface-bg-accent: radial-gradient(1200px 700px at 10% -10%, rgba(255,255,255,0.72), transparent 58%), radial-gradient(1000px 640px at 95% -5%, rgba(255,255,255,0.48), transparent 55%);
+
+  --surface-panel: rgba(255,255,255,0.82);
+  --surface-panel-strong: rgba(255,255,255,0.92);
+
+  --surface-border-subtle: rgba(0,0,0,0.08);
+
+  --backdrop-overlay: rgba(6,8,12,0.42);
+
+  /* =======================================================
+     TEXT SYSTEM
+  ======================================================= */
+
+  --text-primary: #111113;
+  --text-secondary: #414450;
+  --text-tertiary: #6d7180;
+
+  /* Modal */
+  --modal-surface: #f2f2f5;
+  --modal-title: #18181b;
+  --modal-body: #3d3f46;
+  --modal-eyebrow: #676b75;
+  --modal-close-bg: #1a1a1d;
+
+  /* =======================================================
+     CARD VARIANTS
+  ======================================================= */
+
+  --card-dark-bg: linear-gradient(160deg, #15171b 0%, #0c0d11 100%);
+
+  --card-light-bg: linear-gradient(160deg, rgba(255,255,255,0.98), rgba(244,246,250,0.96));
+
+  /* =======================================================
+     ELEVATION SYSTEM
+  ======================================================= */
+
+  --elevation-1: 0 3px 10px rgba(15,18,28,0.045);
+  --elevation-2: 0 8px 20px rgba(15,18,28,0.07);
+  --elevation-card-hover: 0 12px 24px rgba(15,18,28,0.085);
+
+  --elevation-modal:
+    0 24px 60px rgba(15,18,28,0.18),
+    0 8px 20px rgba(15,18,28,0.10);
+
+  /* =======================================================
+     RADIUS SCALE
+  ======================================================= */
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-full: 999px;
+
+  /* =======================================================
+     SPACING SCALE
+  ======================================================= */
+
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* =======================================================
+     TYPOGRAPHY SCALE
+  ======================================================= */
+
+  --text-display-xl: clamp(2.65rem, 4.9vw, 3.55rem);
+  --text-display-lg: clamp(2.35rem, 4.2vw, 3.2rem);
+
+  --text-body-lg: clamp(1.02rem, 1.8vw, 1.25rem);
+  --text-body-md: 1rem;
+
+  --text-eyebrow: 0.75rem;
+  --weight-display: 615;
+  --weight-title: 605;
+  --weight-eyebrow: 600;
+  --tracking-display: -0.022em;
+  --tracking-title: -0.02em;
+  --tracking-eyebrow: 0.09em;
+
+  /* Mapped display tokens used by components */
+  --display-title-size-lg: var(--text-display-xl);
+  --display-title-size-sm: var(--text-display-lg);
+
+  --display-lede-size-lg: var(--text-body-lg);
+  --display-lede-size-sm: var(--text-body-md);
+
+  /* =======================================================
+     CONTROL PRIMITIVES
+  ======================================================= */
+
+  --focus-color: #0a84ff;
+  --focus-ring-offset: 4px;
+
+  /* =======================================================
+     LAYOUT
+  ======================================================= */
+
+  --maxw: 1120px;
+  --modal-maxw: 1060px;
+  --layout-padding: 24px;
+
+  /* Variables referenced in layout */
+  --pad: var(--layout-padding);
+
+  /* =======================================================
+     MOTION SYSTEM
+  ======================================================= */
+
+  --ease-standard: cubic-bezier(0.28, 0.11, 0.32, 1);
+
+  --dur-fast: 160ms;
+  --dur-medium: 280ms;
+  --dur-slow: 420ms;
+  --dur-card: 360ms;
+  --dur-modal-backdrop: 320ms;
+  --dur-modal-sheet: 420ms;
+  --delay-modal-sheet: 56ms;
+  --delay-modal-content: 112ms;
+
+  --motion-transform-fast: transform var(--dur-fast) var(--ease-standard);
+  --motion-opacity-fast: opacity var(--dur-fast) var(--ease-standard);
+  --motion-opacity-medium: opacity var(--dur-medium) var(--ease-standard);
+  --motion-border-medium: border-color var(--dur-medium) var(--ease-standard);
+  --motion-background-fast: background var(--dur-fast) var(--ease-standard);
+
+  /* =======================================================
+     BLUR SYSTEM
+  ======================================================= */
+
+  --blur-control: blur(10px);
+
+  /* =======================================================
+     Z-INDEX
+  ======================================================= */
+
+  --z-nav: 1000;
+  --z-modal: 3000;
+
+  /* =======================================================
+     CONTAINER BREAKPOINTS
+  ======================================================= */
+
+  --cq-sm: 620px;
+  --cq-md: 860px;
+}
+

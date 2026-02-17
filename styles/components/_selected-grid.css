@@ -1,0 +1,24 @@
+/* _selected-grid.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  @container (max-width: var(--cq-md)) {
+    .research-proof__grid { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 860px) {
+    .research-proof__grid { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ======================
+     CARD
+  ====================== */
+

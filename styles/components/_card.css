@@ -1,0 +1,110 @@
+/* _card.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  .card {
+    position: relative;
+    isolation: isolate;
+    height: 400px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: minmax(160px, 1fr) auto;
+    padding: var(--space-8) var(--space-10) var(--space-10);
+
+    border: 0;
+    box-shadow: var(--elevation-2);
+
+    cursor: pointer;
+    transform-origin: center center;
+
+    transition:
+      transform var(--dur-card) var(--ease-standard),
+      box-shadow var(--dur-card) var(--ease-standard);
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(150deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 40%);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+    transition: var(--motion-opacity-medium);
+  }
+
+  .card:active {
+    transform: scale(0.996);
+  }
+
+  .card:focus-visible {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 4px;
+  }
+
+  @container (max-width: var(--cq-sm)) {
+    .card {
+      height: 352px;
+      grid-template-rows: minmax(120px, 1fr) auto;
+      padding: var(--space-6) var(--space-7) var(--space-7);
+    }
+  }
+
+  @media (max-width: 620px) {
+    .card {
+      height: 352px;
+      grid-template-rows: minmax(120px, 1fr) auto;
+      padding: var(--space-6) var(--space-7) var(--space-7);
+    }
+  }
+
+  /* --------------------------------------
+     CARD: Theme Variants
+  -------------------------------------- */
+
+  .card--dark {
+    background: var(--card-dark-bg);
+    color: #ffffff;
+  }
+
+  .card--light {
+    background: var(--card-light-bg);
+    color: var(--text-primary);
+  }
+
+  .card[data-project="qft"] {
+    --project-card-bg: #2a1240;
+  }
+
+  .card[data-project="vision"] {
+    --project-card-bg: #13273d;
+  }
+
+  .card[data-project="chaotic"] {
+    --project-card-bg: #2b2f9f;
+  }
+
+  .card[data-project="unity3d"] {
+    --project-card-bg: #121822;
+  }
+
+  .card[data-project] {
+    height: auto;
+    min-height: 620px;
+    grid-template-rows: clamp(250px, 34vw, 340px) auto;
+    padding: 0;
+    gap: 0;
+    background: var(--project-card-bg);
+    color: #f5f5f7;
+  }
+
+  .card[data-project]::before {
+    opacity: 0;
+  }
+
+  /* --------------------------------------
+     CARD: Content
+  -------------------------------------- */
+

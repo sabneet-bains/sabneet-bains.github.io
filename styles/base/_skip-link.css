@@ -1,0 +1,25 @@
+/* _skip-link.css */
+/* Auto-extracted from styles.css split markers. */
+
+  .skip-link {
+    position: absolute;
+    left: var(--space-3);
+    top: var(--space-2);
+
+    transform: translateY(-220%);
+    transition: var(--motion-transform-fast);
+
+    background: var(--surface-panel-strong);
+    border: 0;
+    padding: var(--space-2) var(--space-3);
+
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-2);
+
+    z-index: var(--z-modal); /* always above nav */
+  }
+
+  .skip-link:focus-visible {
+    transform: translateY(0);
+  }
+

@@ -1,0 +1,38 @@
+/* _theme-overrides.css */
+/* Auto-extracted from styles.css split markers. */
+
+@layer tokens {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --surface-bg: #0d1015;
+      --surface-bg-accent: radial-gradient(1200px 700px at 10% -10%, rgba(78,87,104,0.18), transparent 58%), radial-gradient(1000px 640px at 95% -5%, rgba(70,77,92,0.14), transparent 55%);
+      --surface-panel: rgba(29,32,39,0.72);
+      --surface-panel-strong: rgba(30,33,40,0.84);
+      --text-primary: #f4f6fb;
+      --text-secondary: #b4bac5;
+      --text-tertiary: #89909d;
+      --surface-border-subtle: rgba(255,255,255,0.12);
+      --modal-surface: #181b23;
+      --modal-title: #f3f5f9;
+      --modal-body: #d2d6e0;
+      --modal-eyebrow: #97a0ae;
+      --modal-close-bg: #2b2f38;
+      --elevation-1: 0 4px 12px rgba(0,0,0,0.24);
+      --elevation-2: 0 10px 24px rgba(0,0,0,0.30);
+      --elevation-card-hover: 0 12px 26px rgba(0,0,0,0.34);
+      --elevation-modal:
+        0 24px 60px rgba(0,0,0,0.46),
+        0 8px 20px rgba(0,0,0,0.28);
+      --card-dark-bg: linear-gradient(160deg, #1a1d24 0%, #111319 100%);
+      --card-light-bg: linear-gradient(160deg, rgba(32,35,43,0.96), rgba(26,29,36,0.94));
+    }
+  }
+
+  @media (max-width: 900px) {
+    :root {
+      --elevation-modal:
+        0 42px 90px rgba(15,18,28,0.20),
+        0 10px 28px rgba(15,18,28,0.12);
+    }
+  }
+}

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Research Archive | Sabneet Bains</title>
+  <link rel="preconnect" href="https://github.com" crossorigin />
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav-primary" aria-label="Primary navigation">
+      <a class="nav-primary__brand" href="index.html#home" aria-label="Go to home">Sabneet</a>
+      <div class="nav-primary__links">
+        <a class="nav-primary__link" href="index.html#selected">Selected</a>
+        <a class="nav-primary__link" href="archive.html" aria-current="page">Archive</a>
+        <a class="nav-primary__link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="layout-container archive-page" tabindex="-1">
+    <section class="hero-section archive-hero" aria-label="Archive introduction">
+      <h1 class="display-title">Research Archive</h1>
+      <p class="display-lede">
+        Extended work and supporting artifacts organized by theme. Each entry focuses on
+        method clarity, assumptions, and reproducible evaluation.
+      </p>
+    </section>
+
+    <section class="archive-filters" aria-label="Filter archive entries">
+      <div class="archive-filters__controls" role="toolbar" aria-label="Archive filters">
+        <button class="archive-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="archive-filter" type="button" data-filter="ai" aria-pressed="false">AI &amp; Vision</button>
+        <button class="archive-filter" type="button" data-filter="simulation" aria-pressed="false">Simulation</button>
+        <button class="archive-filter" type="button" data-filter="quantum" aria-pressed="false">Quantum</button>
+        <button class="archive-filter" type="button" data-filter="systems" aria-pressed="false">Systems</button>
+        <button class="archive-filter" type="button" data-filter="neuroscience" aria-pressed="false">Neuroscience</button>
+      </div>
+      <div class="archive-filters__tools">
+        <label class="archive-filters__field">
+          <span class="archive-filters__field-label">Search</span>
+          <input id="archive-search" class="archive-search" type="search" placeholder="Search methods, datasets, or projects" />
+        </label>
+        <label class="archive-filters__field">
+          <span class="archive-filters__field-label">Sort</span>
+          <select id="archive-sort" class="archive-sort">
+            <option value="recent">Most Recent</option>
+            <option value="repro">Most Reproducible</option>
+            <option value="applied">Most Applied</option>
+            <option value="theoretical">Most Theoretical</option>
+          </select>
+        </label>
+      </div>
+      <p class="archive-filters__status" aria-live="polite">Showing 0 of 0</p>
+      <section class="archive-metrics" aria-label="Archive metrics">
+        <article class="archive-metric">
+          <p class="archive-metric__label">Visible Entries</p>
+          <p class="archive-metric__value" data-metric="entries">0</p>
+        </article>
+        <article class="archive-metric">
+          <p class="archive-metric__label">With Code</p>
+          <p class="archive-metric__value" data-metric="code">0%</p>
+        </article>
+        <article class="archive-metric">
+          <p class="archive-metric__label">With Reports</p>
+          <p class="archive-metric__value" data-metric="report">0%</p>
+        </article>
+        <article class="archive-metric">
+          <p class="archive-metric__label">Seeded Runs</p>
+          <p class="archive-metric__value" data-metric="seeded">0%</p>
+        </article>
+      </section>
+      <div class="archive-filters__utility">
+        <details class="archive-refine">
+        <summary class="archive-refine__summary">Refine Filters</summary>
+        <div class="archive-filters__toggles" role="group" aria-label="Quick toggles">
+          <label class="archive-toggle">
+            <input id="toggle-repro" type="checkbox" />
+            <span>High Reproducibility</span>
+          </label>
+          <label class="archive-toggle">
+            <input id="toggle-applied" type="checkbox" />
+            <span>Applied Work</span>
+          </label>
+          <label class="archive-toggle">
+            <input id="toggle-repo" type="checkbox" />
+            <span>Has Repository</span>
+          </label>
+        </div>
+        </details>
+        <a class="archive-export-link" href="data/archive.json" target="_blank" rel="noopener noreferrer">Structured JSON ↗</a>
+      </div>
+    </section>
+
+    <section class="archive-group" id="learning" aria-labelledby="archive-learning">
+      <h2 class="archive-group__title" id="archive-learning">Learning Systems &amp; Perception</h2>
+      <div class="archive-list">
+        <article id="entry-real-time-object-detection" class="archive-item" data-tags="ai vision systems" data-year="2024" data-repro="5" data-applied="5" data-theoretical="2" data-availability="public">
+          <p class="archive-item__meta">Neural Networks &amp; Computer Vision · 2024</p>
+          <h3 class="archive-item__title">Real-Time Object Detection</h3>
+          <p class="archive-item__summary">
+            Controlled evaluation of a CNN perception system under variable lighting, with
+            emphasis on baseline comparison and reliability-oriented measurement.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> How much robustness can a compact CNN gain under lighting variation without violating real-time constraints?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Achieved about 10% classification improvement under controlled lighting variation while maintaining stable runtime behavior.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Generalization under unseen scene composition remains sensitive; next step is broader domain-shift evaluation.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>CNN</li>
+                <li>Controlled Evaluation</li>
+                <li>Ablation</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Custom Capture Set</li>
+                <li>Variable Lighting Scenes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-on">Code</li>
+              <li class="is-off">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+            <a href="index.html#selected">View Project ↗</a>
+            <a href="https://github.com/sabneet-bains/Computer-Vision" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
+          </div>
+        </article>
+
+        <article id="entry-quantitative-neuroimaging-automation" class="archive-item" data-tags="ai neuroscience systems" data-year="2017" data-repro="4" data-applied="5" data-theoretical="2" data-availability="partial">
+          <p class="archive-item__meta">Neuroimaging Pipelines · 2016-2017</p>
+          <h3 class="archive-item__title">Quantitative MRI/PET Analysis Automation</h3>
+          <p class="archive-item__summary">
+            Built and automated neuroimaging analysis workflows with validated preprocessing and
+            quality controls, reducing error and accelerating collaborative analysis cycles.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> Can neuroimaging workflows be standardized for reliable clinical-scale analysis without slowing teams down?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Automated and quality-controlled pipeline structure accelerated collaborative analysis cycles by over 70%.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Data heterogeneity still introduces edge-case variability; next step is stronger cohort-level harmonization checks.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>Pipeline Automation</li>
+                <li>Quality Control</li>
+                <li>Statistical Mapping</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>MRI/PET Volumes</li>
+                <li>Clinical Cohorts</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-off">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-group" id="simulation" aria-labelledby="archive-simulation">
+      <h2 class="archive-group__title" id="archive-simulation">Simulation &amp; Modeling</h2>
+      <div class="archive-list">
+        <article id="entry-stochastic-siqr-modeling" class="archive-item" data-tags="simulation modeling" data-year="2023" data-repro="4" data-applied="4" data-theoretical="4" data-availability="public">
+          <p class="archive-item__meta">Probabilistic Simulation · 2023</p>
+          <h3 class="archive-item__title">Stochastic SIQR Disease Modeling</h3>
+          <p class="archive-item__summary">
+            Stochastic SIQR simulation for intervention comparison under explicit modeling
+            assumptions, using Monte Carlo analysis to quantify outcome variability.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> Which intervention assumptions produce meaningfully different outbreak trajectories in SIQR-style simulations?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Monte Carlo comparisons exposed clear policy sensitivity across intervention settings under explicit SIQR assumptions.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> External validity depends on assumption calibration; next step is broader scenario stress testing.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>SIQR Modeling</li>
+                <li>Monte Carlo</li>
+                <li>Parameter Sweeps</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Synthetic Population</li>
+                <li>Policy Scenarios</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-on">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+            <a href="index.html#selected">View Project ↗</a>
+          </div>
+        </article>
+
+        <article id="entry-nonlinear-dynamics-experiments" class="archive-item" data-tags="simulation modeling" data-year="2024" data-repro="4" data-applied="3" data-theoretical="5" data-availability="public">
+          <p class="archive-item__meta">Nonlinear Dynamics · Ongoing</p>
+          <h3 class="archive-item__title">Nonlinear Dynamics Experiments</h3>
+          <p class="archive-item__summary">
+            Computational experiments exploring stability regimes, attractor behavior, and
+            numerical sensitivity across parameter sweeps.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> Where do nonlinear systems transition between stable and chaotic regimes under parameter perturbation?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Parameter sweeps identified clear stability-window and divergence-pattern shifts across attractor regimes.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Some phase-space regions remain under-sampled; next step is denser sweep coverage near bifurcation boundaries.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>Nonlinear Dynamics</li>
+                <li>Stochastic Modeling</li>
+                <li>Sensitivity Analysis</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Simulated Trajectories</li>
+                <li>Phase-Space Grids</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-on">Code</li>
+              <li class="is-on">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+            <a href="https://github.com/sabneet-bains/Nonlinear-Dynamics" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-group" id="quantum" aria-labelledby="archive-quantum">
+      <h2 class="archive-group__title" id="archive-quantum">Quantum &amp; Hybrid Methods</h2>
+      <div class="archive-list">
+        <article id="entry-qft-simulation" class="archive-item" data-tags="quantum simulation" data-year="2025" data-repro="5" data-applied="3" data-theoretical="5" data-availability="public">
+          <p class="archive-item__meta">Quantum Computation · 2025</p>
+          <h3 class="archive-item__title">Quantum Fourier Transform Simulation</h3>
+          <p class="archive-item__summary">
+            QFT simulation work centered on numerical stability, noise sensitivity, and
+            repeatability across controlled parameter sweeps.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> How does QFT fidelity degrade as circuit depth and modeled noise increase under finite numerical precision?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Controlled sweeps revealed measurable amplitude and phase degradation trends as depth and noise stress increased.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Current scope is simulation-first; next step is expanded cross-validation against additional noise and qubit configurations.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>Cirq</li>
+                <li>QFT/QFT†</li>
+                <li>Noise Sweeps</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Simulated Qubit States</li>
+                <li>Noise Model Variants</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-on">Code</li>
+              <li class="is-on">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+            <a href="index.html#selected">View Project ↗</a>
+            <a href="https://github.com/sabneet-bains/Quantum-Computing" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-group" id="systems" aria-labelledby="archive-systems">
+      <h2 class="archive-group__title" id="archive-systems">Systems &amp; Performance Engineering</h2>
+      <div class="archive-list">
+        <article id="entry-cfd-reimplementation" class="archive-item" data-tags="systems simulation" data-year="2018" data-repro="4" data-applied="5" data-theoretical="3" data-availability="restricted">
+          <p class="archive-item__meta">Simulation Optimization · 2018</p>
+          <h3 class="archive-item__title">High-Performance CFD Reimplementation</h3>
+          <p class="archive-item__summary">
+            Re-engineered a legacy CFD prototype into validated C++, applying
+            profiling-guided optimization and numerical verification.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> Can legacy CFD simulation workflows be re-architected for major runtime gains without sacrificing numerical validity?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Delivered high-confidence runtime reduction through profiling-led C++ optimization and validation workflows.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Classified context limits artifact release; next step is portability of optimization patterns to related simulation stacks.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>C++ Optimization</li>
+                <li>Profiling</li>
+                <li>Numerical Verification</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>CFD Runtime Benchmarks</li>
+                <li>Validation Cases</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-on">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+          </div>
+        </article>
+
+        <article id="entry-voice-interface-integration" class="archive-item" data-tags="systems ai" data-year="2018" data-repro="3" data-applied="5" data-theoretical="2" data-availability="restricted">
+          <p class="archive-item__meta">Defense Interface Engineering · 2018</p>
+          <h3 class="archive-item__title">Low-Latency Voice Interface Integration</h3>
+          <p class="archive-item__summary">
+            Designed an NLP-enabled, low-latency voice interaction layer integrated with legacy
+            systems under secure communication constraints.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> How can a voice interaction layer be integrated into constrained legacy systems without breaking latency or security requirements?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Built and integrated a low-latency NLP control interface over secure communication constraints.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Security-scoped deployment limits public benchmarking; next step is broader robustness testing under varied command distributions.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>NLP Interface</li>
+                <li>Low-Latency UDP</li>
+                <li>Qt Integration</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Voice Command Logs</li>
+                <li>Interface Test Cases</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-off">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-off">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-group" id="computational-neuroscience" aria-labelledby="archive-neuroscience">
+      <h2 class="archive-group__title" id="archive-neuroscience">Computational Neuroscience</h2>
+      <div class="archive-list">
+        <article id="entry-neural-synchrony-modeling" class="archive-item" data-tags="neuroscience simulation ai" data-year="2018" data-repro="4" data-applied="3" data-theoretical="5" data-availability="public">
+          <p class="archive-item__meta">Spiking Networks · 2017-2018</p>
+          <h3 class="archive-item__title">Neural Synchrony Modeling</h3>
+          <p class="archive-item__summary">
+            Implemented spiking neural network models and controlled parameter sweeps to analyze
+            excitation-inhibition balance, phase locking, and synchrony behavior.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> Which excitatory-inhibitory conditions most strongly govern synchrony and phase-locking in spiking neural systems?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Controlled sweeps identified synchronization trends across conductivity and excitation regimes.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Model assumptions simplify biological complexity; next step is broader parameter realism and comparative model baselines.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>Spiking Neural Nets</li>
+                <li>Multithreaded Sweeps</li>
+                <li>Synchrony Analysis</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Simulated Neural Signals</li>
+                <li>Conductivity Regimes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-on">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-on">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+          </div>
+        </article>
+
+        <article id="entry-sparse-connectivity-visualization" class="archive-item" data-tags="neuroscience simulation" data-year="2018" data-repro="3" data-applied="2" data-theoretical="5" data-availability="public">
+          <p class="archive-item__meta">Research Thesis · 2018</p>
+          <h3 class="archive-item__title">Sparse Connectivity Visualization Method</h3>
+          <p class="archive-item__summary">
+            Designed a sparse graph visualization approach for neural connectivity change analysis
+            and documented methodology, validation, and limits in a 26-page thesis.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> Can sparse-connectivity structure be visualized in a way that improves interpretability of synchrony shifts?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Produced a thesis-documented visualization method that exposed interpretable connectivity-change patterns.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Visualization heuristics require broader comparative validation; next step is testing against alternate graph summarization methods.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>Graph Visualization</li>
+                <li>Sparse Connectivity</li>
+                <li>Thesis Validation</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Connectivity Matrices</li>
+                <li>Simulation Runs</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-on">Data</li>
+              <li class="is-on">Environment</li>
+              <li class="is-off">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-group" id="presentations" aria-labelledby="archive-presentations">
+      <h2 class="archive-group__title" id="archive-presentations">Technical Presentations</h2>
+      <div class="archive-list">
+        <article id="entry-simulation-systems-demos" class="archive-item" data-tags="ai simulation systems" data-year="2022" data-repro="2" data-applied="4" data-theoretical="3" data-availability="public">
+          <p class="archive-item__meta">Research Demos · 2021-2022</p>
+          <h3 class="archive-item__title">Simulation and Systems Demonstrations</h3>
+          <p class="archive-item__summary">
+            Presented technical demonstrations covering SIQR pandemic simulation and Unity-based
+            interactive systems, with emphasis on model assumptions and implementation tradeoffs.
+          </p>
+          <div class="archive-item__insights">
+            <p class="archive-item__insight"><strong>Research Question:</strong> How can complex simulation and interactive system behavior be communicated with methodological clarity to technical audiences?</p>
+            <p class="archive-item__insight"><strong>Key Result:</strong> Delivered technical demonstrations that highlighted assumption-sensitive behavior and implementation tradeoffs.</p>
+            <p class="archive-item__insight"><strong>Limitations / Next Step:</strong> Demo format prioritizes communication over full benchmarking; next step is tighter coupling to reproducible benchmark artifacts.</p>
+          </div>
+          <div class="archive-item__details">
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Methods</p>
+              <ul class="archive-item__tags">
+                <li>Technical Demos</li>
+                <li>Interactive Systems</li>
+                <li>Model Tradeoff Analysis</li>
+              </ul>
+            </div>
+            <div class="archive-item__detail-group">
+              <p class="archive-item__detail-label">Datasets</p>
+              <ul class="archive-item__tags">
+                <li>Demo Artifacts</li>
+                <li>Video Records</li>
+              </ul>
+            </div>
+          </div>
+          <div class="archive-item__repro">
+            <span class="archive-item__repro-label">Reproducibility</span>
+            <ul class="archive-item__repro-tags">
+              <li class="is-off">Code</li>
+              <li class="is-off">Data</li>
+              <li class="is-off">Environment</li>
+              <li class="is-off">Seeded Runs</li>
+              <li class="is-on">Report</li>
+            </ul>
+          </div>
+          <div class="archive-item__links">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer-links" aria-label="Footer links">
+      <div class="footer-social">
+        <a class="footer-social__link footer-social__link--email" href="mailto:sabneet.bains@outlook.com" aria-label="Send email to sabneet.bains@outlook.com">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="2880 1764 792 594" aria-hidden="true">
+              <path d="M2880 1863C2880 1808.32 2924.32 1764 2979 1764L3573 1764C3627.68 1764 3672 1808.32 3672 1863L3672 1873.89 3276 2104.56 2880.5 1873.89 2880.5 1863ZM2880 1931.31 2880 2259.5C2880.27 2313.98 2924.52 2358 2979 2358L3573 2358C3627.48 2358 3671.73 2313.98 3672 2259.5L3672 1931.31 3303.23 2147.13C3286.71 2158.01 3265.29 2158.01 3248.77 2147.13L2880 1931.31Z" fill-rule="evenodd" />
+            </svg>
+          </span>
+          <span class="footer-social__label">Email</span>
+        </a>
+        <a class="footer-social__link" href="https://linkedin.com/in/sabneet-bains" aria-label="LinkedIn profile" rel="noopener noreferrer">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="1444 1004 660 660" aria-hidden="true">
+              <path d="M2051.19 1004.06 1500.51 1004.06C1493.41 1003.73 1486.32 1004.8 1479.64 1007.21 1472.95 1009.62 1466.81 1013.33 1461.56 1018.12 1456.31 1022.91 1452.06 1028.68 1449.05 1035.12 1446.03 1041.55 1444.32 1048.52 1444 1055.62L1444 1607.49C1444.42 1622.35 1450.5 1636.48 1461.01 1646.99 1471.52 1657.5 1485.66 1663.58 1500.51 1664L2051.19 1664C2065.63 1663.36 2079.24 1657.08 2089.12 1646.52 2098.99 1635.95 2104.32 1621.95 2103.99 1607.49L2103.99 1055.62C2104.11 1048.71 2102.81 1041.85 2100.18 1035.46 2097.56 1029.07 2093.65 1023.28 2088.7 1018.45 2083.76 1013.63 2077.88 1009.86 2071.43 1007.38 2064.98 1004.91 2058.09 1003.78 2051.19 1004.06ZM1650.25 1554.29 1554.14 1554.29 1554.14 1260.2 1650.25 1260.2 1650.25 1554.29ZM1604.46 1215.65C1597.75 1215.89 1591.07 1214.73 1584.83 1212.26 1578.59 1209.79 1572.93 1206.05 1568.21 1201.29 1563.48 1196.52 1559.79 1190.83 1557.37 1184.57 1554.95 1178.32 1553.85 1171.62 1554.14 1164.92 1553.84 1158.14 1554.96 1151.38 1557.43 1145.06 1559.9 1138.75 1563.67 1133.01 1568.48 1128.24 1573.3 1123.46 1579.06 1119.74 1585.4 1117.32 1591.74 1114.9 1598.51 1113.84 1605.28 1114.19 1611.99 1113.95 1618.67 1115.11 1624.91 1117.58 1631.15 1120.05 1636.81 1123.79 1641.54 1128.55 1646.26 1133.32 1649.95 1139.01 1652.37 1145.27 1654.8 1151.52 1655.9 1158.22 1655.61 1164.92 1655.9 1171.7 1654.78 1178.46 1652.31 1184.78 1649.84 1191.09 1646.07 1196.82 1641.26 1201.6 1636.44 1206.38 1630.68 1210.1 1624.34 1212.52 1618.01 1214.94 1611.23 1216 1604.46 1215.65ZM1994.26 1554.29 1897.74 1554.29 1897.74 1393.43C1897.74 1355.07 1884.13 1328.67 1849.89 1328.67 1839.26 1328.76 1828.91 1332.14 1820.27 1338.34 1811.63 1344.54 1805.12 1353.27 1801.63 1363.32 1798.95 1370.85 1797.83 1378.84 1798.33 1386.83L1798.33 1554.29 1703.46 1554.29 1703.46 1260.2 1798.33 1260.2 1798.33 1301.45C1806.77 1285.95 1819.32 1273.09 1834.6 1264.28 1849.89 1255.47 1867.31 1251.06 1884.95 1251.54 1947.24 1251.54 1994.26 1292.78 1994.26 1380.64L1994.26 1554.29Z" fill-rule="evenodd" />
+            </svg>
+          </span>
+          <span class="footer-social__label">LinkedIn</span>
+        </a>
+        <a class="footer-social__link" href="https://github.com/sabneet-bains" aria-label="GitHub profile" rel="noopener noreferrer">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="460 1001 661 661" aria-hidden="true">
+              <path d="M790.97 1001.33C973.229 1001.33 1120.97 1152.79 1120.97 1339.68 1120.97 1489.14 1026.52 1615.92 895.481 1660.7 878.75 1664.04 872.81 1653.48 872.81 1644.46 872.81 1633.31 873.205 1596.88 873.205 1551.6 873.205 1520.06 862.645 1499.47 850.799 1488.96 924.29 1480.59 1001.51 1451.97 1001.51 1322.02 1001.51 1285.07 988.705 1254.9 967.52 1231.2 970.952 1222.66 982.27 1188.24 964.286 1141.64 964.286 1141.64 936.632 1132.57 873.635 1176.34 847.268 1168.84 819.02 1165.07 790.97 1164.94 762.92 1165.07 734.705 1168.84 708.371 1176.34 645.308 1132.57 617.588 1141.64 617.588 1141.64 599.669 1188.24 610.988 1222.66 614.387 1231.2 593.3 1254.9 580.397 1285.07 580.397 1322.02 580.397 1451.65 657.452 1480.68 730.745 1489.24 721.307 1497.68 712.76 1512.6 709.79 1534.47 690.98 1543.12 643.196 1558.07 613.76 1506.37 613.76 1506.37 596.302 1473.85 563.171 1471.48 563.171 1471.48 530.996 1471.05 560.927 1492.04 560.927 1492.04 582.542 1502.44 597.557 1541.54 597.557 1541.54 616.927 1601.93 708.734 1581.47 708.899 1609.75 709.196 1636.42 709.196 1644.46 709.196 1653.4 703.124 1663.87 686.657 1660.73 555.514 1616.02 460.97 1489.17 460.97 1339.68 460.97 1152.79 608.744 1001.33 790.97 1001.33" fill-rule="evenodd" />
+            </svg>
+          </span>
+          <span class="footer-social__label">GitHub</span>
+        </a>
+        <a class="footer-social__link footer-social__link--youtube" href="https://www.youtube.com/@sabneetbains" aria-label="YouTube channel" rel="noopener noreferrer">
+          <span class="footer-social__icon" aria-hidden="true">
+            <svg viewBox="2405 1029 887 606" aria-hidden="true">
+              <path d="M2765.6 1440.34 2765.6 1202.23C2850.07 1242.01 2915.49 1280.44 2992.86 1321.86 2929.04 1357.28 2850.07 1397 2765.6 1440.34M3236.35 1083.81C3221.77 1064.59 3196.94 1049.65 3170.5 1044.7 3092.79 1029.95 2607.98 1029.91 2530.31 1044.7 2509.1 1048.68 2490.23 1058.29 2474.01 1073.23 2405.67 1136.7 2427.08 1477.07 2443.56 1532.2 2450.48 1556.06 2459.44 1573.28 2470.71 1584.57 2485.24 1599.51 2505.13 1609.8 2527.98 1614.4 2591.97 1627.66 2921.61 1635.06 3169.15 1616.39 3191.96 1612.42 3212.15 1601.81 3228.07 1586.23 3291.25 1523.02 3286.94 1163.51 3236.35 1083.81" fill-rule="evenodd" />
+            </svg>
+          </span>
+          <span class="footer-social__label">YouTube</span>
+        </a>
+      </div>
+    </footer>
+  </main>
+  <aside class="archive-compare" id="archive-compare" aria-live="polite" aria-label="Compare selected entries" hidden>
+    <div class="archive-compare__head">
+      <h2 class="archive-compare__title">Compare Entries</h2>
+      <button class="archive-compare__clear" type="button" id="compare-clear">Clear</button>
+    </div>
+    <div class="archive-compare__list" id="compare-list"></div>
+  </aside>
+  <script src="js/archive-filters.js" defer></script>
+</body>
+</html>

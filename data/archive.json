@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-02-16",
+  "source": "archive.html",
+  "entries": [
+    {
+      "id": "entry-real-time-object-detection",
+      "group": "Learning Systems & Perception",
+      "year": 2024,
+      "meta": "Neural Networks & Computer Vision · 2024",
+      "title": "Real-Time Object Detection",
+      "tags": ["ai", "vision", "systems"],
+      "summary": "Controlled evaluation of a CNN perception system under variable lighting, with emphasis on baseline comparison and reliability-oriented measurement.",
+      "researchQuestion": "How much robustness can a compact CNN gain under lighting variation without violating real-time constraints?",
+      "keyResult": "Achieved about 10% classification improvement under controlled lighting variation while maintaining stable runtime behavior.",
+      "limitationsNextStep": "Generalization under unseen scene composition remains sensitive; next step is broader domain-shift evaluation.",
+      "methods": ["CNN", "Controlled Evaluation", "Ablation"],
+      "datasets": ["Custom Capture Set", "Variable Lighting Scenes"],
+      "reproducibility": {
+        "code": true,
+        "data": false,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "project": "index.html#selected",
+        "repository": "https://github.com/sabneet-bains/Computer-Vision",
+        "anchor": "archive.html#entry-real-time-object-detection"
+      }
+    },
+    {
+      "id": "entry-quantitative-neuroimaging-automation",
+      "group": "Learning Systems & Perception",
+      "year": 2017,
+      "meta": "Neuroimaging Pipelines · 2016-2017",
+      "title": "Quantitative MRI/PET Analysis Automation",
+      "tags": ["ai", "neuroscience", "systems"],
+      "summary": "Built and automated neuroimaging analysis workflows with validated preprocessing and quality controls, reducing error and accelerating collaborative analysis cycles.",
+      "researchQuestion": "Can neuroimaging workflows be standardized for reliable clinical-scale analysis without slowing teams down?",
+      "keyResult": "Automated and quality-controlled pipeline structure accelerated collaborative analysis cycles by over 70%.",
+      "limitationsNextStep": "Data heterogeneity still introduces edge-case variability; next step is stronger cohort-level harmonization checks.",
+      "methods": ["Pipeline Automation", "Quality Control", "Statistical Mapping"],
+      "datasets": ["MRI/PET Volumes", "Clinical Cohorts"],
+      "reproducibility": {
+        "code": false,
+        "data": false,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "anchor": "archive.html#entry-quantitative-neuroimaging-automation"
+      }
+    },
+    {
+      "id": "entry-stochastic-siqr-modeling",
+      "group": "Simulation & Modeling",
+      "year": 2023,
+      "meta": "Probabilistic Simulation · 2023",
+      "title": "Stochastic SIQR Disease Modeling",
+      "tags": ["simulation", "modeling"],
+      "summary": "Stochastic SIQR simulation for intervention comparison under explicit modeling assumptions, using Monte Carlo analysis to quantify outcome variability.",
+      "researchQuestion": "Which intervention assumptions produce meaningfully different outbreak trajectories in SIQR-style simulations?",
+      "keyResult": "Monte Carlo comparisons exposed clear policy sensitivity across intervention settings under explicit SIQR assumptions.",
+      "limitationsNextStep": "External validity depends on assumption calibration; next step is broader scenario stress testing.",
+      "methods": ["SIQR Modeling", "Monte Carlo", "Parameter Sweeps"],
+      "datasets": ["Synthetic Population", "Policy Scenarios"],
+      "reproducibility": {
+        "code": false,
+        "data": true,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "project": "index.html#selected",
+        "anchor": "archive.html#entry-stochastic-siqr-modeling"
+      }
+    },
+    {
+      "id": "entry-nonlinear-dynamics-experiments",
+      "group": "Simulation & Modeling",
+      "year": 2024,
+      "meta": "Nonlinear Dynamics · Ongoing",
+      "title": "Nonlinear Dynamics Experiments",
+      "tags": ["simulation", "modeling"],
+      "summary": "Computational experiments exploring stability regimes, attractor behavior, and numerical sensitivity across parameter sweeps.",
+      "researchQuestion": "Where do nonlinear systems transition between stable and chaotic regimes under parameter perturbation?",
+      "keyResult": "Parameter sweeps identified clear stability-window and divergence-pattern shifts across attractor regimes.",
+      "limitationsNextStep": "Some phase-space regions remain under-sampled; next step is denser sweep coverage near bifurcation boundaries.",
+      "methods": ["Nonlinear Dynamics", "Stochastic Modeling", "Sensitivity Analysis"],
+      "datasets": ["Simulated Trajectories", "Phase-Space Grids"],
+      "reproducibility": {
+        "code": true,
+        "data": true,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "repository": "https://github.com/sabneet-bains/Nonlinear-Dynamics",
+        "anchor": "archive.html#entry-nonlinear-dynamics-experiments"
+      }
+    },
+    {
+      "id": "entry-qft-simulation",
+      "group": "Quantum & Hybrid Methods",
+      "year": 2025,
+      "meta": "Quantum Computation · 2025",
+      "title": "Quantum Fourier Transform Simulation",
+      "tags": ["quantum", "simulation"],
+      "summary": "QFT simulation work centered on numerical stability, noise sensitivity, and repeatability across controlled parameter sweeps.",
+      "researchQuestion": "How does QFT fidelity degrade as circuit depth and modeled noise increase under finite numerical precision?",
+      "keyResult": "Controlled sweeps revealed measurable amplitude and phase degradation trends as depth and noise stress increased.",
+      "limitationsNextStep": "Current scope is simulation-first; next step is expanded cross-validation against additional noise and qubit configurations.",
+      "methods": ["Cirq", "QFT/QFT†", "Noise Sweeps"],
+      "datasets": ["Simulated Qubit States", "Noise Model Variants"],
+      "reproducibility": {
+        "code": true,
+        "data": true,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "project": "index.html#selected",
+        "repository": "https://github.com/sabneet-bains/Quantum-Computing",
+        "anchor": "archive.html#entry-qft-simulation"
+      }
+    },
+    {
+      "id": "entry-cfd-reimplementation",
+      "group": "Systems & Performance Engineering",
+      "year": 2018,
+      "meta": "Simulation Optimization · 2018",
+      "title": "High-Performance CFD Reimplementation",
+      "tags": ["systems", "simulation"],
+      "summary": "Re-engineered a legacy CFD prototype into validated C++, applying profiling-guided optimization and numerical verification.",
+      "researchQuestion": "Can legacy CFD simulation workflows be re-architected for major runtime gains without sacrificing numerical validity?",
+      "keyResult": "Delivered high-confidence runtime reduction through profiling-led C++ optimization and validation workflows.",
+      "limitationsNextStep": "Classified context limits artifact release; next step is portability of optimization patterns to related simulation stacks.",
+      "methods": ["C++ Optimization", "Profiling", "Numerical Verification"],
+      "datasets": ["CFD Runtime Benchmarks", "Validation Cases"],
+      "reproducibility": {
+        "code": false,
+        "data": true,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "anchor": "archive.html#entry-cfd-reimplementation"
+      }
+    },
+    {
+      "id": "entry-voice-interface-integration",
+      "group": "Systems & Performance Engineering",
+      "year": 2018,
+      "meta": "Defense Interface Engineering · 2018",
+      "title": "Low-Latency Voice Interface Integration",
+      "tags": ["systems", "ai"],
+      "summary": "Designed an NLP-enabled, low-latency voice interaction layer integrated with legacy systems under secure communication constraints.",
+      "researchQuestion": "How can a voice interaction layer be integrated into constrained legacy systems without breaking latency or security requirements?",
+      "keyResult": "Built and integrated a low-latency NLP control interface over secure communication constraints.",
+      "limitationsNextStep": "Security-scoped deployment limits public benchmarking; next step is broader robustness testing under varied command distributions.",
+      "methods": ["NLP Interface", "Low-Latency UDP", "Qt Integration"],
+      "datasets": ["Voice Command Logs", "Interface Test Cases"],
+      "reproducibility": {
+        "code": false,
+        "data": false,
+        "environment": true,
+        "seededRuns": false,
+        "report": true
+      },
+      "links": {
+        "anchor": "archive.html#entry-voice-interface-integration"
+      }
+    },
+    {
+      "id": "entry-neural-synchrony-modeling",
+      "group": "Computational Neuroscience",
+      "year": 2018,
+      "meta": "Spiking Networks · 2017-2018",
+      "title": "Neural Synchrony Modeling",
+      "tags": ["neuroscience", "simulation", "ai"],
+      "summary": "Implemented spiking neural network models and controlled parameter sweeps to analyze excitation-inhibition balance, phase locking, and synchrony behavior.",
+      "researchQuestion": "Which excitatory-inhibitory conditions most strongly govern synchrony and phase-locking in spiking neural systems?",
+      "keyResult": "Controlled sweeps identified synchronization trends across conductivity and excitation regimes.",
+      "limitationsNextStep": "Model assumptions simplify biological complexity; next step is broader parameter realism and comparative model baselines.",
+      "methods": ["Spiking Neural Nets", "Multithreaded Sweeps", "Synchrony Analysis"],
+      "datasets": ["Simulated Neural Signals", "Conductivity Regimes"],
+      "reproducibility": {
+        "code": false,
+        "data": true,
+        "environment": true,
+        "seededRuns": true,
+        "report": true
+      },
+      "links": {
+        "anchor": "archive.html#entry-neural-synchrony-modeling"
+      }
+    },
+    {
+      "id": "entry-sparse-connectivity-visualization",
+      "group": "Computational Neuroscience",
+      "year": 2018,
+      "meta": "Research Thesis · 2018",
+      "title": "Sparse Connectivity Visualization Method",
+      "tags": ["neuroscience", "simulation"],
+      "summary": "Designed a sparse graph visualization approach for neural connectivity change analysis and documented methodology, validation, and limits in a 26-page thesis.",
+      "researchQuestion": "Can sparse-connectivity structure be visualized in a way that improves interpretability of synchrony shifts?",
+      "keyResult": "Produced a thesis-documented visualization method that exposed interpretable connectivity-change patterns.",
+      "limitationsNextStep": "Visualization heuristics require broader comparative validation; next step is testing against alternate graph summarization methods.",
+      "methods": ["Graph Visualization", "Sparse Connectivity", "Thesis Validation"],
+      "datasets": ["Connectivity Matrices", "Simulation Runs"],
+      "reproducibility": {
+        "code": false,
+        "data": true,
+        "environment": true,
+        "seededRuns": false,
+        "report": true
+      },
+      "links": {
+        "anchor": "archive.html#entry-sparse-connectivity-visualization"
+      }
+    },
+    {
+      "id": "entry-simulation-systems-demos",
+      "group": "Technical Presentations",
+      "year": 2022,
+      "meta": "Research Demos · 2021-2022",
+      "title": "Simulation and Systems Demonstrations",
+      "tags": ["ai", "simulation", "systems"],
+      "summary": "Presented technical demonstrations covering SIQR pandemic simulation and Unity-based interactive systems, with emphasis on model assumptions and implementation tradeoffs.",
+      "researchQuestion": "How can complex simulation and interactive system behavior be communicated with methodological clarity to technical audiences?",
+      "keyResult": "Delivered technical demonstrations that highlighted assumption-sensitive behavior and implementation tradeoffs.",
+      "limitationsNextStep": "Demo format prioritizes communication over full benchmarking; next step is tighter coupling to reproducible benchmark artifacts.",
+      "methods": ["Technical Demos", "Interactive Systems", "Model Tradeoff Analysis"],
+      "datasets": ["Demo Artifacts", "Video Records"],
+      "reproducibility": {
+        "code": false,
+        "data": false,
+        "environment": false,
+        "seededRuns": false,
+        "report": true
+      },
+      "links": {
+        "anchor": "archive.html#entry-simulation-systems-demos"
+      }
+    }
+  ]
+}

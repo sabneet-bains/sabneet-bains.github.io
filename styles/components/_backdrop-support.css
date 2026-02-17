@@ -1,0 +1,26 @@
+/* _backdrop-support.css */
+/* Auto-extracted from styles.css split markers. */
+
+
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .nav-primary {
+      backdrop-filter: saturate(1.01) blur(12px);
+      -webkit-backdrop-filter: saturate(1.01) blur(12px);
+    }
+
+    .card__action {
+      backdrop-filter: var(--blur-control);
+      -webkit-backdrop-filter: var(--blur-control);
+    }
+
+    .dialog-modal__backdrop {
+      /* Keep backdrop as tonal scrim only; page-layer blur handles the cinematic transition */
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+  }
+
+  /* ======================
+     ACCESSIBILITY
+  ====================== */
+
