@@ -3,7 +3,18 @@
   "rules": {
     "selector-class-pattern": null,
     "alpha-value-notation": "number",
-    "color-function-notation": "modern",
-    "no-descending-specificity": null
+    "color-function-notation": null,
+    "no-descending-specificity": null,
+    "comment-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "declaration-block-single-line-max-declarations": null,
+    "value-keyword-case": null,
+    "media-feature-range-notation": null,
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "color-hex-length": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-block-no-duplicate-properties": null,
+    "shorthand-property-no-redundant-values": null
   }
 }
