@@ -3,12 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sabneet Bains portfolio: AI/ML, quantum and simulation research projects, methods, outcomes, and reproducibility-focused archive." />
+  <link rel="canonical" href="https://sabneet-bains.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sabneet Bains" />
+  <meta property="og:description" content="AI/ML, quantum, and simulation research portfolio with selected projects and archive." />
+  <meta property="og:url" content="https://sabneet-bains.github.io/" />
+  <meta property="og:site_name" content="Sabneet Bains Portfolio" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sabneet Bains" />
+  <meta name="twitter:description" content="AI/ML, quantum, and simulation research portfolio with selected projects and archive." />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f4f8" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d1015" />
   <title>Sabneet Bains</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sabneet Bains",
+      "url": "https://sabneet-bains.github.io/",
+      "sameAs": [
+        "https://linkedin.com/in/sabneet-bains",
+        "https://github.com/sabneet-bains",
+        "https://www.youtube.com/@sabneetbains"
+      ],
+      "jobTitle": "Applied Research Scientist",
+      "knowsAbout": [
+        "Machine Learning",
+        "Computer Vision",
+        "Quantum Computing",
+        "Simulation",
+        "Systems Engineering"
+      ]
+    }
+  </script>
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
 
@@ -29,51 +62,44 @@
   <main id="main" class="layout-container" tabindex="-1">
 
     <section class="hero-section" id="home" aria-label="Homepage introduction">
+      <p class="hero-eyebrow">Applied Research Scientist</p>
       <h1 class="display-title">Sabneet Bains</h1>
       <p class="display-lede">
-        AI/ML and quantum-focused researcher building rigorously evaluated learning and
-        simulation systems under real-world constraints, with experience across defense
-        R&amp;D, clinical neuroscience pipelines, and academic research.
+        Builds reliable AI/ML and simulation systems under real-world constraints across
+        defense R&amp;D, clinical neuroscience, and academic research.
       </p>
+      <nav class="hero-actions" aria-label="Primary actions">
+        <a class="hero-action hero-action--primary" href="#selected">Review Selected Work</a>
+        <a class="hero-action" href="archive.html">Open Full Archive</a>
+      </nav>
     </section>
 
-    <section class="research-proof" aria-labelledby="research-proof-title">
-      <h2 class="section-label" id="research-proof-title">Research Snapshot</h2>
+    <section class="research-proof research-proof--compact" aria-labelledby="research-proof-title">
+      <h2 class="section-label" id="research-proof-title">Selected Outcomes</h2>
       <div class="research-proof__grid">
         <article class="research-proof__item">
           <h3 class="research-proof__metric">15x runtime reduction</h3>
-          <p class="research-proof__text">
-            Re-engineered CFD simulation workflows from FORTRAN prototype to validated C++ at Lockheed Martin.
-          </p>
+          <p class="research-proof__text">CFD simulation re-engineering with validated C++ implementation.</p>
         </article>
         <article class="research-proof__item">
           <h3 class="research-proof__metric">&gt;70% faster analysis cycles</h3>
-          <p class="research-proof__text">
-            Automated MRI/PET research pipelines with integrated quality checks in clinical neuroscience settings.
-          </p>
+          <p class="research-proof__text">Automated MRI/PET pipelines with integrated quality controls.</p>
         </article>
         <article class="research-proof__item">
           <h3 class="research-proof__metric">~10% CV accuracy gain</h3>
-          <p class="research-proof__text">
-            Built and evaluated a custom CNN for real-time object detection under variable lighting conditions.
-          </p>
-        </article>
-        <article class="research-proof__item">
-          <h3 class="research-proof__metric">Quantum + complex systems</h3>
-          <p class="research-proof__text">
-            Implemented QFT/Deutsch simulations, stochastic SIQR modeling, and nonlinear system analysis at JHU.
-          </p>
+          <p class="research-proof__text">Controlled evaluation for real-time detection under lighting variation.</p>
         </article>
       </div>
     </section>
 
     <section class="selected-section" id="selected" aria-labelledby="selected-title">
       <h2 class="selected-heading" id="selected-title">Selected Research</h2>
+      <p class="selected-intro">Four representative projects across quantum methods, computer vision, nonlinear simulation, and interactive systems engineering.</p>
 
       <div class="card-grid">
 
         <!-- Card 1 -->
-        <article class="card card--dark" tabindex="0" role="button"
+        <a class="card card--dark" href="#project-modal"
                 aria-haspopup="dialog"
                 aria-controls="project-modal"
                 aria-expanded="false"
@@ -91,7 +117,7 @@
 
           <span class="card__action" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+              <path d="M4.5 10a1 1 0 0 1 1-1h6.34L9.17 6.33a1 1 0 1 1 1.41-1.41l4.38 4.38a1 1 0 0 1 0 1.41l-4.38 4.38a1 1 0 0 1-1.41-1.41L11.84 11H5.5a1 1 0 0 1-1-1z"></path>
             </svg>
           </span>
 
@@ -103,10 +129,10 @@
             </div>
             <div class="card__meta">Jan 2025 · JHU · QFT + Deutsch simulation</div>
           </div>
-        </article>
+        </a>
 
         <!-- Card 2 -->
-        <article class="card card--light" tabindex="0" role="button"
+        <a class="card card--light" href="#project-modal"
                 aria-haspopup="dialog"
                 aria-controls="project-modal"
                 aria-expanded="false"
@@ -124,7 +150,7 @@
 
           <span class="card__action" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+              <path d="M4.5 10a1 1 0 0 1 1-1h6.34L9.17 6.33a1 1 0 1 1 1.41-1.41l4.38 4.38a1 1 0 0 1 0 1.41l-4.38 4.38a1 1 0 0 1-1.41-1.41L11.84 11H5.5a1 1 0 0 1-1-1z"></path>
             </svg>
           </span>
 
@@ -136,10 +162,10 @@
             </div>
             <div class="card__meta">Dec 2024 · JHU · Controlled CV experiments</div>
           </div>
-        </article>
+        </a>
 
         <!-- Card 3 -->
-        <article class="card card--light" tabindex="0" role="button"
+        <a class="card card--light" href="#project-modal"
                 aria-haspopup="dialog"
                 aria-controls="project-modal"
                 aria-expanded="false"
@@ -157,7 +183,7 @@
 
           <span class="card__action" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+              <path d="M4.5 10a1 1 0 0 1 1-1h6.34L9.17 6.33a1 1 0 1 1 1.41-1.41l4.38 4.38a1 1 0 0 1 0 1.41l-4.38 4.38a1 1 0 0 1-1.41-1.41L11.84 11H5.5a1 1 0 0 1-1-1z"></path>
             </svg>
           </span>
 
@@ -169,10 +195,10 @@
             </div>
             <div class="card__meta">05 Nov 2024 · SIQR + stochastic modeling</div>
           </div>
-        </article>
+        </a>
 
         <!-- Card 4 -->
-        <article class="card card--dark" tabindex="0" role="button"
+        <a class="card card--dark" href="#project-modal"
                 aria-haspopup="dialog"
                 aria-controls="project-modal"
                 aria-expanded="false"
@@ -190,7 +216,7 @@
 
           <span class="card__action" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-              <path d="M16 8.5h-4.5V4a1.5 1.5 0 0 0-3 0v4.5H4a1.5 1.5 0 0 0 0 3h4.5V16a1.5 1.5 0 0 0 3 0v-4.5H16a1.5 1.5 0 0 0 0-3z"></path>
+              <path d="M4.5 10a1 1 0 0 1 1-1h6.34L9.17 6.33a1 1 0 1 1 1.41-1.41l4.38 4.38a1 1 0 0 1 0 1.41l-4.38 4.38a1 1 0 0 1-1.41-1.41L11.84 11H5.5a1 1 0 0 1-1-1z"></path>
             </svg>
           </span>
 
@@ -202,7 +228,7 @@
             </div>
             <div class="card__meta">20 Oct 2024 · Unity · CI + software quality</div>
           </div>
-        </article>
+        </a>
 
       </div>
 

@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research archive for Sabneet Bains: methods, datasets, reproducibility indicators, and technical outcomes across AI, simulation, quantum, and systems work." />
+  <link rel="canonical" href="https://sabneet-bains.github.io/archive.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Research Archive | Sabneet Bains" />
+  <meta property="og:description" content="Extended research archive with filters, methods, reproducibility indicators, and project links." />
+  <meta property="og:url" content="https://sabneet-bains.github.io/archive.html" />
+  <meta property="og:site_name" content="Sabneet Bains Portfolio" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Research Archive | Sabneet Bains" />
+  <meta name="twitter:description" content="Extended research archive with filters, methods, reproducibility indicators, and project links." />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self'; font-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="color-scheme" content="light dark" />
   <title>Research Archive | Sabneet Bains</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Research Archive | Sabneet Bains",
+      "url": "https://sabneet-bains.github.io/archive.html",
+      "description": "Research archive with methods, outcomes, and reproducibility indicators across AI, simulation, quantum, and systems projects."
+    }
+  </script>
   <link rel="preconnect" href="https://github.com" crossorigin />
   <link rel="preconnect" href="https://www.youtube.com" crossorigin />
   <link rel="stylesheet" href="styles/main.css" />
@@ -32,6 +53,30 @@
         Extended work and supporting artifacts organized by theme. Each entry focuses on
         method clarity, assumptions, and reproducible evaluation.
       </p>
+    </section>
+
+    <section class="archive-intent" aria-labelledby="archive-intent-title">
+      <h2 class="section-label" id="archive-intent-title">Read This First</h2>
+      <div class="archive-intent__grid">
+        <article class="archive-intent__item">
+          <h3 class="archive-intent__title">Hiring Review Path</h3>
+          <p class="archive-intent__text">
+            Start with <a href="#learning">Learning Systems</a> and <a href="#systems">Systems Engineering</a> for highest applied signal and ownership scope.
+          </p>
+        </article>
+        <article class="archive-intent__item">
+          <h3 class="archive-intent__title">Academic Review Path</h3>
+          <p class="archive-intent__text">
+            Prioritize <a href="#quantum">Quantum</a> and <a href="#simulation">Simulation</a> for assumptions, parameter sweeps, and theory-to-implementation links.
+          </p>
+        </article>
+        <article class="archive-intent__item">
+          <h3 class="archive-intent__title">Fast Navigation</h3>
+          <p class="archive-intent__text">
+            Use <kbd>/</kbd> to focus search, then use filters and reproducibility tags to narrow the evidence set.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section class="archive-filters" aria-label="Filter archive entries">
@@ -95,6 +140,10 @@
           </label>
         </div>
         </details>
+        <label class="archive-simple-toggle">
+          <input id="toggle-simple-mode" type="checkbox" checked />
+          <span>Simple Mode</span>
+        </label>
         <a class="archive-export-link" href="data/archive.json" target="_blank" rel="noopener noreferrer">Structured JSON ↗</a>
       </div>
     </section>

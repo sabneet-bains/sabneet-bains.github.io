@@ -13,15 +13,21 @@
     grid-template-rows: minmax(160px, 1fr) auto;
     padding: var(--space-8) var(--space-10) var(--space-10);
 
-    border: 0;
-    box-shadow: var(--elevation-2);
+    border: 1px solid color-mix(in srgb, var(--surface-border-subtle) 35%, transparent);
+    box-shadow: 0 14px 34px -28px rgba(0, 0, 0, 0.55);
 
     cursor: pointer;
+    transform: translateZ(0) scale(1);
     transform-origin: center center;
+    backface-visibility: hidden;
+    will-change: transform;
 
     transition:
       transform var(--dur-card) var(--ease-standard),
-      box-shadow var(--dur-card) var(--ease-standard);
+      box-shadow var(--dur-card) var(--ease-standard),
+      border-color var(--dur-card) var(--ease-standard);
+    text-decoration: none;
+    color: inherit;
   }
 
   .card::before {
@@ -75,36 +81,51 @@
   }
 
   .card[data-project="qft"] {
-    --project-card-bg: #2a1240;
+    --project-card-bg: #0d1624;
+    --project-accent: #8a3dff;
+    --project-panel-bg: #260a37;
   }
 
   .card[data-project="vision"] {
-    --project-card-bg: #13273d;
+    --project-card-bg: #101b2a;
+    --project-accent: #42cec2;
+    --project-panel-bg: #79e6d8;
   }
 
   .card[data-project="chaotic"] {
-    --project-card-bg: #2b2f9f;
+    --project-card-bg: #121a2d;
+    --project-accent: #5f66ff;
+    --project-panel-bg: #39229c;
   }
 
   .card[data-project="unity3d"] {
-    --project-card-bg: #121822;
+    --project-card-bg: #0d1522;
+    --project-accent: #67a2d3;
+    --project-panel-bg: #111e34;
   }
 
   .card[data-project] {
     height: auto;
-    min-height: 620px;
+    min-height: 600px;
     grid-template-rows: clamp(250px, 34vw, 340px) auto;
     padding: 0;
     gap: 0;
-    background: var(--project-card-bg);
+    background: var(--project-panel-bg);
     color: #f5f5f7;
+    border: 0;
+    box-shadow: none;
   }
 
   .card[data-project]::before {
-    opacity: 0;
+    content: none;
+  }
+
+  .card[data-project]::after {
+    content: none;
   }
 
   /* --------------------------------------
      CARD: Content
   -------------------------------------- */
+
 

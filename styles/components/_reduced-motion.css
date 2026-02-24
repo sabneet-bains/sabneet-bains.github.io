@@ -6,6 +6,7 @@
     .card,
     .card::before,
     .card__media-video,
+    .card__content,
     .card__action,
     .footer-social__link,
     .dialog-modal,
@@ -20,4 +21,3 @@
       transform: none;
     }
   }
-

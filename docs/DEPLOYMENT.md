@@ -48,6 +48,11 @@ npm run test:a11y
 npm run test:perf
 ```
 
+Windows note:
+
+- The repository uses script wrappers (`scripts/test-a11y.js`, `scripts/test-perf.js`) to avoid `wmic`-dependent process detection issues in `start-server-and-test`.
+- For Lighthouse on Windows, `CHROME_PATH` may point to Edge (for example `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`).
+
 ## 6) Post-deploy smoke test
 
 - Verify `Home` and `Selected` anchor jumps land correctly under sticky nav.

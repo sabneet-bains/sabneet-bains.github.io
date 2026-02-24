@@ -1,0 +1,15 @@
+{
+  "name": "Sabneet Bains Portfolio",
+  "short_name": "Sabneet",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f4f8",
+  "theme_color": "#f2f4f8",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

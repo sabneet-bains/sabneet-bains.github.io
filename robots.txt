@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sabneet-bains.github.io/sitemap.xml

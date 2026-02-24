@@ -18,7 +18,9 @@
 
     ctx.cardElements.forEach((card) => {
       card.addEventListener("click", (e) => {
-        if (e.target.closest("a")) return;
+        const linkTarget = e.target.closest("a");
+        if (linkTarget && linkTarget !== card) return;
+        e.preventDefault();
         modal.openFromCard(card, card);
       });
 

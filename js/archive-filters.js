@@ -11,6 +11,7 @@
   const toggleRepro = root.querySelector("#toggle-repro");
   const toggleApplied = root.querySelector("#toggle-applied");
   const toggleRepo = root.querySelector("#toggle-repo");
+  const toggleSimpleMode = root.querySelector("#toggle-simple-mode");
   const metrics = {
     entries: root.querySelector('[data-metric="entries"]'),
     code: root.querySelector('[data-metric="code"]'),
@@ -30,6 +31,7 @@
     !toggleRepro ||
     !toggleApplied ||
     !toggleRepo ||
+    !toggleSimpleMode ||
     !metrics.entries ||
     !metrics.code ||
     !metrics.report ||
@@ -59,6 +61,7 @@
     highRepro: false,
     appliedOnly: false,
     hasRepoOnly: false,
+    simpleMode: true,
     compare: new Set(),
     activeIndex: -1,
   };
@@ -173,6 +176,7 @@
       renderCompare();
       track("compare_toggle");
     });
+    compareBtn.classList.add("archive-item__action--compare");
 
     const copyLinkBtn = makeButton("Copy Link", async () => {
       await copyText(link);
@@ -384,6 +388,7 @@
     if (state.highRepro) params.set("repro", "1");
     if (state.appliedOnly) params.set("applied", "1");
     if (state.hasRepoOnly) params.set("repo", "1");
+    if (!state.simpleMode) params.set("mode", "advanced");
     const q = params.toString();
     history.replaceState(null, "", q ? `${window.location.pathname}?${q}` : window.location.pathname);
   };
@@ -397,6 +402,11 @@
   };
 
   const applyState = () => {
+    root.classList.toggle("is-simple-mode", state.simpleMode);
+    if (state.simpleMode && state.compare.size) {
+      state.compare.clear();
+      renderCompare();
+    }
     sortItemsWithinGroups();
     items.forEach((item) => {
       const show = matchesFilter(item) && matchesSearch(item) && matchesToggles(item);
@@ -433,9 +443,11 @@
     state.highRepro = params.get("repro") === "1";
     state.appliedOnly = params.get("applied") === "1";
     state.hasRepoOnly = params.get("repo") === "1";
+    state.simpleMode = params.get("mode") !== "advanced";
     toggleRepro.checked = state.highRepro;
     toggleApplied.checked = state.appliedOnly;
     toggleRepo.checked = state.hasRepoOnly;
+    toggleSimpleMode.checked = state.simpleMode;
   };
 
   const renderCompare = () => {
@@ -519,6 +531,12 @@
       state.hasRepoOnly = toggleRepo.checked;
       applyState();
       track("toggle_repo");
+    });
+
+    toggleSimpleMode.addEventListener("change", () => {
+      state.simpleMode = toggleSimpleMode.checked;
+      applyState();
+      track("toggle_simple_mode");
     });
 
     compareClear.addEventListener("click", () => {

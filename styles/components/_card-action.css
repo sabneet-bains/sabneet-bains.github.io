@@ -7,8 +7,8 @@
     right: var(--space-6);
     bottom: var(--space-6);
 
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-full);
     border: 0;
 
@@ -20,12 +20,13 @@
 
     z-index: 3;
 
-    transition: none;
-
-    background: #f5f5f7;
-    color: #0a0a0a;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
-    transform: translate3d(0, 0, 0);
+    background: color-mix(in srgb, #f7f9fd 90%, transparent);
+    color: #0d1622;
+    box-shadow:
+      0 10px 22px -14px rgba(0, 0, 0, 0.46),
+      0 0 0 1px color-mix(in srgb, var(--project-accent, #ffffff) 28%, transparent) inset;
+    transition: transform 240ms var(--ease-standard), box-shadow 240ms var(--ease-standard), background 240ms var(--ease-standard);
+    transform: translate3d(0, 4px, 0) scale(1);
     backface-visibility: hidden;
   }
 
@@ -47,18 +48,33 @@
 
   @media (hover: hover) and (pointer: fine) {
     .card:hover {
-      transform: scale(1.01);
+      transform: translate3d(0, -4px, 0) scale(1.006);
       box-shadow: var(--elevation-card-hover);
+      border-color: color-mix(in srgb, var(--surface-border-subtle) 62%, transparent);
     }
 
-    .card:hover::before {
-      opacity: 0.16;
+    .card:hover .card__action,
+    .card:focus-visible .card__action {
+      transform: translate3d(0, 0, 0) scale(1.05);
+      box-shadow:
+        0 12px 24px -14px rgba(0, 0, 0, 0.52),
+        0 0 0 1px color-mix(in srgb, var(--project-accent, #ffffff) 42%, transparent) inset;
     }
 
-    .card[data-project]:hover::before {
-      opacity: 0;
+    .card[data-project]:hover {
+      box-shadow: none;
+      border-color: transparent;
     }
 
+    .card:hover .card__media-video,
+    .card:focus-visible .card__media-video {
+      transform: translate3d(0, -2px, 0) scale(1.012);
+    }
+
+    .card:hover .card__content,
+    .card:focus-visible .card__content {
+      color: #f5f5f7;
+    }
   }
 
   @media (max-width: 900px) {
@@ -82,7 +98,14 @@
     }
   }
 
+  @media (prefers-color-scheme: dark) {
+    .card__action {
+      background: color-mix(in srgb, #f6f8fd 92%, transparent);
+      color: #0b1118;
+      box-shadow: 0 10px 22px -14px rgba(0, 0, 0, 0.78);
+    }
+  }
+
   /* ======================
      FOOTER SOCIAL
   ====================== */
-
